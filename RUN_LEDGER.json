@@ -1,0 +1,11 @@
+{
+  "ledgerName": "Rise FC Standalone Schema Run Ledger",
+  "ledgerVersion": "1.0.0",
+  "status": "BOOTSTRAP_EMPTY_NO_RUNS",
+  "entries": [],
+  "safetyRules": {
+    "productionLockedAllowedByThisLedger": false,
+    "realRunArtifactsAllowedInRepo": false,
+    "schemaOutputAllowedByBootstrap": false
+  }
+}
