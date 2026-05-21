@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -23,28 +23,26 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ---
 
-## What you can do right now (after PR #5)
+## What you can do right now (after PR #6)
 
+- Use `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md` to find the right document for your task.
+- Use `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` to check all gates before any schema work.
+- Use `00_START_HERE/RISE_MODE_STATUS_AND_NEXT_STEP_GUIDE_V1_0.md` to understand the current status of Mode 1 and Mode 2.
 - Read the package README and start files.
 - Read the governing doctrine in `02_GOVERNING_DOCTRINE/`.
 - Read the homepage scoped truth-pack reference in `03_TRUTH_PACK/`.
 - Read the homepage schema profile and reference lists in `07_REFERENCE_LISTS/`.
 - Read the master flow documents in `01_MASTER_FLOW/` to understand the full operating sequence.
-- Understand the page run sequence from intake through implementation or Astro handoff.
-- Understand all master stop conditions and when they apply.
-- Understand Mode 1 (current website) and Mode 2 (future Astro) flows and their current status.
-- Understand which modules are allowed and which are blocked.
-- Understand which fields are held and require owner approval.
-- Review the owner approval worksheet.
-- Understand the source-truth boundary, hierarchy, and lane ownership rules.
+- Understand which modules are allowed, which are blocked, and which fields are held.
+- Review the owner approval worksheet to understand which fields need human owner decisions.
 
 ---
 
 ## What you cannot do right now
 
-> **The source-truth boundary, doctrine, homepage scoped truth-pack reference, homepage schema profile, and master flow now exist. The package is still not runnable for schema production. Operators must wait for operator prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff before generating or implementing any schema.**
+> **The source-truth boundary, doctrine, homepage scoped truth-pack reference, homepage schema profile, master flow, and operator navigation documents now exist. The package is still not runnable for schema production. Operators must wait for operator prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff before generating or implementing any schema.**
 
-Specifically, after PR #5 you must not:
+Specifically, after PR #6 you must not:
 
 - Generate any JSON-LD
 - Create any schema output
@@ -67,7 +65,7 @@ The sequence:
 - PR #3 adds Phase 0 truth source map and homepage scoped truth view ✓ Done
 - PR #4 adds homepage schema profile and blocked module policy ✓ Done
 - PR #5 adds standalone schema master flow ✓ Done
-- PR #6 adds team quickstart and operator checklist upgrades
+- PR #6 adds team quickstart and operator checklist upgrades ✓ Done
 - PR #7 adds operator prompts 00 through 04 and 08
 - PR #8 adds final validation, analyzer, and completion prompts
 - PR #9 adds output bundle contract schemas

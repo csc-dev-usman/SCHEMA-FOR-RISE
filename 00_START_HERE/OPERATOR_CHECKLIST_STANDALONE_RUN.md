@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_MASTER_FLOW_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_QUICKSTART_UPGRADED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #5. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #6. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -33,6 +33,10 @@
 - [ ] Confirm the active schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`
 - [ ] Confirm no held fields are being emitted (all 15 held field categories default to NOT_REVIEWED_HELD)
 - [ ] Confirm the standalone master flow (PR #5) has been merged ✓ Done
+- [ ] Confirm the quickstart/checklist upgrade (PR #6) has been merged ✓ Done
+- [ ] Confirm you have read `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md`
+- [ ] Confirm you have used `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` and all gates pass
+- [ ] Confirm you have read `00_START_HERE/RISE_MODE_STATUS_AND_NEXT_STEP_GUIDE_V1_0.md`
 - [ ] Confirm the master flow has been read (`01_MASTER_FLOW/RISE_STANDALONE_SCHEMA_MASTER_FLOW_V1_0.md`)
 - [ ] Confirm the page run sequence has been read (`01_MASTER_FLOW/RISE_SCHEMA_PAGE_RUN_SEQUENCE_V1_0.md`)
 - [ ] Confirm the master stop conditions have been read (`01_MASTER_FLOW/RISE_SCHEMA_MASTER_STOP_CONDITIONS_V1_0.md`)
@@ -110,7 +114,7 @@ Operators must not:
 | PR #3 | Phase 0 truth source map and homepage scoped truth view | ✓ Done |
 | PR #4 | Homepage schema profile and blocked module policy | ✓ Done |
 | PR #5 | Standalone schema master flow | ✓ Done |
-| PR #6 | Team quickstart and operator checklist upgrades | Pending |
+| PR #6 | Team quickstart and operator checklist upgrades | ✓ Done |
 | PR #7 | Operator prompts 00 through 04 and 08 | Pending |
 | PR #8 | Final validation, analyzer, and completion prompts | Pending |
 | PR #9 | Output bundle contract schemas | Pending |

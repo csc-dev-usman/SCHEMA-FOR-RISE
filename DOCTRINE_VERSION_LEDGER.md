@@ -10,7 +10,7 @@
 
 ## Current status
 
-`MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+`OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -23,6 +23,7 @@
 | PR #3 | `docs: add Rise Phase 0 truth source map and homepage scoped truth view` | Homepage scoped truth-pack reference added. Fingerprint locked. No schema output. |
 | PR #4 | `docs: add Rise homepage schema profile and blocked module policy` | Homepage schema profile added. Blocked module policy added. Held field categories defined. Allowed modules defined. Decision matrix added. No schema output. |
 | PR #5 | `docs: add Rise standalone schema master flow` | Standalone master flow added. Mode 1 flow documented. Mode 2 flow documented. Page run sequence documented. Master stop conditions documented. No schema output. |
+| PR #6 | `docs: upgrade Rise standalone team quickstart and operator checklist` | Team quickstart upgraded. Operator checklist upgraded. Navigation decision tree added. Preflight checklist added. Mode status guide added. No schema output. |
 
 ---
 
@@ -43,6 +44,11 @@
 - Mode 2 flow documented: **YES (PR #5) — not ready**
 - Page run sequence documented: **YES (PR #5)**
 - Master stop conditions documented: **YES (PR #5)**
+- Team quickstart upgraded: **YES (PR #6)**
+- Operator checklist upgraded: **YES (PR #6)**
+- Navigation decision tree added: **YES (PR #6)**
+- Preflight checklist added: **YES (PR #6)**
+- Mode status guide added: **YES (PR #6)**
 - Evidence map added: **NO**
 
 ---
@@ -75,9 +81,11 @@ Schema profile added in PR #4. Homepage schema profile (`HOMEPAGE_SCHEMA_PROFILE
 
 Standalone master flow added in PR #5. The root master flow, Mode 1 current-website optimization flow, Mode 2 future Astro carry flow, page run sequence, and master stop conditions are now in `01_MASTER_FLOW/`. Mode 1 is documented but not runnable. Mode 2 is documented but not ready. No schema output has been created.
 
+Operator quickstart and checklist upgraded in PR #6. The navigation decision tree, preflight checklist, and mode status guide are now in `00_START_HERE/`. Team quickstart and operator checklist have been upgraded with full reference coverage through PR #6. No schema output has been created.
+
 The package is not runnable for schema production. Operator prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff are pending in later PRs.
 
-Next doctrine dependency: team quickstart and operator checklist upgrades — PR #6.
+Next doctrine dependency: operator prompts 00 through 04 and 08 — PR #7.
 
 ---
 
@@ -90,3 +98,4 @@ Next doctrine dependency: team quickstart and operator checklist upgrades — PR
 | 1.0.0 | 2026-05-21 | PR #3 | Homepage scoped truth-pack reference added. Fingerprint locked. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-21 | PR #4 | Homepage schema profile added. Blocked module policy added. Held field categories defined. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-21 | PR #5 | Standalone master flow added. Mode 1 documented. Mode 2 documented. Page run sequence documented. Master stop conditions documented. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-21 | PR #6 | Team quickstart upgraded. Operator checklist upgraded. Navigation decision tree added. Preflight checklist added. Mode status guide added. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |

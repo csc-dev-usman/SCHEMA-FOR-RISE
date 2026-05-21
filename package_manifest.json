@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -19,6 +19,11 @@
   "schemaProfileAdded": true,
   "homepageSchemaProfile": "HOMEPAGE_SCHEMA_PROFILE",
   "homepageRoute": "/",
+  "teamQuickstartUpgraded": true,
+  "operatorChecklistUpgraded": true,
+  "operatorNavigationDecisionTreeAdded": true,
+  "operatorPreflightChecklistAdded": true,
+  "modeStatusGuideAdded": true,
   "standaloneMasterFlowAdded": true,
   "mode1FlowDocumented": true,
   "mode2FlowDocumented": true,
@@ -49,7 +54,10 @@
     "00_START_HERE/FINAL_STANDALONE_OPERATING_MANUAL_INDEX_V1_0.md",
     "00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md",
     "00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md",
-    "00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md"
+    "00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md",
+    "00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md",
+    "00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md",
+    "00_START_HERE/RISE_MODE_STATUS_AND_NEXT_STEP_GUIDE_V1_0.md"
   ],
   "activeDoctrineFiles": [
     "02_GOVERNING_DOCTRINE/README_GOVERNING_DOCTRINE_V1_0.md",
@@ -100,5 +108,5 @@
     "WebPage",
     "BreadcrumbList"
   ],
-  "nextRecommendedPr": "PR #6: Add team quickstart and operator checklist upgrades"
+  "nextRecommendedPr": "PR #7: Add Rise standalone operator prompts 00 through 04 and 08"
 }
