@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `TRUTH_PACK_HOMEPAGE_SCOPED_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 adds the governing doctrine and source-truth boundary. Prompts, validators, output bundle schemas, smoke tests, and generated schema are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 adds the read-only homepage scoped truth-pack reference. The homepage scoped truth view is read-only reference material — it does not authorize schema generation. Prompts, validators, output bundle schemas, smoke tests, and generated schema are still later PRs.
 
 ---
 
@@ -41,17 +41,29 @@
 
 ---
 
+## Active truth-pack files (PR #3)
+
+| File | Purpose |
+|------|---------|
+| `03_TRUTH_PACK/README_TRUTH_PACK_V1_0.md` | Truth-pack folder index and reading order |
+| `03_TRUTH_PACK/RISE_PHASE0_TRUTH_SOURCE_MAP_V1_0.md` | Source map defining truth classes needed by schema operators |
+| `03_TRUTH_PACK/RISE_PHASE0_SCHEMA_TRUTH_VIEW_HOMEPAGE_SCOPED_V1_0.json` | Read-only homepage scoped truth-view reference. **Not JSON-LD. Not schema output.** |
+| `03_TRUTH_PACK/RISE_HOMEPAGE_TRUTH_FINGERPRINT_LOCK_V1_0.md` | Fingerprint lock for homepage truth-view currency verification |
+| `03_TRUTH_PACK/RISE_CONTACT_SOCIAL_LOGO_OWNER_APPROVAL_WORKSHEET_V1_0.md` | Owner approval worksheet — all held fields default to NOT_REVIEWED |
+| `03_TRUTH_PACK/TRUTH_PACK_BACKLOG.md` | Future truth-pack additions for other pages and routes |
+
+---
+
 ## Active placeholder directories
 
 | Directory | Status | Purpose |
 |-----------|--------|---------|
 | `01_MASTER_FLOW/` | Placeholder only | Future master operator flow documents |
-| `03_TRUTH_PACK/` | Pending PR #3 | Phase 0 truth source map and homepage scoped truth view |
-| `04_OPERATOR_PROMPTS/` | Pending PR #4 | Operator prompt files |
+| `04_OPERATOR_PROMPTS/` | Pending PR #5 | Operator prompt files |
 | `05_REFERENCE_WORKFLOW/` | Placeholder only | Future reference workflow documents |
-| `06_MACHINE_RULES/` | Pending PR #4 | Machine rule files |
+| `06_MACHINE_RULES/` | Pending PR #5 | Machine rule files |
 | `07_REFERENCE_LISTS/` | Placeholder only | Future reference lists |
-| `08_SMOKE_TESTS/` | Pending PR #5 | Smoke test files |
+| `08_SMOKE_TESTS/` | Pending PR #6 | Smoke test files |
 | `tools/` | Placeholder only | Future tooling scripts |
 
 ---
@@ -90,8 +102,9 @@ The following file types and artifacts are **not permitted** in this repository 
 ## What later PRs will add
 
 - **PR #2:** ~~Governing doctrine and source-truth boundary~~ ✓ Done
-- **PR #3:** Phase 0 truth source map and homepage scoped truth view
-- **PR #4:** Operator prompts and machine rules
-- **PR #5:** Validators, smoke tests, and final runnable handoff
+- **PR #3:** ~~Phase 0 truth source map and homepage scoped truth view~~ ✓ Done
+- **PR #4:** Homepage schema profile and blocked module policy
+- **PR #5:** Operator prompts and machine rules
+- **PR #6:** Validators, smoke tests, and final runnable handoff
 
-Generated schema, output bundle schemas, real run artifacts, and smoke tests are still not allowed. They require PR #3 through PR #5.
+Generated schema, output bundle schemas, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #4 through PR #6.

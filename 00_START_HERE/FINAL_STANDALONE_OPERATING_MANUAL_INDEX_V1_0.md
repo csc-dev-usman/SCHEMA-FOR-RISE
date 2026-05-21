@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `TRUTH_PACK_HOMEPAGE_SCOPED_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add truth packs, prompts, contracts, validators, and the final runnable handoff.
 
@@ -44,6 +44,23 @@ Understand:
 - Lane ownership and cross-lane prohibitions
 - Hold conditions and blocked field/module categories
 
+### Step 2c — Read truth-pack reference (PR #3 addition)
+
+Files in this order:
+1. `03_TRUTH_PACK/README_TRUTH_PACK_V1_0.md`
+2. `03_TRUTH_PACK/RISE_PHASE0_TRUTH_SOURCE_MAP_V1_0.md`
+3. `03_TRUTH_PACK/RISE_PHASE0_SCHEMA_TRUTH_VIEW_HOMEPAGE_SCOPED_V1_0.json`
+4. `03_TRUTH_PACK/RISE_HOMEPAGE_TRUTH_FINGERPRINT_LOCK_V1_0.md`
+5. `03_TRUTH_PACK/RISE_CONTACT_SOCIAL_LOGO_OWNER_APPROVAL_WORKSHEET_V1_0.md`
+6. `03_TRUTH_PACK/TRUTH_PACK_BACKLOG.md`
+
+Understand:
+- What truth classes are needed for schema operations
+- Homepage scoped truth view is read-only — it is not JSON-LD, not schema output
+- Fingerprint lock and freshness rules
+- Which fields are held and require owner approval before schema can use them
+- What truth-pack additions are needed for future pages
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -64,13 +81,14 @@ Understand:
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #2**.
+The schema workflow is **not runnable after PR #3**.
 
 Operators must wait for:
 - PR #2: Governing doctrine ✓ Done
-- PR #3: Phase 0 truth source map and homepage scoped truth view
-- PR #4: Operator prompts and machine rules
-- PR #5: Validators, smoke tests, and runnable handoff
+- PR #3: Phase 0 truth source map and homepage scoped truth view ✓ Done
+- PR #4: Homepage schema profile and blocked module policy
+- PR #5: Operator prompts and machine rules
+- PR #6: Validators, smoke tests, and runnable handoff
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 
@@ -85,7 +103,7 @@ Produce validated schema for pages on the current risefcsoccer.com website.
 - Schema is derived from approved Phase 0 content and confirmed page evidence
 - Output must be validated before any implementation handoff
 
-**Not runnable yet. Waiting for PR #5 runnable handoff.**
+**Not runnable yet. Waiting for PR #4 schema profile, PR #5 prompts, and PR #6 runnable handoff.**
 
 ---
 
