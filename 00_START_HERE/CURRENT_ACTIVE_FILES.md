@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `HOMEPAGE_SCHEMA_PROFILE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 adds the homepage schema profile, blocked module policy, held field categories, allowed modules list, and schema profile decision matrix. No schema output has been created. Prompts, validators, evidence maps, and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 adds the standalone schema master flow, Mode 1 and Mode 2 flow documentation, page run sequence, and master stop conditions. No schema output has been created. Evidence maps, operator prompts, validators, and the final runnable handoff are still later PRs.
 
 ---
 
@@ -67,15 +67,27 @@
 
 ---
 
+## Active master-flow files (PR #5)
+
+| File | Purpose |
+|------|---------|
+| `01_MASTER_FLOW/README_MASTER_FLOW_V1_0.md` | Master-flow folder index and reading order |
+| `01_MASTER_FLOW/RISE_STANDALONE_SCHEMA_MASTER_FLOW_V1_0.md` | Root master flow — source-truth hierarchy, modes, homepage lane, sequence, stop conditions |
+| `01_MASTER_FLOW/MODE_1_CURRENT_WEBSITE_SCHEMA_OPTIMIZATION_FLOW_V1_0.md` | Mode 1 current-site optimization flow — documented, not runnable yet |
+| `01_MASTER_FLOW/MODE_2_FUTURE_ASTRO_SCHEMA_CARRY_FLOW_V1_0.md` | Mode 2 future Astro carry flow — documented, not ready |
+| `01_MASTER_FLOW/RISE_SCHEMA_PAGE_RUN_SEQUENCE_V1_0.md` | Per-page run sequence from intake through implementation or Astro handoff |
+| `01_MASTER_FLOW/RISE_SCHEMA_MASTER_STOP_CONDITIONS_V1_0.md` | All master stop conditions with resolution rules |
+
+---
+
 ## Active placeholder directories
 
 | Directory | Status | Purpose |
 |-----------|--------|---------|
-| `01_MASTER_FLOW/` | Placeholder only | Future master operator flow documents |
-| `04_OPERATOR_PROMPTS/` | Pending PR #5 | Operator prompt files |
-| `05_REFERENCE_WORKFLOW/` | Placeholder only | Future reference workflow documents |
-| `06_MACHINE_RULES/` | Pending PR #5 | Machine rule files |
-| `08_SMOKE_TESTS/` | Pending PR #6 | Smoke test files |
+| `04_OPERATOR_PROMPTS/` | Pending PR #7 | Operator prompt files |
+| `05_REFERENCE_WORKFLOW/` | Pending PR #10 | Reference workflow documents |
+| `06_MACHINE_RULES/` | Pending PR #9 | Output bundle contract schemas |
+| `08_SMOKE_TESTS/` | Future PR | Smoke test files |
 | `tools/` | Placeholder only | Future tooling scripts |
 
 ---
@@ -116,7 +128,11 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #2:** ~~Governing doctrine and source-truth boundary~~ ✓ Done
 - **PR #3:** ~~Phase 0 truth source map and homepage scoped truth view~~ ✓ Done
 - **PR #4:** ~~Homepage schema profile and blocked module policy~~ ✓ Done
-- **PR #5:** Operator prompts and machine rules
-- **PR #6:** Validators, smoke tests, and final runnable handoff
+- **PR #5:** ~~Standalone schema master flow~~ ✓ Done
+- **PR #6:** Team quickstart and operator checklist upgrades
+- **PR #7:** Operator prompts 00 through 04 and 08
+- **PR #8:** Final validation, analyzer, and completion prompts
+- **PR #9:** Output bundle contract schemas
+- **PR #10:** Controlled homepage non-production JSON-LD draft contract
 
-Generated schema, output bundle schemas, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #5 through PR #6.
+Generated schema, output bundle schemas, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #7 and later.

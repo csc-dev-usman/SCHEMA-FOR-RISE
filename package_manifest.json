@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "HOMEPAGE_SCHEMA_PROFILE_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -19,6 +19,13 @@
   "schemaProfileAdded": true,
   "homepageSchemaProfile": "HOMEPAGE_SCHEMA_PROFILE",
   "homepageRoute": "/",
+  "standaloneMasterFlowAdded": true,
+  "mode1FlowDocumented": true,
+  "mode2FlowDocumented": true,
+  "pageRunSequenceDocumented": true,
+  "masterStopConditionsDocumented": true,
+  "outputBundleSchemasAdded": false,
+  "smokeTestsAdded": false,
   "evidenceMapAdded": false,
   "operatorPromptsAdded": false,
   "validatorsAdded": false,
@@ -50,6 +57,14 @@
     "02_GOVERNING_DOCTRINE/RISE_SCHEMA_GOVERNING_DOCTRINE_V1_0.md",
     "02_GOVERNING_DOCTRINE/RISE_SCHEMA_OPERATOR_LANE_OWNERSHIP_V1_0.md",
     "02_GOVERNING_DOCTRINE/RISE_SCHEMA_NON_AUTHORIZATION_AND_HOLD_RULES_V1_0.md"
+  ],
+  "activeMasterFlowFiles": [
+    "01_MASTER_FLOW/README_MASTER_FLOW_V1_0.md",
+    "01_MASTER_FLOW/RISE_STANDALONE_SCHEMA_MASTER_FLOW_V1_0.md",
+    "01_MASTER_FLOW/MODE_1_CURRENT_WEBSITE_SCHEMA_OPTIMIZATION_FLOW_V1_0.md",
+    "01_MASTER_FLOW/MODE_2_FUTURE_ASTRO_SCHEMA_CARRY_FLOW_V1_0.md",
+    "01_MASTER_FLOW/RISE_SCHEMA_PAGE_RUN_SEQUENCE_V1_0.md",
+    "01_MASTER_FLOW/RISE_SCHEMA_MASTER_STOP_CONDITIONS_V1_0.md"
   ],
   "activeReferenceListFiles": [
     "07_REFERENCE_LISTS/README_REFERENCE_LISTS_V1_0.md",
@@ -85,5 +100,5 @@
     "WebPage",
     "BreadcrumbList"
   ],
-  "nextRecommendedPr": "PR #5: Add Rise standalone master flow"
+  "nextRecommendedPr": "PR #6: Add team quickstart and operator checklist upgrades"
 }

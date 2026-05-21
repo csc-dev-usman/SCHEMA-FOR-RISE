@@ -10,7 +10,7 @@
 
 ## Current status
 
-`HOMEPAGE_SCHEMA_PROFILE_ADDED_NO_SCHEMA_OUTPUT`
+`MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -22,6 +22,7 @@
 | PR #2 | `docs: add Rise schema source-truth boundary and governing doctrine` | Doctrine/source-truth boundary added. No schema output. |
 | PR #3 | `docs: add Rise Phase 0 truth source map and homepage scoped truth view` | Homepage scoped truth-pack reference added. Fingerprint locked. No schema output. |
 | PR #4 | `docs: add Rise homepage schema profile and blocked module policy` | Homepage schema profile added. Blocked module policy added. Held field categories defined. Allowed modules defined. Decision matrix added. No schema output. |
+| PR #5 | `docs: add Rise standalone schema master flow` | Standalone master flow added. Mode 1 flow documented. Mode 2 flow documented. Page run sequence documented. Master stop conditions documented. No schema output. |
 
 ---
 
@@ -37,6 +38,11 @@
 - Homepage schema profile added: **YES (PR #4) — `HOMEPAGE_SCHEMA_PROFILE`**
 - Blocked module policy added: **YES (PR #4)**
 - Held field categories defined: **YES (PR #4) — 15 categories, all NOT_REVIEWED_HELD**
+- Standalone master flow added: **YES (PR #5)**
+- Mode 1 flow documented: **YES (PR #5) — not runnable yet**
+- Mode 2 flow documented: **YES (PR #5) — not ready**
+- Page run sequence documented: **YES (PR #5)**
+- Master stop conditions documented: **YES (PR #5)**
 - Evidence map added: **NO**
 
 ---
@@ -67,9 +73,11 @@ Truth pack added in PR #3. Homepage scoped truth view and fingerprint are now in
 
 Schema profile added in PR #4. Homepage schema profile (`HOMEPAGE_SCHEMA_PROFILE`), blocked module policy, held field categories, allowed modules list, and decision matrix are now in `07_REFERENCE_LISTS/`. All 15 held field categories default to NOT_REVIEWED_HELD. No schema output has been created.
 
-The package is not runnable for schema production. Evidence maps, operator prompts, validators, and the final runnable handoff are pending in later PRs.
+Standalone master flow added in PR #5. The root master flow, Mode 1 current-website optimization flow, Mode 2 future Astro carry flow, page run sequence, and master stop conditions are now in `01_MASTER_FLOW/`. Mode 1 is documented but not runnable. Mode 2 is documented but not ready. No schema output has been created.
 
-Next doctrine dependency: standalone master flow — PR #5.
+The package is not runnable for schema production. Operator prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff are pending in later PRs.
+
+Next doctrine dependency: team quickstart and operator checklist upgrades — PR #6.
 
 ---
 
@@ -81,3 +89,4 @@ Next doctrine dependency: standalone master flow — PR #5.
 | 1.0.0 | 2026-05-21 | PR #2 | Doctrine/source-truth boundary added. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-21 | PR #3 | Homepage scoped truth-pack reference added. Fingerprint locked. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-21 | PR #4 | Homepage schema profile added. Blocked module policy added. Held field categories defined. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-21 | PR #5 | Standalone master flow added. Mode 1 documented. Mode 2 documented. Page run sequence documented. Master stop conditions documented. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |

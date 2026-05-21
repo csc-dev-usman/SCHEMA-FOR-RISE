@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_SCHEMA_PROFILE_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_MASTER_FLOW_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #4. The checklist items below are provided for reference only and will be enabled when PR #6 merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #5. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -32,7 +32,12 @@
 - [ ] Confirm the schema profile decision matrix has been read (`07_REFERENCE_LISTS/RISE_SCHEMA_PROFILE_DECISION_MATRIX_V1_0.md`)
 - [ ] Confirm the active schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`
 - [ ] Confirm no held fields are being emitted (all 15 held field categories default to NOT_REVIEWED_HELD)
-- [ ] Confirm the operator prompts (PR #5) have been merged
+- [ ] Confirm the standalone master flow (PR #5) has been merged ✓ Done
+- [ ] Confirm the master flow has been read (`01_MASTER_FLOW/RISE_STANDALONE_SCHEMA_MASTER_FLOW_V1_0.md`)
+- [ ] Confirm the page run sequence has been read (`01_MASTER_FLOW/RISE_SCHEMA_PAGE_RUN_SEQUENCE_V1_0.md`)
+- [ ] Confirm the master stop conditions have been read (`01_MASTER_FLOW/RISE_SCHEMA_MASTER_STOP_CONDITIONS_V1_0.md`)
+- [ ] Confirm Mode 1 flow has been read (`01_MASTER_FLOW/MODE_1_CURRENT_WEBSITE_SCHEMA_OPTIMIZATION_FLOW_V1_0.md`)
+- [ ] Confirm the operator prompts (PR #7) have been merged
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -104,7 +109,11 @@ Operators must not:
 | PR #2 | Governing doctrine and source-truth boundary | ✓ Done |
 | PR #3 | Phase 0 truth source map and homepage scoped truth view | ✓ Done |
 | PR #4 | Homepage schema profile and blocked module policy | ✓ Done |
-| PR #5 | Operator prompts and machine rules | Pending |
-| PR #6 | Validators, smoke tests, and final runnable handoff | Pending |
+| PR #5 | Standalone schema master flow | ✓ Done |
+| PR #6 | Team quickstart and operator checklist upgrades | Pending |
+| PR #7 | Operator prompts 00 through 04 and 08 | Pending |
+| PR #8 | Final validation, analyzer, and completion prompts | Pending |
+| PR #9 | Output bundle contract schemas | Pending |
+| PR #10 | Controlled homepage non-production JSON-LD draft contract | Pending |
 
-This checklist will be updated and activated when PR #5 is merged.
+This checklist will be updated and activated when a later PR merges the final runnable handoff.

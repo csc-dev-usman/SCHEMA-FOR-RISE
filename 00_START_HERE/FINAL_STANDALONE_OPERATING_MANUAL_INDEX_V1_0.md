@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `HOMEPAGE_SCHEMA_PROFILE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add truth packs, prompts, contracts, validators, and the final runnable handoff.
 
@@ -80,6 +80,24 @@ Understand:
 
 ---
 
+### Step 2e — Read master flow (PR #5 addition)
+
+Files in this order:
+1. `01_MASTER_FLOW/README_MASTER_FLOW_V1_0.md`
+2. `01_MASTER_FLOW/RISE_STANDALONE_SCHEMA_MASTER_FLOW_V1_0.md`
+3. `01_MASTER_FLOW/MODE_1_CURRENT_WEBSITE_SCHEMA_OPTIMIZATION_FLOW_V1_0.md`
+4. `01_MASTER_FLOW/MODE_2_FUTURE_ASTRO_SCHEMA_CARRY_FLOW_V1_0.md`
+5. `01_MASTER_FLOW/RISE_SCHEMA_PAGE_RUN_SEQUENCE_V1_0.md`
+6. `01_MASTER_FLOW/RISE_SCHEMA_MASTER_STOP_CONDITIONS_V1_0.md`
+
+Understand:
+- The full operating sequence from intake through implementation or Astro handoff
+- Mode 1 and Mode 2 flows — both documented but not yet runnable
+- What upstream artifacts exist and what future artifacts are still required
+- The complete master stop conditions and resolution rules for each condition
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -100,14 +118,18 @@ Understand:
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #4**.
+The schema workflow is **not runnable after PR #5**.
 
 Operators must wait for:
 - PR #2: Governing doctrine ✓ Done
 - PR #3: Phase 0 truth source map and homepage scoped truth view ✓ Done
 - PR #4: Homepage schema profile and blocked module policy ✓ Done
-- PR #5: Operator prompts and machine rules
-- PR #6: Validators, smoke tests, and runnable handoff
+- PR #5: Standalone schema master flow ✓ Done
+- PR #6: Team quickstart and operator checklist upgrades
+- PR #7: Operator prompts 00 through 04 and 08
+- PR #8: Final validation, analyzer, and completion prompts
+- PR #9: Output bundle contract schemas
+- PR #10: Controlled homepage non-production JSON-LD draft contract
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 
@@ -122,7 +144,7 @@ Produce validated schema for pages on the current risefcsoccer.com website.
 - Schema is derived from approved Phase 0 content and confirmed page evidence
 - Output must be validated before any implementation handoff
 
-**Not runnable yet. Waiting for PR #5 prompts and PR #6 runnable handoff.**
+**Not runnable yet. Waiting for PR #7 operator prompts, PR #9 output bundle schemas, PR #10 draft contract, and final runnable handoff.**
 
 ---
 
