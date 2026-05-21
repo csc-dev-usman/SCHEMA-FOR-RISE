@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_TRUTH_PACK_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_SCHEMA_PROFILE_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #3. The checklist items below are provided for reference only and will be enabled when PR #6 merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #4. The checklist items below are provided for reference only and will be enabled when PR #6 merges the final runnable handoff.
 
 ---
 
@@ -24,7 +24,14 @@
 - [ ] Confirm the owner approval worksheet has been read (`03_TRUTH_PACK/RISE_CONTACT_SOCIAL_LOGO_OWNER_APPROVAL_WORKSHEET_V1_0.md`)
 - [ ] Confirm no held fields are being emitted in any schema draft
 - [ ] Confirm the truth-pack backlog has been checked for current page scope (`03_TRUTH_PACK/TRUTH_PACK_BACKLOG.md`)
-- [ ] Confirm the homepage schema profile (PR #4) has been merged
+- [ ] Confirm the homepage schema profile (PR #4) has been merged ✓ Done
+- [ ] Confirm the homepage schema profile has been read (`07_REFERENCE_LISTS/RISE_HOMEPAGE_SCHEMA_PROFILE_V1_0.md`)
+- [ ] Confirm the blocked module policy has been read (`07_REFERENCE_LISTS/RISE_BLOCKED_SCHEMA_MODULES_FIRST_PAGE_V1_0.md`)
+- [ ] Confirm the held field categories have been read (`07_REFERENCE_LISTS/RISE_HELD_FIELD_CATEGORIES_FIRST_PAGE_V1_0.md`)
+- [ ] Confirm the allowed modules list has been read (`07_REFERENCE_LISTS/RISE_FIRST_PAGE_ALLOWED_MODULES_V1_0.md`)
+- [ ] Confirm the schema profile decision matrix has been read (`07_REFERENCE_LISTS/RISE_SCHEMA_PROFILE_DECISION_MATRIX_V1_0.md`)
+- [ ] Confirm the active schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`
+- [ ] Confirm no held fields are being emitted (all 15 held field categories default to NOT_REVIEWED_HELD)
 - [ ] Confirm the operator prompts (PR #5) have been merged
 
 **If any of the above are not true: STOP. Do not proceed.**
@@ -96,7 +103,7 @@ Operators must not:
 |----|-------------|--------|
 | PR #2 | Governing doctrine and source-truth boundary | ✓ Done |
 | PR #3 | Phase 0 truth source map and homepage scoped truth view | ✓ Done |
-| PR #4 | Homepage schema profile and blocked module policy | Pending |
+| PR #4 | Homepage schema profile and blocked module policy | ✓ Done |
 | PR #5 | Operator prompts and machine rules | Pending |
 | PR #6 | Validators, smoke tests, and final runnable handoff | Pending |
 
