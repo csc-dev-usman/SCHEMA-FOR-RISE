@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,12 +50,13 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #5 adds the standalone schema master flow.
+PR #6 upgrades the operator-facing start documents and adds the navigation decision tree, preflight checklist, and mode status guide.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
 - The homepage schema profile, blocked module policy, held field policy, and decision matrix are in `07_REFERENCE_LISTS/`.
-- The standalone master flow, Mode 1 flow, Mode 2 flow, page run sequence, and master stop conditions are now in `01_MASTER_FLOW/`.
+- The standalone master flow, Mode 1 flow, Mode 2 flow, page run sequence, and master stop conditions are in `01_MASTER_FLOW/`.
+- The operator navigation decision tree, preflight checklist, and mode status guide are now in `00_START_HERE/`.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -66,7 +67,7 @@ PR #5 adds the standalone schema master flow.
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add operator prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff.
+Status is `OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add operator prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff.
 
 ---
 
@@ -147,9 +148,9 @@ No content in this package (through PR #2) authorizes any schema to be deployed 
 - **PR #2:** ~~Add Rise schema source-truth boundary and governing doctrine~~ ✓ Merged
 - **PR #3:** ~~Add Phase 0 truth source map and homepage scoped truth view~~ ✓ Merged
 - **PR #4:** ~~Add Rise homepage schema profile and blocked module policy~~ ✓ Merged
-- **PR #5:** Add Rise standalone schema master flow
-  `docs: add Rise standalone schema master flow`
+- **PR #5:** ~~Add Rise standalone schema master flow~~ ✓ Merged
 - **PR #6:** Add team quickstart and operator checklist upgrades
+  `docs: upgrade Rise standalone team quickstart and operator checklist`
 - **PR #7:** Add operator prompts 00 through 04 and 08
 - **PR #8:** Add final validation, analyzer, and completion prompts
 - **PR #9:** Add output bundle contract schemas

@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add truth packs, prompts, contracts, validators, and the final runnable handoff.
 
@@ -98,6 +98,20 @@ Understand:
 
 ---
 
+### Step 2f — Read operator navigation and status documents (PR #6 addition)
+
+Files:
+1. `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md` — which document to read for each task
+2. `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` — all preflight gates required before schema work
+3. `00_START_HERE/RISE_MODE_STATUS_AND_NEXT_STEP_GUIDE_V1_0.md` — current Mode 1 and Mode 2 status
+
+Understand:
+- How to navigate to the right document for any task
+- What all preflight conditions look like — and which are not yet met
+- The current status of Mode 1 and Mode 2 and what is still needed
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -118,14 +132,14 @@ Understand:
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #5**.
+The schema workflow is **not runnable after PR #6**.
 
 Operators must wait for:
 - PR #2: Governing doctrine ✓ Done
 - PR #3: Phase 0 truth source map and homepage scoped truth view ✓ Done
 - PR #4: Homepage schema profile and blocked module policy ✓ Done
 - PR #5: Standalone schema master flow ✓ Done
-- PR #6: Team quickstart and operator checklist upgrades
+- PR #6: Team quickstart and operator checklist upgrades ✓ Done
 - PR #7: Operator prompts 00 through 04 and 08
 - PR #8: Final validation, analyzer, and completion prompts
 - PR #9: Output bundle contract schemas
@@ -144,7 +158,7 @@ Produce validated schema for pages on the current risefcsoccer.com website.
 - Schema is derived from approved Phase 0 content and confirmed page evidence
 - Output must be validated before any implementation handoff
 
-**Not runnable yet. Waiting for PR #7 operator prompts, PR #9 output bundle schemas, PR #10 draft contract, and final runnable handoff.**
+**Not runnable yet. Waiting for PR #7 operator prompts, PR #8 validation prompts, PR #9 output bundle schemas, PR #10 draft contract, and final runnable handoff.**
 
 ---
 

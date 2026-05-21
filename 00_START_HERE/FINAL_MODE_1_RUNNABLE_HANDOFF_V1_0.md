@@ -1,6 +1,6 @@
 # Final Mode 1 Runnable Handoff V1.0
 
-**Status:** `NOT_RUNNABLE_YET_MASTER_FLOW_ADDED`
+**Status:** `NOT_RUNNABLE_YET_QUICKSTART_UPGRADED`
 
 ---
 
@@ -18,7 +18,7 @@ The Mode 1 runnable handoff requires the following dependencies:
 | Homepage schema profile | PR #4 | ✓ Done |
 | Blocked module policy | PR #4 | ✓ Done |
 | Standalone master flow | PR #5 | ✓ Done |
-| Team quickstart and checklist upgrades | PR #6 | Pending |
+| Team quickstart and checklist upgrades | PR #6 | ✓ Done |
 | Operator prompts 00–04, 08 | PR #7 | Pending |
 | Final validation and analyzer prompts | PR #8 | Pending |
 | Output bundle contract schemas | PR #9 | Pending |

@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 adds the standalone schema master flow, Mode 1 and Mode 2 flow documentation, page run sequence, and master stop conditions. No schema output has been created. Evidence maps, operator prompts, validators, and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 adds the operator navigation decision tree, preflight checklist, mode status guide, and upgrades the team quickstart and operator checklist. No schema output has been created. Operator prompts, evidence maps, validators, and the final runnable handoff are still later PRs.
 
 ---
 
@@ -26,6 +26,9 @@
 | `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md` | Plain-language quickstart for team members. |
 | `00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md` | Pre-run checklist. Currently disabled — not runnable yet. |
 | `00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md` | Mode 1 handoff placeholder. Not runnable yet. |
+| `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md` | Navigation aid — which document to read for each task |
+| `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` | Preflight checklist — all gates required before schema production |
+| `00_START_HERE/RISE_MODE_STATUS_AND_NEXT_STEP_GUIDE_V1_0.md` | Current Mode 1 and Mode 2 status and next steps |
 
 ---
 
@@ -129,7 +132,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #3:** ~~Phase 0 truth source map and homepage scoped truth view~~ ✓ Done
 - **PR #4:** ~~Homepage schema profile and blocked module policy~~ ✓ Done
 - **PR #5:** ~~Standalone schema master flow~~ ✓ Done
-- **PR #6:** Team quickstart and operator checklist upgrades
+- **PR #6:** ~~Team quickstart and operator checklist upgrades~~ ✓ Done
 - **PR #7:** Operator prompts 00 through 04 and 08
 - **PR #8:** Final validation, analyzer, and completion prompts
 - **PR #9:** Output bundle contract schemas
