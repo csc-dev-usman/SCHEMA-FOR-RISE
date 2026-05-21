@@ -10,7 +10,7 @@
 
 ## Current status
 
-`TRUTH_PACK_HOMEPAGE_SCOPED_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+`HOMEPAGE_SCHEMA_PROFILE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -21,6 +21,7 @@
 | PR #1 | `docs: initialize Rise standalone schema operator package` | Bootstrap shell only. No schema output. |
 | PR #2 | `docs: add Rise schema source-truth boundary and governing doctrine` | Doctrine/source-truth boundary added. No schema output. |
 | PR #3 | `docs: add Rise Phase 0 truth source map and homepage scoped truth view` | Homepage scoped truth-pack reference added. Fingerprint locked. No schema output. |
+| PR #4 | `docs: add Rise homepage schema profile and blocked module policy` | Homepage schema profile added. Blocked module policy added. Held field categories defined. Allowed modules defined. Decision matrix added. No schema output. |
 
 ---
 
@@ -33,6 +34,10 @@
 - Doctrine boundary added: **YES (PR #2)**
 - Homepage scoped truth-pack reference added: **YES (PR #3)**
 - Homepage truth fingerprint locked: **YES — `80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d`**
+- Homepage schema profile added: **YES (PR #4) — `HOMEPAGE_SCHEMA_PROFILE`**
+- Blocked module policy added: **YES (PR #4)**
+- Held field categories defined: **YES (PR #4) — 15 categories, all NOT_REVIEWED_HELD**
+- Evidence map added: **NO**
 
 ---
 
@@ -60,9 +65,11 @@ The package is not runnable for schema production. Truth pack, operator prompts,
 
 Truth pack added in PR #3. Homepage scoped truth view and fingerprint are now in `03_TRUTH_PACK/`. Contact/social/logo owner approval worksheet is present — all fields default to NOT_REVIEWED.
 
-The package is not runnable for schema production. Schema profile, operator prompts, validators, and the final runnable handoff are pending in later PRs.
+Schema profile added in PR #4. Homepage schema profile (`HOMEPAGE_SCHEMA_PROFILE`), blocked module policy, held field categories, allowed modules list, and decision matrix are now in `07_REFERENCE_LISTS/`. All 15 held field categories default to NOT_REVIEWED_HELD. No schema output has been created.
 
-Next doctrine dependency: homepage schema profile and blocked module policy — PR #4.
+The package is not runnable for schema production. Evidence maps, operator prompts, validators, and the final runnable handoff are pending in later PRs.
+
+Next doctrine dependency: standalone master flow — PR #5.
 
 ---
 
@@ -73,3 +80,4 @@ Next doctrine dependency: homepage schema profile and blocked module policy — 
 | 1.0.0 | 2026-05-21 | PR #1 | Bootstrap initialization. Package shell only. No schema output. |
 | 1.0.0 | 2026-05-21 | PR #2 | Doctrine/source-truth boundary added. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-21 | PR #3 | Homepage scoped truth-pack reference added. Fingerprint locked. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-21 | PR #4 | Homepage schema profile added. Blocked module policy added. Held field categories defined. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |

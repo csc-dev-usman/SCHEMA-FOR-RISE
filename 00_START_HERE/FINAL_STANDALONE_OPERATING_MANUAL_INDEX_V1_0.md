@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `TRUTH_PACK_HOMEPAGE_SCOPED_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `HOMEPAGE_SCHEMA_PROFILE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add truth packs, prompts, contracts, validators, and the final runnable handoff.
 
@@ -61,6 +61,25 @@ Understand:
 - Which fields are held and require owner approval before schema can use them
 - What truth-pack additions are needed for future pages
 
+### Step 2d — Read reference lists (PR #4 addition)
+
+Files in this order:
+1. `07_REFERENCE_LISTS/README_REFERENCE_LISTS_V1_0.md`
+2. `07_REFERENCE_LISTS/RISE_HOMEPAGE_SCHEMA_PROFILE_V1_0.md`
+3. `07_REFERENCE_LISTS/RISE_FIRST_PAGE_ALLOWED_MODULES_V1_0.md`
+4. `07_REFERENCE_LISTS/RISE_BLOCKED_SCHEMA_MODULES_FIRST_PAGE_V1_0.md`
+5. `07_REFERENCE_LISTS/RISE_HELD_FIELD_CATEGORIES_FIRST_PAGE_V1_0.md`
+6. `07_REFERENCE_LISTS/RISE_SCHEMA_PROFILE_DECISION_MATRIX_V1_0.md`
+
+Understand:
+- Active schema profile for the homepage lane (`HOMEPAGE_SCHEMA_PROFILE`, route `/`)
+- Which modules are allowed for future first-page schema (Organization, WebSite, WebPage, BreadcrumbList only)
+- Which modules are blocked and why — including the conditions required to unblock them
+- Which fields are held and require owner approval before any schema emission
+- How the decision matrix drives PROCEED or HOLD outcomes from profile selection through production
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -81,12 +100,12 @@ Understand:
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #3**.
+The schema workflow is **not runnable after PR #4**.
 
 Operators must wait for:
 - PR #2: Governing doctrine ✓ Done
 - PR #3: Phase 0 truth source map and homepage scoped truth view ✓ Done
-- PR #4: Homepage schema profile and blocked module policy
+- PR #4: Homepage schema profile and blocked module policy ✓ Done
 - PR #5: Operator prompts and machine rules
 - PR #6: Validators, smoke tests, and runnable handoff
 
@@ -103,7 +122,7 @@ Produce validated schema for pages on the current risefcsoccer.com website.
 - Schema is derived from approved Phase 0 content and confirmed page evidence
 - Output must be validated before any implementation handoff
 
-**Not runnable yet. Waiting for PR #4 schema profile, PR #5 prompts, and PR #6 runnable handoff.**
+**Not runnable yet. Waiting for PR #5 prompts and PR #6 runnable handoff.**
 
 ---
 
