@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_DOCTRINE_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_TRUTH_PACK_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #2. The checklist items below are provided for reference only and will be enabled when PR #5 merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #3. The checklist items below are provided for reference only and will be enabled when PR #6 merges the final runnable handoff.
 
 ---
 
@@ -11,14 +11,21 @@
 - [ ] Confirm you have read `README_COMPLETE_OPERATOR_PACKAGE.md`
 - [ ] Confirm you have read `00_START_HERE/FINAL_STANDALONE_OPERATING_MANUAL_INDEX_V1_0.md`
 - [ ] Confirm you have read `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
-- [ ] Confirm PR #5 (runnable handoff) has been merged
+- [ ] Confirm PR #6 (runnable handoff) has been merged
 - [ ] Confirm the governing doctrine (PR #2) has been merged ✓ Done
 - [ ] Confirm the source-truth boundary has been read (`02_GOVERNING_DOCTRINE/RISE_SCHEMA_SOURCE_TRUTH_BOUNDARY_V1_0.md`)
 - [ ] Confirm the governing doctrine has been read (`02_GOVERNING_DOCTRINE/RISE_SCHEMA_GOVERNING_DOCTRINE_V1_0.md`)
 - [ ] Confirm the lane ownership rules have been read (`02_GOVERNING_DOCTRINE/RISE_SCHEMA_OPERATOR_LANE_OWNERSHIP_V1_0.md`)
 - [ ] Confirm the hold rules have been read (`02_GOVERNING_DOCTRINE/RISE_SCHEMA_NON_AUTHORIZATION_AND_HOLD_RULES_V1_0.md`)
-- [ ] Confirm the Phase 0 truth source map (PR #3) has been merged
-- [ ] Confirm the operator prompts (PR #4) have been merged
+- [ ] Confirm the Phase 0 truth source map (PR #3) has been merged ✓ Done
+- [ ] Confirm the Phase 0 truth source map has been read (`03_TRUTH_PACK/RISE_PHASE0_TRUTH_SOURCE_MAP_V1_0.md`)
+- [ ] Confirm the homepage scoped truth view has been read (`03_TRUTH_PACK/RISE_PHASE0_SCHEMA_TRUTH_VIEW_HOMEPAGE_SCOPED_V1_0.json`)
+- [ ] Confirm the homepage truth fingerprint lock has been read (`03_TRUTH_PACK/RISE_HOMEPAGE_TRUTH_FINGERPRINT_LOCK_V1_0.md`)
+- [ ] Confirm the owner approval worksheet has been read (`03_TRUTH_PACK/RISE_CONTACT_SOCIAL_LOGO_OWNER_APPROVAL_WORKSHEET_V1_0.md`)
+- [ ] Confirm no held fields are being emitted in any schema draft
+- [ ] Confirm the truth-pack backlog has been checked for current page scope (`03_TRUTH_PACK/TRUTH_PACK_BACKLOG.md`)
+- [ ] Confirm the homepage schema profile (PR #4) has been merged
+- [ ] Confirm the operator prompts (PR #5) have been merged
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -88,8 +95,9 @@ Operators must not:
 | PR | What it adds | Status |
 |----|-------------|--------|
 | PR #2 | Governing doctrine and source-truth boundary | ✓ Done |
-| PR #3 | Phase 0 truth source map and homepage scoped truth view | Pending |
-| PR #4 | Operator prompts and machine rules | Pending |
-| PR #5 | Validators, smoke tests, and final runnable handoff | Pending |
+| PR #3 | Phase 0 truth source map and homepage scoped truth view | ✓ Done |
+| PR #4 | Homepage schema profile and blocked module policy | Pending |
+| PR #5 | Operator prompts and machine rules | Pending |
+| PR #6 | Validators, smoke tests, and final runnable handoff | Pending |
 
 This checklist will be updated and activated when PR #5 is merged.

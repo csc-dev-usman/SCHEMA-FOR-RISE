@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "TRUTH_PACK_HOMEPAGE_SCOPED_REFERENCE_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -10,7 +10,12 @@
   "phase0MutationAllowed": false,
   "sourceTruthMutationAllowed": false,
   "doctrineBoundaryAdded": true,
-  "truthPackAdded": false,
+  "truthPackAdded": true,
+  "homepageScopedTruthViewAdded": true,
+  "homepageTruthFingerprintLocked": true,
+  "homepageTruthFingerprint": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d",
+  "evidenceMapAdded": false,
+  "schemaProfileAdded": false,
   "operatorPromptsAdded": false,
   "validatorsAdded": false,
   "mode1Runnable": false,
@@ -42,6 +47,14 @@
     "02_GOVERNING_DOCTRINE/RISE_SCHEMA_OPERATOR_LANE_OWNERSHIP_V1_0.md",
     "02_GOVERNING_DOCTRINE/RISE_SCHEMA_NON_AUTHORIZATION_AND_HOLD_RULES_V1_0.md"
   ],
+  "activeTruthPackFiles": [
+    "03_TRUTH_PACK/README_TRUTH_PACK_V1_0.md",
+    "03_TRUTH_PACK/RISE_PHASE0_TRUTH_SOURCE_MAP_V1_0.md",
+    "03_TRUTH_PACK/RISE_PHASE0_SCHEMA_TRUTH_VIEW_HOMEPAGE_SCOPED_V1_0.json",
+    "03_TRUTH_PACK/RISE_HOMEPAGE_TRUTH_FINGERPRINT_LOCK_V1_0.md",
+    "03_TRUTH_PACK/RISE_CONTACT_SOCIAL_LOGO_OWNER_APPROVAL_WORKSHEET_V1_0.md",
+    "03_TRUTH_PACK/TRUTH_PACK_BACKLOG.md"
+  ],
   "blockedFirstPageSchemaModules": [
     "FAQPage",
     "Offer",
@@ -60,5 +73,5 @@
     "WebPage",
     "BreadcrumbList"
   ],
-  "nextRecommendedPr": "PR #3: Add Phase 0 truth source map and homepage scoped truth view"
+  "nextRecommendedPr": "PR #4: Add Rise homepage schema profile and blocked module policy"
 }

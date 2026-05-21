@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `TRUTH_PACK_HOMEPAGE_SCOPED_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,9 +50,11 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #2 adds the source-truth boundary and governing doctrine. The package shell from PR #1 is unchanged.
+PR #3 adds the read-only homepage scoped truth-pack reference layer.
 
-- The governing doctrine is now in `02_GOVERNING_DOCTRINE/`.
+- The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
+- The homepage scoped truth-pack is now in `03_TRUTH_PACK/`.
+- The homepage truth fingerprint is locked: `80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d`
 - No JSON-LD has been created.
 - No schema output has been created.
 - No production schema bundles have been created.
@@ -62,7 +64,7 @@ PR #2 adds the source-truth boundary and governing doctrine. The package shell f
 - Mode 1 is not runnable yet.
 - Mode 2 is not ready.
 
-Status is `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #3 adds the Phase 0 truth source map and homepage scoped truth view, and later PRs add prompts, validators, and the final runnable handoff.
+Status is `TRUTH_PACK_HOMEPAGE_SCOPED_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #4 adds the homepage schema profile and blocked module policy, and later PRs add prompts, validators, and the final runnable handoff.
 
 ---
 
@@ -141,7 +143,8 @@ No content in this package (through PR #2) authorizes any schema to be deployed 
 ## Next PRs
 
 - **PR #2:** ~~Add Rise schema source-truth boundary and governing doctrine~~ ✓ Merged
-- **PR #3:** Add Phase 0 truth source map and homepage scoped truth view
-  `docs: add Rise Phase 0 truth source map and homepage scoped truth view`
-- **PR #4:** Add operator prompts and machine rules
-- **PR #5:** Add validators, smoke tests, and final runnable handoff
+- **PR #3:** ~~Add Phase 0 truth source map and homepage scoped truth view~~ ✓ Merged
+- **PR #4:** Add Rise homepage schema profile and blocked module policy
+  `docs: add Rise homepage schema profile and blocked module policy`
+- **PR #5:** Add operator prompts and machine rules
+- **PR #6:** Add validators, smoke tests, and final runnable handoff

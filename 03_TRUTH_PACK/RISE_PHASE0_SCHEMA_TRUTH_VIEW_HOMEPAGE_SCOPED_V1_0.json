@@ -1,0 +1,81 @@
+{
+  "artifactName": "RISE_PHASE0_SCHEMA_TRUTH_VIEW_HOMEPAGE_SCOPED_V1_0",
+  "artifactType": "PHASE0_SCHEMA_TRUTH_VIEW_SCOPED_REFERENCE",
+  "status": "HOMEPAGE_SCOPED_TRUTH_VIEW_IMPORTED_READ_ONLY_NO_SCHEMA_OUTPUT",
+  "isJsonLd": false,
+  "isSchemaOutput": false,
+  "isProductionBundle": false,
+  "sourceTruthMutationAllowed": false,
+  "phase0MutationAllowed": false,
+  "pageScope": {
+    "targetPage": "homepage",
+    "route": "/",
+    "schemaProfile": "HOMEPAGE_SCHEMA_PROFILE",
+    "mode": "MODE_1_CURRENT_WEBSITE_STANDALONE_SCHEMA_OPTIMIZATION_AND_MODE_2_FUTURE_ASTRO_CARRY_REFERENCE"
+  },
+  "truthFingerprint": {
+    "algorithm": "sha256",
+    "value": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d",
+    "status": "LOCKED_FROM_GOVERNED_RISE_SCHEMA_LANE_REFERENCE"
+  },
+  "allowedFirstPageSchemaModulesFutureOnly": [
+    "Organization",
+    "WebSite",
+    "WebPage",
+    "BreadcrumbList"
+  ],
+  "blockedFirstPageSchemaModules": [
+    "FAQPage",
+    "Offer",
+    "Event",
+    "Review",
+    "AggregateRating",
+    "Place",
+    "GeoCoordinates",
+    "testimonial_derived_schema",
+    "bilingual_schema",
+    "advanced_modules"
+  ],
+  "heldFieldCategories": [
+    "phone",
+    "email",
+    "sameAs_social_urls",
+    "absolute_logo_url",
+    "schema_description_from_tagline_or_mission_line",
+    "coordinates",
+    "reviews",
+    "ratings",
+    "prices",
+    "event_dates",
+    "offer_details",
+    "testimonial_derived_claims",
+    "bilingual_alternate_data"
+  ],
+  "currentAuthorization": {
+    "jsonLdDraftAuthorized": false,
+    "productionSchemaAuthorized": false,
+    "currentWebsiteImplementationAuthorized": false,
+    "astroAttachmentAuthorized": false,
+    "evidenceMapAuthorizedInThisPr": false,
+    "operatorPromptAuthorizedInThisPr": false,
+    "validatorAuthorizedInThisPr": false
+  },
+  "holdRules": [
+    "HOLD_IF_PHASE0_SOURCE_REFERENCE_MISSING",
+    "HOLD_IF_TRUTH_FINGERPRINT_MISMATCH",
+    "HOLD_IF_TRUTH_VIEW_STALE",
+    "HOLD_IF_PAGE_EVIDENCE_MAP_MISSING",
+    "HOLD_IF_SCHEMA_PROFILE_MISSING",
+    "HOLD_IF_BLOCKED_MODULE_REQUESTED",
+    "HOLD_IF_HELD_FIELD_REQUESTED_WITHOUT_OWNER_APPROVAL",
+    "HOLD_IF_PHASE0_AND_PAGE_EVIDENCE_CONFLICT",
+    "HOLD_IF_ASTRO_ATTACHMENT_REQUESTED_BEFORE_CARRY_GATES"
+  ],
+  "notes": [
+    "This artifact is not JSON-LD.",
+    "This artifact is not a schema output bundle.",
+    "This artifact does not authorize production deployment.",
+    "This artifact does not mutate Rise Phase 0.",
+    "This artifact is read-only source material for later governed schema operations."
+  ]
+}

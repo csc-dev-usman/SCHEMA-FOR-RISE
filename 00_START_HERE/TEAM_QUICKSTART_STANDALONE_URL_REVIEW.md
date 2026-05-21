@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `TRUTH_PACK_HOMEPAGE_SCOPED_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -23,22 +23,24 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ---
 
-## What you can do right now (after PR #2)
+## What you can do right now (after PR #3)
 
 - Read the package README and start files.
 - Read the governing doctrine in `02_GOVERNING_DOCTRINE/`.
-- Understand the source-truth boundary and hierarchy.
-- Understand the lane ownership rules and cross-lane prohibitions.
-- Review the blocked module and blocked field category lists in the hold rules document.
+- Read the homepage scoped truth-pack reference in `03_TRUTH_PACK/`.
+- Understand what is confirmed, what is held, and what is blocked for the homepage schema lane.
+- Review the owner approval worksheet to understand which fields need human owner decisions.
+- Review the truth-pack backlog to understand what source material is needed for other pages.
+- Understand the source-truth boundary, hierarchy, and lane ownership rules.
 - Understand the two operating modes (current website vs. Astro).
 
 ---
 
 ## What you cannot do right now
 
-> **The source-truth boundary and doctrine now exist. The package is still not runnable for schema production. Operators must wait for truth pack, prompts, contracts, validators, and the final runnable handoff before generating or implementing any schema.**
+> **The source-truth boundary, doctrine, and homepage scoped truth-pack reference now exist. The package is still not runnable for schema production. Operators must wait for the homepage schema profile, blocked module policy, prompts, contracts, validators, and the final runnable handoff before generating or implementing any schema.**
 
-Specifically, after PR #2 you must not:
+Specifically, after PR #3 you must not:
 
 - Generate any JSON-LD
 - Create any schema output
@@ -47,21 +49,23 @@ Specifically, after PR #2 you must not:
 - Attach schema to Astro
 - Run any schema operator workflow
 - Commit real run artifacts
-- Create truth pack files, evidence maps, or schema profiles outside the governed workflow
+- Create evidence maps or schema profiles outside the governed workflow
+- Treat the homepage scoped truth view JSON as schema output or JSON-LD — it is read-only reference material only
 
 ---
 
 ## When can you run the schema workflow?
 
-After PR #5 merges the final runnable handoff, Mode 1 will be fully operational.
+After PR #6 merges the final runnable handoff, Mode 1 will be fully operational.
 
 The sequence:
 - PR #2 adds governing doctrine ✓ Done
-- PR #3 adds Phase 0 truth source map and homepage scoped truth view
-- PR #4 adds operator prompts and machine rules
-- PR #5 adds validators, smoke tests, and the runnable handoff
+- PR #3 adds Phase 0 truth source map and homepage scoped truth view ✓ Done
+- PR #4 adds homepage schema profile and blocked module policy
+- PR #5 adds operator prompts and machine rules
+- PR #6 adds validators, smoke tests, and the runnable handoff
 
-Until PR #5 is merged, this package is documentation, structure, and doctrine only.
+Until PR #6 is merged, this package is documentation, structure, doctrine, and truth-pack reference only.
 
 ---
 
