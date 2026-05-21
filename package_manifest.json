@@ -1,0 +1,50 @@
+{
+  "packageName": "Rise FC Complete Schema Operator Package",
+  "packageVersion": "1.0.0",
+  "status": "BOOTSTRAP_INITIALIZED_NO_SCHEMA_OUTPUT",
+  "createdByPr": null,
+  "schemaOutputCreated": false,
+  "jsonLdCreated": false,
+  "productionSchemaBundleCreated": false,
+  "astroAttachmentCreated": false,
+  "phase0MutationAllowed": false,
+  "sourceTruthMutationAllowed": false,
+  "modes": [
+    "MODE_1_CURRENT_WEBSITE_STANDALONE_SCHEMA_OPTIMIZATION",
+    "MODE_2_FUTURE_ASTRO_SCHEMA_CARRY_AND_ATTACHMENT"
+  ],
+  "sourceTruthHierarchy": [
+    "Rise Phase 0 factual truth",
+    "Rise generated Phase 0 schema truth view / scoped derivations",
+    "Rise evidence maps and schema profile decisions",
+    "Rise schema operator package",
+    "Validated schema output bundles",
+    "Current website or Astro implementation handoff"
+  ],
+  "activeStartFiles": [
+    "README_COMPLETE_OPERATOR_PACKAGE.md",
+    "00_START_HERE/CURRENT_ACTIVE_FILES.md",
+    "00_START_HERE/FINAL_STANDALONE_OPERATING_MANUAL_INDEX_V1_0.md",
+    "00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md",
+    "00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md",
+    "00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md"
+  ],
+  "blockedFirstPageSchemaModules": [
+    "FAQPage",
+    "Offer",
+    "Event",
+    "Review",
+    "AggregateRating",
+    "Place",
+    "GeoCoordinates",
+    "testimonial_derived_schema",
+    "bilingual_schema",
+    "advanced_modules"
+  ],
+  "allowedFirstPageSchemaModulesFutureOnly": [
+    "Organization",
+    "WebSite",
+    "WebPage",
+    "BreadcrumbList"
+  ]
+}
