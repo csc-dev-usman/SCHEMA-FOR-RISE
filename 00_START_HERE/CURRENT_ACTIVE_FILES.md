@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `BOOTSTRAP_INITIALIZED_NO_SCHEMA_OUTPUT`
+**Status:** `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`
 
-> This first PR intentionally does not include prompts, validators, output bundle schemas, smoke tests, or generated schema. Those are later PRs.
+> PR #1 created the package shell. PR #2 adds the governing doctrine and source-truth boundary. Prompts, validators, output bundle schemas, smoke tests, and generated schema are still later PRs.
 
 ---
 
@@ -29,21 +29,30 @@
 
 ---
 
+## Active governing doctrine files (PR #2)
+
+| File | Purpose |
+|------|---------|
+| `02_GOVERNING_DOCTRINE/README_GOVERNING_DOCTRINE_V1_0.md` | Doctrine folder index and reading order |
+| `02_GOVERNING_DOCTRINE/RISE_SCHEMA_SOURCE_TRUTH_BOUNDARY_V1_0.md` | Source-truth hierarchy and stop conditions |
+| `02_GOVERNING_DOCTRINE/RISE_SCHEMA_GOVERNING_DOCTRINE_V1_0.md` | Main operating doctrine |
+| `02_GOVERNING_DOCTRINE/RISE_SCHEMA_OPERATOR_LANE_OWNERSHIP_V1_0.md` | Lane ownership and cross-lane prohibitions |
+| `02_GOVERNING_DOCTRINE/RISE_SCHEMA_NON_AUTHORIZATION_AND_HOLD_RULES_V1_0.md` | Hold rules and blocked fields/modules |
+
+---
+
 ## Active placeholder directories
 
 | Directory | Status | Purpose |
 |-----------|--------|---------|
 | `01_MASTER_FLOW/` | Placeholder only | Future master operator flow documents |
-| `02_GOVERNING_DOCTRINE/` | Placeholder only | Future governing doctrine files (PR #2) |
-| `03_TRUTH_PACK/` | Placeholder only | Future Phase 0 truth-pack reference files |
-| `04_OPERATOR_PROMPTS/` | Placeholder only | Future operator prompt files |
+| `03_TRUTH_PACK/` | Pending PR #3 | Phase 0 truth source map and homepage scoped truth view |
+| `04_OPERATOR_PROMPTS/` | Pending PR #4 | Operator prompt files |
 | `05_REFERENCE_WORKFLOW/` | Placeholder only | Future reference workflow documents |
-| `06_MACHINE_RULES/` | Placeholder only | Future machine rule files |
+| `06_MACHINE_RULES/` | Pending PR #4 | Machine rule files |
 | `07_REFERENCE_LISTS/` | Placeholder only | Future reference lists |
-| `08_SMOKE_TESTS/` | Placeholder only | Future smoke test files |
+| `08_SMOKE_TESTS/` | Pending PR #5 | Smoke test files |
 | `tools/` | Placeholder only | Future tooling scripts |
-
-All placeholder directories contain only a `.gitkeep` file. No content files exist yet.
 
 ---
 
@@ -80,7 +89,9 @@ The following file types and artifacts are **not permitted** in this repository 
 
 ## What later PRs will add
 
-- **PR #2:** Governing doctrine and source-truth boundary
-- **PR #3:** Phase 0 truth-pack reference and schema truth view boundary
+- **PR #2:** ~~Governing doctrine and source-truth boundary~~ ✓ Done
+- **PR #3:** Phase 0 truth source map and homepage scoped truth view
 - **PR #4:** Operator prompts and machine rules
 - **PR #5:** Validators, smoke tests, and final runnable handoff
+
+Generated schema, output bundle schemas, real run artifacts, and smoke tests are still not allowed. They require PR #3 through PR #5.

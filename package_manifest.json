@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "BOOTSTRAP_INITIALIZED_NO_SCHEMA_OUTPUT",
+  "status": "DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -9,6 +9,12 @@
   "astroAttachmentCreated": false,
   "phase0MutationAllowed": false,
   "sourceTruthMutationAllowed": false,
+  "doctrineBoundaryAdded": true,
+  "truthPackAdded": false,
+  "operatorPromptsAdded": false,
+  "validatorsAdded": false,
+  "mode1Runnable": false,
+  "mode2AstroReady": false,
   "modes": [
     "MODE_1_CURRENT_WEBSITE_STANDALONE_SCHEMA_OPTIMIZATION",
     "MODE_2_FUTURE_ASTRO_SCHEMA_CARRY_AND_ATTACHMENT"
@@ -29,6 +35,13 @@
     "00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md",
     "00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md"
   ],
+  "activeDoctrineFiles": [
+    "02_GOVERNING_DOCTRINE/README_GOVERNING_DOCTRINE_V1_0.md",
+    "02_GOVERNING_DOCTRINE/RISE_SCHEMA_SOURCE_TRUTH_BOUNDARY_V1_0.md",
+    "02_GOVERNING_DOCTRINE/RISE_SCHEMA_GOVERNING_DOCTRINE_V1_0.md",
+    "02_GOVERNING_DOCTRINE/RISE_SCHEMA_OPERATOR_LANE_OWNERSHIP_V1_0.md",
+    "02_GOVERNING_DOCTRINE/RISE_SCHEMA_NON_AUTHORIZATION_AND_HOLD_RULES_V1_0.md"
+  ],
   "blockedFirstPageSchemaModules": [
     "FAQPage",
     "Offer",
@@ -46,5 +59,6 @@
     "WebSite",
     "WebPage",
     "BreadcrumbList"
-  ]
+  ],
+  "nextRecommendedPr": "PR #3: Add Phase 0 truth source map and homepage scoped truth view"
 }

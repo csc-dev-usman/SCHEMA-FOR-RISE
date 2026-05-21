@@ -19,6 +19,7 @@
 | PR | Title | Status |
 |----|-------|--------|
 | PR #1 | `docs: initialize Rise standalone schema operator package` | Bootstrap shell only. No schema output. |
+| PR #2 | `docs: add Rise schema source-truth boundary and governing doctrine` | Doctrine/source-truth boundary added. No schema output. |
 
 ---
 
@@ -28,6 +29,7 @@
 - JSON-LD created: **NO**
 - Production schema bundle created: **NO**
 - Production approval: **NOT GRANTED**
+- Doctrine boundary added: **YES (PR #2)**
 
 ---
 
@@ -49,9 +51,11 @@
 
 ## Doctrine lock
 
-No governing doctrine has been added yet. Doctrine is added in PR #2.
+Governing doctrine added in PR #2. The source-truth boundary, governing doctrine, lane ownership, and non-authorization/hold rules are now in `02_GOVERNING_DOCTRINE/`.
 
-Until PR #2 is merged, operators must not run schema workflows. The package is a shell only.
+The package is not runnable for schema production. Truth pack, operator prompts, validators, and the final runnable handoff are pending in later PRs.
+
+Next doctrine dependency: Phase 0 truth source map and homepage scoped truth view — PR #3.
 
 ---
 
@@ -60,3 +64,4 @@ Until PR #2 is merged, operators must not run schema workflows. The package is a
 | Version | Date | PR | Notes |
 |---------|------|----|-------|
 | 1.0.0 | 2026-05-21 | PR #1 | Bootstrap initialization. Package shell only. No schema output. |
+| 1.0.0 | 2026-05-21 | PR #2 | Doctrine/source-truth boundary added. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |

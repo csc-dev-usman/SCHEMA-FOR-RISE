@@ -1,8 +1,8 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `BOOTSTRAP_INITIALIZED_NO_SCHEMA_OUTPUT`
+**Status:** `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`
 
-> This manual index defines the future operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add prompts, contracts, validators, and the final runnable handoff.
+> This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add truth packs, prompts, contracts, validators, and the final runnable handoff.
 
 ---
 
@@ -29,6 +29,21 @@ Understand:
 - What is blocked
 - What later PRs will add
 
+### Step 2b — Read governing doctrine (PR #2 addition)
+
+Files in this order:
+1. `02_GOVERNING_DOCTRINE/README_GOVERNING_DOCTRINE_V1_0.md`
+2. `02_GOVERNING_DOCTRINE/RISE_SCHEMA_SOURCE_TRUTH_BOUNDARY_V1_0.md`
+3. `02_GOVERNING_DOCTRINE/RISE_SCHEMA_GOVERNING_DOCTRINE_V1_0.md`
+4. `02_GOVERNING_DOCTRINE/RISE_SCHEMA_OPERATOR_LANE_OWNERSHIP_V1_0.md`
+5. `02_GOVERNING_DOCTRINE/RISE_SCHEMA_NON_AUTHORIZATION_AND_HOLD_RULES_V1_0.md`
+
+Understand:
+- Source-truth hierarchy and hard boundaries
+- Evidence-first and no-invention rules
+- Lane ownership and cross-lane prohibitions
+- Hold conditions and blocked field/module categories
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -49,11 +64,11 @@ Understand:
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #1**.
+The schema workflow is **not runnable after PR #2**.
 
 Operators must wait for:
-- PR #2: Governing doctrine
-- PR #3: Truth-pack reference
+- PR #2: Governing doctrine ✓ Done
+- PR #3: Phase 0 truth source map and homepage scoped truth view
 - PR #4: Operator prompts and machine rules
 - PR #5: Validators, smoke tests, and runnable handoff
 

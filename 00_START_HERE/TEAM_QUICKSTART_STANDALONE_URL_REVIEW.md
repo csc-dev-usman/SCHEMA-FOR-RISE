@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `BOOTSTRAP_INITIALIZED_NO_SCHEMA_OUTPUT`
+**Status:** `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -23,20 +23,22 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ---
 
-## What you can do right now (after PR #1)
+## What you can do right now (after PR #2)
 
 - Read the package README and start files.
-- Understand the operating structure and source truth hierarchy.
-- Review the blocked module list.
+- Read the governing doctrine in `02_GOVERNING_DOCTRINE/`.
+- Understand the source-truth boundary and hierarchy.
+- Understand the lane ownership rules and cross-lane prohibitions.
+- Review the blocked module and blocked field category lists in the hold rules document.
 - Understand the two operating modes (current website vs. Astro).
 
 ---
 
 ## What you cannot do right now
 
-> **The package is initialized but not yet runnable for schema production. Operators must not generate or implement schema until later PRs add prompts, contracts, validators, and the final runnable handoff.**
+> **The source-truth boundary and doctrine now exist. The package is still not runnable for schema production. Operators must wait for truth pack, prompts, contracts, validators, and the final runnable handoff before generating or implementing any schema.**
 
-Specifically, after PR #1 you must not:
+Specifically, after PR #2 you must not:
 
 - Generate any JSON-LD
 - Create any schema output
@@ -45,6 +47,7 @@ Specifically, after PR #1 you must not:
 - Attach schema to Astro
 - Run any schema operator workflow
 - Commit real run artifacts
+- Create truth pack files, evidence maps, or schema profiles outside the governed workflow
 
 ---
 
@@ -53,12 +56,12 @@ Specifically, after PR #1 you must not:
 After PR #5 merges the final runnable handoff, Mode 1 will be fully operational.
 
 The sequence:
-- PR #2 adds governing doctrine
-- PR #3 adds truth-pack reference
+- PR #2 adds governing doctrine ✓ Done
+- PR #3 adds Phase 0 truth source map and homepage scoped truth view
 - PR #4 adds operator prompts and machine rules
 - PR #5 adds validators, smoke tests, and the runnable handoff
 
-Until then, this package is documentation and structure only.
+Until PR #5 is merged, this package is documentation, structure, and doctrine only.
 
 ---
 

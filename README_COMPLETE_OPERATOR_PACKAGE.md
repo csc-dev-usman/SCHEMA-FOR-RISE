@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `BOOTSTRAP_INITIALIZED_NO_SCHEMA_OUTPUT`
+**Status:** `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,16 +50,19 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-This PR initializes the package shell only.
+PR #2 adds the source-truth boundary and governing doctrine. The package shell from PR #1 is unchanged.
 
-- No schema output has been created.
+- The governing doctrine is now in `02_GOVERNING_DOCTRINE/`.
 - No JSON-LD has been created.
+- No schema output has been created.
 - No production schema bundles have been created.
 - No schema has been attached to any page.
 - No Astro files have been modified.
 - No Phase 0 or source truth files have been mutated.
+- Mode 1 is not runnable yet.
+- Mode 2 is not ready.
 
-Status remains `BOOTSTRAP_INITIALIZED_NO_SCHEMA_OUTPUT` until later PRs add prompts, validators, truth-pack content, and the final runnable handoff.
+Status is `DOCTRINE_BOUNDARY_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #3 adds the Phase 0 truth source map and homepage scoped truth view, and later PRs add prompts, validators, and the final runnable handoff.
 
 ---
 
@@ -118,9 +121,9 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 ## Current non-authorization statement
 
-This PR creates no JSON-LD and no schema output.
+No JSON-LD has been created. No schema output has been created.
 
-No content in this PR authorizes any schema to be deployed to the current website or to any Astro implementation. No content in this PR approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #2) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #2 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -137,8 +140,8 @@ No content in this PR authorizes any schema to be deployed to the current websit
 
 ## Next PRs
 
-- **PR #2:** Add Rise schema source-truth boundary and governing doctrine
-  `docs: add Rise schema source-truth boundary and governing doctrine`
-- **PR #3:** Add Phase 0 truth-pack reference and schema truth view boundary
+- **PR #2:** ~~Add Rise schema source-truth boundary and governing doctrine~~ ✓ Merged
+- **PR #3:** Add Phase 0 truth source map and homepage scoped truth view
+  `docs: add Rise Phase 0 truth source map and homepage scoped truth view`
 - **PR #4:** Add operator prompts and machine rules
 - **PR #5:** Add validators, smoke tests, and final runnable handoff
