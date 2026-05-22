@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `RUN_LEDGER_TOOLS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #15 adds the run ledger append helper (`tools/append_run_ledger_entry.py`) and the read-only ledger status reporter (`tools/report_run_ledger_status.py`). These are tooling only — no real run entries have been appended, no schema has been generated, and `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #16 adds the package validator (`tools/validate_package.py`), the package expected active files contract (`06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`), and the package validation checklist (`06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md`). These are tooling and documentation only — no schema has been generated, and `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -64,7 +64,8 @@ PR #15 adds the run ledger append helper (`tools/append_run_ledger_entry.py`) an
 - The Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference are in `06_MACHINE_RULES/` and `05_REFERENCE_WORKFLOW/`.
 - The final schema validation protocol, Schema.org Validator runbook, Google Rich Results Test runbook, Screaming Frog checklist, and validation evidence handoff requirements are in `05_REFERENCE_WORKFLOW/`.
 - The governed run ledger schema and run ledger review guide are in `06_MACHINE_RULES/` and `05_REFERENCE_WORKFLOW/`. `RUN_LEDGER.json` has been upgraded with `schemaVersion`, `ledgerStatus`, and `productionLockStatus`.
-- The run ledger append helper (`tools/append_run_ledger_entry.py`) and read-only ledger status reporter (`tools/report_run_ledger_status.py`) are now in `tools/`. See `tools/README_RUN_LEDGER_TOOLS_V1_0.md` for usage.
+- The run ledger append helper (`tools/append_run_ledger_entry.py`) and read-only ledger status reporter (`tools/report_run_ledger_status.py`) are in `tools/`. See `tools/README_RUN_LEDGER_TOOLS_V1_0.md` for usage.
+- The package validator (`tools/validate_package.py`), expected active files contract (`06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`), and validation checklist (`06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md`) are now in the package. Run `python tools/validate_package.py .` at any time to check structural integrity.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -75,7 +76,7 @@ PR #15 adds the run ledger append helper (`tools/append_run_ledger_entry.py`) an
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `RUN_LEDGER_TOOLS_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
+Status is `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
 
 ---
 
@@ -136,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #15) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #15 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #16) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #16 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 

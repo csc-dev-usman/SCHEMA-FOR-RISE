@@ -10,7 +10,7 @@
 
 ## Current status
 
-`RUN_LEDGER_TOOLS_ADDED_NO_SCHEMA_OUTPUT`
+`PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -33,6 +33,7 @@
 | PR #13 | `docs: add Rise final schema validation protocol` | Final schema validation protocol and five runbook/requirements documents added to `05_REFERENCE_WORKFLOW/`. Documentation contracts only — no validators run, no schema generated, no evidence collected. finalValidationProtocolAdded=true; schemaValidatorRunbookAdded=true; googleRichResultsRunbookAdded=true; screamingFrogChecklistAdded=true; validationEvidenceHandoffRequirementsAdded=true. |
 | PR #14 | `schema: add governed Rise run ledger schema` | Run ledger schema added to `06_MACHINE_RULES/`. Run ledger review guide added to `05_REFERENCE_WORKFLOW/`. `RUN_LEDGER.json` upgraded with schemaVersion, ledgerStatus, productionLockStatus. Contract definition only — no run entries, no schema generated. runLedgerSchemaAdded=true; runLedgerGuideAdded=true; runLedgerUpgraded=true. |
 | PR #15 | `tools: add Rise run ledger append helper and reporter` | Run ledger append helper (`tools/append_run_ledger_entry.py`) and read-only ledger status reporter (`tools/report_run_ledger_status.py`) added. Tool README added (`tools/README_RUN_LEDGER_TOOLS_V1_0.md`). Tooling only — no real run entries appended, no schema generated. runLedgerAppendHelperAdded=true; runLedgerReporterAdded=true; runLedgerToolsAdded=true. |
+| PR #16 | `tools: add Rise package validator and active-file checks` | Package validator (`tools/validate_package.py`) added. Package expected active files contract (`06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`) and validation checklist (`06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md`) added. 12 checks run against package directory — all pass at bootstrap. Tooling only — no schema generated. packageValidatorAdded=true; packageActiveFileChecksAdded=true; packageValidationChecklistAdded=true. |
 
 ---
 
@@ -102,6 +103,9 @@
 - Run ledger append helper added: **YES (PR #15) — tooling only, no real entries appended**
 - Run ledger reporter added: **YES (PR #15) — read-only, no files modified**
 - Run ledger tools added: **YES (PR #15)**
+- Package validator added: **YES (PR #16) — tooling only**
+- Package active file checks added: **YES (PR #16) — 80 required files tracked**
+- Package validation checklist added: **YES (PR #16) — documentation contract only**
 - Production lock status: **NO_PRODUCTION_LOCKS**
 
 ---
@@ -154,7 +158,7 @@ Final schema validation protocol added in PR #13. The 9-step final schema valida
 
 Governed run ledger schema added in PR #14. The run ledger schema (`06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json`) defines the required shape of future run ledger entries — all fields, allowed status values, and safety constraints. The run ledger review guide (`05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md`) explains how to read the ledger and when `PRODUCTION_LOCKED` may and may not be claimed. `RUN_LEDGER.json` has been upgraded with `schemaVersion`, `ledgerStatus`, `productionLockStatus`, and `lastUpdatedByPr` fields. Entries remain empty — no governed runs have been performed. `runLedgerSchemaAdded=true`, `runLedgerGuideAdded=true`, `runLedgerUpgraded=true`. Mode 1 remains not runnable.
 
-Next doctrine dependency: package validator and active-file coherence checks (PR #16), then evidence map for the homepage (future PR).
+Next doctrine dependency: smoke-test fixture contract and canned fixture (PR #17), then evidence map for the homepage (future PR).
 
 ---
 
@@ -177,3 +181,4 @@ Next doctrine dependency: package validator and active-file coherence checks (PR
 | 1.0.0 | 2026-05-22 | PR #13 | Final schema validation protocol and five runbook/requirements documents added. Documentation contracts only — no validators run, no schema generated, no evidence collected. finalValidationProtocolAdded=true; schemaValidatorRunbookAdded=true; googleRichResultsRunbookAdded=true; screamingFrogChecklistAdded=true; validationEvidenceHandoffRequirementsAdded=true. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #14 | Run ledger schema and review guide added. RUN_LEDGER.json upgraded with schemaVersion, ledgerStatus, productionLockStatus. Contract definition only — no run entries, no schema generated. runLedgerSchemaAdded=true; runLedgerGuideAdded=true; runLedgerUpgraded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #15 | Run ledger append helper and read-only reporter added to tools/. Tool README added. Tooling only — no real run entries appended, no schema generated. runLedgerAppendHelperAdded=true; runLedgerReporterAdded=true; runLedgerToolsAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #16 | Package validator added to tools/. Expected active files contract and validation checklist added to 06_MACHINE_RULES/. 12 checks, all pass at bootstrap. Tooling only — no schema generated. packageValidatorAdded=true; packageActiveFileChecksAdded=true; packageValidationChecklistAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |

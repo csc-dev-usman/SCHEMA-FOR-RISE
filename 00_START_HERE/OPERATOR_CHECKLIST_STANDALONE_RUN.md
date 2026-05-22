@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_RUN_LEDGER_TOOLS_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_PACKAGE_VALIDATOR_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #15. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #16. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -94,6 +94,12 @@
 - [ ] Confirm `python tools/append_run_ledger_entry.py --help` runs successfully
 - [ ] Confirm `python tools/report_run_ledger_status.py --help` runs successfully
 - [ ] Confirm `python tools/report_run_ledger_status.py RUN_LEDGER.json` shows `BOOTSTRAP_EMPTY_NO_RUNS`
+- [ ] Confirm the package validator (PR #16) has been merged ✓ Done
+- [ ] Confirm the package validator README has been read (`tools/README_PACKAGE_VALIDATOR_V1_0.md`)
+- [ ] Confirm the package validation checklist has been read (`06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md`)
+- [ ] Confirm the expected active files contract has been read (`06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`)
+- [ ] Confirm `python tools/validate_package.py --help` runs successfully
+- [ ] Confirm `python tools/validate_package.py .` returns PASS (all 12 checks)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -176,6 +182,7 @@ Operators must not:
 | PR #13 | Final schema validation protocol and validator runbook | ✓ Done |
 | PR #14 | Governed run ledger schema and RUN_LEDGER upgrade | ✓ Done |
 | PR #15 | Run ledger append helper and reporter | ✓ Done |
-| PR #16 | Package validator and active-file coherence checks | Pending |
+| PR #16 | Package validator and active-file coherence checks | ✓ Done |
+| PR #17 | Smoke-test fixture contract and canned fixture | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.
