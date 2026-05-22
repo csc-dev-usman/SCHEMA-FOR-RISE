@@ -1,0 +1,116 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_schemaVersion": "V1_0",
+  "_description": "Contract schema for Rise FC schema operator evidence map records. Defines the required shape of a future evidence map run artifact. This schema definition exists — no actual evidence map run artifact has been created. evidenceMapSchemaAdded is true; evidenceMapAdded remains false.",
+  "_notAnOutputBundle": true,
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "_evidenceMapSchemaAddedTrue": true,
+  "_evidenceMapAddedFalse": true,
+  "requiredFields": {
+    "runId": {
+      "type": "string",
+      "description": "Run identifier this evidence map belongs to."
+    },
+    "targetUrl": {
+      "type": "string",
+      "description": "Full URL of the target page this evidence map covers."
+    },
+    "targetRoute": {
+      "type": "string",
+      "description": "Route path of the target page."
+    },
+    "pageFamily": {
+      "type": "string",
+      "description": "Page family identifier.",
+      "example": "homepage"
+    },
+    "schemaProfile": {
+      "type": "string",
+      "description": "Active schema profile at the time this evidence map was created.",
+      "example": "HOMEPAGE_SCHEMA_PROFILE"
+    },
+    "truthFingerprint": {
+      "type": "string",
+      "description": "SHA-256 fingerprint of the truth-pack reference used when deriving evidence.",
+      "example": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d"
+    },
+    "evidenceMapDate": {
+      "type": "string",
+      "description": "ISO 8601 date the evidence map was created or last updated."
+    },
+    "fields": {
+      "type": "array",
+      "description": "Array of field-level evidence records — one entry per schema field considered for this run.",
+      "items": {
+        "fieldPath": {
+          "type": "string",
+          "description": "Dot-notation schema field path.",
+          "example": "Organization.name"
+        },
+        "fieldValue": {
+          "type": "string",
+          "description": "The confirmed value for this field. Null if held or missing.",
+          "nullable": true
+        },
+        "evidenceSource": {
+          "type": "string",
+          "description": "Source reference for this field value.",
+          "enum": [
+            "PHASE_0_CONFIRMED",
+            "PAGE_EVIDENCE_CONFIRMED",
+            "OWNER_APPROVAL_GRANTED",
+            "NOT_CONFIRMED",
+            "HELD",
+            "BLOCKED"
+          ]
+        },
+        "evidenceReference": {
+          "type": "string",
+          "description": "Specific reference to the Phase 0 section, page element, or approval record confirming this field.",
+          "nullable": true
+        },
+        "emissionDecision": {
+          "type": "string",
+          "description": "Whether this field is emitted, held, deferred, or excluded from the schema draft.",
+          "enum": ["EMIT", "HELD", "DEFERRED", "EXCLUDED_BLOCKED_MODULE", "EXCLUDED_NO_EVIDENCE"]
+        },
+        "heldReason": {
+          "type": "string",
+          "description": "Reason this field is held, if emissionDecision is HELD.",
+          "nullable": true
+        },
+        "conflictNotes": {
+          "type": "string",
+          "description": "Notes if there is a conflict between Phase 0 and page evidence for this field.",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "heldFieldSummary": {
+    "type": "object",
+    "description": "Summary of held field status for all 15 held field categories.",
+    "properties": {
+      "phone": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "OWNER_APPROVED", "EMIT"]},
+      "email": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "OWNER_APPROVED", "EMIT"]},
+      "sameAs": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "OWNER_APPROVED", "EMIT"]},
+      "logoUrl": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "OWNER_APPROVED", "EMIT"]},
+      "descriptionFromTagline": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "OWNER_APPROVED", "EMIT"]},
+      "coordinates": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]},
+      "addressPlaceIdentity": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]},
+      "reviews": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]},
+      "ratings": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]},
+      "prices": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]},
+      "eventDates": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]},
+      "offerDetails": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]},
+      "testimonialDerivedClaims": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]},
+      "bilingualAlternateData": {"type": "string", "enum": ["NOT_REVIEWED_HELD", "BLOCKED"]}
+    }
+  },
+  "conflictResolutionPolicy": {
+    "type": "string",
+    "description": "How conflicts between Phase 0 and page evidence are resolved.",
+    "value": "Phase 0 takes precedence. Page evidence may confirm a field but may not override Phase 0. If page evidence contradicts Phase 0, the field is held pending owner review."
+  }
+}

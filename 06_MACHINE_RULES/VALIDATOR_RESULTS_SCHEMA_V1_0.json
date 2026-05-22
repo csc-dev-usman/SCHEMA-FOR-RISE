@@ -1,0 +1,122 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_schemaVersion": "V1_0",
+  "_description": "Contract schema for Rise FC schema operator validator result sets. Defines the required shape of external validator output records from Prompt 04. This is a contract definition only — not a real run artifact.",
+  "_notAnOutputBundle": true,
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "requiredFields": {
+    "runId": {
+      "type": "string",
+      "description": "Run identifier this validator result set belongs to."
+    },
+    "validatorRunDate": {
+      "type": "string",
+      "description": "ISO 8601 date the external validators were run."
+    },
+    "targetUrl": {
+      "type": "string",
+      "description": "URL submitted to validators."
+    },
+    "schemaProfile": {
+      "type": "string",
+      "description": "Active schema profile at time of validation."
+    },
+    "draftVersion": {
+      "type": "string",
+      "description": "Identifier of the draft version submitted to validators."
+    },
+    "overallValidatorDecision": {
+      "type": "string",
+      "description": "Aggregated validator decision across all tools.",
+      "enum": ["VALIDATION_PASS", "VALIDATION_WARN", "VALIDATION_FAIL", "VALIDATION_DEFER"]
+    }
+  },
+  "validatorResults": {
+    "googleRichResultsTest": {
+      "status": {
+        "type": "string",
+        "enum": ["PASS", "WARN", "FAIL", "NOT_RUN"]
+      },
+      "detectedItemTypes": {
+        "type": "array",
+        "description": "Schema item types detected by the Google Rich Results Test.",
+        "items": {"type": "string"},
+        "example": ["Organization", "WebSite", "WebPage", "BreadcrumbList"]
+      },
+      "errors": {
+        "type": "array",
+        "description": "Errors reported by the Google Rich Results Test.",
+        "items": {"type": "string"}
+      },
+      "warnings": {
+        "type": "array",
+        "description": "Warnings reported by the Google Rich Results Test.",
+        "items": {"type": "string"}
+      },
+      "evidenceLink": {
+        "type": "string",
+        "description": "URL or screenshot reference for the validator result. Optional.",
+        "nullable": true
+      }
+    },
+    "schemaOrgValidator": {
+      "status": {
+        "type": "string",
+        "enum": ["PASS", "WARN", "FAIL", "NOT_RUN"]
+      },
+      "errors": {
+        "type": "array",
+        "description": "Errors reported by the Schema.org Validator.",
+        "items": {"type": "string"}
+      },
+      "warnings": {
+        "type": "array",
+        "description": "Warnings reported by the Schema.org Validator.",
+        "items": {"type": "string"}
+      },
+      "evidenceLink": {
+        "type": "string",
+        "description": "URL or screenshot reference for the validator result. Optional.",
+        "nullable": true
+      }
+    },
+    "screamingFrog": {
+      "status": {
+        "type": "string",
+        "enum": ["PASS", "WARN", "FAIL", "NOT_AVAILABLE", "NOT_RUN"]
+      },
+      "errors": {
+        "type": "array",
+        "description": "Errors reported by Screaming Frog, if available.",
+        "items": {"type": "string"}
+      },
+      "warnings": {
+        "type": "array",
+        "description": "Warnings reported by Screaming Frog, if available.",
+        "items": {"type": "string"}
+      },
+      "evidenceLink": {
+        "type": "string",
+        "description": "Export file reference for the Screaming Frog result. Optional.",
+        "nullable": true
+      }
+    }
+  },
+  "crossChecks": {
+    "heldFieldDetectedInValidatorOutput": {
+      "type": "boolean",
+      "description": "Whether any held field was detected in live validator output. Must be false for a compliant result.",
+      "required_value": false
+    },
+    "blockedModuleDetectedInValidatorOutput": {
+      "type": "boolean",
+      "description": "Whether any blocked module type was detected in live validator output. Must be false.",
+      "required_value": false
+    },
+    "detectedTypesMatchAllowedModules": {
+      "type": "boolean",
+      "description": "Whether all detected item types are in the allowed modules list for the active schema profile."
+    }
+  }
+}

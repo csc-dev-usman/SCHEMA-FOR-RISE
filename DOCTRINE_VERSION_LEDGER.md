@@ -10,7 +10,7 @@
 
 ## Current status
 
-`FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT`
+`OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -26,6 +26,7 @@
 | PR #6 | `docs: upgrade Rise standalone team quickstart and operator checklist` | Team quickstart upgraded. Operator checklist upgraded. Navigation decision tree added. Preflight checklist added. Mode status guide added. No schema output. |
 | PR #7 | `docs: add Rise standalone operator prompts 00 through 04 and 08` | Core operator prompt templates added. Prompts 00, 01, 02, 03, 04, and 08 added as templates only. No prompts executed. No schema output. |
 | PR #8 | `docs: add Rise standalone final validation analyzer and completion prompts` | Final validation, analyzer, and completion prompt templates added. Prompts 12, 13, 14, and 15 added as templates only. No prompts executed. No schema output. |
+| PR #9 | `schema: add Rise standalone output bundle contract schemas` | Output bundle contract schemas added to `06_MACHINE_RULES/`. Contract schema definitions only — not validators, not scripts, not JSON-LD, not schema output. evidenceMapSchemaAdded=true; evidenceMapAdded=false. No schema output. |
 
 ---
 
@@ -63,6 +64,13 @@
 - Prompt 13 added: **YES (PR #8)**
 - Prompt 14 added: **YES (PR #8)**
 - Prompt 15 added: **YES (PR #8)**
+- Output bundle contract schemas added: **YES (PR #9)**
+- Output bundle manifest schema added: **YES (PR #9)**
+- Run metadata schema added: **YES (PR #9)**
+- Controller decision schema added: **YES (PR #9)**
+- Validator results schema added: **YES (PR #9)**
+- Evidence map schema added: **YES (PR #9) — contract definition only**
+- Lint rules added: **YES (PR #9)**
 - Evidence map added: **NO**
 
 ---
@@ -101,9 +109,11 @@ Core operator prompt templates added in PR #7. Prompts 00 (standalone URL review
 
 Final validation, analyzer, and completion prompt templates added in PR #8. Prompts 13 (independent analyzer review), 14 (controller post-analyzer decision), 12 (final validation and implementation schema), and 15 (Mode 1 lane completion audit) are now in `04_OPERATOR_PROMPTS/` as templates only. No prompts have been executed. No schema has been generated. No JSON-LD has been created. The full operator prompt set (Prompts 00–04, 08, 12–15) is now in place.
 
-The package is not runnable for schema production. Output bundle schemas (PR #9), the draft contract (PR #10), evidence maps, validators, and the final runnable handoff are still pending in later PRs.
+Output bundle contract schemas added in PR #9. The output bundle manifest schema, run metadata schema, controller decision schema, validator results schema, evidence map schema, and lint rules are now in `06_MACHINE_RULES/` as contract schema definitions only. These are not validators, not scripts, not JSON-LD, not schema output, and not real run artifacts. The evidence map schema contract exists (`evidenceMapSchemaAdded=true`) but no evidence map run artifact has been created (`evidenceMapAdded=false`). No schema has been generated. No JSON-LD has been created.
 
-Next doctrine dependency: output bundle contract schemas — PR #9.
+The package is not runnable for schema production. The draft contract (PR #10), evidence maps, validators, and the final runnable handoff are still pending in later PRs.
+
+Next doctrine dependency: controlled homepage non-production JSON-LD draft contract — PR #10.
 
 ---
 
@@ -119,3 +129,4 @@ Next doctrine dependency: output bundle contract schemas — PR #9.
 | 1.0.0 | 2026-05-21 | PR #6 | Team quickstart upgraded. Operator checklist upgraded. Navigation decision tree added. Preflight checklist added. Mode status guide added. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #7 | Core operator prompt templates added (Prompts 00, 01, 02, 03, 04, 08). Templates only — not executed. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #8 | Final validation, analyzer, and completion prompt templates added (Prompts 12, 13, 14, 15). Templates only — not executed. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #9 | Output bundle contract schemas added (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules). Contract definitions only — not validators, not scripts, not JSON-LD, not schema output. No Phase 0 mutation. No Astro attachment. |

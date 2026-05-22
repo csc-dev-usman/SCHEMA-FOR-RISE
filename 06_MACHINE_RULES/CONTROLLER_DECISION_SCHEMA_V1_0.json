@@ -1,0 +1,114 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_schemaVersion": "V1_0",
+  "_description": "Contract schema for Rise FC schema operator controller decision records. Applies to Prompt 03 (initial controller decision) and Prompt 14 (post-analyzer controller decision). This is a contract definition only — not a real run artifact.",
+  "_notAnOutputBundle": true,
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "allowedDecisions": [
+    "ACCEPT",
+    "MODIFY",
+    "REJECT",
+    "DEFER",
+    "HUMAN_REVIEW_REQUIRED",
+    "PATCH_REQUIRED"
+  ],
+  "decisionDescriptions": {
+    "ACCEPT": "Draft passes all checks. No blocking defects. Proceed to next governed step.",
+    "MODIFY": "Draft has non-blocking issues requiring targeted correction. Specify exact modifications. Re-confirm before proceeding.",
+    "REJECT": "Draft has a blocking defect. Draft is discarded. Return to Prompt 01 for regeneration.",
+    "DEFER": "Run cannot proceed due to an external condition. Suspend and document blocking condition.",
+    "HUMAN_REVIEW_REQUIRED": "Ambiguity or edge case requires package owner judgment. Escalate before proceeding.",
+    "PATCH_REQUIRED": "Specific targeted defect found that can be corrected without full regeneration. Document patch, apply, and re-run affected review steps. (Prompt 14 only)"
+  },
+  "requiredFields": {
+    "runId": {
+      "type": "string",
+      "description": "Run identifier this decision belongs to."
+    },
+    "promptSource": {
+      "type": "string",
+      "description": "Which prompt issued this controller decision.",
+      "enum": ["PROMPT_03", "PROMPT_14"]
+    },
+    "decisionDate": {
+      "type": "string",
+      "description": "ISO 8601 date of the controller decision."
+    },
+    "decision": {
+      "type": "string",
+      "description": "The controller decision issued.",
+      "enum": ["ACCEPT", "MODIFY", "REJECT", "DEFER", "HUMAN_REVIEW_REQUIRED", "PATCH_REQUIRED"]
+    },
+    "reason": {
+      "type": "string",
+      "description": "Plain-language reason for the decision."
+    },
+    "priorQaResult": {
+      "type": "string",
+      "description": "QA result received from Prompt 02 before this decision.",
+      "enum": ["PASS", "WARN", "FAIL", "NOT_APPLICABLE"]
+    },
+    "selfApprovalAttempted": {
+      "type": "boolean",
+      "description": "Whether self-approval was attempted. Must always be false.",
+      "required_value": false
+    },
+    "productionAuthorizationGranted": {
+      "type": "boolean",
+      "description": "Whether this decision grants production authorization. Must always be false — production requires human approval.",
+      "required_value": false
+    }
+  },
+  "conditionalFields": {
+    "modificationsRequired": {
+      "applicableWhen": "decision == MODIFY",
+      "type": "array",
+      "description": "List of exact modifications required when decision is MODIFY.",
+      "items": {
+        "field": "string",
+        "reason": "string",
+        "correctedValue": "string",
+        "evidenceSource": "string"
+      }
+    },
+    "defectAndStopCode": {
+      "applicableWhen": "decision == REJECT",
+      "type": "object",
+      "description": "Defect description and applicable stop code when decision is REJECT.",
+      "properties": {
+        "defect": {"type": "string"},
+        "stopCode": {"type": "string"}
+      }
+    },
+    "blockingCondition": {
+      "applicableWhen": "decision == DEFER",
+      "type": "string",
+      "description": "Description of the external condition blocking the run."
+    },
+    "ambiguityDescription": {
+      "applicableWhen": "decision == HUMAN_REVIEW_REQUIRED",
+      "type": "string",
+      "description": "Description of the ambiguity requiring owner judgment."
+    },
+    "patchSpecification": {
+      "applicableWhen": "decision == PATCH_REQUIRED",
+      "type": "object",
+      "description": "Exact patch specification when decision is PATCH_REQUIRED. Prompt 14 only.",
+      "properties": {
+        "fieldsAffected": {"type": "array", "items": {"type": "string"}},
+        "patchDescription": {"type": "string"},
+        "promptsToRerun": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "analyzerIssuesReviewed": {
+      "applicableWhen": "promptSource == PROMPT_14",
+      "type": "array",
+      "description": "List of analyzer WARN or DISAGREE items reviewed by the controller in Prompt 14.",
+      "items": {
+        "issue": "string",
+        "controllerAssessment": "string"
+      }
+    }
+  }
+}

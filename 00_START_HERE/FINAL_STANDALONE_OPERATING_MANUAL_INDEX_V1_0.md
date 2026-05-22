@@ -1,8 +1,8 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
 
-> This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add truth packs, prompts, contracts, validators, and the final runnable handoff.
+> This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add the draft contract, evidence maps, validators, and the final runnable handoff.
 
 ---
 
@@ -137,6 +137,26 @@ Understand:
 
 ---
 
+### Step 2h — Read machine rules (PR #9 addition)
+
+Files in this order:
+1. `06_MACHINE_RULES/README_MACHINE_RULES_V1_0.md`
+2. `06_MACHINE_RULES/OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0.json`
+3. `06_MACHINE_RULES/RUN_METADATA_SCHEMA_V1_0.json`
+4. `06_MACHINE_RULES/CONTROLLER_DECISION_SCHEMA_V1_0.json`
+5. `06_MACHINE_RULES/VALIDATOR_RESULTS_SCHEMA_V1_0.json`
+6. `06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json`
+7. `06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json`
+
+Understand:
+- These are contract schema definitions — they define the required shape of future run artifacts
+- No output bundles, validators, scripts, or JSON-LD have been created
+- The evidence map schema contract exists (`evidenceMapSchemaAdded=true`) but no evidence map run artifact exists yet (`evidenceMapAdded=false`)
+- Lint rules define allowed modules, blocked modules, held field categories, and 10 JSON-LD safety rules (JLSR_001–JLSR_010)
+- All 10 JSON-LD safety rules must be satisfied by every schema draft and implementation
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -157,7 +177,7 @@ Understand:
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #8**.
+The schema workflow is **not runnable after PR #9**.
 
 Operators must wait for:
 - PR #2: Governing doctrine ✓ Done
@@ -167,7 +187,7 @@ Operators must wait for:
 - PR #6: Team quickstart and operator checklist upgrades ✓ Done
 - PR #7: Operator prompts 00 through 04 and 08 ✓ Done
 - PR #8: Final validation, analyzer, and completion prompts ✓ Done
-- PR #9: Output bundle contract schemas
+- PR #9: Output bundle contract schemas ✓ Done
 - PR #10: Controlled homepage non-production JSON-LD draft contract
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
@@ -183,7 +203,7 @@ Produce validated schema for pages on the current risefcsoccer.com website.
 - Schema is derived from approved Phase 0 content and confirmed page evidence
 - Output must be validated before any implementation handoff
 
-**Not runnable yet. Waiting for PR #9 output bundle schemas, PR #10 draft contract, and final runnable handoff.**
+**Not runnable yet. Waiting for PR #10 draft contract and final runnable handoff.**
 
 ---
 

@@ -1,0 +1,208 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_schemaVersion": "V1_0",
+  "_description": "Rise FC schema lint rules. Defines blocked modules, held fields, allowed future homepage modules, and JSON-LD safety rules for use in QA and validation steps. This is a rule definition only — not a validator script, not a real run artifact.",
+  "_notAnOutputBundle": true,
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "schemaProfile": "HOMEPAGE_SCHEMA_PROFILE",
+  "targetRoute": "/",
+  "allowedModules": {
+    "description": "Schema @type values permitted for the first-page lane (homepage, route /).",
+    "values": [
+      "Organization",
+      "WebSite",
+      "WebPage",
+      "BreadcrumbList",
+      "ListItem"
+    ],
+    "note": "ListItem is permitted only as a child of BreadcrumbList."
+  },
+  "blockedModules": {
+    "description": "Schema @type values that are blocked for the first-page lane. Any draft or implementation containing these must be rejected.",
+    "values": [
+      "FAQPage",
+      "Question",
+      "Answer",
+      "Offer",
+      "AggregateOffer",
+      "Event",
+      "SportsEvent",
+      "Review",
+      "AggregateRating",
+      "Place",
+      "LocalBusiness",
+      "GeoCoordinates",
+      "PostalAddress"
+    ],
+    "additionalBlockedCategories": [
+      "testimonial_derived_schema",
+      "bilingual_schema",
+      "advanced_modules_not_in_profile"
+    ]
+  },
+  "heldFieldCategories": {
+    "description": "Field categories that are held and must not appear in any schema draft or implementation unless explicitly released by owner approval.",
+    "categories": [
+      {
+        "id": "phone",
+        "schemaProperties": ["telephone"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": true
+      },
+      {
+        "id": "email",
+        "schemaProperties": ["email"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": true
+      },
+      {
+        "id": "sameAs",
+        "schemaProperties": ["sameAs"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": true
+      },
+      {
+        "id": "logoUrl",
+        "schemaProperties": ["logo", "image"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": true
+      },
+      {
+        "id": "descriptionFromTagline",
+        "schemaProperties": ["description"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": true,
+        "note": "Description derived from confirmed factual copy (not tagline or mission line) may be released with owner approval."
+      },
+      {
+        "id": "coordinates",
+        "schemaProperties": ["geo", "latitude", "longitude"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "Coordinates are blocked via GeoCoordinates blocked module policy."
+      },
+      {
+        "id": "addressPlaceIdentity",
+        "schemaProperties": ["address", "streetAddress", "addressLocality", "addressRegion", "postalCode"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "Address/PostalAddress is blocked via Place blocked module policy."
+      },
+      {
+        "id": "reviews",
+        "schemaProperties": ["review"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "Review module is blocked."
+      },
+      {
+        "id": "ratings",
+        "schemaProperties": ["aggregateRating", "ratingValue", "ratingCount"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "AggregateRating module is blocked."
+      },
+      {
+        "id": "prices",
+        "schemaProperties": ["price", "priceCurrency", "priceRange"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "Offer module is blocked."
+      },
+      {
+        "id": "eventDates",
+        "schemaProperties": ["startDate", "endDate", "eventSchedule"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "Event module is blocked."
+      },
+      {
+        "id": "offerDetails",
+        "schemaProperties": ["offers", "availability"],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "Offer module is blocked."
+      },
+      {
+        "id": "testimonialDerivedClaims",
+        "schemaProperties": [],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "Any schema field value derived from a testimonial is blocked regardless of @type."
+      },
+      {
+        "id": "bilingualAlternateData",
+        "schemaProperties": [],
+        "defaultStatus": "NOT_REVIEWED_HELD",
+        "canBeUnblocked": false,
+        "note": "Bilingual or multi-language alternate schema is blocked."
+      }
+    ]
+  },
+  "jsonLdSafetyRules": {
+    "description": "JSON-LD structural safety rules that every schema draft and implementation must satisfy.",
+    "rules": [
+      {
+        "ruleId": "JLSR_001",
+        "rule": "context_must_be_schema_org_https",
+        "description": "@context must be exactly the string 'https://schema.org'. Not 'http://schema.org'. Not a schema.org array. Not a custom context.",
+        "failCondition": "@context is missing, is 'http://schema.org', or is any value other than 'https://schema.org'"
+      },
+      {
+        "ruleId": "JLSR_002",
+        "rule": "graph_must_be_present",
+        "description": "When multiple @type nodes are used, @graph must be present and must be an array.",
+        "failCondition": "Multiple nodes present without @graph, or @graph is not an array"
+      },
+      {
+        "ruleId": "JLSR_003",
+        "rule": "all_urls_must_use_https",
+        "description": "All URL values in the schema must use https:// not http://.",
+        "failCondition": "Any URL value begins with http://"
+      },
+      {
+        "ruleId": "JLSR_004",
+        "rule": "no_duplicate_properties_per_node",
+        "description": "No @type node may contain duplicate property names.",
+        "failCondition": "Any node contains the same property key more than once"
+      },
+      {
+        "ruleId": "JLSR_005",
+        "rule": "all_types_must_be_valid_schema_org",
+        "description": "All @type values must be valid schema.org types in the current vocabulary.",
+        "failCondition": "Any @type value is not a recognized schema.org type"
+      },
+      {
+        "ruleId": "JLSR_006",
+        "rule": "all_properties_must_be_valid_for_type",
+        "description": "All property names used within a node must be valid schema.org properties for the node's @type.",
+        "failCondition": "Any property is not a recognized schema.org property for the given @type"
+      },
+      {
+        "ruleId": "JLSR_007",
+        "rule": "no_blocked_module_types",
+        "description": "No blocked @type value may appear anywhere in the schema graph.",
+        "failCondition": "Any node @type is in the blockedModules list"
+      },
+      {
+        "ruleId": "JLSR_008",
+        "rule": "no_held_field_properties",
+        "description": "No held field property may appear in the schema graph.",
+        "failCondition": "Any property in heldFieldCategories appears in any node"
+      },
+      {
+        "ruleId": "JLSR_009",
+        "rule": "all_field_values_must_be_evidence_anchored",
+        "description": "Every emitted field value must trace to a confirmed Phase 0 source reference or confirmed page evidence. No invented, inferred, or speculative values.",
+        "failCondition": "Any field value cannot be traced to an evidence map entry with PHASE_0_CONFIRMED or PAGE_EVIDENCE_CONFIRMED status"
+      },
+      {
+        "ruleId": "JLSR_010",
+        "rule": "non_production_marker_required_until_approved",
+        "description": "All draft schema output must be marked as NON_PRODUCTION until explicit human approval is granted.",
+        "failCondition": "Draft is missing NON_PRODUCTION marker before human approval is documented"
+      }
+    ]
+  }
+}
