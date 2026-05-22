@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -57,6 +57,10 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Run `python tools/run_standalone_smoke_test.py .` to exercise the fake fixture (12 checks, read-only, no side effects).
 - Run `python tools/report_package_health.py .` for a full package health summary (read-only, no side effects).
 - Read `05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md` to understand Milestone 3 completion status and current package posture.
+- Read `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md` to understand the blank future-use handoff template for first real page runs.
+- Read `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md` to understand required intake fields and validation expectations.
+- Read `05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md` to understand the homepage lane supervision rules — route `/`, `HOMEPAGE_SCHEMA_PROFILE`, fingerprint, allowed modules, blocked modules, held fields.
+- Read `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md` to understand all hold codes and resolution requirements for first real page runs.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -104,7 +108,10 @@ The sequence:
 - PR #16 adds package validator and active-file coherence checks ✓ Done
 - PR #17 adds smoke-test fixture contract and canned fixture ✓ Done
 - PR #18 adds smoke-test runner and package health reporter ✓ Done — Milestone 3 complete
-- PR #19 adds homepage evidence map and first real page handoff template
+- PR #19 adds first real page handoff template ✓ Done
+- PR #20 adds independent analyzer and controller post-analyzer flow
+- PR #21 adds current website implementation handoff checklist
+- PR #22 adds governed sample-run artifact policy
 
 Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
 
