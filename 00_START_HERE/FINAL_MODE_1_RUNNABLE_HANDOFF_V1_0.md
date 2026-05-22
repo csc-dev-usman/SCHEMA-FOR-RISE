@@ -1,12 +1,12 @@
 # Final Mode 1 Runnable Handoff V1.0
 
-**Status:** `NOT_RUNNABLE_YET_CORE_PROMPTS_ADDED`
+**Status:** `NOT_RUNNABLE_YET_FULL_PROMPT_SET_ADDED`
 
 ---
 
 ## Notice
 
-Mode 1 is not runnable yet after PR #7. This file is a placeholder for the later final runnable handoff.
+Mode 1 is not runnable yet after PR #8. This file is a placeholder for the later final runnable handoff.
 
 The Mode 1 runnable handoff requires the following dependencies:
 
@@ -20,7 +20,7 @@ The Mode 1 runnable handoff requires the following dependencies:
 | Standalone master flow | PR #5 | ✓ Done |
 | Team quickstart and checklist upgrades | PR #6 | ✓ Done |
 | Operator prompts 00–04, 08 | PR #7 | ✓ Done |
-| Final validation and analyzer prompts | PR #8 | Pending |
+| Final validation and analyzer prompts | PR #8 | ✓ Done |
 | Output bundle contract schemas | PR #9 | Pending |
 | Homepage non-production draft contract | PR #10 | Pending |
 | Homepage evidence map | Future PR | Pending |

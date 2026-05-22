@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `CORE_OPERATOR_PROMPTS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 adds core operator prompt templates (Prompts 00, 01, 02, 03, 04, and 08) as templates only. No schema has been generated. No prompts have been executed. Evidence maps, final validation prompts, output bundle schemas, the draft contract, validators, and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 adds the final validation, analyzer, and completion prompt templates (Prompts 12–15). No schema has been generated. No prompts have been executed. Evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff are still later PRs.
 
 ---
 
@@ -94,6 +94,10 @@
 | `04_OPERATOR_PROMPTS/PROMPT_03_CONTROLLER_DECISION_AND_REGENERATION_V1_0.txt` | Prompt 03 — Controller decision (ACCEPT / MODIFY / REJECT / DEFER / HUMAN_REVIEW_REQUIRED). |
 | `04_OPERATOR_PROMPTS/PROMPT_04_VALIDATOR_RESULTS_REVIEW_V1_0.txt` | Prompt 04 — Validator results review (Google Rich Results Test, Schema.org validator, Screaming Frog). |
 | `04_OPERATOR_PROMPTS/PROMPT_08_PAGE_CONTENT_READINESS_GATE_V1_0.txt` | Prompt 08 — Page content readiness gate. Runs before Prompt 01. |
+| `04_OPERATOR_PROMPTS/PROMPT_12_FINAL_VALIDATION_AND_IMPLEMENTATION_SCHEMA_V1_0.txt` | Prompt 12 — Final validation and implementation schema — post human approval only. |
+| `04_OPERATOR_PROMPTS/PROMPT_13_FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_V1_0.txt` | Prompt 13 — Independent analyzer review — fresh session, no prior context. |
+| `04_OPERATOR_PROMPTS/PROMPT_14_CONTROLLER_POST_ANALYZER_DECISION_V1_0.txt` | Prompt 14 — Controller post-analyzer decision (adds PATCH_REQUIRED). |
+| `04_OPERATOR_PROMPTS/PROMPT_15_MODE_1_LANE_COMPLETION_AUDIT_V1_0.txt` | Prompt 15 — Mode 1 lane completion audit and RUN_LEDGER entry. |
 
 ---
 
@@ -147,8 +151,8 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #5:** ~~Standalone schema master flow~~ ✓ Done
 - **PR #6:** ~~Team quickstart and operator checklist upgrades~~ ✓ Done
 - **PR #7:** ~~Operator prompts 00 through 04 and 08~~ ✓ Done
-- **PR #8:** Final validation, analyzer, and completion prompts
+- **PR #8:** ~~Final validation, analyzer, and completion prompts~~ ✓ Done
 - **PR #9:** Output bundle contract schemas
 - **PR #10:** Controlled homepage non-production JSON-LD draft contract
 
-Generated schema, output bundle schemas, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #8 and later.
+Generated schema, output bundle schemas, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #9 and later.

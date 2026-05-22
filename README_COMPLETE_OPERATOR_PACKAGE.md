@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `CORE_OPERATOR_PROMPTS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,14 +50,14 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #7 adds the core operator prompt templates (Prompts 00, 01, 02, 03, 04, and 08) to `04_OPERATOR_PROMPTS/`. These are templates only — they have not been executed and no schema has been generated.
+PR #8 adds the final validation, analyzer, and completion prompt templates (Prompts 12, 13, 14, and 15) to `04_OPERATOR_PROMPTS/`. The full operator prompt set is now in place. These are templates only — they have not been executed and no schema has been generated.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
 - The homepage schema profile, blocked module policy, held field policy, and decision matrix are in `07_REFERENCE_LISTS/`.
 - The standalone master flow, Mode 1 flow, Mode 2 flow, page run sequence, and master stop conditions are in `01_MASTER_FLOW/`.
 - The operator navigation decision tree, preflight checklist, and mode status guide are in `00_START_HERE/`.
-- The core operator prompt templates are now in `04_OPERATOR_PROMPTS/`.
+- The full operator prompt set (Prompts 00–04, 08, 12–15) is now in `04_OPERATOR_PROMPTS/`.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -68,7 +68,7 @@ PR #7 adds the core operator prompt templates (Prompts 00, 01, 02, 03, 04, and 0
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `CORE_OPERATOR_PROMPTS_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add the final validation/analyzer prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff.
+Status is `FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add output bundle schemas, the draft contract, evidence maps, validators, and the final runnable handoff.
 
 ---
 
@@ -151,8 +151,8 @@ No content in this package (through PR #2) authorizes any schema to be deployed 
 - **PR #4:** ~~Add Rise homepage schema profile and blocked module policy~~ ✓ Merged
 - **PR #5:** ~~Add Rise standalone schema master flow~~ ✓ Merged
 - **PR #6:** ~~Add team quickstart and operator checklist upgrades~~ ✓ Merged
-- **PR #7:** Add operator prompts 00 through 04 and 08
-  `docs: add Rise standalone operator prompts 00 through 04 and 08`
+- **PR #7:** ~~Add operator prompts 00 through 04 and 08~~ ✓ Merged
 - **PR #8:** Add final validation, analyzer, and completion prompts
+  `docs: add Rise standalone final validation analyzer and completion prompts`
 - **PR #9:** Add output bundle contract schemas
 - **PR #10:** Add controlled homepage non-production JSON-LD draft contract
