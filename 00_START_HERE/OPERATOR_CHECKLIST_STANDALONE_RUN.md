@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_HOMEPAGE_DRAFT_CONTRACT_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_OUTPUT_BUNDLE_VALIDATOR_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #10. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #11. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -69,6 +69,11 @@
 - [ ] Confirm all preconditions in the hold matrix are met before beginning any draft run
 - [ ] Confirm the output file list has been read (`05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md`)
 - [ ] Confirm the review and approval sequence has been read (`05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md`)
+- [ ] Confirm the output bundle validator (PR #11) has been merged ✓ Done
+- [ ] Confirm the validator README has been read (`tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md`)
+- [ ] Confirm the validator rules have been read (`06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md`)
+- [ ] Confirm the expected-files contract has been read (`06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json`)
+- [ ] Confirm `python tools/validate_output_bundle.py --help` runs successfully
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -146,6 +151,7 @@ Operators must not:
 | PR #8 | Final validation, analyzer, and completion prompts | ✓ Done |
 | PR #9 | Output bundle contract schemas | ✓ Done |
 | PR #10 | Controlled homepage non-production JSON-LD draft contract | ✓ Done |
-| PR #11 | Output bundle validator or Claude QA/controller schema layer | Pending |
+| PR #11 | Output bundle validator | ✓ Done |
+| PR #12 | Claude QA finding schema and controller QA review contract | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

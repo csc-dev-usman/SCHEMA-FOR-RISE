@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #10 adds the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. This is a documentation contract only — it defines the rules, preconditions, output file plans, and review sequence for a future homepage draft run. No schema has been generated, no JSON-LD has been created, and no draft exists.
+PR #11 adds the output bundle validator to `tools/` and the validator rules and expected-files contract to `06_MACHINE_RULES/`. This is validator tooling only — it adds a Python standard-library script (`tools/validate_output_bundle.py`) that checks future output bundle directories for compliance with governed rules. No schema has been generated, no JSON-LD has been created, and no output bundles exist.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -59,7 +59,8 @@ PR #10 adds the controlled homepage non-production JSON-LD draft contract to `05
 - The operator navigation decision tree, preflight checklist, and mode status guide are in `00_START_HERE/`.
 - The full operator prompt set (Prompts 00–04, 08, 12–15) is in `04_OPERATOR_PROMPTS/`.
 - The output bundle contract schemas (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules) are in `06_MACHINE_RULES/`.
-- The controlled homepage non-production JSON-LD draft contract, preconditions matrix, output file list, and review sequence are now in `05_REFERENCE_WORKFLOW/`.
+- The controlled homepage non-production JSON-LD draft contract, preconditions matrix, output file list, and review sequence are in `05_REFERENCE_WORKFLOW/`.
+- The output bundle validator (`tools/validate_output_bundle.py`), validator README, validator rules, and expected-files contract are now in `tools/` and `06_MACHINE_RULES/`.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -70,7 +71,7 @@ PR #10 adds the controlled homepage non-production JSON-LD draft contract to `05
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps, validators, and the final runnable handoff.
+Status is `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
 
 ---
 
@@ -160,4 +161,6 @@ No content in this package (through PR #10) authorizes any schema to be deployed
   `schema: add Rise standalone output bundle contract schemas`
 - **PR #10:** ~~Add controlled homepage non-production JSON-LD draft contract~~ ✓ Merged
   `docs: add controlled homepage non-production JSON-LD draft contract`
-- **PR #11:** Add output bundle validator or Claude QA/controller schema layer
+- **PR #11:** ~~Add output bundle validator~~ ✓ Merged
+  `tools: add Rise standalone output bundle validator`
+- **PR #12:** Add Claude QA finding schema and controller QA review contract

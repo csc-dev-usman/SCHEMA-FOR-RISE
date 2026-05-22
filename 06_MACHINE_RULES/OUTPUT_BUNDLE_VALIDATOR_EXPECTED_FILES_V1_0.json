@@ -1,0 +1,170 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "_description": "Rise FC standalone schema operator — expected files contract for output bundle validator. This is a contract schema definition, not a real run artifact. No output bundle has been created.",
+  "_governedBy": "06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md",
+  "_validatorImplementation": "tools/validate_output_bundle.py",
+  "schemaVersion": "1.0",
+  "packageVersion": "1.0.0",
+  "status": "OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT",
+  "requiredFiles": [
+    {
+      "fileName": "output_bundle_manifest.json",
+      "type": "json",
+      "required": true,
+      "description": "Top-level manifest for the output bundle. Must conform to OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0.json.",
+      "contractSchema": "06_MACHINE_RULES/OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0.json",
+      "validatorRule": "RULE_VAL_001"
+    },
+    {
+      "fileName": "run_metadata.json",
+      "type": "json",
+      "required": true,
+      "description": "Run metadata including schemaProfile, pageRoute, truthFingerprint, and run context. Must conform to RUN_METADATA_SCHEMA_V1_0.json.",
+      "contractSchema": "06_MACHINE_RULES/RUN_METADATA_SCHEMA_V1_0.json",
+      "validatorRule": "RULE_VAL_001"
+    },
+    {
+      "fileName": "evidence_map.json",
+      "type": "json",
+      "required": true,
+      "description": "Evidence map confirming page content evidence for each emitted schema field. Must conform to EVIDENCE_MAP_SCHEMA_V1_0.json. Must be built from confirmed page content — not invented.",
+      "contractSchema": "06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json",
+      "validatorRule": "RULE_VAL_001"
+    },
+    {
+      "fileName": "controller_decision.json",
+      "type": "json",
+      "required": true,
+      "description": "Controller decision record including held field approvals, blocked module confirmation, and decision rationale. Must conform to CONTROLLER_DECISION_SCHEMA_V1_0.json.",
+      "contractSchema": "06_MACHINE_RULES/CONTROLLER_DECISION_SCHEMA_V1_0.json",
+      "validatorRule": "RULE_VAL_001"
+    },
+    {
+      "fileName": "validator_results.json",
+      "type": "json",
+      "required": true,
+      "description": "Validator results record from the schema validation run. Must conform to VALIDATOR_RESULTS_SCHEMA_V1_0.json.",
+      "contractSchema": "06_MACHINE_RULES/VALIDATOR_RESULTS_SCHEMA_V1_0.json",
+      "validatorRule": "RULE_VAL_001"
+    },
+    {
+      "fileName": "withheld_schema_report.md",
+      "type": "markdown",
+      "required": true,
+      "description": "Human-readable report of all schema fields and modules that were withheld from the output bundle, with reasons.",
+      "validatorRule": "RULE_VAL_001"
+    },
+    {
+      "fileName": "deferred_truth_report.md",
+      "type": "markdown",
+      "required": true,
+      "description": "Human-readable report of all Phase 0 facts that were deferred — not yet emitted — with the reason for deferral.",
+      "validatorRule": "RULE_VAL_001"
+    }
+  ],
+  "conditionalFiles": [
+    {
+      "fileName": "emitted_schema.jsonld",
+      "type": "jsonld",
+      "required": false,
+      "doesNotExistYet": true,
+      "condition": "Present when the run produces schema output (jsonLdCreated: true). Must not contain blocked @type values. Must not contain unapproved held properties.",
+      "blockedTypes": [
+        "FAQPage",
+        "Question",
+        "Answer",
+        "Offer",
+        "AggregateOffer",
+        "Event",
+        "SportsEvent",
+        "Review",
+        "AggregateRating",
+        "Place",
+        "LocalBusiness",
+        "GeoCoordinates",
+        "PostalAddress"
+      ],
+      "validatorRules": ["RULE_VAL_004", "RULE_VAL_005"],
+      "note": "This file does not exist yet. It will be created in a future governed schema run after all preconditions in 05_REFERENCE_WORKFLOW/ are confirmed."
+    },
+    {
+      "fileName": "implementation_handoff.md",
+      "type": "markdown",
+      "required": false,
+      "condition": "Present when currentWebsiteImplementationAuthorized: true in output_bundle_manifest.json. Requires explicit human approval before production use.",
+      "note": "This file does not exist yet. It will be created after human approval for Mode 1 implementation."
+    }
+  ],
+  "blockedFiles": [
+    {
+      "fileName": "emitted_schema.jsonld",
+      "blockedUntil": "Human approval granted and all preconditions in HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md confirmed",
+      "note": "The file name is listed in conditionalFiles above. It is also listed here to make clear it must not be created until governed preconditions are met."
+    }
+  ],
+  "safetyConstraints": {
+    "phase0MutationAllowed": false,
+    "sourceTruthMutationAllowed": false,
+    "schemaOutputCreated": false,
+    "jsonLdCreated": false,
+    "productionSchemaBundleCreated": false,
+    "astroAttachmentCreated": false,
+    "currentWebsiteImplementationAuthorized": false,
+    "note": "These values represent the current package posture. A future governed run may update schemaOutputCreated and jsonLdCreated to true only after all preconditions are confirmed."
+  },
+  "expectedHomepageTruthFingerprint": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d",
+  "homepageSchemaProfile": "HOMEPAGE_SCHEMA_PROFILE",
+  "homepageRoute": "/",
+  "blockedSchemaModules": [
+    "FAQPage",
+    "Question",
+    "Answer",
+    "Offer",
+    "AggregateOffer",
+    "Event",
+    "SportsEvent",
+    "Review",
+    "AggregateRating",
+    "Place",
+    "LocalBusiness",
+    "GeoCoordinates",
+    "PostalAddress"
+  ],
+  "allowedFirstPageModules": [
+    "Organization",
+    "WebSite",
+    "WebPage",
+    "BreadcrumbList",
+    "ListItem"
+  ],
+  "heldFieldCategories": [
+    "telephone",
+    "email",
+    "sameAs",
+    "logo",
+    "image",
+    "description",
+    "geo",
+    "latitude",
+    "longitude",
+    "address",
+    "streetAddress",
+    "addressLocality",
+    "addressRegion",
+    "postalCode",
+    "review",
+    "aggregateRating",
+    "ratingValue",
+    "ratingCount",
+    "price",
+    "priceCurrency",
+    "priceRange",
+    "startDate",
+    "endDate",
+    "eventSchedule",
+    "offers",
+    "availability"
+  ]
+}

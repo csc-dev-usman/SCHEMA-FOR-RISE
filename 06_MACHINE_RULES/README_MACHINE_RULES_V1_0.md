@@ -1,8 +1,8 @@
 # Machine Rules — Rise FC Standalone Schema Package
 
-**Status:** `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
-> These are contract schema definitions only. They are not validators. They are not scripts. They are not real run artifacts. No schema has been generated. No JSON-LD has been created. No evidence maps exist as run artifacts. These files define the expected shape of future governed run outputs.
+> This folder contains contract schema definitions and validator tooling. The contract schemas define the expected shape of future governed run outputs. The validator rules and expected-files contract support the Python output bundle validator in `tools/`. No schema has been generated. No JSON-LD has been created. No evidence maps exist as run artifacts.
 
 ---
 
@@ -36,6 +36,8 @@ No real run artifacts exist. No governed runs have occurred. No output bundles h
 | `VALIDATOR_RESULTS_SCHEMA_V1_0.json` | Contract schema for validator result sets |
 | `EVIDENCE_MAP_SCHEMA_V1_0.json` | Contract schema for evidence map records |
 | `RISE_SCHEMA_LINT_RULES_V1_0.json` | Lint rules defining blocked modules, held fields, allowed modules, and JSON-LD safety rules |
+| `OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md` | Validation rules for the output bundle validator (RULE_VAL_001–RULE_VAL_007). Added PR #11. |
+| `OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json` | Machine-readable expected file list contract for the validator — required, conditional, and blocked files. Added PR #11. |
 
 ---
 
@@ -63,4 +65,6 @@ This folder and all files within it do not authorize:
 
 No governed run has occurred. No real run artifacts exist. No evidence maps exist as run artifacts. The `evidenceMapSchemaAdded` flag in the package manifest is true — this means the evidence map contract schema exists as a definition. The `evidenceMapAdded` flag remains false — no actual evidence map run artifact has been created.
 
-Future PRs will add the homepage non-production draft contract (PR #10) and the final runnable handoff.
+The output bundle validator (`tools/validate_output_bundle.py`) added in PR #11 uses these contract schemas and rules to check future output bundle directories for compliance. See `tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md` for usage.
+
+Future PRs will add the homepage evidence map and the final runnable handoff.

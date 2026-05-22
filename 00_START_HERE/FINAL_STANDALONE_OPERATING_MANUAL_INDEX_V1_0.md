@@ -1,8 +1,8 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
-> This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps, validators, and the final runnable handoff.
+> This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
 ---
 
@@ -176,6 +176,25 @@ Understand:
 
 ---
 
+### Step 2j — Read output bundle validator (PR #11 addition)
+
+Files in this order:
+1. `tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md`
+2. `06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md`
+3. `06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json`
+
+Understand:
+- The validator is Python standard library only — no third-party packages required
+- Run with: `python tools/validate_output_bundle.py <bundle_dir>`
+- The validator checks: required files present, JSON validity, truth fingerprint (homepage), blocked modules, held fields without approval, production lock without human approval, safety booleans
+- Exit codes: 0=PASS, 1=FAIL, 2=WARN
+- The validator does NOT create or modify output bundles
+- The validator does NOT generate schema or JSON-LD
+- A PASS result is necessary but not sufficient — human review is still required before any implementation action
+- The expected-files contract lists all required, conditional, and blocked files for a future output bundle
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -208,7 +227,8 @@ Operators must wait for:
 - PR #8: Final validation, analyzer, and completion prompts ✓ Done
 - PR #9: Output bundle contract schemas ✓ Done
 - PR #10: Controlled homepage non-production JSON-LD draft contract ✓ Done
-- PR #11: Output bundle validator or Claude QA/controller schema layer
+- PR #11: Output bundle validator ✓ Done
+- PR #12: Claude QA finding schema and controller QA review contract
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -38,6 +38,8 @@
   "lintRulesAdded": true,
   "smokeTestsAdded": false,
   "evidenceMapAdded": false,
+  "outputBundleValidatorAdded": true,
+  "validatorsAdded": true,
   "operatorPromptsAdded": true,
   "prompt00Added": true,
   "prompt01Added": true,
@@ -161,5 +163,5 @@
     "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md",
     "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #11: Add output bundle validator or Claude QA/controller schema layer"
+  "nextRecommendedPr": "PR #12: Add Claude QA finding schema and controller QA review contract"
 }

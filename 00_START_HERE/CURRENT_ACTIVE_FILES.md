@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 adds the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. No schema has been generated. No prompts have been executed. Evidence maps, validators, and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 adds the output bundle validator to `tools/` and validator rules/expected-files contract to `06_MACHINE_RULES/`. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -113,17 +113,28 @@
 
 ---
 
-## Active machine-rules files (PR #9)
+## Active machine-rules files (PR #9 and PR #11)
 
 | File | Purpose |
 |------|---------|
-| `06_MACHINE_RULES/README_MACHINE_RULES_V1_0.md` | Machine rules folder index. Contract schema definitions only — not validators, not scripts. |
+| `06_MACHINE_RULES/README_MACHINE_RULES_V1_0.md` | Machine rules folder index. Contract schema definitions and validator tooling. |
 | `06_MACHINE_RULES/OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0.json` | Contract schema — required shape of a run output bundle manifest. |
 | `06_MACHINE_RULES/RUN_METADATA_SCHEMA_V1_0.json` | Contract schema — required shape of a run metadata record. |
 | `06_MACHINE_RULES/CONTROLLER_DECISION_SCHEMA_V1_0.json` | Contract schema — allowed controller decisions and required fields for Prompt 03 and Prompt 14. |
 | `06_MACHINE_RULES/VALIDATOR_RESULTS_SCHEMA_V1_0.json` | Contract schema — required shape of external validator result sets from Prompt 04. |
 | `06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json` | Contract schema — required shape of a future evidence map run artifact. Schema added; no evidence map run artifact exists yet. |
 | `06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json` | Lint rules — allowed modules, blocked modules, held field categories, and 10 JSON-LD safety rules. |
+| `06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md` | Validation rules for the output bundle validator — RULE_VAL_001 through RULE_VAL_007. Added PR #11. |
+| `06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json` | Machine-readable expected file list contract for validator — required, conditional, and blocked files. Added PR #11. |
+
+---
+
+## Active tools files (PR #11)
+
+| File | Purpose |
+|------|---------|
+| `tools/validate_output_bundle.py` | Python standard-library output bundle validator. Checks required files, JSON validity, truth fingerprint, blocked modules, held fields, production lock, and safety booleans. Does not create or modify output bundles. |
+| `tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md` | Operator README for the output bundle validator. Usage, exit codes, check descriptions, non-authorization statement. |
 
 ---
 
@@ -132,7 +143,6 @@
 | Directory | Status | Purpose |
 |-----------|--------|---------|
 | `08_SMOKE_TESTS/` | Future PR | Smoke test files |
-| `tools/` | Placeholder only | Future tooling scripts |
 
 ---
 
@@ -178,6 +188,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #8:** ~~Final validation, analyzer, and completion prompts~~ ✓ Done
 - **PR #9:** ~~Output bundle contract schemas~~ ✓ Done
 - **PR #10:** ~~Controlled homepage non-production JSON-LD draft contract~~ ✓ Done
-- **PR #11:** Output bundle validator or Claude QA/controller schema layer
+- **PR #11:** ~~Output bundle validator~~ ✓ Done
+- **PR #12:** Claude QA finding schema and controller QA review contract
 
 Generated schema, evidence maps, real run artifacts, and smoke tests are still not allowed. They require a future governed run after all preconditions are confirmed.
