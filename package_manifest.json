@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -48,6 +48,9 @@
   "googleRichResultsRunbookAdded": true,
   "screamingFrogChecklistAdded": true,
   "validationEvidenceHandoffRequirementsAdded": true,
+  "runLedgerSchemaAdded": true,
+  "runLedgerGuideAdded": true,
+  "runLedgerUpgraded": true,
   "operatorPromptsAdded": true,
   "prompt00Added": true,
   "prompt01Added": true,
@@ -165,7 +168,8 @@
     "06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md",
     "06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json",
     "06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json",
-    "06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json"
+    "06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json",
+    "06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json"
   ],
   "activeToolFiles": [
     "tools/validate_output_bundle.py",
@@ -183,7 +187,8 @@
     "05_REFERENCE_WORKFLOW/SCHEMA_VALIDATOR_RUNBOOK_V1_0.md",
     "05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md",
     "05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md",
-    "05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md"
+    "05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md",
+    "05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #14: Add governed run ledger schema and upgrade empty RUN_LEDGER"
+  "nextRecommendedPr": "PR #15: Add run ledger append helper and read-only ledger reporter"
 }

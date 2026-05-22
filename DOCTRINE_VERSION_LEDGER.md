@@ -10,7 +10,7 @@
 
 ## Current status
 
-`FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
+`RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -31,6 +31,7 @@
 | PR #11 | `tools: add Rise standalone output bundle validator` | Output bundle validator added to `tools/`. Validator rules and expected-files contract added to `06_MACHINE_RULES/`. Validator tooling only — no actual output bundles, no JSON-LD, no schema output. validatorsAdded=true; outputBundleValidatorAdded=true. |
 | PR #12 | `schema: add Rise Claude QA finding and controller review contracts` | Claude QA finding schema and controller review packet schema added to `06_MACHINE_RULES/`. QA/controller workflow and controller decision enum reference added to `05_REFERENCE_WORKFLOW/`. Contract definitions only — no QA run, no findings, no JSON-LD, no schema output. claudeQaFindingSchemaAdded=true; controllerReviewPacketSchemaAdded=true; claudeQaControllerWorkflowAdded=true. |
 | PR #13 | `docs: add Rise final schema validation protocol` | Final schema validation protocol and five runbook/requirements documents added to `05_REFERENCE_WORKFLOW/`. Documentation contracts only — no validators run, no schema generated, no evidence collected. finalValidationProtocolAdded=true; schemaValidatorRunbookAdded=true; googleRichResultsRunbookAdded=true; screamingFrogChecklistAdded=true; validationEvidenceHandoffRequirementsAdded=true. |
+| PR #14 | `schema: add governed Rise run ledger schema` | Run ledger schema added to `06_MACHINE_RULES/`. Run ledger review guide added to `05_REFERENCE_WORKFLOW/`. `RUN_LEDGER.json` upgraded with schemaVersion, ledgerStatus, productionLockStatus. Contract definition only — no run entries, no schema generated. runLedgerSchemaAdded=true; runLedgerGuideAdded=true; runLedgerUpgraded=true. |
 
 ---
 
@@ -94,6 +95,10 @@
 - Google Rich Results Test runbook added: **YES (PR #13) — documentation contract only**
 - Screaming Frog structured data export checklist added: **YES (PR #13) — documentation contract only, optional step**
 - Validation evidence handoff requirements added: **YES (PR #13) — documentation contract only**
+- Run ledger schema added: **YES (PR #14) — contract definition only**
+- Run ledger review guide added: **YES (PR #14) — documentation contract only**
+- Run ledger upgraded: **YES (PR #14) — schemaVersion, ledgerStatus, productionLockStatus added; entries remain empty**
+- Production lock status: **NO_PRODUCTION_LOCKS**
 
 ---
 
@@ -143,7 +148,9 @@ Claude QA finding schema and controller review packet schema added in PR #12. Th
 
 Final schema validation protocol added in PR #13. The 9-step final schema validation protocol (`05_REFERENCE_WORKFLOW/FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md`), Schema.org Validator runbook (`05_REFERENCE_WORKFLOW/SCHEMA_VALIDATOR_RUNBOOK_V1_0.md`), Google Rich Results Test runbook (`05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md`), Screaming Frog structured data export checklist (`05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md`), and validation evidence handoff requirements (`05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md`) are now in the package. These are documentation contracts only — no validators have been run, no schema has been generated, and no evidence exists. `finalValidationProtocolAdded=true`, `schemaValidatorRunbookAdded=true`, `googleRichResultsRunbookAdded=true`, `screamingFrogChecklistAdded=true`, `validationEvidenceHandoffRequirementsAdded=true`. Mode 1 remains not runnable.
 
-Next doctrine dependency: evidence map for the homepage (future PR).
+Governed run ledger schema added in PR #14. The run ledger schema (`06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json`) defines the required shape of future run ledger entries — all fields, allowed status values, and safety constraints. The run ledger review guide (`05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md`) explains how to read the ledger and when `PRODUCTION_LOCKED` may and may not be claimed. `RUN_LEDGER.json` has been upgraded with `schemaVersion`, `ledgerStatus`, `productionLockStatus`, and `lastUpdatedByPr` fields. Entries remain empty — no governed runs have been performed. `runLedgerSchemaAdded=true`, `runLedgerGuideAdded=true`, `runLedgerUpgraded=true`. Mode 1 remains not runnable.
+
+Next doctrine dependency: run ledger append helper and reporter (PR #15), then evidence map for the homepage (future PR).
 
 ---
 
@@ -164,3 +171,4 @@ Next doctrine dependency: evidence map for the homepage (future PR).
 | 1.0.0 | 2026-05-22 | PR #11 | Output bundle validator added (validate_output_bundle.py, README, validator rules, expected-files contract). Validator tooling only — not actual output bundles, not JSON-LD, not schema output. validatorsAdded=true; outputBundleValidatorAdded=true. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #12 | Claude QA finding schema and controller review packet schema added. QA/controller workflow and controller decision enum reference added. Contract definitions only — no QA run, no findings, no JSON-LD, not schema output. claudeQaFindingSchemaAdded=true; controllerReviewPacketSchemaAdded=true; claudeQaControllerWorkflowAdded=true. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #13 | Final schema validation protocol and five runbook/requirements documents added. Documentation contracts only — no validators run, no schema generated, no evidence collected. finalValidationProtocolAdded=true; schemaValidatorRunbookAdded=true; googleRichResultsRunbookAdded=true; screamingFrogChecklistAdded=true; validationEvidenceHandoffRequirementsAdded=true. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #14 | Run ledger schema and review guide added. RUN_LEDGER.json upgraded with schemaVersion, ledgerStatus, productionLockStatus. Contract definition only — no run entries, no schema generated. runLedgerSchemaAdded=true; runLedgerGuideAdded=true; runLedgerUpgraded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |

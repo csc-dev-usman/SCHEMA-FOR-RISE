@@ -1,0 +1,230 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "_description": "Contract schema defining the required shape of future Rise FC standalone schema operator run ledger entries. This is a reference definition only — it does not create run entries, does not generate schema, and does not authorize any production action.",
+  "status": "RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT",
+  "runLedgerEntryShape": {
+    "runId": {
+      "type": "string",
+      "format": "RISE_RUN_<PAGE_FAMILY>_<DATE_YYYYMMDD>_<SEQ>",
+      "example": "RISE_RUN_HOMEPAGE_20260601_001",
+      "required": true,
+      "description": "Unique identifier for this governed schema run. Must be unique within the ledger. Never reuse a runId."
+    },
+    "prNumber": {
+      "type": "integer",
+      "required": true,
+      "description": "The PR number that authorized or documented this run. Ties the run entry to the package PR history."
+    },
+    "targetUrl": {
+      "type": "string",
+      "format": "https://",
+      "example": "https://www.risefcsoccer.com/",
+      "required": true,
+      "description": "The confirmed target page URL for this schema run."
+    },
+    "pageFamily": {
+      "type": "string",
+      "allowedValues": ["homepage", "program_page", "about_page", "contact_page", "other"],
+      "required": true,
+      "description": "The page family for this run. Homepage is the first target."
+    },
+    "mode": {
+      "type": "string",
+      "allowedValues": ["MODE_1_CURRENT_WEBSITE", "MODE_2_ASTRO_CARRY"],
+      "required": true,
+      "description": "The operating mode for this run. Mode 1 targets the current risefcsoccer.com website. Mode 2 targets the future Astro implementation."
+    },
+    "schemaProfile": {
+      "type": "string",
+      "example": "HOMEPAGE_SCHEMA_PROFILE",
+      "required": true,
+      "description": "The confirmed schema profile name used for this run. Must match an approved profile in 07_REFERENCE_LISTS/."
+    },
+    "truthFingerprint": {
+      "type": "string",
+      "format": "sha256hex",
+      "example": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d",
+      "required": true,
+      "description": "SHA-256 truth fingerprint confirmed at run start. Must match the fingerprint in RISE_HOMEPAGE_TRUTH_FINGERPRINT_LOCK_V1_0.md for homepage runs."
+    },
+    "runDate": {
+      "type": "string",
+      "format": "ISO 8601 date",
+      "example": "2026-06-01",
+      "required": true,
+      "description": "Date the governed schema run was performed."
+    },
+    "readinessStatus": {
+      "type": "string",
+      "allowedValues": [
+        "READINESS_GATE_PASSED",
+        "READINESS_GATE_FAILED",
+        "READINESS_GATE_NOT_RUN"
+      ],
+      "required": true,
+      "description": "Result of Prompt 08 page content readiness gate. Must be READINESS_GATE_PASSED before drafting proceeds."
+    },
+    "evidenceMapStatus": {
+      "type": "string",
+      "allowedValues": [
+        "EVIDENCE_MAP_CONFIRMED",
+        "EVIDENCE_MAP_MISSING",
+        "EVIDENCE_MAP_STALE"
+      ],
+      "required": true,
+      "description": "Status of the evidence map for this run. Must be EVIDENCE_MAP_CONFIRMED before a draft is produced."
+    },
+    "draftStatus": {
+      "type": "string",
+      "allowedValues": [
+        "DRAFT_PRODUCED",
+        "DRAFT_NOT_PRODUCED",
+        "DRAFT_PATCHED",
+        "DRAFT_REJECTED"
+      ],
+      "required": true,
+      "description": "Status of the non-production JSON-LD draft for this run."
+    },
+    "qaStatus": {
+      "type": "string",
+      "allowedValues": [
+        "QA_PASSED",
+        "QA_PASSED_WITH_FINDINGS",
+        "QA_FAILED",
+        "QA_NOT_RUN"
+      ],
+      "required": true,
+      "description": "Result of Claude external QA (Prompt 02) and independent analyzer review (Prompt 13) for this run."
+    },
+    "controllerStatus": {
+      "type": "string",
+      "allowedValues": [
+        "CONTROLLER_APPROVED",
+        "CONTROLLER_PATCH_REQUIRED",
+        "CONTROLLER_REJECTED",
+        "CONTROLLER_HUMAN_REVIEW_REQUIRED",
+        "CONTROLLER_NOT_RUN"
+      ],
+      "required": true,
+      "description": "Result of controller decision (Prompt 03 and Prompt 14) for this run."
+    },
+    "validationStatus": {
+      "type": "string",
+      "allowedValues": [
+        "VALIDATION_PASSED",
+        "VALIDATION_PASSED_WITH_WARNINGS",
+        "VALIDATION_FAILED",
+        "VALIDATION_NOT_RUN"
+      ],
+      "required": true,
+      "description": "Result of the full 9-step validation protocol (FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md) for this run."
+    },
+    "implementationStatus": {
+      "type": "string",
+      "allowedValues": [
+        "IMPLEMENTATION_HANDOFF_DELIVERED",
+        "IMPLEMENTATION_HANDOFF_PENDING",
+        "IMPLEMENTATION_NOT_AUTHORIZED",
+        "IMPLEMENTATION_DEFERRED"
+      ],
+      "required": true,
+      "description": "Status of the current website implementation handoff for this run. IMPLEMENTATION_HANDOFF_DELIVERED requires human approval record."
+    },
+    "astroCarryStatus": {
+      "type": "string",
+      "allowedValues": [
+        "ASTRO_CARRY_DELIVERED",
+        "ASTRO_CARRY_PENDING",
+        "ASTRO_CARRY_NOT_AUTHORIZED",
+        "ASTRO_CARRY_DEFERRED",
+        "ASTRO_CARRY_NOT_APPLICABLE"
+      ],
+      "required": true,
+      "description": "Status of Astro schema carry for this run. ASTRO_CARRY_NOT_APPLICABLE is the expected value for all Mode 1 runs until Astro carry gates are defined."
+    },
+    "productionLockStatus": {
+      "type": "string",
+      "allowedValues": [
+        "NO_PRODUCTION_LOCKS",
+        "PRODUCTION_LOCKED"
+      ],
+      "required": true,
+      "default": "NO_PRODUCTION_LOCKS",
+      "description": "Production lock status for this run. PRODUCTION_LOCKED requires explicit human approval record and may never be self-claimed by any automated process."
+    },
+    "humanApprovalRef": {
+      "type": "string",
+      "required": false,
+      "description": "Reference to the human approval record. Required if implementationStatus is IMPLEMENTATION_HANDOFF_DELIVERED or productionLockStatus is PRODUCTION_LOCKED."
+    },
+    "outputBundleRef": {
+      "type": "string",
+      "required": false,
+      "description": "Reference to the output bundle directory or manifest file for this run."
+    },
+    "notes": {
+      "type": "string",
+      "required": false,
+      "description": "Optional free-text notes for this run entry."
+    }
+  },
+  "ledgerShape": {
+    "ledgerName": {
+      "type": "string",
+      "required": true
+    },
+    "ledgerVersion": {
+      "type": "string",
+      "required": true
+    },
+    "schemaVersion": {
+      "type": "string",
+      "description": "Reference to the run ledger schema version used to validate this ledger.",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "ledgerStatus": {
+      "type": "string",
+      "allowedValues": [
+        "BOOTSTRAP_EMPTY_NO_RUNS",
+        "HAS_DRAFT_RUNS",
+        "HAS_COMPLETED_RUNS",
+        "HAS_PRODUCTION_LOCKED_RUNS"
+      ],
+      "required": true
+    },
+    "productionLockStatus": {
+      "type": "string",
+      "allowedValues": [
+        "NO_PRODUCTION_LOCKS",
+        "HAS_PRODUCTION_LOCKS"
+      ],
+      "default": "NO_PRODUCTION_LOCKS",
+      "required": true
+    },
+    "safetyRules": {
+      "type": "object",
+      "required": true
+    },
+    "entries": {
+      "type": "array",
+      "required": true,
+      "description": "Array of run ledger entries. Each entry must conform to runLedgerEntryShape."
+    }
+  },
+  "safetyConstraints": {
+    "noRealRunEntriesUntilRunnableHandoffExists": true,
+    "productionLockRequiresHumanApprovalRecord": true,
+    "noFakeSuccessfulRunIds": true,
+    "noDuplicateRunIds": true,
+    "noSelfClaimedProductionLock": true,
+    "phase0MutationAllowed": false,
+    "schemaOutputCreated": false,
+    "jsonLdCreated": false
+  }
+}

@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 added the output bundle validator to `tools/`. PR #12 added the Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference. PR #13 adds the final schema validation protocol, Schema.org Validator runbook, Google Rich Results Test runbook, Screaming Frog checklist, and validation evidence handoff requirements. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 added the output bundle validator to `tools/`. PR #12 added the Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference. PR #13 added the final schema validation protocol and associated runbooks. PR #14 adds the governed run ledger schema, run ledger review guide, and upgrades `RUN_LEDGER.json`. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -12,7 +12,7 @@
 |------|---------|
 | `README_COMPLETE_OPERATOR_PACKAGE.md` | Root package README. Read first. |
 | `package_manifest.json` | Machine-readable package manifest. Status, modes, blocked modules. |
-| `RUN_LEDGER.json` | Run ledger. Currently empty — no runs have occurred. |
+| `RUN_LEDGER.json` | Run ledger. Upgraded PR #14 — empty entries, `schemaVersion`, `ledgerStatus`, `productionLockStatus` added. No runs recorded. |
 | `DOCTRINE_VERSION_LEDGER.md` | Doctrine and version history. PR log. |
 
 ---
@@ -101,7 +101,7 @@
 
 ---
 
-## Active reference-workflow files (PR #10, PR #12, and PR #13)
+## Active reference-workflow files (PR #10, PR #12, PR #13, and PR #14)
 
 | File | Purpose |
 |------|---------|
@@ -117,10 +117,11 @@
 | `05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md` | How to use the Google Rich Results Test. Rich results eligibility not guaranteed. Step 5 is informational only. Added PR #13. |
 | `05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md` | Screaming Frog structured data extraction checklist — optional/where available. Step 6 of validation protocol. Added PR #13. |
 | `05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md` | Required evidence metadata for the implementation handoff packet. No actual evidence. Added PR #13. |
+| `05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md` | How to read the run ledger, field explanations, when PRODUCTION_LOCKED may and may not be claimed. Added PR #14. |
 
 ---
 
-## Active machine-rules files (PR #9, PR #11, and PR #12)
+## Active machine-rules files (PR #9, PR #11, PR #12, and PR #14)
 
 | File | Purpose |
 |------|---------|
@@ -135,6 +136,7 @@
 | `06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json` | Machine-readable expected file list contract for validator — required, conditional, and blocked files. Added PR #11. |
 | `06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json` | Contract schema — required shape of a Claude QA finding record. Severity, category, claim, evidence, recommendation, controller disposition. Added PR #12. |
 | `06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json` | Contract schema — required shape of a controller review packet. Per-finding dispositions, final recommendation, patch/human-review flags. Added PR #12. |
+| `06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json` | Contract schema — required shape of run ledger entries. All fields, allowed status values, safety constraints. Added PR #14. |
 
 ---
 
@@ -200,6 +202,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #11:** ~~Output bundle validator~~ ✓ Done
 - **PR #12:** ~~Claude QA finding schema and controller review contracts~~ ✓ Done
 - **PR #13:** ~~Final schema validation protocol and validator runbook~~ ✓ Done
-- **PR #14:** Governed run ledger schema and RUN_LEDGER upgrade
+- **PR #14:** ~~Governed run ledger schema and RUN_LEDGER upgrade~~ ✓ Done
+- **PR #15:** Run ledger append helper and reporter
 
 Generated schema, evidence maps, real run artifacts, and smoke tests are still not allowed. They require a future governed run after all preconditions are confirmed.
