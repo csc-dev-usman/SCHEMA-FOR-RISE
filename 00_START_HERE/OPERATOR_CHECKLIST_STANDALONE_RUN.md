@@ -1,6 +1,6 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_PACKAGE_VALIDATOR_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_SMOKE_TEST_FIXTURE_CONTRACT_ADDED`
 
 > This checklist is not yet active. Do not attempt to run the schema workflow after PR #16. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
@@ -100,6 +100,11 @@
 - [ ] Confirm the expected active files contract has been read (`06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`)
 - [ ] Confirm `python tools/validate_package.py --help` runs successfully
 - [ ] Confirm `python tools/validate_package.py .` returns PASS (all 12 checks)
+- [ ] Confirm the smoke-test fixture contract (PR #17) has been merged ✓ Done
+- [ ] Confirm the smoke-test README has been read (`08_SMOKE_TESTS/README_SMOKE_TESTS.md`)
+- [ ] Confirm the smoke-test fixture contract has been read (`08_SMOKE_TESTS/STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md`)
+- [ ] Confirm the canned fixture README has been read (`08_SMOKE_TESTS/fixtures/standalone_v1_0/README_FAKE_FIXTURE.md`)
+- [ ] Confirm the canned fixture manifest has been read and parses cleanly (`08_SMOKE_TESTS/fixtures/standalone_v1_0/fixture_manifest.json`)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -183,6 +188,7 @@ Operators must not:
 | PR #14 | Governed run ledger schema and RUN_LEDGER upgrade | ✓ Done |
 | PR #15 | Run ledger append helper and reporter | ✓ Done |
 | PR #16 | Package validator and active-file coherence checks | ✓ Done |
-| PR #17 | Smoke-test fixture contract and canned fixture | Pending |
+| PR #17 | Smoke-test fixture contract and canned fixture | ✓ Done |
+| PR #18 | Smoke-test runner and package health reporter | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

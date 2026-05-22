@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,6 +50,9 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read `tools/README_PACKAGE_VALIDATOR_V1_0.md` to understand the package validator added in PR #16.
 - Read `06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md` to understand all 12 package checks.
 - Run `python tools/validate_package.py .` at any time to verify package structural integrity (read-only, no side effects).
+- Read `08_SMOKE_TESTS/README_SMOKE_TESTS.md` to understand what smoke tests are and are not.
+- Read `08_SMOKE_TESTS/STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md` to understand fixture safety rules.
+- Review `08_SMOKE_TESTS/fixtures/standalone_v1_0/` to understand the canned fake fixture — all data uses `example.invalid`, no real Rise data.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -95,7 +98,8 @@ The sequence:
 - PR #14 adds governed run ledger schema and RUN_LEDGER upgrade ✓ Done
 - PR #15 adds run ledger append helper and reporter ✓ Done
 - PR #16 adds package validator and active-file coherence checks ✓ Done
-- PR #17 adds smoke-test fixture contract and canned fixture
+- PR #17 adds smoke-test fixture contract and canned fixture ✓ Done
+- PR #18 adds smoke-test runner and package health reporter
 
 Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
 

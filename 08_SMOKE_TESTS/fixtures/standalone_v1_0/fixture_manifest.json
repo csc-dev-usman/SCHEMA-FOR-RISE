@@ -1,0 +1,56 @@
+{
+  "_isFakeFixture": true,
+  "_notRealRunArtifact": true,
+  "_fixtureVersion": "standalone_v1_0",
+  "fixtureSetId": "RISE_SMOKE_FIXTURE_STANDALONE_V1_0",
+  "createdByPr": 17,
+  "status": "FAKE_FIXTURE_ONLY",
+  "description": "Canned synthetic fixture set for the Rise FC standalone schema operator package smoke tests. All data is fake. All URLs use example.invalid. No real Rise FC data is present.",
+  "files": [
+    {
+      "path": "README_FAKE_FIXTURE.md",
+      "type": "documentation",
+      "purpose": "Human-readable explanation of what this fixture is and is not"
+    },
+    {
+      "path": "fixture_manifest.json",
+      "type": "manifest",
+      "purpose": "This file. Index of all fixture files with safety metadata."
+    },
+    {
+      "path": "fake_run_metadata.json",
+      "type": "fixture_data",
+      "purpose": "Synthetic run metadata record conforming to RUN_METADATA_SCHEMA_V1_0 shape"
+    },
+    {
+      "path": "fake_output_bundle_manifest.json",
+      "type": "fixture_data",
+      "purpose": "Synthetic output bundle manifest conforming to OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0 shape"
+    },
+    {
+      "path": "fake_controller_decision.json",
+      "type": "fixture_data",
+      "purpose": "Synthetic controller decision record conforming to CONTROLLER_DECISION_SCHEMA_V1_0 shape"
+    },
+    {
+      "path": "fake_validator_results.json",
+      "type": "fixture_data",
+      "purpose": "Synthetic validator results record conforming to VALIDATOR_RESULTS_SCHEMA_V1_0 shape"
+    }
+  ],
+  "safetyConstraints": {
+    "usesExampleInvalidOnly": true,
+    "noRealRiseData": true,
+    "noRealContactDetails": true,
+    "noRealSocialUrls": true,
+    "noRealCoordinates": true,
+    "noJsonLdOutput": true,
+    "noEmittedSchemaFile": true,
+    "noProductionLock": true,
+    "noRealRunId": true,
+    "schemaOutputCreated": false,
+    "jsonLdCreated": false,
+    "phase0MutationAllowed": false
+  },
+  "notes": "This fixture was added in PR #17. The smoke-test runner that exercises this fixture is not yet present — it will be added in PR #18."
+}
