@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -195,6 +195,27 @@ Understand:
 
 ---
 
+### Step 2k — Read Claude QA and controller review contracts (PR #12 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md`
+3. `06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json`
+4. `06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json`
+
+Understand:
+- Claude QA is a reviewer only — it is not a source of truth for Rise FC
+- Claude QA must run in a fresh session with no prior context from the schema generation run
+- Claude QA findings use severity levels: BLOCKER, HIGH, MEDIUM, LOW, INFO
+- Finding categories: SOURCE_TRUTH, HELD_FIELD, BLOCKED_MODULE, JSONLD_VALIDITY, EVIDENCE_MAP, VALIDATOR_RESULT, ASTRO_CARRY, CURRENT_SITE_IMPLEMENTATION, DOCUMENTATION, OTHER
+- Controller dispositions per finding: ACCEPT, MODIFY, REJECT, DEFER, HUMAN_REVIEW_REQUIRED, PATCH_REQUIRED
+- Controller final recommendations: PROCEED_TO_HUMAN_APPROVAL, PATCH_REQUIRED, REJECT_RUN, HUMAN_REVIEW_REQUIRED, DEFER_TO_LATER_PR
+- The controller cannot mutate Phase 0 and cannot self-approve production
+- Human approval at Step 9 is required before any implementation action — controller review does not replace it
+- No QA has been run. No findings exist. These are contract definitions only.
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -228,7 +249,8 @@ Operators must wait for:
 - PR #9: Output bundle contract schemas ✓ Done
 - PR #10: Controlled homepage non-production JSON-LD draft contract ✓ Done
 - PR #11: Output bundle validator ✓ Done
-- PR #12: Claude QA finding schema and controller QA review contract
+- PR #12: Claude QA finding schema and controller review contracts ✓ Done
+- PR #13: Final schema validation protocol and validator runbook
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

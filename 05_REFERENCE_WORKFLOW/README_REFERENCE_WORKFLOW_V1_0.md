@@ -1,8 +1,8 @@
 # Reference Workflow — Rise FC Standalone Schema Package
 
-**Status:** `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
 
-> This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, and review sequences for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet.
+> This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, and QA/controller review process for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist.
 
 ---
 
@@ -23,6 +23,8 @@ These documents serve as a governance checkpoint: the full workflow must be unde
 | `HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` | All preconditions that must be met before drafting begins. Hold matrix for fields that require owner approval. |
 | `HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md` | Planned output file names and their expected shapes. These are planned names only — no files have been created. |
 | `HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md` | The full 10-step review and approval sequence from readiness gate through implementation handoff. |
+| `CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md` | Claude QA and controller review workflow — what QA is, session rules, what the controller can and cannot do, finding severity rules. Added PR #12. |
+| `CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md` | Authoritative reference for all valid controller decision values — per-finding dispositions, final recommendations, and constraint table. Added PR #12. |
 
 ---
 
@@ -48,3 +50,5 @@ All files in this folder are documentation-only governance contracts. The actual
 3. `HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` — understand all preconditions
 4. `HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md` — understand planned outputs
 5. `HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md` — understand the full review sequence
+6. `CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md` — understand the Claude QA and controller review process
+7. `CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md` — understand all valid controller decision values

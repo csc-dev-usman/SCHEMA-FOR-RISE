@@ -1,0 +1,227 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "_description": "Rise FC standalone schema operator — contract schema defining the required shape of a Claude QA finding record. This is a contract definition only. No QA has been run. No findings exist. No QA zips have been created.",
+  "_governedBy": "05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md",
+  "_nonAuthorizationStatement": "This schema does not authorize schema output, production deployment, or any implementation action. Claude QA is a reviewer only — it is not a source of truth.",
+  "schemaVersion": "1.0",
+  "packageVersion": "1.0.0",
+  "status": "CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT",
+
+  "findingRecord": {
+    "_description": "Shape of a single Claude QA finding record. All fields are required unless marked optional.",
+
+    "findingId": {
+      "type": "string",
+      "format": "FINDING_<RUN_ID>_<SEQUENCE>",
+      "example": "FINDING_RUN001_001",
+      "required": true,
+      "description": "Unique identifier for this finding within the run."
+    },
+
+    "runId": {
+      "type": "string",
+      "format": "RUN_<NNN>_<PAGE>_<MODE>",
+      "example": "RUN_001_HOMEPAGE_MODE1",
+      "required": true,
+      "description": "Identifies the governed run this finding belongs to."
+    },
+
+    "severity": {
+      "type": "enum",
+      "required": true,
+      "allowedValues": [
+        "BLOCKER",
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "INFO"
+      ],
+      "descriptions": {
+        "BLOCKER": "Finding prevents schema from being used at all. Must be resolved before any further review.",
+        "HIGH": "Serious defect that must be resolved before operator approval. Not implementation-blocking by itself but requires controller decision.",
+        "MEDIUM": "Notable issue that should be addressed. May be resolved in patch or deferred with documented rationale.",
+        "LOW": "Minor issue or style concern. May be accepted with documented acknowledgement.",
+        "INFO": "Informational observation. No action required but recorded for operator awareness."
+      }
+    },
+
+    "category": {
+      "type": "enum",
+      "required": true,
+      "allowedValues": [
+        "SOURCE_TRUTH",
+        "HELD_FIELD",
+        "BLOCKED_MODULE",
+        "JSONLD_VALIDITY",
+        "EVIDENCE_MAP",
+        "VALIDATOR_RESULT",
+        "ASTRO_CARRY",
+        "CURRENT_SITE_IMPLEMENTATION",
+        "DOCUMENTATION",
+        "OTHER"
+      ],
+      "descriptions": {
+        "SOURCE_TRUTH": "Finding relates to Phase 0 source truth — incorrect derivation, invented field, or truth fingerprint mismatch.",
+        "HELD_FIELD": "Finding relates to a held field being emitted without approval or with insufficient evidence.",
+        "BLOCKED_MODULE": "Finding relates to a blocked schema module appearing in the output bundle.",
+        "JSONLD_VALIDITY": "Finding relates to JSON-LD syntax, context, graph structure, or lint rule (JLSR_001–JLSR_010).",
+        "EVIDENCE_MAP": "Finding relates to the evidence map — missing evidence, weak evidence, or invented evidence.",
+        "VALIDATOR_RESULT": "Finding relates to an external validator result (Schema.org Validator, Google Rich Results Test, Screaming Frog).",
+        "ASTRO_CARRY": "Finding relates to Astro schema carry or attachment (Mode 2 only).",
+        "CURRENT_SITE_IMPLEMENTATION": "Finding relates to the current website implementation (Mode 1 only).",
+        "DOCUMENTATION": "Finding relates to package documentation, workflow docs, or operator materials.",
+        "OTHER": "Finding does not fit another category. Requires description."
+      }
+    },
+
+    "sourceFile": {
+      "type": "string",
+      "required": true,
+      "description": "The file path within the output bundle or package that contains the issue. Use relative path from repo root.",
+      "example": "sample_runs/RUN_001_HOMEPAGE_MODE1/emitted_schema.jsonld"
+    },
+
+    "sourcePath": {
+      "type": "string",
+      "required": false,
+      "description": "Optional JSON path or section within the sourceFile that pinpoints the finding.",
+      "example": "@graph[0].@type"
+    },
+
+    "claim": {
+      "type": "string",
+      "required": true,
+      "description": "Plain-language statement of what the finding is. What is wrong, missing, or noteworthy. Must not invent schema facts."
+    },
+
+    "evidence": {
+      "type": "string",
+      "required": true,
+      "description": "Supporting evidence for the finding — e.g. quoted text from the file, field value, rule reference. Must trace to actual file content, not invented."
+    },
+
+    "ruleReference": {
+      "type": "string",
+      "required": false,
+      "description": "Optional reference to a governing rule, lint rule, or doctrine section that this finding relates to.",
+      "example": "JLSR_005"
+    },
+
+    "recommendation": {
+      "type": "string",
+      "required": true,
+      "description": "Claude QA recommendation for how to resolve the finding. This is advisory only — the controller makes the final decision."
+    },
+
+    "controllerDisposition": {
+      "type": "enum",
+      "required": false,
+      "description": "Filled in by the controller after reviewing this finding. Not set by Claude QA.",
+      "allowedValues": [
+        "ACCEPTED",
+        "MODIFIED",
+        "REJECTED",
+        "DEFERRED",
+        "HUMAN_REVIEW_REQUIRED",
+        "PATCH_REQUIRED"
+      ],
+      "descriptions": {
+        "ACCEPTED": "Controller accepts the finding and applies the recommendation.",
+        "MODIFIED": "Controller applies a modified version of the recommendation.",
+        "REJECTED": "Controller rejects the finding with documented rationale.",
+        "DEFERRED": "Controller defers the finding to a later run or PR.",
+        "HUMAN_REVIEW_REQUIRED": "Controller escalates to human review before proceeding.",
+        "PATCH_REQUIRED": "Finding requires a patch before the output bundle can proceed."
+      }
+    },
+
+    "controllerRationale": {
+      "type": "string",
+      "required": false,
+      "description": "Controller's documented rationale for the disposition. Required when controllerDisposition is REJECTED or DEFERRED."
+    }
+  },
+
+  "findingSetShape": {
+    "_description": "Shape of a complete Claude QA finding set for a single governed run.",
+    "qaRunId": {
+      "type": "string",
+      "required": true,
+      "description": "Identifies this QA review run. Matches the targetRunId in the controller review packet."
+    },
+    "qaSessionId": {
+      "type": "string",
+      "required": true,
+      "description": "Identifies the Claude session used for QA. Must be a fresh session — Claude QA must run with no prior context from the schema generation session."
+    },
+    "schemaProfile": {
+      "type": "string",
+      "required": true,
+      "description": "The schema profile being reviewed.",
+      "example": "HOMEPAGE_SCHEMA_PROFILE"
+    },
+    "pageRoute": {
+      "type": "string",
+      "required": true,
+      "description": "The page route being reviewed.",
+      "example": "/"
+    },
+    "truthFingerprint": {
+      "type": "string",
+      "required": true,
+      "description": "The truth fingerprint of the source truth used for this run. Must match the locked homepage fingerprint for homepage runs."
+    },
+    "totalFindings": {
+      "type": "integer",
+      "required": true,
+      "description": "Total number of findings in this set."
+    },
+    "blockerCount": {
+      "type": "integer",
+      "required": true,
+      "description": "Number of BLOCKER severity findings."
+    },
+    "highCount": {
+      "type": "integer",
+      "required": true,
+      "description": "Number of HIGH severity findings."
+    },
+    "findings": {
+      "type": "array",
+      "required": true,
+      "description": "Array of finding records conforming to findingRecord shape above.",
+      "items": "findingRecord"
+    },
+    "qaRecommendation": {
+      "type": "enum",
+      "required": true,
+      "allowedValues": [
+        "PROCEED_TO_CONTROLLER",
+        "PATCH_REQUIRED_BEFORE_CONTROLLER",
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "description": "Claude QA overall recommendation for this finding set. Advisory only — controller makes the final decision."
+    },
+    "nonAuthorizationStatement": {
+      "type": "string",
+      "required": true,
+      "description": "Must state that Claude QA does not authorize schema output, production deployment, or any implementation action."
+    }
+  },
+
+  "safetyConstraints": {
+    "claudeQaIsReviewerOnly": true,
+    "claudeQaIsNotSourceTruth": true,
+    "claudeQaMayNotMutatePhase0": true,
+    "claudeQaMayNotSelfApproveProduction": true,
+    "claudeQaMayNotInventFacts": true,
+    "controllerDecisionRequiredBeforeProduction": true,
+    "humanApprovalRequiredBeforeProduction": true,
+    "phase0MutationAllowed": false,
+    "sourceTruthMutationAllowed": false,
+    "schemaOutputCreated": false,
+    "jsonLdCreated": false
+  }
+}

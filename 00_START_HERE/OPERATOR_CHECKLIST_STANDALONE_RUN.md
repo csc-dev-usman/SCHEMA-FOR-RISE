@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_OUTPUT_BUNDLE_VALIDATOR_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #11. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #12. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -74,6 +74,11 @@
 - [ ] Confirm the validator rules have been read (`06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md`)
 - [ ] Confirm the expected-files contract has been read (`06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json`)
 - [ ] Confirm `python tools/validate_output_bundle.py --help` runs successfully
+- [ ] Confirm the Claude QA and controller review contracts (PR #12) have been merged ✓ Done
+- [ ] Confirm the Claude QA/controller workflow has been read (`05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md`)
+- [ ] Confirm the controller decision enum reference has been read (`05_REFERENCE_WORKFLOW/CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md`)
+- [ ] Confirm the Claude QA finding schema has been read (`06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json`)
+- [ ] Confirm the controller review packet schema has been read (`06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json`)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -152,6 +157,7 @@ Operators must not:
 | PR #9 | Output bundle contract schemas | ✓ Done |
 | PR #10 | Controlled homepage non-production JSON-LD draft contract | ✓ Done |
 | PR #11 | Output bundle validator | ✓ Done |
-| PR #12 | Claude QA finding schema and controller QA review contract | Pending |
+| PR #12 | Claude QA finding schema and controller review contracts | ✓ Done |
+| PR #13 | Final schema validation protocol and validator runbook | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

@@ -1,12 +1,12 @@
 # Final Mode 1 Runnable Handoff V1.0
 
-**Status:** `NOT_RUNNABLE_YET_OUTPUT_BUNDLE_VALIDATOR_ADDED`
+**Status:** `NOT_RUNNABLE_YET_CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED`
 
 ---
 
 ## Notice
 
-Mode 1 is not runnable yet after PR #11. This file is a placeholder for the later final runnable handoff.
+Mode 1 is not runnable yet after PR #12. This file is a placeholder for the later final runnable handoff.
 
 The Mode 1 runnable handoff requires the following dependencies:
 
@@ -24,6 +24,7 @@ The Mode 1 runnable handoff requires the following dependencies:
 | Output bundle contract schemas | PR #9 | ✓ Done |
 | Homepage non-production draft contract | PR #10 | ✓ Done |
 | Output bundle validator | PR #11 | ✓ Done |
+| Claude QA and controller review contracts | PR #12 | ✓ Done |
 | Homepage evidence map | Future PR | Pending |
 | Smoke tests | Future PR | Pending |
 | Final runnable handoff | Future PR | Pending |

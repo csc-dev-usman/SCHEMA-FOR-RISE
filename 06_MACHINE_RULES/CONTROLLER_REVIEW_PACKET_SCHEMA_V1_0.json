@@ -1,0 +1,199 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "_description": "Rise FC standalone schema operator — contract schema defining the required shape of a controller review packet. This is a contract definition only. No controller review has been run. No packets exist.",
+  "_governedBy": "05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md",
+  "_nonAuthorizationStatement": "This schema does not authorize schema output, production deployment, or any implementation action. The controller cannot mutate Phase 0 and cannot self-approve production.",
+  "schemaVersion": "1.0",
+  "packageVersion": "1.0.0",
+  "status": "CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT",
+
+  "controllerReviewPacket": {
+    "_description": "Shape of a controller review packet. Produced after Claude QA finding review. Required before human approval.",
+
+    "reviewId": {
+      "type": "string",
+      "format": "REVIEW_<RUN_ID>_<SEQUENCE>",
+      "example": "REVIEW_RUN001_001",
+      "required": true,
+      "description": "Unique identifier for this controller review packet."
+    },
+
+    "targetRunId": {
+      "type": "string",
+      "format": "RUN_<NNN>_<PAGE>_<MODE>",
+      "example": "RUN_001_HOMEPAGE_MODE1",
+      "required": true,
+      "description": "The governed run this review packet covers. Must match the runId of the finding set."
+    },
+
+    "qaRunId": {
+      "type": "string",
+      "required": true,
+      "description": "The QA review run ID this packet is responding to. Must match qaRunId in the Claude QA finding set."
+    },
+
+    "schemaProfile": {
+      "type": "string",
+      "required": true,
+      "description": "The schema profile under review.",
+      "example": "HOMEPAGE_SCHEMA_PROFILE"
+    },
+
+    "pageRoute": {
+      "type": "string",
+      "required": true,
+      "description": "The page route under review.",
+      "example": "/"
+    },
+
+    "truthFingerprint": {
+      "type": "string",
+      "required": true,
+      "description": "The truth fingerprint of the source truth used for this run. Must match the locked homepage fingerprint for homepage runs."
+    },
+
+    "qaFindings": {
+      "type": "array",
+      "required": true,
+      "description": "Array of Claude QA findings being reviewed in this packet. Each item conforms to findingRecord shape in CLAUDE_QA_FINDING_SCHEMA_V1_0.json.",
+      "sourceSchema": "06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json"
+    },
+
+    "controllerDecisions": {
+      "type": "array",
+      "required": true,
+      "description": "Array of controller decisions — one per finding. Each decision records the findingId, disposition, rationale, and any patch action.",
+      "items": {
+        "findingId": {
+          "type": "string",
+          "required": true,
+          "description": "The findingId from the QA finding set this decision addresses."
+        },
+        "disposition": {
+          "type": "enum",
+          "required": true,
+          "allowedValues": [
+            "ACCEPT",
+            "MODIFY",
+            "REJECT",
+            "DEFER",
+            "HUMAN_REVIEW_REQUIRED",
+            "PATCH_REQUIRED"
+          ],
+          "descriptions": {
+            "ACCEPT": "Controller accepts the QA finding and recommendation. Applies as-is.",
+            "MODIFY": "Controller applies a modified version of the recommendation. Rationale required.",
+            "REJECT": "Controller rejects the finding. Rationale required. Operator must verify rejection is not a doctrine violation.",
+            "DEFER": "Controller defers the finding to a later run or PR. Rationale required.",
+            "HUMAN_REVIEW_REQUIRED": "Controller escalates this finding to human review. Blocks progression until human resolves.",
+            "PATCH_REQUIRED": "Finding requires a patch before the output bundle can proceed. Patch description required."
+          }
+        },
+        "rationale": {
+          "type": "string",
+          "required": false,
+          "description": "Controller rationale. Required when disposition is REJECT, DEFER, MODIFY, or PATCH_REQUIRED."
+        },
+        "patchDescription": {
+          "type": "string",
+          "required": false,
+          "description": "Description of the patch to apply. Required when disposition is PATCH_REQUIRED."
+        }
+      }
+    },
+
+    "patchRequired": {
+      "type": "boolean",
+      "required": true,
+      "description": "True if any finding has disposition PATCH_REQUIRED. False otherwise. A patch must be applied and the run re-reviewed before progression."
+    },
+
+    "humanReviewRequired": {
+      "type": "boolean",
+      "required": true,
+      "description": "True if any finding has disposition HUMAN_REVIEW_REQUIRED or if the controller's finalRecommendation is HUMAN_REVIEW_REQUIRED. Blocks progression until human resolves."
+    },
+
+    "blockerCount": {
+      "type": "integer",
+      "required": true,
+      "description": "Count of BLOCKER severity findings in the QA finding set."
+    },
+
+    "unresolvedBlockers": {
+      "type": "integer",
+      "required": true,
+      "description": "Count of BLOCKER severity findings not yet resolved (disposition is not ACCEPT or MODIFY). Must be 0 before progression."
+    },
+
+    "finalRecommendation": {
+      "type": "enum",
+      "required": true,
+      "allowedValues": [
+        "PROCEED_TO_HUMAN_APPROVAL",
+        "PATCH_REQUIRED",
+        "REJECT_RUN",
+        "HUMAN_REVIEW_REQUIRED",
+        "DEFER_TO_LATER_PR"
+      ],
+      "descriptions": {
+        "PROCEED_TO_HUMAN_APPROVAL": "All findings resolved. Bundle may proceed to human approval step. Human approval is required before implementation.",
+        "PATCH_REQUIRED": "One or more findings require a patch before the bundle can proceed. Re-review required after patch.",
+        "REJECT_RUN": "Controller rejects the entire run. A new governed run is required from the beginning.",
+        "HUMAN_REVIEW_REQUIRED": "Controller escalates the entire packet to human review before any action.",
+        "DEFER_TO_LATER_PR": "Controller defers all unresolved findings to a later PR. Documents which findings are deferred and why."
+      }
+    },
+
+    "controllerSummary": {
+      "type": "string",
+      "required": true,
+      "description": "Controller plain-language summary of the review packet — what was found, what was decided, and what happens next."
+    },
+
+    "nonAuthorizationStatement": {
+      "type": "string",
+      "required": true,
+      "description": "Must state: the controller review packet does not authorize schema output, production deployment, or any implementation action. Human approval is required. The controller cannot mutate Phase 0. The controller cannot self-approve production."
+    }
+  },
+
+  "controllerDecisionEnum": {
+    "_description": "Reference enumeration of all valid controller decisions. See CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md for full descriptions.",
+    "values": [
+      "ACCEPT",
+      "MODIFY",
+      "REJECT",
+      "DEFER",
+      "HUMAN_REVIEW_REQUIRED",
+      "PATCH_REQUIRED"
+    ]
+  },
+
+  "finalRecommendationEnum": {
+    "_description": "Reference enumeration of all valid final recommendations for a controller review packet.",
+    "values": [
+      "PROCEED_TO_HUMAN_APPROVAL",
+      "PATCH_REQUIRED",
+      "REJECT_RUN",
+      "HUMAN_REVIEW_REQUIRED",
+      "DEFER_TO_LATER_PR"
+    ]
+  },
+
+  "safetyConstraints": {
+    "controllerMayNotMutatePhase0": true,
+    "controllerMayNotSelfApproveProduction": true,
+    "controllerMayNotInventFacts": true,
+    "controllerMayNotBypassHumanApproval": true,
+    "humanApprovalRequiredBeforeProduction": true,
+    "patchRequiredBlocksProgression": true,
+    "unresolvedBlockerBlocksProgression": true,
+    "phase0MutationAllowed": false,
+    "sourceTruthMutationAllowed": false,
+    "schemaOutputCreated": false,
+    "jsonLdCreated": false
+  }
+}
