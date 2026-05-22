@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -347,6 +347,25 @@ Understand:
 
 ---
 
+### Step 2s — Read independent analyzer and controller post-analyzer flow (PR #20 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`
+
+Understand:
+- The analyzer runs in a fresh session with no prior context and produces findings only — it does not approve or reject the run
+- The analyzer checks 10 items: evidence mapping, truth-view currency, schema profile conformance, held field compliance, JSON-LD validity, lint rule compliance, validation result, implementation eligibility, Phase 0 boundary, and production lock status
+- The controller reviews each finding and assigns a per-finding disposition (ACCEPT, MODIFY, REJECT, DEFER, HUMAN_REVIEW_REQUIRED, PATCH_REQUIRED, or HOLD)
+- The controller issues a final recommendation; `PROCEED_TO_HUMAN_APPROVAL` with `unresolvedBlockers: 0` is required before Step 8
+- Neither the analyzer nor the controller may mutate Phase 0, self-approve production, or bypass the human approval gate
+- The analyzer review template and controller decision template are blank future-use documents only — no real findings or decisions exist
+- Reading these files does not run the analyzer or create any findings
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -388,7 +407,7 @@ Operators must wait for:
 - PR #17: Smoke-test fixture contract and canned fixture ✓ Done
 - PR #18: Smoke-test runner and package health reporter ✓ Done
 - PR #19: First real page handoff template ✓ Done
-- PR #20: Independent analyzer and controller post-analyzer flow
+- PR #20: Independent analyzer and controller post-analyzer flow ✓ Done
 - PR #21: Current website implementation handoff checklist
 - PR #22: Governed sample-run artifact policy
 

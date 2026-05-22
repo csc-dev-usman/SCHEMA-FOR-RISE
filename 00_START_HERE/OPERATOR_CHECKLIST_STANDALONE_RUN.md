@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #19. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #20. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -117,6 +117,11 @@
 - [ ] Confirm the homepage first real run supervision rules have been read (`05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md`)
 - [ ] Confirm the hold reason reference has been read (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md`)
 - [ ] Confirm no hold codes are active before beginning any run
+- [ ] Confirm the independent analyzer and controller post-analyzer flow (PR #20) has been merged ✓ Done
+- [ ] Confirm the analyzer/controller flow has been read (`05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`)
+- [ ] Confirm the analyzer review template has been read (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`)
+- [ ] Confirm the controller decision template has been read (`05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`)
+- [ ] Confirm the disposition matrix has been read (`05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -203,7 +208,7 @@ Operators must not:
 | PR #17 | Smoke-test fixture contract and canned fixture | ✓ Done |
 | PR #18 | Smoke-test runner and package health reporter | ✓ Done |
 | PR #19 | First real page handoff template | ✓ Done |
-| PR #20 | Independent analyzer and controller post-analyzer flow | Pending |
+| PR #20 | Independent analyzer and controller post-analyzer flow | ✓ Done |
 | PR #21 | Current website implementation handoff checklist | Pending |
 | PR #22 | Governed sample-run artifact policy | Pending |
 

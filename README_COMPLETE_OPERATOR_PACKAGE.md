@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #19 adds the first real page run handoff template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md`), intake fields document (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md`), homepage first real run supervision rules (`05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md`), and hold reason reference (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md`). These are governance reference documents only — no real run has been started, no schema has been generated. Milestone 3 is tooling-complete. Milestone 4 (first real page run support layer) is in progress. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #20 adds the independent analyzer and controller post-analyzer flow (`05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`), independent analyzer review template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`), controller post-analyzer decision template (`05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`), and analyzer/controller disposition matrix (`05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`). These are workflow definitions and blank templates only — no analyzer has been run, no findings exist, no controller decisions have been made, no schema has been generated. Milestone 4 (first real page run support layer) is in progress. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -137,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #19) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #19 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #20) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #20 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -184,6 +184,7 @@ No content in this package (through PR #19) authorizes any schema to be deployed
   `tools: add Rise smoke-test runner and package health reporter`
 - **PR #19:** ~~Add first real page handoff template~~ ✓ Merged
   `docs: add Rise first real page handoff template`
-- **PR #20:** Add independent analyzer and controller post-analyzer flow
+- **PR #20:** ~~Add independent analyzer and controller post-analyzer flow~~ ✓ Merged
+  `docs: add Rise independent analyzer and controller post-analyzer flow`
 - **PR #21:** Add current website implementation handoff checklist
 - **PR #22:** Add governed sample-run artifact policy

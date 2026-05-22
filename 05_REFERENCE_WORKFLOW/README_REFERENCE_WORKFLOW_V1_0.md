@@ -1,6 +1,6 @@
 # Reference Workflow — Rise FC Standalone Schema Package
 
-**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
 > This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, the full validation protocol, the run ledger review guide, and the first real page run handoff templates for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run. No run entries exist.
 
@@ -35,6 +35,10 @@ These documents serve as a governance checkpoint: the full workflow must be unde
 | `FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md` | Required intake fields and validation expectations for a governed first real page run. Added PR #19. |
 | `HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md` | Supervision rules for the first real homepage schema run — route `/`, `HOMEPAGE_SCHEMA_PROFILE`, fingerprint, allowed modules, blocked modules, held fields, stop conditions. Added PR #19. |
 | `FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md` | All hold codes for governed first real page runs — definitions, conditions, and resolution requirements. Added PR #19. |
+| `INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md` | Full independent analyzer and controller post-analyzer flow definition — stages, checks, dispositions, constraints. Added PR #20. |
+| `FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md` | Blank future-use independent analyzer review template. Added PR #20. |
+| `CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md` | Blank future-use controller post-analyzer decision template. Added PR #20. |
+| `ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md` | Disposition matrix — severity-to-disposition guidance, category constraints, final recommendation rules. Added PR #20. |
 
 ---
 
@@ -72,3 +76,7 @@ All files in this folder are documentation-only governance contracts. The actual
 15. `FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md` — required intake fields and validation expectations (Added PR #19)
 16. `HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md` — homepage lane supervision rules (Added PR #19)
 17. `FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md` — all hold codes and resolution requirements (Added PR #19)
+18. `INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md` — full analyzer and controller flow (Added PR #20)
+19. `FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md` — blank analyzer review template (Added PR #20)
+20. `CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md` — blank controller decision template (Added PR #20)
+21. `ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md` — disposition matrix (Added PR #20)
