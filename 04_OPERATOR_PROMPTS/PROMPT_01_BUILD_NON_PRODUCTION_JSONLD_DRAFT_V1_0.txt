@@ -1,0 +1,165 @@
+PROMPT 01 — BUILD NON-PRODUCTION JSON-LD DRAFT
+Rise FC Standalone Schema Operator Package
+Version: V1_0
+Status: TEMPLATE_ONLY — NOT EXECUTED
+
+---
+
+PURPOSE
+
+Build a non-production JSON-LD draft from confirmed Phase 0 evidence and confirmed page evidence. This prompt runs after Prompt 08 (page content readiness gate) passes. The output is a draft only — it is not production schema, it is not attached to any website, and it requires further review through Prompts 02, 03, 04, 13, and 14 before any human approval gate is reached.
+
+---
+
+OPERATOR INSTRUCTION
+
+Paste this prompt only after:
+- Prompt 00 gates are confirmed (intake complete)
+- Prompt 08 passes (page readiness confirmed)
+- Evidence map for the target page is confirmed as present
+- All preconditions below are met
+
+Do not use this prompt to generate schema if any precondition is not met.
+
+---
+
+BEGIN PROMPT
+
+You are operating inside the Rise FC standalone schema operator package.
+
+This is Prompt 01 — Build Non-Production JSON-LD Draft.
+
+---
+
+HARD PRECONDITIONS — CHECK ALL BEFORE PROCEEDING
+
+You must confirm every item below before building any draft. If any item is not confirmed, stop immediately and report which precondition failed.
+
+[ ] Phase 0 source reference confirmed
+[ ] Homepage scoped truth view confirmed (03_TRUTH_PACK/RISE_PHASE0_SCHEMA_TRUTH_VIEW_HOMEPAGE_SCOPED_V1_0.json)
+[ ] Truth fingerprint confirmed and matches: 80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d
+[ ] Active schema profile confirmed: HOMEPAGE_SCHEMA_PROFILE for route /
+[ ] Evidence map confirmed as present for the target page
+[ ] Prompt 08 readiness gate passed — confirmed modules listed
+[ ] Blocked modules confirmed — none included in this draft
+[ ] Held fields confirmed — all 15 held field categories remain NOT_REVIEWED_HELD unless explicitly released by owner approval worksheet
+[ ] This draft is non-production only — it will not be attached to any website from this step
+[ ] Human approval is required before any implementation handoff
+
+If any precondition is not confirmed: STOP. Do not build the draft. Report the failed precondition and the applicable stop code.
+
+---
+
+INPUTS REQUIRED FROM OPERATOR
+
+Target URL:
+[OPERATOR INPUT REQUIRED]
+
+Target route:
+[OPERATOR INPUT REQUIRED]
+
+Active schema profile:
+[HOMEPAGE_SCHEMA_PROFILE]
+
+Confirmed modules from Prompt 08 readiness gate:
+[OPERATOR INPUT REQUIRED — list confirmed modules, e.g., Organization, WebSite, WebPage, BreadcrumbList]
+
+Evidence map fields confirmed for this draft:
+[OPERATOR INPUT REQUIRED — list each field, its confirmed value, and its Phase 0 or page evidence source]
+
+Example format:
+  - Organization.name: "Rise FC" — source: Phase 0 legal entity name
+  - Organization.url: "https://risefcsoccer.com/" — source: Phase 0 homepage URL
+  - WebSite.name: "Rise FC" — source: Phase 0 site name
+  - WebSite.url: "https://risefcsoccer.com/" — source: Phase 0 homepage URL
+  - WebPage.name: [confirmed page title] — source: confirmed page <title> or H1
+  - WebPage.url: "https://risefcsoccer.com/" — source: confirmed canonical URL
+  - BreadcrumbList items: [OPERATOR INPUT — list item names and URLs]
+
+---
+
+DRAFT RULES — MANDATORY
+
+1. Emit only fields that have a confirmed Phase 0 source reference or confirmed page evidence.
+2. Do not invent any field. A field with no confirmed source is omitted.
+3. Do not emit any held field. Held fields remain held regardless of what appears on the page.
+4. Do not include any blocked module. Blocked modules are not emitted even if the page contains relevant content.
+5. Use schema.org vocabulary only. Do not use non-standard extensions.
+6. Use a single JSON-LD script block with @graph for multiple node types.
+7. Use https:// URLs only. Do not use http://.
+8. Do not include redundant or duplicate properties.
+9. Do not include fields that require speculation or inference from non-confirmed sources.
+10. Mark the output as NON_PRODUCTION at the top of the draft response.
+
+---
+
+HELD FIELDS — ABSOLUTE EXCLUSION LIST
+
+Do not include any of the following in the draft regardless of evidence:
+
+- Telephone — NOT_REVIEWED_HELD
+- Email — NOT_REVIEWED_HELD
+- sameAs — NOT_REVIEWED_HELD
+- Logo — NOT_REVIEWED_HELD
+- Description (from tagline or mission line) — NOT_REVIEWED_HELD
+- Coordinates / geo — NOT_REVIEWED_HELD
+- Address / PostalAddress — NOT_REVIEWED_HELD
+- Review nodes — BLOCKED
+- AggregateRating nodes — BLOCKED
+- Offer nodes — BLOCKED
+- Event nodes — BLOCKED
+- Place / GeoCoordinates nodes — BLOCKED
+- Testimonial-derived claims — BLOCKED
+- Bilingual alternate data — BLOCKED
+
+---
+
+BLOCKED MODULES — ABSOLUTE EXCLUSION LIST
+
+Do not include any of the following:
+
+- FAQPage
+- Offer
+- Event
+- Review
+- AggregateRating
+- Place
+- GeoCoordinates
+- Any testimonial-derived schema type
+- Any bilingual schema structure
+- Any advanced module not listed in HOMEPAGE_SCHEMA_PROFILE
+
+---
+
+OUTPUT FORMAT
+
+Return the draft as a JSON-LD script block with:
+- A clear NON_PRODUCTION header comment
+- @context: "https://schema.org"
+- @graph array containing each module node
+- Each node clearly identified by @type
+
+After the draft, return a field-by-field evidence table:
+
+| Field | Value | Evidence source |
+|-------|-------|----------------|
+| [field path] | [emitted value] | [Phase 0 ref or page evidence] |
+
+After the evidence table, return a held fields table:
+
+| Field | Status | Reason |
+|-------|--------|--------|
+| [held field] | NOT_REVIEWED_HELD | [reason] |
+
+After the held fields table, return:
+- List of blocked modules not included
+- Any fields that were confirmed but intentionally omitted and why
+- Overall draft status: NON_PRODUCTION_DRAFT_COMPLETE
+
+---
+
+NON-AUTHORIZATION STATEMENT
+
+This draft is non-production only. It must not be attached to any website. It must not be committed to a production branch. It must not be treated as approved schema. Further review through Prompt 02 (external QA), Prompt 03 (controller decision), Prompt 04 (validator results), Prompt 13 (independent analyzer), and Prompt 14 (controller post-analyzer) is required before any human approval gate is reached. Human approval is required at every gate before implementation handoff.
+
+END PROMPT

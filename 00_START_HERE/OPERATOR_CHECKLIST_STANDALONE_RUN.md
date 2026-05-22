@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_QUICKSTART_UPGRADED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_CORE_PROMPTS_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #6. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #7. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -41,7 +41,15 @@
 - [ ] Confirm the page run sequence has been read (`01_MASTER_FLOW/RISE_SCHEMA_PAGE_RUN_SEQUENCE_V1_0.md`)
 - [ ] Confirm the master stop conditions have been read (`01_MASTER_FLOW/RISE_SCHEMA_MASTER_STOP_CONDITIONS_V1_0.md`)
 - [ ] Confirm Mode 1 flow has been read (`01_MASTER_FLOW/MODE_1_CURRENT_WEBSITE_SCHEMA_OPTIMIZATION_FLOW_V1_0.md`)
-- [ ] Confirm the operator prompts (PR #7) have been merged
+- [ ] Confirm the operator prompts (PR #7) have been merged ✓ Done
+- [ ] Confirm the operator prompt README has been read (`04_OPERATOR_PROMPTS/README_OPERATOR_PROMPTS_V1_0.md`)
+- [ ] Confirm Prompt 00 has been read (`04_OPERATOR_PROMPTS/PROMPT_00_STANDALONE_URL_REVIEW_START_V1_0.txt`)
+- [ ] Confirm Prompt 08 has been read (`04_OPERATOR_PROMPTS/PROMPT_08_PAGE_CONTENT_READINESS_GATE_V1_0.txt`)
+- [ ] Confirm Prompt 01 has been read (`04_OPERATOR_PROMPTS/PROMPT_01_BUILD_NON_PRODUCTION_JSONLD_DRAFT_V1_0.txt`)
+- [ ] Confirm Prompt 02 has been read (`04_OPERATOR_PROMPTS/PROMPT_02_CLAUDE_EXTERNAL_QA_ONE_ZIP_V1_0.txt`)
+- [ ] Confirm Prompt 03 has been read (`04_OPERATOR_PROMPTS/PROMPT_03_CONTROLLER_DECISION_AND_REGENERATION_V1_0.txt`)
+- [ ] Confirm Prompt 04 has been read (`04_OPERATOR_PROMPTS/PROMPT_04_VALIDATOR_RESULTS_REVIEW_V1_0.txt`)
+- [ ] Confirm the final validation/analyzer prompts (PR #8) have been merged
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -115,7 +123,7 @@ Operators must not:
 | PR #4 | Homepage schema profile and blocked module policy | ✓ Done |
 | PR #5 | Standalone schema master flow | ✓ Done |
 | PR #6 | Team quickstart and operator checklist upgrades | ✓ Done |
-| PR #7 | Operator prompts 00 through 04 and 08 | Pending |
+| PR #7 | Operator prompts 00 through 04 and 08 | ✓ Done |
 | PR #8 | Final validation, analyzer, and completion prompts | Pending |
 | PR #9 | Output bundle contract schemas | Pending |
 | PR #10 | Controlled homepage non-production JSON-LD draft contract | Pending |

@@ -1,0 +1,166 @@
+PROMPT 03 — CONTROLLER DECISION AND REGENERATION
+Rise FC Standalone Schema Operator Package
+Version: V1_0
+Status: TEMPLATE_ONLY — NOT EXECUTED
+
+---
+
+PURPOSE
+
+The controller reviews the non-production JSON-LD draft and the Prompt 02 QA report together and issues a formal decision. The controller is not Claude acting autonomously — the controller role is defined by this prompt and its decisions are constrained to the allowable outcomes below. No self-approval is permitted. No production authorization is issued from this prompt.
+
+This prompt runs after Prompt 02 (Claude external QA one-zip) returns a PASS or WARN result.
+
+If Prompt 02 returns FAIL, do not run Prompt 03. Resolve failures in Prompt 01 first, then re-run Prompt 02.
+
+---
+
+OPERATOR INSTRUCTION
+
+Paste this prompt after Prompt 02 returns a PASS or WARN result. Provide the draft, evidence table, held fields table, and Prompt 02 QA report in the input. The controller will return one of the defined decisions.
+
+---
+
+BEGIN PROMPT
+
+You are operating inside the Rise FC standalone schema operator package.
+
+This is Prompt 03 — Controller Decision and Regeneration.
+
+You are acting as the controller for this governed schema run. Your role is to review the non-production JSON-LD draft, the Prompt 02 QA report, and the evidence table, and to issue one of the allowable decisions defined below. You may not issue a decision not on this list. You may not self-approve the draft for production.
+
+---
+
+INPUTS REQUIRED FROM OPERATOR
+
+Target URL:
+[OPERATOR INPUT REQUIRED]
+
+Target route:
+[OPERATOR INPUT REQUIRED]
+
+Active schema profile:
+[HOMEPAGE_SCHEMA_PROFILE]
+
+Non-production JSON-LD draft (from Prompt 01):
+[OPERATOR INPUT REQUIRED — paste full draft]
+
+Evidence table (from Prompt 01):
+[OPERATOR INPUT REQUIRED — paste full evidence table]
+
+Held fields table (from Prompt 01):
+[OPERATOR INPUT REQUIRED — paste full held fields table]
+
+Prompt 02 QA report:
+[OPERATOR INPUT REQUIRED — paste full QA report]
+
+Overall Prompt 02 QA result:
+[OPERATOR INPUT REQUIRED — PASS, WARN, or FAIL]
+
+---
+
+CONTROLLER REVIEW CHECKLIST
+
+Review the draft, evidence table, and QA report. Check each of the following:
+
+[ ] Draft is structurally valid JSON-LD
+[ ] All emitted fields trace to confirmed evidence
+[ ] No held fields are emitted
+[ ] No blocked modules are present
+[ ] All QA PASS items are confirmed
+[ ] All QA WARN items are reviewed and understood
+[ ] No QA FAIL items are present (if any FAIL: issue REJECT, not ACCEPT)
+[ ] Draft is clearly marked as NON_PRODUCTION
+
+---
+
+ALLOWABLE CONTROLLER DECISIONS
+
+The controller must issue exactly one of the following decisions:
+
+ACCEPT
+  Condition: Draft passes all checks. QA is PASS or WARN with no blocking issues. No held fields. No blocked modules. No invented content.
+  Next step: Proceed to Prompt 04 (validator results review).
+
+MODIFY
+  Condition: Draft has non-blocking issues (e.g., a WARN from QA) that require a targeted correction but do not require full regeneration.
+  Next step: Specify exact modifications required. Operator or Claude applies modifications. Controller confirms modified draft before proceeding to Prompt 04.
+  Note: Modified draft must be re-reviewed within this prompt before ACCEPT is issued.
+
+REJECT
+  Condition: Draft has a blocking defect — e.g., a QA FAIL, a held field was emitted, a blocked module is present, or an invented field was found.
+  Next step: Draft is discarded. Operator must return to Prompt 01 and regenerate with the defects corrected.
+
+DEFER
+  Condition: The run cannot proceed due to an external condition — e.g., evidence map incomplete, fingerprint mismatch discovered, owner approval required for a field.
+  Next step: Suspend the run. Document the blocking condition. Resume only when the condition is resolved.
+
+HUMAN_REVIEW_REQUIRED
+  Condition: The controller has identified an ambiguity or edge case that requires package owner judgment before the run can continue.
+  Next step: Escalate to the package owner. Do not proceed until the owner resolves the ambiguity and explicitly authorizes continuation.
+
+---
+
+MODIFICATION RULES (if MODIFY is issued)
+
+If the controller issues MODIFY:
+- State exactly which field(s) or node(s) require modification
+- State the reason for the modification
+- State the corrected value(s) with Phase 0 or evidence source
+- Do not modify held fields — if a held field issue was found, issue REJECT instead
+- Do not add blocked modules — if a blocked module was found, issue REJECT instead
+- After modification is applied, return the modified draft here for confirmation before issuing ACCEPT
+
+---
+
+REGENERATION RULES (if REJECT is issued)
+
+If the controller issues REJECT:
+- State exactly which defect caused the rejection
+- State the applicable stop code (e.g., STOP_HELD_FIELD_VIOLATION, STOP_BLOCKED_MODULE_ATTEMPTED, STOP_CONTENT_INVENTED)
+- The operator must return to Prompt 01 and rebuild the draft
+- The rebuilt draft must go through Prompt 02 and Prompt 03 again before proceeding
+
+---
+
+CONTROLLER DECISION OUTPUT FORMAT
+
+Return the controller decision in this format:
+
+CONTROLLER DECISION — PROMPT 03
+Target: [URL]
+Profile: [schema profile]
+Draft status: NON_PRODUCTION
+
+QA result received: [PASS / WARN / FAIL]
+
+Issues reviewed:
+[List any WARN items and the controller's assessment of each]
+
+Decision: [ACCEPT / MODIFY / REJECT / DEFER / HUMAN_REVIEW_REQUIRED]
+
+Reason:
+[State the reason for the decision in plain language]
+
+If MODIFY — modifications required:
+[List each required modification with field, reason, and corrected value]
+
+If REJECT — defect and stop code:
+[State the defect and stop code]
+
+If DEFER — blocking condition:
+[State the blocking condition and what must be resolved]
+
+If HUMAN_REVIEW_REQUIRED — ambiguity:
+[State the ambiguity and what the owner must decide]
+
+Next step:
+[State the next action]
+
+---
+
+NON-AUTHORIZATION STATEMENT
+
+The controller does not self-approve the draft for production. An ACCEPT decision from Prompt 03 means the draft is suitable to proceed to Prompt 04 (validator results review). It does not mean the draft is approved for implementation. Validator review (Prompt 04), independent analyzer review (Prompt 13), controller post-analyzer review (Prompt 14), and explicit human approval are all still required before any implementation handoff.
+
+END PROMPT

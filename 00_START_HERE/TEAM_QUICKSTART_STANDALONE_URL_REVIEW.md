@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`
+**Status:** `CORE_OPERATOR_PROMPTS_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -23,7 +23,7 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ---
 
-## What you can do right now (after PR #6)
+## What you can do right now (after PR #7)
 
 - Use `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md` to find the right document for your task.
 - Use `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` to check all gates before any schema work.
@@ -33,6 +33,8 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read the homepage scoped truth-pack reference in `03_TRUTH_PACK/`.
 - Read the homepage schema profile and reference lists in `07_REFERENCE_LISTS/`.
 - Read the master flow documents in `01_MASTER_FLOW/` to understand the full operating sequence.
+- Read the operator prompt templates in `04_OPERATOR_PROMPTS/` to understand what each governed step will do.
+- Understand the run order: Prompt 00 → Prompt 08 → Prompt 01 → Prompt 02 → Prompt 03 → Prompt 04.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 
@@ -40,11 +42,12 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ## What you cannot do right now
 
-> **The source-truth boundary, doctrine, homepage scoped truth-pack reference, homepage schema profile, master flow, and operator navigation documents now exist. The package is still not runnable for schema production. Operators must wait for operator prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff before generating or implementing any schema.**
+> **The source-truth boundary, doctrine, homepage scoped truth-pack reference, homepage schema profile, master flow, operator navigation documents, and core operator prompt templates now exist. The package is still not runnable for schema production. Operators must wait for final validation and analyzer prompts (PR #8), output bundle schemas (PR #9), the draft contract (PR #10), evidence maps, validators, and the final runnable handoff before generating or implementing any schema.**
 
-Specifically, after PR #6 you must not:
+Specifically, after PR #7 you must not:
 
 - Generate any JSON-LD
+- Execute any operator prompt (prompts are templates only)
 - Create any schema output
 - Create any production schema bundles
 - Attach schema to the current website
@@ -58,7 +61,7 @@ Specifically, after PR #6 you must not:
 
 ## When can you run the schema workflow?
 
-After PR #6 merges the final runnable handoff, Mode 1 will be fully operational.
+After all required PRs are merged and the final runnable handoff is in place, Mode 1 will be fully operational.
 
 The sequence:
 - PR #2 adds governing doctrine ✓ Done
@@ -66,12 +69,12 @@ The sequence:
 - PR #4 adds homepage schema profile and blocked module policy ✓ Done
 - PR #5 adds standalone schema master flow ✓ Done
 - PR #6 adds team quickstart and operator checklist upgrades ✓ Done
-- PR #7 adds operator prompts 00 through 04 and 08
+- PR #7 adds operator prompts 00 through 04 and 08 ✓ Done
 - PR #8 adds final validation, analyzer, and completion prompts
 - PR #9 adds output bundle contract schemas
 - PR #10 adds controlled homepage non-production JSON-LD draft contract
 
-Until PR #6 is merged, this package is documentation, structure, doctrine, and truth-pack reference only.
+Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
 
 ---
 

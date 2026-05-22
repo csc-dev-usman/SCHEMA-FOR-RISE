@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`
+**Status:** `CORE_OPERATOR_PROMPTS_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 adds the operator navigation decision tree, preflight checklist, mode status guide, and upgrades the team quickstart and operator checklist. No schema output has been created. Operator prompts, evidence maps, validators, and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 adds core operator prompt templates (Prompts 00, 01, 02, 03, 04, and 08) as templates only. No schema has been generated. No prompts have been executed. Evidence maps, final validation prompts, output bundle schemas, the draft contract, validators, and the final runnable handoff are still later PRs.
 
 ---
 
@@ -83,11 +83,24 @@
 
 ---
 
+## Active operator prompt files (PR #7)
+
+| File | Purpose |
+|------|---------|
+| `04_OPERATOR_PROMPTS/README_OPERATOR_PROMPTS_V1_0.md` | Operator prompts folder index. Templates only — not executed. |
+| `04_OPERATOR_PROMPTS/PROMPT_00_STANDALONE_URL_REVIEW_START_V1_0.txt` | Prompt 00 — Intake and run context. Collect target, truth state, profile, blocked modules, held fields, evidence map status. |
+| `04_OPERATOR_PROMPTS/PROMPT_01_BUILD_NON_PRODUCTION_JSONLD_DRAFT_V1_0.txt` | Prompt 01 — Build non-production JSON-LD draft from confirmed evidence. |
+| `04_OPERATOR_PROMPTS/PROMPT_02_CLAUDE_EXTERNAL_QA_ONE_ZIP_V1_0.txt` | Prompt 02 — Claude external QA one-zip review. |
+| `04_OPERATOR_PROMPTS/PROMPT_03_CONTROLLER_DECISION_AND_REGENERATION_V1_0.txt` | Prompt 03 — Controller decision (ACCEPT / MODIFY / REJECT / DEFER / HUMAN_REVIEW_REQUIRED). |
+| `04_OPERATOR_PROMPTS/PROMPT_04_VALIDATOR_RESULTS_REVIEW_V1_0.txt` | Prompt 04 — Validator results review (Google Rich Results Test, Schema.org validator, Screaming Frog). |
+| `04_OPERATOR_PROMPTS/PROMPT_08_PAGE_CONTENT_READINESS_GATE_V1_0.txt` | Prompt 08 — Page content readiness gate. Runs before Prompt 01. |
+
+---
+
 ## Active placeholder directories
 
 | Directory | Status | Purpose |
 |-----------|--------|---------|
-| `04_OPERATOR_PROMPTS/` | Pending PR #7 | Operator prompt files |
 | `05_REFERENCE_WORKFLOW/` | Pending PR #10 | Reference workflow documents |
 | `06_MACHINE_RULES/` | Pending PR #9 | Output bundle contract schemas |
 | `08_SMOKE_TESTS/` | Future PR | Smoke test files |
@@ -133,9 +146,9 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #4:** ~~Homepage schema profile and blocked module policy~~ ✓ Done
 - **PR #5:** ~~Standalone schema master flow~~ ✓ Done
 - **PR #6:** ~~Team quickstart and operator checklist upgrades~~ ✓ Done
-- **PR #7:** Operator prompts 00 through 04 and 08
+- **PR #7:** ~~Operator prompts 00 through 04 and 08~~ ✓ Done
 - **PR #8:** Final validation, analyzer, and completion prompts
 - **PR #9:** Output bundle contract schemas
 - **PR #10:** Controlled homepage non-production JSON-LD draft contract
 
-Generated schema, output bundle schemas, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #7 and later.
+Generated schema, output bundle schemas, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #8 and later.

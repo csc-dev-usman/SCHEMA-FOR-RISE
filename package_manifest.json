@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT",
+  "status": "CORE_OPERATOR_PROMPTS_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -32,7 +32,13 @@
   "outputBundleSchemasAdded": false,
   "smokeTestsAdded": false,
   "evidenceMapAdded": false,
-  "operatorPromptsAdded": false,
+  "operatorPromptsAdded": true,
+  "prompt00Added": true,
+  "prompt01Added": true,
+  "prompt02Added": true,
+  "prompt03Added": true,
+  "prompt04Added": true,
+  "prompt08Added": true,
   "validatorsAdded": false,
   "mode1Runnable": false,
   "mode2AstroReady": false,
@@ -47,6 +53,15 @@
     "Rise schema operator package",
     "Validated schema output bundles",
     "Current website or Astro implementation handoff"
+  ],
+  "activeOperatorPromptFiles": [
+    "04_OPERATOR_PROMPTS/README_OPERATOR_PROMPTS_V1_0.md",
+    "04_OPERATOR_PROMPTS/PROMPT_00_STANDALONE_URL_REVIEW_START_V1_0.txt",
+    "04_OPERATOR_PROMPTS/PROMPT_01_BUILD_NON_PRODUCTION_JSONLD_DRAFT_V1_0.txt",
+    "04_OPERATOR_PROMPTS/PROMPT_02_CLAUDE_EXTERNAL_QA_ONE_ZIP_V1_0.txt",
+    "04_OPERATOR_PROMPTS/PROMPT_03_CONTROLLER_DECISION_AND_REGENERATION_V1_0.txt",
+    "04_OPERATOR_PROMPTS/PROMPT_04_VALIDATOR_RESULTS_REVIEW_V1_0.txt",
+    "04_OPERATOR_PROMPTS/PROMPT_08_PAGE_CONTENT_READINESS_GATE_V1_0.txt"
   ],
   "activeStartFiles": [
     "README_COMPLETE_OPERATOR_PACKAGE.md",
@@ -108,5 +123,5 @@
     "WebPage",
     "BreadcrumbList"
   ],
-  "nextRecommendedPr": "PR #7: Add Rise standalone operator prompts 00 through 04 and 08"
+  "nextRecommendedPr": "PR #8: Add Rise standalone final validation analyzer and completion prompts"
 }
