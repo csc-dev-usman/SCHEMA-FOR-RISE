@@ -10,7 +10,7 @@
 
 ## Current status
 
-`FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+`INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -37,6 +37,7 @@
 | PR #17 | `test: add Rise standalone smoke-test fixture contract` | Smoke-test fixture contract (`08_SMOKE_TESTS/STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md`) and canned fake fixture set (`08_SMOKE_TESTS/fixtures/standalone_v1_0/`) added. New `08_SMOKE_TESTS/` directory created. All fixture files use `example.invalid` only — no real Rise data. Fixtures are synthetic tooling artifacts only — no JSON-LD, no schema output, no real run artifacts. smokeTestFixtureContractAdded=true; smokeTestFixtureAdded=true; smokeTestsAdded=true. smokeTestRunnerAdded remains false until PR #18. |
 | PR #18 | `tools: add Rise smoke-test runner and package health reporter` | Smoke test runner (`tools/run_standalone_smoke_test.py`) and package health reporter (`tools/report_package_health.py`) added to `tools/`. Smoke test runner expectations (`08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md`) and Milestone 3 completion audit (`05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md`) added. Milestone 3 tooling complete. Smoke test runner: 12 checks, PASS. Health reporter: CLEAN. Tooling only — no schema generated. smokeTestRunnerAdded=true; packageHealthReporterAdded=true; milestone3LedgerAndHealthToolsComplete=true. |
 | PR #19 | `docs: add Rise first real page handoff template` | First real page run handoff template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md`), intake fields (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md`), homepage first real run supervision rules (`05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md`), and hold reason reference (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Governance reference documents only — no real run started, no schema generated. firstRealPageHandoffTemplateAdded=true; firstRealPageIntakeFieldsAdded=true; homepageFirstRealRunSupervisionRulesAdded=true; firstRealPageHoldReasonReferenceAdded=true. |
+| PR #20 | `docs: add Rise independent analyzer and controller post-analyzer flow` | Independent analyzer and controller flow (`05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`), blank analyzer review template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`), blank controller decision template (`05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`), and disposition matrix (`05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Workflow definitions and blank templates only — no analyzer run, no findings, no controller decisions, no schema generated. independentAnalyzerFlowAdded=true; controllerPostAnalyzerFlowAdded=true; analyzerReviewTemplateAdded=true; controllerPostAnalyzerDecisionTemplateAdded=true; analyzerControllerDispositionMatrixAdded=true. |
 
 ---
 
@@ -119,6 +120,11 @@
 - First real page intake fields added: **YES (PR #19) — governance reference only**
 - Homepage first real run supervision rules added: **YES (PR #19) — governance reference only**
 - First real page hold reason reference added: **YES (PR #19) — 14 hold codes, governance reference only**
+- Independent analyzer flow added: **YES (PR #20) — workflow definition only, no analyzer run**
+- Controller post-analyzer flow added: **YES (PR #20) — workflow definition only, no decisions made**
+- Analyzer review template added: **YES (PR #20) — blank future-use template**
+- Controller post-analyzer decision template added: **YES (PR #20) — blank future-use template**
+- Analyzer/controller disposition matrix added: **YES (PR #20) — governance reference only**
 - Production lock status: **NO_PRODUCTION_LOCKS**
 
 ---
@@ -175,9 +181,11 @@ Smoke-test fixture contract and canned fake fixture set added in PR #17. The `08
 
 Milestone 3 completed in PR #18. The smoke test runner (`tools/run_standalone_smoke_test.py`) and package health reporter (`tools/report_package_health.py`) were added along with the runner README (`tools/README_SMOKE_TEST_AND_HEALTH_TOOLS_V1_0.md`), smoke test runner expectations (`08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md`), and this completion audit. Smoke test runner: 12/12 PASS. Health reporter: CLEAN. Milestone 3 is tooling-complete only — Mode 1 remains not runnable.
 
-First real page handoff template added in PR #19. The handoff template (`FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md`), intake fields (`FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md`), homepage supervision rules (`HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md`), and hold reason reference (`FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md`) are now in `05_REFERENCE_WORKFLOW/`. These are governance reference documents only — no real run has been started, no schema has been generated. Milestone 4 (first real page run support layer) is in progress.
+First real page handoff template added in PR #19. The handoff template (`FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md`), intake fields (`FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md`), homepage supervision rules (`HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md`), and hold reason reference (`FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md`) are now in `05_REFERENCE_WORKFLOW/`. These are governance reference documents only — no real run has been started, no schema has been generated.
 
-Next doctrine dependency: independent analyzer and controller post-analyzer flow (PR #20).
+Independent analyzer and controller post-analyzer flow added in PR #20. The flow definition (`INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`), blank analyzer review template (`FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`), blank controller decision template (`CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`), and disposition matrix (`ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`) are now in `05_REFERENCE_WORKFLOW/`. These are workflow definitions and blank templates only — no analyzer has been run, no findings exist, no controller decisions have been made. Milestone 4 (first real page run support layer) is in progress.
+
+Next doctrine dependency: current website implementation handoff checklist (PR #21).
 
 ---
 
@@ -204,3 +212,4 @@ Next doctrine dependency: independent analyzer and controller post-analyzer flow
 | 1.0.0 | 2026-05-22 | PR #17 | 08_SMOKE_TESTS/ directory created. Smoke-test fixture contract and canned fake fixture (standalone_v1_0) added. All fixture data uses example.invalid only — no real Rise FC data. Fixture artifacts only — no JSON-LD, no schema output. smokeTestFixtureContractAdded=true; smokeTestFixtureAdded=true; smokeTestsAdded=true; smokeTestRunnerAdded=false. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #18 | Smoke test runner and package health reporter added to tools/. Smoke test runner expectations and Milestone 3 completion audit added. Smoke test: 12/12 PASS. Health reporter: CLEAN. Milestone 3 tooling complete. smokeTestRunnerAdded=true; packageHealthReporterAdded=true; milestone3LedgerAndHealthToolsComplete=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #19 | First real page run handoff template, intake fields, homepage first real run supervision rules, and hold reason reference added to 05_REFERENCE_WORKFLOW/. Governance reference documents only — no real run started, no schema generated. firstRealPageHandoffTemplateAdded=true; firstRealPageIntakeFieldsAdded=true; homepageFirstRealRunSupervisionRulesAdded=true; firstRealPageHoldReasonReferenceAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #20 | Independent analyzer and controller post-analyzer flow, blank analyzer review template, blank controller decision template, and disposition matrix added to 05_REFERENCE_WORKFLOW/. Workflow definitions and blank templates only — no analyzer run, no findings, no controller decisions, no schema generated. independentAnalyzerFlowAdded=true; controllerPostAnalyzerFlowAdded=true; analyzerReviewTemplateAdded=true; controllerPostAnalyzerDecisionTemplateAdded=true; analyzerControllerDispositionMatrixAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |

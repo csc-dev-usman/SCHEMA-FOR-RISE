@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -61,6 +61,10 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md` to understand required intake fields and validation expectations.
 - Read `05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md` to understand the homepage lane supervision rules — route `/`, `HOMEPAGE_SCHEMA_PROFILE`, fingerprint, allowed modules, blocked modules, held fields.
 - Read `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md` to understand all hold codes and resolution requirements for first real page runs.
+- Read `05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md` to understand the two-stage analyzer/controller post-analyzer flow.
+- Read `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md` to understand the blank analyzer review template.
+- Read `05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md` to understand the blank controller decision template.
+- Read `05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md` to understand the full disposition matrix — severity guidance, category constraints, and final recommendation rules.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -109,7 +113,7 @@ The sequence:
 - PR #17 adds smoke-test fixture contract and canned fixture ✓ Done
 - PR #18 adds smoke-test runner and package health reporter ✓ Done — Milestone 3 complete
 - PR #19 adds first real page handoff template ✓ Done
-- PR #20 adds independent analyzer and controller post-analyzer flow
+- PR #20 adds independent analyzer and controller post-analyzer flow ✓ Done
 - PR #21 adds current website implementation handoff checklist
 - PR #22 adds governed sample-run artifact policy
 

@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -46,6 +46,11 @@
   "firstRealPageIntakeFieldsAdded": true,
   "homepageFirstRealRunSupervisionRulesAdded": true,
   "firstRealPageHoldReasonReferenceAdded": true,
+  "independentAnalyzerFlowAdded": true,
+  "controllerPostAnalyzerFlowAdded": true,
+  "analyzerReviewTemplateAdded": true,
+  "controllerPostAnalyzerDecisionTemplateAdded": true,
+  "analyzerControllerDispositionMatrixAdded": true,
   "evidenceMapAdded": false,
   "outputBundleValidatorAdded": true,
   "validatorsAdded": true,
@@ -218,7 +223,11 @@
     "05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md",
     "05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md",
     "05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md",
-    "05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md"
+    "05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md",
+    "05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md",
+    "05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md",
+    "05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #20: Add independent analyzer and controller post-analyzer flow"
+  "nextRecommendedPr": "PR #21: Add current website implementation handoff checklist"
 }

@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PRs #2–#18 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, and health reporter. PR #19 adds the first real page handoff template, intake fields, homepage first real run supervision rules, and hold reason reference. Milestone 3 is tooling-complete. Milestone 4 (support layer) is in progress. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PRs #2–#19 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, and first real page handoff templates. PR #20 adds the independent analyzer and controller post-analyzer flow, analyzer review template, controller decision template, and disposition matrix. Milestone 3 is tooling-complete. Milestone 4 (support layer) is in progress. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -122,6 +122,10 @@
 | `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md` | Required intake fields and validation expectations for a governed first real page run. Added PR #19. |
 | `05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md` | Supervision rules for the homepage first real run — route `/`, `HOMEPAGE_SCHEMA_PROFILE`, fingerprint, allowed modules, blocked modules, held fields, stop conditions. Added PR #19. |
 | `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md` | All hold codes for first real page runs — definitions, conditions, resolution requirements. Added PR #19. |
+| `05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md` | Full independent analyzer and controller post-analyzer flow definition — stages, checks, dispositions, constraints. Added PR #20. |
+| `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md` | Blank future-use independent analyzer review template. Added PR #20. |
+| `05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md` | Blank future-use controller post-analyzer decision template. Added PR #20. |
+| `05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md` | Disposition matrix — severity guidance, category constraints, final recommendation rules. Added PR #20. |
 
 ---
 
@@ -238,7 +242,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #17:** ~~Smoke-test fixture contract and canned fixture~~ ✓ Done
 - **PR #18:** ~~Smoke-test runner and package health reporter~~ ✓ Done
 - **PR #19:** ~~First real page handoff template~~ ✓ Done
-- **PR #20:** Independent analyzer and controller post-analyzer flow
+- **PR #20:** ~~Independent analyzer and controller post-analyzer flow~~ ✓ Done
 - **PR #21:** Current website implementation handoff checklist
 - **PR #22:** Governed sample-run artifact policy
 
