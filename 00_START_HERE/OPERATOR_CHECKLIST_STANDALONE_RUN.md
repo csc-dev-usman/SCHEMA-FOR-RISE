@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_CORE_PROMPTS_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_FULL_PROMPT_SET_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #7. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #8. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -49,7 +49,12 @@
 - [ ] Confirm Prompt 02 has been read (`04_OPERATOR_PROMPTS/PROMPT_02_CLAUDE_EXTERNAL_QA_ONE_ZIP_V1_0.txt`)
 - [ ] Confirm Prompt 03 has been read (`04_OPERATOR_PROMPTS/PROMPT_03_CONTROLLER_DECISION_AND_REGENERATION_V1_0.txt`)
 - [ ] Confirm Prompt 04 has been read (`04_OPERATOR_PROMPTS/PROMPT_04_VALIDATOR_RESULTS_REVIEW_V1_0.txt`)
-- [ ] Confirm the final validation/analyzer prompts (PR #8) have been merged
+- [ ] Confirm the final validation/analyzer prompts (PR #8) have been merged ✓ Done
+- [ ] Confirm Prompt 13 has been read (`04_OPERATOR_PROMPTS/PROMPT_13_FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_V1_0.txt`)
+- [ ] Confirm Prompt 14 has been read (`04_OPERATOR_PROMPTS/PROMPT_14_CONTROLLER_POST_ANALYZER_DECISION_V1_0.txt`)
+- [ ] Confirm Prompt 12 has been read (`04_OPERATOR_PROMPTS/PROMPT_12_FINAL_VALIDATION_AND_IMPLEMENTATION_SCHEMA_V1_0.txt`)
+- [ ] Confirm Prompt 15 has been read (`04_OPERATOR_PROMPTS/PROMPT_15_MODE_1_LANE_COMPLETION_AUDIT_V1_0.txt`)
+- [ ] Confirm the output bundle contract schemas (PR #9) have been merged
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -124,7 +129,7 @@ Operators must not:
 | PR #5 | Standalone schema master flow | ✓ Done |
 | PR #6 | Team quickstart and operator checklist upgrades | ✓ Done |
 | PR #7 | Operator prompts 00 through 04 and 08 | ✓ Done |
-| PR #8 | Final validation, analyzer, and completion prompts | Pending |
+| PR #8 | Final validation, analyzer, and completion prompts | ✓ Done |
 | PR #9 | Output bundle contract schemas | Pending |
 | PR #10 | Controlled homepage non-production JSON-LD draft contract | Pending |
 

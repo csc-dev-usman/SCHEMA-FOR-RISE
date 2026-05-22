@@ -1,0 +1,183 @@
+PROMPT 12 — FINAL VALIDATION AND IMPLEMENTATION SCHEMA
+Rise FC Standalone Schema Operator Package
+Version: V1_0
+Status: TEMPLATE_ONLY — NOT EXECUTED
+
+---
+
+PURPOSE
+
+Prepare the final validated schema packet for implementation handoff after human approval has been obtained. This prompt runs only after all of the following are true: Prompt 14 controller post-analyzer decision is ACCEPT, and explicit human approval for implementation handoff has been granted by the package owner or authorized human reviewer.
+
+This prompt does not grant human approval. It does not authorize production lock. It prepares the implementation packet that a human has already approved.
+
+If human approval has not been granted: STOP. Do not run this prompt.
+
+---
+
+OPERATOR INSTRUCTION
+
+Paste this prompt only after:
+- Prompt 14 controller post-analyzer decision is ACCEPT
+- Explicit human approval for implementation handoff has been obtained and documented
+- The approved draft is identified by run ID or date-stamped version
+
+Provide all required inputs below. Do not skip the precondition check.
+
+---
+
+BEGIN PROMPT
+
+You are operating inside the Rise FC standalone schema operator package.
+
+This is Prompt 12 — Final Validation and Implementation Schema.
+
+You are preparing the final implementation packet for a schema draft that has been through the full governed review sequence and has received explicit human approval for implementation handoff. You are not generating new schema. You are not approving the draft. You are assembling and confirming the implementation packet.
+
+---
+
+HARD PRECONDITIONS — CHECK ALL BEFORE PROCEEDING
+
+Every item below must be confirmed before assembling the implementation packet. If any item is not confirmed, stop immediately.
+
+[ ] Prompt 00 intake confirmed (run ID or date reference):
+[ ] Prompt 08 readiness gate: PASS
+[ ] Prompt 01 non-production draft: complete
+[ ] Prompt 02 QA result: PASS or WARN (no FAIL)
+[ ] Prompt 03 controller decision: ACCEPT or MODIFY resolved to ACCEPT
+[ ] Prompt 04 validator result: VALIDATION_PASS or VALIDATION_WARN (no VALIDATION_FAIL)
+[ ] Prompt 13 analyzer result: ANALYZER_PASS, ANALYZER_WARN, or ANALYZER_DISAGREE resolved
+[ ] Prompt 14 post-analyzer controller decision: ACCEPT
+[ ] Human approval: GRANTED — documented here: [OPERATOR INPUT REQUIRED — name, date, and approval statement]
+[ ] Implementation target: current website only (Mode 1) — not Astro
+[ ] Draft is the specific approved version — not a regeneration
+
+If any precondition is not confirmed: STOP. Do not assemble the packet. Resolve the missing precondition before proceeding.
+
+---
+
+INPUTS REQUIRED FROM OPERATOR
+
+Target URL:
+[OPERATOR INPUT REQUIRED]
+
+Target route:
+[OPERATOR INPUT REQUIRED]
+
+Active schema profile:
+[HOMEPAGE_SCHEMA_PROFILE]
+
+Human-approved non-production JSON-LD draft:
+[OPERATOR INPUT REQUIRED — paste the exact approved draft]
+
+Evidence table (from Prompt 01):
+[OPERATOR INPUT REQUIRED]
+
+Held fields table (from Prompt 01):
+[OPERATOR INPUT REQUIRED]
+
+Run reference (run ID or date stamp):
+[OPERATOR INPUT REQUIRED]
+
+Human approver name and date:
+[OPERATOR INPUT REQUIRED]
+
+Human approval statement:
+[OPERATOR INPUT REQUIRED — verbatim approval statement from the authorized human reviewer]
+
+Implementation target platform:
+[OPERATOR INPUT REQUIRED — e.g., current risefcsoccer.com website, CMS name or method]
+
+---
+
+IMPLEMENTATION PACKET CONTENTS
+
+Assemble and confirm the following for the implementation packet:
+
+1. FINAL JSON-LD BLOCK
+
+Confirm the approved draft is copied exactly as approved. Do not modify any field. Do not add any field. Do not remove any field. The implementation JSON-LD must match the approved draft byte-for-byte in all schema fields.
+
+[Paste the final JSON-LD block here — confirmed as identical to the approved draft]
+
+2. IMPLEMENTATION METADATA
+
+Run ID or date stamp: [from operator input]
+Target URL: [from operator input]
+Target route: [from operator input]
+Schema profile: HOMEPAGE_SCHEMA_PROFILE
+Truth fingerprint: 80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d
+Human approver: [from operator input]
+Approval date: [from operator input]
+Implementation target: [from operator input]
+Mode: Mode 1 (current website)
+
+3. HELD FIELDS NOT EMITTED
+
+Confirm all 15 held field categories remain held in the implementation packet:
+
+- Telephone — NOT_EMITTED
+- Email — NOT_EMITTED
+- sameAs — NOT_EMITTED
+- Logo — NOT_EMITTED
+- Description (tagline/mission) — NOT_EMITTED
+- Coordinates — NOT_EMITTED
+- Address/PostalAddress — NOT_EMITTED
+- Reviews — NOT_EMITTED (blocked)
+- Ratings — NOT_EMITTED (blocked)
+- Prices — NOT_EMITTED (blocked)
+- Event dates — NOT_EMITTED (blocked)
+- Offer details — NOT_EMITTED (blocked)
+- Testimonial-derived claims — NOT_EMITTED (blocked)
+- Bilingual alternate data — NOT_EMITTED (blocked)
+
+4. BLOCKED MODULES NOT INCLUDED
+
+Confirm none of the following are in the implementation packet:
+
+- FAQPage — EXCLUDED
+- Offer — EXCLUDED
+- Event — EXCLUDED
+- Review — EXCLUDED
+- AggregateRating — EXCLUDED
+- Place — EXCLUDED
+- GeoCoordinates — EXCLUDED
+- Testimonial-derived schema — EXCLUDED
+- Bilingual schema — EXCLUDED
+- Advanced modules — EXCLUDED
+
+5. IMPLEMENTATION INSTRUCTIONS
+
+The JSON-LD block must be placed in the <head> section of the target page as a <script type="application/ld+json"> element.
+
+The JSON-LD block must not be modified during implementation. If the CMS or implementation environment requires changes, those changes must be reviewed and approved before implementation.
+
+After implementation, the operator must run the external validators again to confirm the live implementation matches the approved draft:
+- Google Rich Results Test: https://search.google.com/test/rich-results
+- Schema.org Validator: https://validator.schema.org/
+
+6. POST-IMPLEMENTATION CONFIRMATION
+
+After implementation:
+- [ ] Confirm JSON-LD block is present in page <head>
+- [ ] Confirm Google Rich Results Test returns the expected item types
+- [ ] Confirm Schema.org Validator returns no errors
+- [ ] Confirm no held fields appear in validator output
+- [ ] Confirm no blocked module types appear in validator output
+- [ ] Record implementation date and validator results in RUN_LEDGER.json
+
+---
+
+PRODUCTION LOCK STATEMENT
+
+This implementation packet represents a human-approved, validated, evidence-anchored schema implementation for the target page. It does not grant production lock for any other page. It does not authorize schema implementation on any other route. It does not authorize Mode 2 Astro attachment.
+
+Each additional page requires its own full governed run sequence.
+
+---
+
+NON-AUTHORIZATION STATEMENT FOR FUTURE PAGES
+
+This prompt and the resulting implementation packet apply only to the approved target page and route. No other page, route, or implementation target is authorized by this packet. Future pages must go through the full governed run sequence starting from Prompt 00.
+
+END PROMPT

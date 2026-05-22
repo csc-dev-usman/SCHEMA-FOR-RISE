@@ -1,0 +1,174 @@
+PROMPT 14 — CONTROLLER POST-ANALYZER DECISION
+Rise FC Standalone Schema Operator Package
+Version: V1_0
+Status: TEMPLATE_ONLY — NOT EXECUTED
+
+---
+
+PURPOSE
+
+The controller reviews the independent analyzer report (Prompt 13) alongside all prior review outputs and issues a final pre-human-approval decision. This is the last controller gate before human approval is sought. The controller may issue ACCEPT, MODIFY, REJECT, DEFER, HUMAN_REVIEW_REQUIRED, or PATCH_REQUIRED. No production authorization is issued from this prompt.
+
+This prompt runs after Prompt 13 returns ANALYZER_PASS, ANALYZER_WARN, or ANALYZER_DISAGREE.
+
+If Prompt 13 returns ANALYZER_FAIL, do not run Prompt 14. Return to Prompt 03 with the analyzer failure report first.
+
+---
+
+OPERATOR INSTRUCTION
+
+Paste this prompt after Prompt 13 returns ANALYZER_PASS, ANALYZER_WARN, or ANALYZER_DISAGREE. Provide all prior review outputs including the Prompt 13 analyzer report. The controller will issue one of the defined decisions.
+
+---
+
+BEGIN PROMPT
+
+You are operating inside the Rise FC standalone schema operator package.
+
+This is Prompt 14 — Controller Post-Analyzer Decision.
+
+You are the controller. You have received the independent analyzer report from Prompt 13. Your role is to review the analyzer report alongside all prior review outputs, adjudicate any disagreements, and issue a final pre-human-approval decision. You may not self-approve the draft for production. Human approval is required before any implementation handoff.
+
+---
+
+INPUTS REQUIRED FROM OPERATOR
+
+Target URL:
+[OPERATOR INPUT REQUIRED]
+
+Target route:
+[OPERATOR INPUT REQUIRED]
+
+Active schema profile:
+[HOMEPAGE_SCHEMA_PROFILE]
+
+Non-production JSON-LD draft (current accepted version):
+[OPERATOR INPUT REQUIRED — paste the full accepted draft]
+
+Evidence table (from Prompt 01):
+[OPERATOR INPUT REQUIRED]
+
+Held fields table (from Prompt 01):
+[OPERATOR INPUT REQUIRED]
+
+Prompt 02 QA report:
+[OPERATOR INPUT REQUIRED]
+
+Prompt 03 controller decision:
+[OPERATOR INPUT REQUIRED]
+
+Prompt 04 validator report:
+[OPERATOR INPUT REQUIRED]
+
+Prompt 13 independent analyzer report:
+[OPERATOR INPUT REQUIRED — paste full analyzer report]
+
+Prompt 13 analyzer decision:
+[OPERATOR INPUT REQUIRED — ANALYZER_PASS / ANALYZER_WARN / ANALYZER_FAIL / ANALYZER_DISAGREE]
+
+---
+
+CONTROLLER POST-ANALYZER REVIEW CHECKLIST
+
+[ ] Analyzer decision is ANALYZER_PASS, ANALYZER_WARN, or ANALYZER_DISAGREE (if ANALYZER_FAIL: do not proceed — return to Prompt 03)
+[ ] All analyzer WARN items are reviewed and assessed
+[ ] All analyzer DISAGREE items are reviewed and adjudicated
+[ ] No new blocking defects were identified by the analyzer
+[ ] Draft remains structurally valid and evidence-anchored
+[ ] No held fields have been emitted
+[ ] No blocked modules are present
+[ ] Draft is clearly marked NON_PRODUCTION
+[ ] Human approval has not yet been granted — this step does not grant it
+
+---
+
+ALLOWABLE POST-ANALYZER CONTROLLER DECISIONS
+
+The controller must issue exactly one of the following:
+
+ACCEPT
+  Condition: Analyzer finds no blocking defects. All WARN items reviewed and found non-blocking. All DISAGREE items adjudicated in favor of the current draft. Draft is ready to proceed to human approval gate.
+  Next step: Proceed to human approval (Step 13 in the master flow). Do not implement until human approval is obtained.
+
+MODIFY
+  Condition: Analyzer identified a non-blocking issue or a DISAGREE item where the controller determines a targeted correction is warranted. Full regeneration is not required.
+  Next step: Specify exact modifications. Apply modifications. Controller confirms modified draft. Proceed to human approval only after confirmation.
+  Note: Modification must not add blocked modules or emit held fields. If either was the issue, issue REJECT instead.
+
+REJECT
+  Condition: Analyzer identified a blocking defect — e.g., a held field was emitted, a blocked module is present, content was invented, or a DISAGREE item reveals a prior reviewer error that constitutes a blocking defect.
+  Next step: Draft is discarded. Return to Prompt 01 for regeneration. Run full review sequence again.
+
+DEFER
+  Condition: Post-analyzer review reveals an external condition that prevents proceeding — e.g., a Phase 0 freshness question raised by the analyzer, an evidence conflict that needs owner resolution, or a fingerprint concern.
+  Next step: Suspend the run. Document the blocking condition. Resume only when resolved.
+
+HUMAN_REVIEW_REQUIRED
+  Condition: The analyzer raised an ambiguity or edge case that requires package owner judgment before the run can continue.
+  Next step: Escalate to the package owner. Do not proceed until the owner resolves and explicitly authorizes continuation.
+
+PATCH_REQUIRED
+  Condition: The analyzer identified a specific, targeted defect that can be corrected without full regeneration, but the correction must be reviewed as a formal patch — not an informal modification.
+  Next step: Document the exact patch required. Apply the patch. Run Prompt 02 (QA) and Prompt 04 (validator) on the patched draft before returning to Prompt 14 for confirmation.
+
+---
+
+ADJUDICATION RULES (for ANALYZER_DISAGREE)
+
+If the analyzer issued ANALYZER_DISAGREE:
+- State which disagreement is being adjudicated
+- State the analyzer's position
+- State the controller's position
+- State the reason the controller's position is correct (or the analyzer's position is accepted)
+- If the analyzer's position reveals a blocking defect the controller missed: issue REJECT
+- If the analyzer's position reveals a non-blocking concern: issue MODIFY or note as documented warning
+
+---
+
+POST-ANALYZER DECISION OUTPUT FORMAT
+
+Return the post-analyzer decision in this format:
+
+POST-ANALYZER CONTROLLER DECISION — PROMPT 14
+Target: [URL]
+Profile: [schema profile]
+Draft status: NON_PRODUCTION
+
+Analyzer decision received: [ANALYZER_PASS / ANALYZER_WARN / ANALYZER_DISAGREE]
+
+Analyzer issues reviewed:
+[List each WARN or DISAGREE item and the controller's assessment]
+
+Adjudications (if ANALYZER_DISAGREE):
+[For each disagreement: state the item, the analyzer's position, the controller's position, and the resolution]
+
+Decision: [ACCEPT / MODIFY / REJECT / DEFER / HUMAN_REVIEW_REQUIRED / PATCH_REQUIRED]
+
+Reason:
+[State the reason for the decision in plain language]
+
+If MODIFY — modifications required:
+[List each required modification with field, reason, and corrected value]
+
+If REJECT — defect and stop code:
+[State the defect and applicable stop code]
+
+If DEFER — blocking condition:
+[State the blocking condition and what must be resolved]
+
+If HUMAN_REVIEW_REQUIRED — ambiguity:
+[State the ambiguity and what the owner must decide]
+
+If PATCH_REQUIRED — patch specification:
+[State the exact patch required, which fields are affected, and which prompts must re-run]
+
+Next step:
+[State the next action — either human approval gate or resolution path]
+
+---
+
+NON-AUTHORIZATION STATEMENT
+
+The controller post-analyzer decision does not approve the draft for production. An ACCEPT decision from Prompt 14 means the draft is ready to proceed to the human approval gate. It does not mean the draft is approved for implementation. Explicit human approval is required before any implementation handoff. The controller does not self-approve. The controller does not mutate source truth.
+
+END PROMPT

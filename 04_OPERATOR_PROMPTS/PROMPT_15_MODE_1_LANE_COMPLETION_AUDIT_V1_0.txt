@@ -1,0 +1,201 @@
+PROMPT 15 — MODE 1 LANE COMPLETION AUDIT
+Rise FC Standalone Schema Operator Package
+Version: V1_0
+Status: TEMPLATE_ONLY — NOT EXECUTED
+
+---
+
+PURPOSE
+
+Run the Mode 1 lane completion audit after a page run has been fully completed — meaning Prompt 12 has been executed, the implementation has been carried out, and post-implementation validator confirmation has been obtained. This prompt audits the run record, confirms all gates were completed in order, and records the completed run in the RUN_LEDGER. It does not grant production lock for additional pages. It does not authorize any new schema run.
+
+This prompt runs after Prompt 12 and post-implementation validator confirmation.
+
+---
+
+OPERATOR INSTRUCTION
+
+Paste this prompt after post-implementation validator confirmation is complete. Provide the full run summary and all gate results. This prompt returns a lane completion audit report and the RUN_LEDGER entry for the completed run.
+
+---
+
+BEGIN PROMPT
+
+You are operating inside the Rise FC standalone schema operator package.
+
+This is Prompt 15 — Mode 1 Lane Completion Audit.
+
+You are auditing the completed Mode 1 run for a single page. Your role is to verify that every gate in the governed run sequence was completed, that all approvals were obtained in order, that no held fields were emitted, that no blocked modules were used, and that no source truth was mutated. You will produce a lane completion audit report and a RUN_LEDGER entry.
+
+You do not grant production lock for other pages. You do not authorize any new schema run. You do not self-approve any schema. You do not mutate source truth.
+
+---
+
+INPUTS REQUIRED FROM OPERATOR
+
+Target URL:
+[OPERATOR INPUT REQUIRED]
+
+Target route:
+[OPERATOR INPUT REQUIRED]
+
+Active schema profile:
+[HOMEPAGE_SCHEMA_PROFILE]
+
+Run reference (run ID or date stamp):
+[OPERATOR INPUT REQUIRED]
+
+Human approver name and approval date:
+[OPERATOR INPUT REQUIRED]
+
+Prompt 00 result: [CONFIRMED or NOT COMPLETED]
+Prompt 08 result: [PASS or NOT COMPLETED]
+Prompt 01 result: [COMPLETE or NOT COMPLETED]
+Prompt 02 result: [PASS / WARN — specify]
+Prompt 03 result: [ACCEPT or NOT COMPLETED — specify if MODIFY/REJECT occurred and how resolved]
+Prompt 04 result: [VALIDATION_PASS / VALIDATION_WARN — specify]
+Prompt 13 result: [ANALYZER_PASS / ANALYZER_WARN / ANALYZER_DISAGREE — specify]
+Prompt 14 result: [ACCEPT or NOT COMPLETED — specify if PATCH_REQUIRED occurred and how resolved]
+Human approval: [GRANTED — with date and approver name]
+Prompt 12 result: [COMPLETE or NOT COMPLETED]
+Post-implementation validator confirmation: [PASS or NOT COMPLETED]
+
+Implementation date:
+[OPERATOR INPUT REQUIRED]
+
+Post-implementation validator results summary:
+[OPERATOR INPUT REQUIRED — paste summary of Google Rich Results Test and Schema.org Validator results after live implementation]
+
+---
+
+LANE COMPLETION AUDIT CHECKLIST
+
+Verify every item below. Issue AUDIT_PASS only if all items are confirmed.
+
+RUN SEQUENCE COMPLETENESS:
+
+[ ] Prompt 00 intake: CONFIRMED
+[ ] Prompt 08 readiness gate: PASS
+[ ] Prompt 01 draft: COMPLETE
+[ ] Prompt 02 QA: PASS or WARN (no unresolved FAIL)
+[ ] Prompt 03 controller: ACCEPT (or MODIFY/REJECT resolved to ACCEPT)
+[ ] Prompt 04 validator: VALIDATION_PASS or VALIDATION_WARN (no unresolved FAIL)
+[ ] Prompt 13 analyzer: ANALYZER_PASS, ANALYZER_WARN, or ANALYZER_DISAGREE (resolved)
+[ ] Prompt 14 post-analyzer controller: ACCEPT (or PATCH_REQUIRED resolved to ACCEPT)
+[ ] Human approval: GRANTED before implementation
+[ ] Prompt 12 implementation packet: COMPLETE
+[ ] Post-implementation validator: PASS
+
+GOVERNANCE COMPLIANCE:
+
+[ ] No held fields were emitted in the final implementation
+[ ] No blocked modules were included in the final implementation
+[ ] No content fields were invented — all fields trace to Phase 0 or confirmed page evidence
+[ ] No Phase 0 files were mutated by this run
+[ ] No source truth was mutated by this run
+[ ] No Astro files were modified by this run (Mode 1 only)
+[ ] Production lock was not granted without human approval
+[ ] Human approval was obtained before implementation, not after
+
+TRUTH INTEGRITY:
+
+[ ] Truth fingerprint used in this run: 80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d
+[ ] Fingerprint was confirmed at intake (Prompt 00) as matching the truth-pack reference
+[ ] No fingerprint mismatch was discovered during the run (or if discovered: run was suspended and restarted after resolution)
+
+POST-IMPLEMENTATION VALIDATION:
+
+[ ] Google Rich Results Test: PASS after live implementation
+[ ] Schema.org Validator: PASS after live implementation
+[ ] No held fields detected in live validator output
+[ ] No blocked module types detected in live validator output
+
+---
+
+AUDIT OUTCOMES
+
+AUDIT_PASS
+  Condition: All checklist items confirmed. Run sequence complete. Governance compliant. Post-implementation validation passed.
+  Result: Lane completion confirmed. RUN_LEDGER entry produced below.
+
+AUDIT_WARN
+  Condition: All required gate results are confirmed, but a non-blocking concern was noted during the audit (e.g., a WARN was carried through without full documentation).
+  Result: Lane completion confirmed with warning. RUN_LEDGER entry produced. Warning documented.
+
+AUDIT_FAIL
+  Condition: One or more required gate results are missing, or a governance violation is discovered during the audit (e.g., human approval was not obtained before implementation, a held field is detected in the live implementation).
+  Result: Lane completion NOT confirmed. Do not record a passing RUN_LEDGER entry. Escalate to the package owner immediately. Document the failure and the corrective action required.
+
+---
+
+RUN_LEDGER ENTRY FORMAT
+
+If AUDIT_PASS or AUDIT_WARN, produce the following RUN_LEDGER entry for the operator to add to RUN_LEDGER.json:
+
+{
+  "runId": "[OPERATOR INPUT — generate a unique run ID, e.g., RUN_001_HOMEPAGE_MODE1]",
+  "targetUrl": "[target URL]",
+  "targetRoute": "[target route]",
+  "pageFamily": "homepage",
+  "mode": "MODE_1_CURRENT_WEBSITE",
+  "schemaProfile": "HOMEPAGE_SCHEMA_PROFILE",
+  "truthFingerprint": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d",
+  "runDate": "[implementation date]",
+  "humanApprover": "[approver name]",
+  "humanApprovalDate": "[approval date]",
+  "prompt00Result": "CONFIRMED",
+  "prompt08Result": "PASS",
+  "prompt01Result": "COMPLETE",
+  "prompt02Result": "[PASS or WARN]",
+  "prompt03Result": "ACCEPT",
+  "prompt04Result": "[VALIDATION_PASS or VALIDATION_WARN]",
+  "prompt13Result": "[ANALYZER_PASS / ANALYZER_WARN / ANALYZER_DISAGREE]",
+  "prompt14Result": "ACCEPT",
+  "prompt12Result": "COMPLETE",
+  "postImplementationValidatorResult": "PASS",
+  "heldFieldsEmitted": false,
+  "blockedModulesUsed": false,
+  "contentInvented": false,
+  "phase0Mutated": false,
+  "sourceTruthMutated": false,
+  "astroModified": false,
+  "productionLockGrantedWithoutApproval": false,
+  "auditResult": "[AUDIT_PASS or AUDIT_WARN]",
+  "auditWarnings": "[none or description of warnings]",
+  "modulesImplemented": ["[list of modules in final implementation]"],
+  "implementationStatus": "COMPLETED_MODE_1_CURRENT_WEBSITE"
+}
+
+---
+
+LANE COMPLETION AUDIT REPORT FORMAT
+
+Return the full audit report in this format:
+
+MODE 1 LANE COMPLETION AUDIT — PROMPT 15
+Target: [URL]
+Route: [route]
+Profile: [schema profile]
+Run reference: [run ID or date]
+Implementation date: [date]
+
+RUN SEQUENCE: [COMPLETE / INCOMPLETE]
+GOVERNANCE COMPLIANCE: [COMPLIANT / VIOLATION FOUND]
+TRUTH INTEGRITY: [CONFIRMED / MISMATCH FOUND]
+POST-IMPLEMENTATION VALIDATION: [PASS / FAIL]
+
+Issues or warnings:
+[none / list of issues or warnings]
+
+Overall audit result: [AUDIT_PASS / AUDIT_WARN / AUDIT_FAIL]
+
+RUN_LEDGER entry:
+[paste the JSON entry above]
+
+---
+
+NON-AUTHORIZATION STATEMENT
+
+This lane completion audit does not authorize schema implementation for any other page or route. It does not grant production lock globally. Each additional page requires its own full governed run sequence starting from Prompt 00. Mode 2 Astro attachment is not authorized by this audit.
+
+END PROMPT
