@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_RUN_LEDGER_SCHEMA_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_RUN_LEDGER_TOOLS_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #14. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #15. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -89,6 +89,11 @@
 - [ ] Confirm the run ledger schema has been read (`06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json`)
 - [ ] Confirm the run ledger review guide has been read (`05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md`)
 - [ ] Confirm `RUN_LEDGER.json` is present, parses cleanly, and `productionLockStatus` is `NO_PRODUCTION_LOCKS`
+- [ ] Confirm the run ledger tools (PR #15) have been merged ✓ Done
+- [ ] Confirm the run ledger tools README has been read (`tools/README_RUN_LEDGER_TOOLS_V1_0.md`)
+- [ ] Confirm `python tools/append_run_ledger_entry.py --help` runs successfully
+- [ ] Confirm `python tools/report_run_ledger_status.py --help` runs successfully
+- [ ] Confirm `python tools/report_run_ledger_status.py RUN_LEDGER.json` shows `BOOTSTRAP_EMPTY_NO_RUNS`
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -170,6 +175,7 @@ Operators must not:
 | PR #12 | Claude QA finding schema and controller review contracts | ✓ Done |
 | PR #13 | Final schema validation protocol and validator runbook | ✓ Done |
 | PR #14 | Governed run ledger schema and RUN_LEDGER upgrade | ✓ Done |
-| PR #15 | Run ledger append helper and reporter | Pending |
+| PR #15 | Run ledger append helper and reporter | ✓ Done |
+| PR #16 | Package validator and active-file coherence checks | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.
