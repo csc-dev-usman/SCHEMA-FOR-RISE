@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -40,6 +40,9 @@
   "evidenceMapAdded": false,
   "outputBundleValidatorAdded": true,
   "validatorsAdded": true,
+  "claudeQaFindingSchemaAdded": true,
+  "controllerReviewPacketSchemaAdded": true,
+  "claudeQaControllerWorkflowAdded": true,
   "operatorPromptsAdded": true,
   "prompt00Added": true,
   "prompt01Added": true,
@@ -155,7 +158,9 @@
     "06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json",
     "06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json",
     "06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md",
-    "06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json"
+    "06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json",
+    "06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json",
+    "06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json"
   ],
   "activeToolFiles": [
     "tools/validate_output_bundle.py",
@@ -166,7 +171,9 @@
     "05_REFERENCE_WORKFLOW/CONTROLLED_HOMEPAGE_NON_PRODUCTION_JSONLD_DRAFT_CONTRACT_V1_0.md",
     "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md",
     "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md",
-    "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md"
+    "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md",
+    "05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md",
+    "05_REFERENCE_WORKFLOW/CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #12: Add Claude QA finding schema and controller QA review contract"
+  "nextRecommendedPr": "PR #13: Add final schema validation protocol and validator runbook"
 }

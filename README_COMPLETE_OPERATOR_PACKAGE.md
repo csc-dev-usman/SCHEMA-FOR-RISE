@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #11 adds the output bundle validator to `tools/` and the validator rules and expected-files contract to `06_MACHINE_RULES/`. This is validator tooling only — it adds a Python standard-library script (`tools/validate_output_bundle.py`) that checks future output bundle directories for compliance with governed rules. No schema has been generated, no JSON-LD has been created, and no output bundles exist.
+PR #12 adds the Claude QA finding schema, controller review packet schema, QA and controller review workflow, and controller decision enum reference. These are contract documents only — they define the structure and rules for future Claude QA review sessions and controller review packets. No QA has been run, no findings exist, and no schema has been generated.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -60,7 +60,8 @@ PR #11 adds the output bundle validator to `tools/` and the validator rules and 
 - The full operator prompt set (Prompts 00–04, 08, 12–15) is in `04_OPERATOR_PROMPTS/`.
 - The output bundle contract schemas (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules) are in `06_MACHINE_RULES/`.
 - The controlled homepage non-production JSON-LD draft contract, preconditions matrix, output file list, and review sequence are in `05_REFERENCE_WORKFLOW/`.
-- The output bundle validator (`tools/validate_output_bundle.py`), validator README, validator rules, and expected-files contract are now in `tools/` and `06_MACHINE_RULES/`.
+- The output bundle validator (`tools/validate_output_bundle.py`), validator README, validator rules, and expected-files contract are in `tools/` and `06_MACHINE_RULES/`.
+- The Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference are now in `06_MACHINE_RULES/` and `05_REFERENCE_WORKFLOW/`.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -163,4 +164,6 @@ No content in this package (through PR #10) authorizes any schema to be deployed
   `docs: add controlled homepage non-production JSON-LD draft contract`
 - **PR #11:** ~~Add output bundle validator~~ ✓ Merged
   `tools: add Rise standalone output bundle validator`
-- **PR #12:** Add Claude QA finding schema and controller QA review contract
+- **PR #12:** ~~Add Claude QA finding schema and controller QA review contract~~ ✓ Merged
+  `schema: add Rise Claude QA finding and controller review contracts`
+- **PR #13:** Add final schema validation protocol and validator runbook

@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 adds the output bundle validator to `tools/` and validator rules/expected-files contract to `06_MACHINE_RULES/`. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 added the output bundle validator to `tools/`. PR #12 adds the Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -101,7 +101,7 @@
 
 ---
 
-## Active reference-workflow files (PR #10)
+## Active reference-workflow files (PR #10 and PR #12)
 
 | File | Purpose |
 |------|---------|
@@ -110,10 +110,12 @@
 | `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` | All preconditions required before drafting begins. Full hold matrix for all 14 held field categories. |
 | `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md` | Planned output file names and shapes — no files created yet. |
 | `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md` | Full 10-step review and approval sequence from readiness gate through implementation handoff. |
+| `05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md` | Claude QA and controller review workflow — what QA is, what it is not, session rules, controller rules. Added PR #12. |
+| `05_REFERENCE_WORKFLOW/CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md` | Authoritative reference for all valid controller decision values — per-finding dispositions and final recommendations. Added PR #12. |
 
 ---
 
-## Active machine-rules files (PR #9 and PR #11)
+## Active machine-rules files (PR #9, PR #11, and PR #12)
 
 | File | Purpose |
 |------|---------|
@@ -126,6 +128,8 @@
 | `06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json` | Lint rules — allowed modules, blocked modules, held field categories, and 10 JSON-LD safety rules. |
 | `06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md` | Validation rules for the output bundle validator — RULE_VAL_001 through RULE_VAL_007. Added PR #11. |
 | `06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json` | Machine-readable expected file list contract for validator — required, conditional, and blocked files. Added PR #11. |
+| `06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json` | Contract schema — required shape of a Claude QA finding record. Severity, category, claim, evidence, recommendation, controller disposition. Added PR #12. |
+| `06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json` | Contract schema — required shape of a controller review packet. Per-finding dispositions, final recommendation, patch/human-review flags. Added PR #12. |
 
 ---
 
@@ -189,6 +193,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #9:** ~~Output bundle contract schemas~~ ✓ Done
 - **PR #10:** ~~Controlled homepage non-production JSON-LD draft contract~~ ✓ Done
 - **PR #11:** ~~Output bundle validator~~ ✓ Done
-- **PR #12:** Claude QA finding schema and controller QA review contract
+- **PR #12:** ~~Claude QA finding schema and controller review contracts~~ ✓ Done
+- **PR #13:** Final schema validation protocol and validator runbook
 
 Generated schema, evidence maps, real run artifacts, and smoke tests are still not allowed. They require a future governed run after all preconditions are confirmed.

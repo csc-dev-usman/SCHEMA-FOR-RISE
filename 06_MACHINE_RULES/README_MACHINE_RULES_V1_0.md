@@ -1,8 +1,8 @@
 # Machine Rules — Rise FC Standalone Schema Package
 
-**Status:** `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
 
-> This folder contains contract schema definitions and validator tooling. The contract schemas define the expected shape of future governed run outputs. The validator rules and expected-files contract support the Python output bundle validator in `tools/`. No schema has been generated. No JSON-LD has been created. No evidence maps exist as run artifacts.
+> This folder contains contract schema definitions and validator tooling. The contract schemas define the expected shape of future governed run outputs. The validator rules and expected-files contract support the Python output bundle validator in `tools/`. The Claude QA finding schema and controller review packet schema define the required shape of future QA and controller review artifacts. No schema has been generated. No JSON-LD has been created. No evidence maps exist as run artifacts. No QA findings exist.
 
 ---
 
@@ -38,6 +38,8 @@ No real run artifacts exist. No governed runs have occurred. No output bundles h
 | `RISE_SCHEMA_LINT_RULES_V1_0.json` | Lint rules defining blocked modules, held fields, allowed modules, and JSON-LD safety rules |
 | `OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md` | Validation rules for the output bundle validator (RULE_VAL_001–RULE_VAL_007). Added PR #11. |
 | `OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json` | Machine-readable expected file list contract for the validator — required, conditional, and blocked files. Added PR #11. |
+| `CLAUDE_QA_FINDING_SCHEMA_V1_0.json` | Contract schema for Claude QA finding records — findingId, severity, category, claim, evidence, recommendation, controllerDisposition. Added PR #12. |
+| `CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json` | Contract schema for controller review packets — reviewId, qaFindings, controllerDecisions, patchRequired, humanReviewRequired, finalRecommendation. Added PR #12. |
 
 ---
 
