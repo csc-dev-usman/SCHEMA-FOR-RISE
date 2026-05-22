@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -36,7 +36,11 @@
   "validatorResultsSchemaAdded": true,
   "evidenceMapSchemaAdded": true,
   "lintRulesAdded": true,
-  "smokeTestsAdded": false,
+  "smokeTestsAdded": true,
+  "smokeTestFixtureContractAdded": true,
+  "smokeTestFixtureAdded": true,
+  "smokeTestRunnerAdded": false,
+  "packageHealthReporterAdded": false,
   "evidenceMapAdded": false,
   "outputBundleValidatorAdded": true,
   "validatorsAdded": true,
@@ -203,5 +207,5 @@
     "05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md",
     "05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #17: Add smoke-test fixture contract and canned fixture"
+  "nextRecommendedPr": "PR #18: Add smoke-test runner and package health reporter"
 }

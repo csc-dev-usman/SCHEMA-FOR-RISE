@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -295,6 +295,23 @@ Understand:
 
 ---
 
+### Step 2p — Read smoke-test fixture contract (PR #17 addition)
+
+Files in this order:
+1. `08_SMOKE_TESTS/README_SMOKE_TESTS.md`
+2. `08_SMOKE_TESTS/STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md`
+3. `08_SMOKE_TESTS/fixtures/standalone_v1_0/README_FAKE_FIXTURE.md`
+4. `08_SMOKE_TESTS/fixtures/standalone_v1_0/fixture_manifest.json`
+
+Understand:
+- Smoke tests are package/tooling integrity checks only — they do not run the schema operator workflow
+- The fixture contract defines safety rules: `example.invalid` only, no real Rise data, no JSON-LD, no production lock
+- The canned fixture (`standalone_v1_0`) is synthetic — all data is fake, all URLs use `example.invalid`
+- The smoke-test runner is not yet available — it will be added in PR #18
+- Reading these files does not authorize schema production or any governed run
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -333,7 +350,8 @@ Operators must wait for:
 - PR #14: Governed run ledger schema and RUN_LEDGER upgrade ✓ Done
 - PR #15: Run ledger append helper and reporter ✓ Done
 - PR #16: Package validator and active-file coherence checks ✓ Done
-- PR #17: Smoke-test fixture contract and canned fixture
+- PR #17: Smoke-test fixture contract and canned fixture ✓ Done
+- PR #18: Smoke-test runner and package health reporter
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

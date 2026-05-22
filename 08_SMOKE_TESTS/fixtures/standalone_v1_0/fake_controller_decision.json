@@ -1,0 +1,26 @@
+{
+  "_isFakeFixture": true,
+  "_notRealRunArtifact": true,
+  "_fixtureVersion": "standalone_v1_0",
+  "_schemaRef": "CONTROLLER_DECISION_SCHEMA_V1_0",
+  "decisionId": "RISE_SMOKE_FAKE_DECISION_STANDALONE_V1_0_20000101_001",
+  "runId": "RISE_SMOKE_FAKE_RUN_STANDALONE_V1_0_20000101_001",
+  "targetUrl": "https://example.invalid/",
+  "schemaProfile": "HOMEPAGE_SCHEMA_PROFILE",
+  "decisionDate": "2000-01-01",
+  "controllerDecision": "FAKE_ACCEPT",
+  "patchRequired": false,
+  "humanReviewRequired": true,
+  "blockedModulesFound": [],
+  "heldFieldsFound": [],
+  "phase0ViolationsFound": [],
+  "sourceTruthViolationsFound": [],
+  "productionLockAuthorized": false,
+  "implementationHandoffAuthorized": false,
+  "decisionNotes": "FAKE FIXTURE ONLY. This controller decision is synthetic. It was created for smoke-test tooling validation in PR #17. It does not represent a real Rise FC controller review. No real schema was reviewed. humanReviewRequired is set to true as a safety reminder that human approval is always required at every gate.",
+  "safetyReminders": {
+    "controllerCannotMutatePhase0": true,
+    "controllerCannotSelfApproveProduction": true,
+    "humanApprovalRequiredAtEveryGate": true
+  }
+}

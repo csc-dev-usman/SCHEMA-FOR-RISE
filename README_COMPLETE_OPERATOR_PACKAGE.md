@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #16 adds the package validator (`tools/validate_package.py`), the package expected active files contract (`06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`), and the package validation checklist (`06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md`). These are tooling and documentation only — no schema has been generated, and `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #17 adds the smoke-test fixture contract (`08_SMOKE_TESTS/STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md`) and the canned fake fixture set (`08_SMOKE_TESTS/fixtures/standalone_v1_0/`). These are synthetic test fixtures using `example.invalid` only — no real Rise data, no JSON-LD, no schema output. `smokeTestsAdded` is now true (fixture layer exists). The smoke-test runner is not yet present — it will be added in PR #18. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -76,7 +76,7 @@ PR #16 adds the package validator (`tools/validate_package.py`), the package exp
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
+Status is `SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
 
 ---
 
@@ -137,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #16) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #16 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #17) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #17 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -174,4 +174,10 @@ No content in this package (through PR #16) authorizes any schema to be deployed
   `docs: add Rise final schema validation protocol`
 - **PR #14:** ~~Add governed run ledger schema~~ ✓ Merged
   `schema: add governed Rise run ledger schema`
-- **PR #15:** Add run ledger append helper and reporter
+- **PR #15:** ~~Add run ledger append helper and reporter~~ ✓ Merged
+  `tools: add Rise run ledger append helper and reporter`
+- **PR #16:** ~~Add package validator and active-file checks~~ ✓ Merged
+  `tools: add Rise package validator and active-file checks`
+- **PR #17:** ~~Add smoke-test fixture contract and canned fixture~~ ✓ Merged
+  `test: add Rise standalone smoke-test fixture contract`
+- **PR #18:** Add smoke-test runner and package health reporter

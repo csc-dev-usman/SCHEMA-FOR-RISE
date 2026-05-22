@@ -1,0 +1,49 @@
+{
+  "_isFakeFixture": true,
+  "_notRealRunArtifact": true,
+  "_fixtureVersion": "standalone_v1_0",
+  "_schemaRef": "OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0",
+  "bundleId": "RISE_SMOKE_FAKE_BUNDLE_STANDALONE_V1_0_20000101_001",
+  "runId": "RISE_SMOKE_FAKE_RUN_STANDALONE_V1_0_20000101_001",
+  "targetUrl": "https://example.invalid/",
+  "pageFamily": "homepage",
+  "schemaProfile": "HOMEPAGE_SCHEMA_PROFILE",
+  "mode": "MODE_1_CURRENT_WEBSITE",
+  "truthFingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+  "bundleCreatedDate": "2000-01-01",
+  "bundleStatus": "FAKE_COMPLETE",
+  "schemaOutputCreated": false,
+  "jsonLdCreated": false,
+  "productionLockStatus": "NO_PRODUCTION_LOCKS",
+  "allowedModulesUsed": [
+    "Organization",
+    "WebSite",
+    "WebPage",
+    "BreadcrumbList"
+  ],
+  "blockedModulesPresent": [],
+  "heldFieldsPresent": [],
+  "files": [
+    {
+      "filename": "fake_run_metadata.json",
+      "type": "run_metadata",
+      "status": "FAKE"
+    },
+    {
+      "filename": "fake_output_bundle_manifest.json",
+      "type": "bundle_manifest",
+      "status": "FAKE"
+    },
+    {
+      "filename": "fake_controller_decision.json",
+      "type": "controller_decision",
+      "status": "FAKE"
+    },
+    {
+      "filename": "fake_validator_results.json",
+      "type": "validator_results",
+      "status": "FAKE"
+    }
+  ],
+  "notes": "FAKE FIXTURE ONLY. This bundle manifest is synthetic. It was created for smoke-test tooling validation in PR #17. It does not represent a real Rise FC output bundle. No emitted_schema.jsonld exists. No JSON-LD was created. No schema output was produced."
+}
