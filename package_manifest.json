@@ -59,7 +59,6 @@
   "homepageJsonLdDraftCreated": false,
   "currentWebsiteImplementationAuthorized": false,
   "astroAttachmentAuthorized": false,
-  "validatorsAdded": false,
   "mode1Runnable": false,
   "mode2AstroReady": false,
   "modes": [
@@ -154,7 +153,13 @@
     "06_MACHINE_RULES/CONTROLLER_DECISION_SCHEMA_V1_0.json",
     "06_MACHINE_RULES/VALIDATOR_RESULTS_SCHEMA_V1_0.json",
     "06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json",
-    "06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json"
+    "06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json",
+    "06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md",
+    "06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json"
+  ],
+  "activeToolFiles": [
+    "tools/validate_output_bundle.py",
+    "tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md"
   ],
   "activeReferenceWorkflowFiles": [
     "05_REFERENCE_WORKFLOW/README_REFERENCE_WORKFLOW_V1_0.md",
