@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #13 adds the final schema validation protocol and five associated runbook/requirements documents. These are documentation contracts only — they define the ordered validation sequence, Schema.org Validator usage, Google Rich Results Test review, Screaming Frog structured data extraction, and implementation handoff evidence requirements for future governed schema runs. No validators have been run, no schema has been generated, and no evidence exists.
+PR #14 adds the governed run ledger schema and upgrades the empty `RUN_LEDGER.json` structure. These are contract definitions only — the ledger schema defines the required shape of future run entries, and the upgraded ledger adds `schemaVersion`, `ledgerStatus`, and `productionLockStatus` fields. No runs have been recorded, no schema has been generated, and `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -62,7 +62,8 @@ PR #13 adds the final schema validation protocol and five associated runbook/req
 - The controlled homepage non-production JSON-LD draft contract, preconditions matrix, output file list, and review sequence are in `05_REFERENCE_WORKFLOW/`.
 - The output bundle validator (`tools/validate_output_bundle.py`), validator README, validator rules, and expected-files contract are in `tools/` and `06_MACHINE_RULES/`.
 - The Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference are in `06_MACHINE_RULES/` and `05_REFERENCE_WORKFLOW/`.
-- The final schema validation protocol, Schema.org Validator runbook, Google Rich Results Test runbook, Screaming Frog checklist, and validation evidence handoff requirements are now in `05_REFERENCE_WORKFLOW/`.
+- The final schema validation protocol, Schema.org Validator runbook, Google Rich Results Test runbook, Screaming Frog checklist, and validation evidence handoff requirements are in `05_REFERENCE_WORKFLOW/`.
+- The governed run ledger schema and run ledger review guide are now in `06_MACHINE_RULES/` and `05_REFERENCE_WORKFLOW/`. `RUN_LEDGER.json` has been upgraded with `schemaVersion`, `ledgerStatus`, and `productionLockStatus`.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -73,7 +74,7 @@ PR #13 adds the final schema validation protocol and five associated runbook/req
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
+Status is `RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
 
 ---
 
@@ -134,7 +135,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #13) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #13 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #14) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #14 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -169,4 +170,6 @@ No content in this package (through PR #13) authorizes any schema to be deployed
   `schema: add Rise Claude QA finding and controller review contracts`
 - **PR #13:** ~~Add final schema validation protocol and validator runbook~~ ✓ Merged
   `docs: add Rise final schema validation protocol`
-- **PR #14:** Add governed run ledger schema
+- **PR #14:** ~~Add governed run ledger schema~~ ✓ Merged
+  `schema: add governed Rise run ledger schema`
+- **PR #15:** Add run ledger append helper and reporter

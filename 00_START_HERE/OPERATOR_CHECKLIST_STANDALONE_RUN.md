@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_FINAL_VALIDATION_PROTOCOL_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_RUN_LEDGER_SCHEMA_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #13. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #14. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -85,6 +85,10 @@
 - [ ] Confirm the Google Rich Results Test runbook has been read (`05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md`)
 - [ ] Confirm the Screaming Frog checklist has been read (`05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md`)
 - [ ] Confirm the validation evidence handoff requirements have been read (`05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md`)
+- [ ] Confirm the governed run ledger schema (PR #14) has been merged ✓ Done
+- [ ] Confirm the run ledger schema has been read (`06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json`)
+- [ ] Confirm the run ledger review guide has been read (`05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md`)
+- [ ] Confirm `RUN_LEDGER.json` is present, parses cleanly, and `productionLockStatus` is `NO_PRODUCTION_LOCKS`
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -165,6 +169,7 @@ Operators must not:
 | PR #11 | Output bundle validator | ✓ Done |
 | PR #12 | Claude QA finding schema and controller review contracts | ✓ Done |
 | PR #13 | Final schema validation protocol and validator runbook | ✓ Done |
-| PR #14 | Governed run ledger schema and RUN_LEDGER upgrade | Pending |
+| PR #14 | Governed run ledger schema and RUN_LEDGER upgrade | ✓ Done |
+| PR #15 | Run ledger append helper and reporter | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

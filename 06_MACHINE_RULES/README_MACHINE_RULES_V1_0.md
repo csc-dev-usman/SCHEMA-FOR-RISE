@@ -1,8 +1,8 @@
 # Machine Rules — Rise FC Standalone Schema Package
 
-**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT`
 
-> This folder contains contract schema definitions and validator tooling. The contract schemas define the expected shape of future governed run outputs. The validator rules and expected-files contract support the Python output bundle validator in `tools/`. The Claude QA finding schema and controller review packet schema define the required shape of future QA and controller review artifacts. No schema has been generated. No JSON-LD has been created. No evidence maps exist as run artifacts. No QA findings exist.
+> This folder contains contract schema definitions and validator tooling. The contract schemas define the expected shape of future governed run outputs. The validator rules and expected-files contract support the Python output bundle validator in `tools/`. The Claude QA finding schema and controller review packet schema define the required shape of future QA and controller review artifacts. The run ledger schema defines the required shape of future run ledger entries. No schema has been generated. No JSON-LD has been created. No evidence maps exist as run artifacts. No QA findings exist. No run entries exist.
 
 ---
 
@@ -40,6 +40,7 @@ No real run artifacts exist. No governed runs have occurred. No output bundles h
 | `OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json` | Machine-readable expected file list contract for the validator — required, conditional, and blocked files. Added PR #11. |
 | `CLAUDE_QA_FINDING_SCHEMA_V1_0.json` | Contract schema for Claude QA finding records — findingId, severity, category, claim, evidence, recommendation, controllerDisposition. Added PR #12. |
 | `CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json` | Contract schema for controller review packets — reviewId, qaFindings, controllerDecisions, patchRequired, humanReviewRequired, finalRecommendation. Added PR #12. |
+| `RUN_LEDGER_SCHEMA_V1_0.json` | Contract schema for run ledger entries — runId, targetUrl, mode, schemaProfile, truthFingerprint, all status fields, productionLockStatus. Added PR #14. |
 
 ---
 
@@ -69,4 +70,6 @@ No governed run has occurred. No real run artifacts exist. No evidence maps exis
 
 The output bundle validator (`tools/validate_output_bundle.py`) added in PR #11 uses these contract schemas and rules to check future output bundle directories for compliance. See `tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md` for usage.
 
-Future PRs will add the homepage evidence map and the final runnable handoff.
+The run ledger schema (`RUN_LEDGER_SCHEMA_V1_0.json`) added in PR #14 defines the required shape of future run ledger entries. See `RUN_LEDGER.json` for the current bootstrap-empty ledger and `05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md` for guidance on reading and interpreting ledger entries.
+
+Future PRs will add the run ledger append helper, the homepage evidence map, and the final runnable handoff.

@@ -1,8 +1,8 @@
 # Reference Workflow — Rise FC Standalone Schema Package
 
-**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT`
 
-> This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, and the full validation protocol for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run.
+> This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, the full validation protocol, and the run ledger review guide for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run. No run entries exist.
 
 ---
 
@@ -30,6 +30,7 @@ These documents serve as a governance checkpoint: the full workflow must be unde
 | `GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md` | How to use the Google Rich Results Test. Rich results eligibility not guaranteed. Step 5 is informational only. Added PR #13. |
 | `SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md` | Screaming Frog structured data extraction checklist — optional/where available. Step 6 of validation protocol. Added PR #13. |
 | `VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md` | Required evidence metadata shape for the implementation handoff packet. No actual evidence. Added PR #13. |
+| `RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md` | How to read the run ledger, field explanations, when PRODUCTION_LOCKED may and may not be claimed. Added PR #14. |
 
 ---
 
@@ -62,3 +63,4 @@ All files in this folder are documentation-only governance contracts. The actual
 10. `GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md` — Google Rich Results Test usage (Step 5)
 11. `SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md` — Screaming Frog extraction (Step 6, optional)
 12. `VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md` — required evidence metadata for implementation handoff
+13. `RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md` — how to read the run ledger and when PRODUCTION_LOCKED may be claimed

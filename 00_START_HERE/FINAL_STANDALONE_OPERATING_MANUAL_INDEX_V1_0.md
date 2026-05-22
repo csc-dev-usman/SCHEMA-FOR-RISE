@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -241,6 +241,24 @@ Understand:
 
 ---
 
+### Step 2m — Read run ledger schema and review guide (PR #14 addition)
+
+Files in this order:
+1. `06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json`
+2. `05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md`
+
+Understand:
+- The run ledger schema defines the required shape of all future run ledger entries — all fields, allowed status values, and safety constraints
+- Every future run entry must conform to this schema before being appended to `RUN_LEDGER.json`
+- `runId` must be unique; format: `RISE_RUN_<PAGE_FAMILY>_<DATE_YYYYMMDD>_<SEQ>`
+- `productionLockStatus` defaults to `NO_PRODUCTION_LOCKS` and may only be set to `PRODUCTION_LOCKED` with an explicit human approval record
+- `PRODUCTION_LOCKED` may never be self-claimed by Claude, a validator, or any automated process
+- The review guide explains how to read ledger entries and what each field means
+- `RUN_LEDGER.json` has been upgraded with `schemaVersion`, `ledgerStatus`, `productionLockStatus` — entries remain empty
+- No governed runs have been performed. No run entries exist. The ledger is bootstrap-empty.
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -276,7 +294,8 @@ Operators must wait for:
 - PR #11: Output bundle validator ✓ Done
 - PR #12: Claude QA finding schema and controller review contracts ✓ Done
 - PR #13: Final schema validation protocol and validator runbook ✓ Done
-- PR #14: Governed run ledger schema and RUN_LEDGER upgrade
+- PR #14: Governed run ledger schema and RUN_LEDGER upgrade ✓ Done
+- PR #15: Run ledger append helper and reporter
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 
