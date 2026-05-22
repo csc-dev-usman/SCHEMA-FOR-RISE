@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -53,6 +53,10 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read `08_SMOKE_TESTS/README_SMOKE_TESTS.md` to understand what smoke tests are and are not.
 - Read `08_SMOKE_TESTS/STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md` to understand fixture safety rules.
 - Review `08_SMOKE_TESTS/fixtures/standalone_v1_0/` to understand the canned fake fixture — all data uses `example.invalid`, no real Rise data.
+- Read `tools/README_SMOKE_TEST_AND_HEALTH_TOOLS_V1_0.md` to understand the smoke test runner and package health reporter.
+- Run `python tools/run_standalone_smoke_test.py .` to exercise the fake fixture (12 checks, read-only, no side effects).
+- Run `python tools/report_package_health.py .` for a full package health summary (read-only, no side effects).
+- Read `05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md` to understand Milestone 3 completion status and current package posture.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -99,7 +103,8 @@ The sequence:
 - PR #15 adds run ledger append helper and reporter ✓ Done
 - PR #16 adds package validator and active-file coherence checks ✓ Done
 - PR #17 adds smoke-test fixture contract and canned fixture ✓ Done
-- PR #18 adds smoke-test runner and package health reporter
+- PR #18 adds smoke-test runner and package health reporter ✓ Done — Milestone 3 complete
+- PR #19 adds homepage evidence map and first real page handoff template
 
 Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
 

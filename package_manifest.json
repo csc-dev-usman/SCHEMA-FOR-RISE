@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -39,8 +39,9 @@
   "smokeTestsAdded": true,
   "smokeTestFixtureContractAdded": true,
   "smokeTestFixtureAdded": true,
-  "smokeTestRunnerAdded": false,
-  "packageHealthReporterAdded": false,
+  "smokeTestRunnerAdded": true,
+  "packageHealthReporterAdded": true,
+  "milestone3LedgerAndHealthToolsComplete": true,
   "evidenceMapAdded": false,
   "outputBundleValidatorAdded": true,
   "validatorsAdded": true,
@@ -190,7 +191,10 @@
     "tools/report_run_ledger_status.py",
     "tools/README_RUN_LEDGER_TOOLS_V1_0.md",
     "tools/validate_package.py",
-    "tools/README_PACKAGE_VALIDATOR_V1_0.md"
+    "tools/README_PACKAGE_VALIDATOR_V1_0.md",
+    "tools/run_standalone_smoke_test.py",
+    "tools/report_package_health.py",
+    "tools/README_SMOKE_TEST_AND_HEALTH_TOOLS_V1_0.md"
   ],
   "activeReferenceWorkflowFiles": [
     "05_REFERENCE_WORKFLOW/README_REFERENCE_WORKFLOW_V1_0.md",
@@ -205,7 +209,8 @@
     "05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md",
     "05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md",
     "05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md",
-    "05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md"
+    "05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md",
+    "05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #18: Add smoke-test runner and package health reporter"
+  "nextRecommendedPr": "PR #19: Add homepage evidence map and first real page handoff template"
 }

@@ -1,6 +1,6 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_SMOKE_TEST_FIXTURE_CONTRACT_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_MILESTONE_3_COMPLETE`
 
 > This checklist is not yet active. Do not attempt to run the schema workflow after PR #16. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
@@ -105,6 +105,12 @@
 - [ ] Confirm the smoke-test fixture contract has been read (`08_SMOKE_TESTS/STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md`)
 - [ ] Confirm the canned fixture README has been read (`08_SMOKE_TESTS/fixtures/standalone_v1_0/README_FAKE_FIXTURE.md`)
 - [ ] Confirm the canned fixture manifest has been read and parses cleanly (`08_SMOKE_TESTS/fixtures/standalone_v1_0/fixture_manifest.json`)
+- [ ] Confirm the smoke-test runner and health reporter (PR #18) have been merged ✓ Done
+- [ ] Confirm the smoke test and health tools README has been read (`tools/README_SMOKE_TEST_AND_HEALTH_TOOLS_V1_0.md`)
+- [ ] Confirm the smoke test runner expectations have been read (`08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md`)
+- [ ] Confirm the Milestone 3 completion audit has been read (`05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md`)
+- [ ] Confirm `python tools/run_standalone_smoke_test.py .` returns PASS (all 12 checks)
+- [ ] Confirm `python tools/report_package_health.py .` returns CLEAN
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -189,6 +195,7 @@ Operators must not:
 | PR #15 | Run ledger append helper and reporter | ✓ Done |
 | PR #16 | Package validator and active-file coherence checks | ✓ Done |
 | PR #17 | Smoke-test fixture contract and canned fixture | ✓ Done |
-| PR #18 | Smoke-test runner and package health reporter | Pending |
+| PR #18 | Smoke-test runner and package health reporter | ✓ Done |
+| PR #19 | Homepage evidence map and first real page handoff template | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

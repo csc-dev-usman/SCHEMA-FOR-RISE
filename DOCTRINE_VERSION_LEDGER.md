@@ -10,7 +10,7 @@
 
 ## Current status
 
-`SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+`MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -35,6 +35,7 @@
 | PR #15 | `tools: add Rise run ledger append helper and reporter` | Run ledger append helper (`tools/append_run_ledger_entry.py`) and read-only ledger status reporter (`tools/report_run_ledger_status.py`) added. Tool README added (`tools/README_RUN_LEDGER_TOOLS_V1_0.md`). Tooling only — no real run entries appended, no schema generated. runLedgerAppendHelperAdded=true; runLedgerReporterAdded=true; runLedgerToolsAdded=true. |
 | PR #16 | `tools: add Rise package validator and active-file checks` | Package validator (`tools/validate_package.py`) added. Package expected active files contract (`06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`) and validation checklist (`06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md`) added. 12 checks run against package directory — all pass at bootstrap. Tooling only — no schema generated. packageValidatorAdded=true; packageActiveFileChecksAdded=true; packageValidationChecklistAdded=true. |
 | PR #17 | `test: add Rise standalone smoke-test fixture contract` | Smoke-test fixture contract (`08_SMOKE_TESTS/STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md`) and canned fake fixture set (`08_SMOKE_TESTS/fixtures/standalone_v1_0/`) added. New `08_SMOKE_TESTS/` directory created. All fixture files use `example.invalid` only — no real Rise data. Fixtures are synthetic tooling artifacts only — no JSON-LD, no schema output, no real run artifacts. smokeTestFixtureContractAdded=true; smokeTestFixtureAdded=true; smokeTestsAdded=true. smokeTestRunnerAdded remains false until PR #18. |
+| PR #18 | `tools: add Rise smoke-test runner and package health reporter` | Smoke test runner (`tools/run_standalone_smoke_test.py`) and package health reporter (`tools/report_package_health.py`) added to `tools/`. Smoke test runner expectations (`08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md`) and Milestone 3 completion audit (`05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md`) added. Milestone 3 tooling complete. Smoke test runner: 12 checks, PASS. Health reporter: CLEAN. Tooling only — no schema generated. smokeTestRunnerAdded=true; packageHealthReporterAdded=true; milestone3LedgerAndHealthToolsComplete=true. |
 
 ---
 
@@ -110,8 +111,9 @@
 - Smoke-test fixture contract added: **YES (PR #17) — contract definition only**
 - Smoke-test fixture added: **YES (PR #17) — fake fixture using example.invalid only**
 - Smoke tests added: **YES (PR #17) — fixture layer only; runner pending PR #18**
-- Smoke-test runner added: **NO — pending PR #18**
-- Package health reporter added: **NO — pending PR #18**
+- Smoke-test runner added: **YES (PR #18) — 12 checks, PASS**
+- Package health reporter added: **YES (PR #18) — read-only, CLEAN**
+- Milestone 3 tooling complete: **YES (PR #18) — tooling only, not schema-production-ready**
 - Production lock status: **NO_PRODUCTION_LOCKS**
 
 ---
@@ -164,9 +166,11 @@ Final schema validation protocol added in PR #13. The 9-step final schema valida
 
 Governed run ledger schema added in PR #14. The run ledger schema (`06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json`) defines the required shape of future run ledger entries — all fields, allowed status values, and safety constraints. The run ledger review guide (`05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md`) explains how to read the ledger and when `PRODUCTION_LOCKED` may and may not be claimed. `RUN_LEDGER.json` has been upgraded with `schemaVersion`, `ledgerStatus`, `productionLockStatus`, and `lastUpdatedByPr` fields. Entries remain empty — no governed runs have been performed. `runLedgerSchemaAdded=true`, `runLedgerGuideAdded=true`, `runLedgerUpgraded=true`. Mode 1 remains not runnable.
 
-Smoke-test fixture contract and canned fake fixture set added in PR #17. The `08_SMOKE_TESTS/` directory was created with the fixture contract (`STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md`), fixture README, and five synthetic fixture JSON files under `08_SMOKE_TESTS/fixtures/standalone_v1_0/`. All fixtures use `example.invalid` only. No real Rise FC data is present. The smoke-test runner is not yet available — it will be added in PR #18.
+Smoke-test fixture contract and canned fake fixture set added in PR #17. The `08_SMOKE_TESTS/` directory was created with the fixture contract (`STANDALONE_SMOKE_TEST_FIXTURE_CONTRACT_V1_0.md`), fixture README, and five synthetic fixture JSON files under `08_SMOKE_TESTS/fixtures/standalone_v1_0/`. All fixtures use `example.invalid` only. No real Rise FC data is present.
 
-Next doctrine dependency: smoke-test runner and package health reporter (PR #18), then evidence map for the homepage (future PR).
+Milestone 3 completed in PR #18. The smoke test runner (`tools/run_standalone_smoke_test.py`) and package health reporter (`tools/report_package_health.py`) were added along with the runner README (`tools/README_SMOKE_TEST_AND_HEALTH_TOOLS_V1_0.md`), smoke test runner expectations (`08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md`), and this completion audit. Smoke test runner: 12/12 PASS. Health reporter: CLEAN. Milestone 3 is tooling-complete only — Mode 1 remains not runnable.
+
+Next doctrine dependency: homepage evidence map and first real page handoff template (future PR).
 
 ---
 
@@ -191,3 +195,4 @@ Next doctrine dependency: smoke-test runner and package health reporter (PR #18)
 | 1.0.0 | 2026-05-22 | PR #15 | Run ledger append helper and read-only reporter added to tools/. Tool README added. Tooling only — no real run entries appended, no schema generated. runLedgerAppendHelperAdded=true; runLedgerReporterAdded=true; runLedgerToolsAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #16 | Package validator added to tools/. Expected active files contract and validation checklist added to 06_MACHINE_RULES/. 12 checks, all pass at bootstrap. Tooling only — no schema generated. packageValidatorAdded=true; packageActiveFileChecksAdded=true; packageValidationChecklistAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #17 | 08_SMOKE_TESTS/ directory created. Smoke-test fixture contract and canned fake fixture (standalone_v1_0) added. All fixture data uses example.invalid only — no real Rise FC data. Fixture artifacts only — no JSON-LD, no schema output. smokeTestFixtureContractAdded=true; smokeTestFixtureAdded=true; smokeTestsAdded=true; smokeTestRunnerAdded=false. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #18 | Smoke test runner and package health reporter added to tools/. Smoke test runner expectations and Milestone 3 completion audit added. Smoke test: 12/12 PASS. Health reporter: CLEAN. Milestone 3 tooling complete. smokeTestRunnerAdded=true; packageHealthReporterAdded=true; milestone3LedgerAndHealthToolsComplete=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
