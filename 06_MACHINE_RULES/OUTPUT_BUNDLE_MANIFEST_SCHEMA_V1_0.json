@@ -1,0 +1,156 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_schemaVersion": "V1_0",
+  "_description": "Contract schema for Rise FC schema operator output bundle manifests. Defines required fields for a compliant output bundle. This is a contract definition only — not a real run artifact.",
+  "_notAnOutputBundle": true,
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "requiredFields": {
+    "runId": {
+      "type": "string",
+      "description": "Unique identifier for this governed schema run. Format: RUN_NNN_PAGEFAMILY_MODE.",
+      "example": "RUN_001_HOMEPAGE_MODE1"
+    },
+    "targetUrl": {
+      "type": "string",
+      "description": "Full URL of the target page for this run.",
+      "example": "https://risefcsoccer.com/"
+    },
+    "targetRoute": {
+      "type": "string",
+      "description": "Route path of the target page.",
+      "example": "/"
+    },
+    "pageFamily": {
+      "type": "string",
+      "description": "Page family identifier.",
+      "enum": ["homepage", "team", "program", "contact", "about", "other"]
+    },
+    "mode": {
+      "type": "string",
+      "description": "Operating mode for this run.",
+      "enum": ["MODE_1_CURRENT_WEBSITE", "MODE_2_FUTURE_ASTRO_CARRY"]
+    },
+    "schemaProfile": {
+      "type": "string",
+      "description": "Active schema profile identifier for this run.",
+      "example": "HOMEPAGE_SCHEMA_PROFILE"
+    },
+    "truthFingerprint": {
+      "type": "string",
+      "description": "SHA-256 fingerprint of the truth-pack reference used in this run.",
+      "example": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d"
+    },
+    "allowedModules": {
+      "type": "array",
+      "description": "List of schema modules authorized for this profile.",
+      "items": {"type": "string"},
+      "example": ["Organization", "WebSite", "WebPage", "BreadcrumbList"]
+    },
+    "blockedModules": {
+      "type": "array",
+      "description": "List of schema modules explicitly blocked for this profile.",
+      "items": {"type": "string"},
+      "example": ["FAQPage", "Offer", "Event", "Review", "AggregateRating", "Place", "GeoCoordinates"]
+    },
+    "heldFields": {
+      "type": "array",
+      "description": "List of held field categories not emitted in this run.",
+      "items": {"type": "string"}
+    },
+    "evidenceMapStatus": {
+      "type": "string",
+      "description": "Status of the evidence map for this run.",
+      "enum": ["CONFIRMED_PRESENT", "MISSING", "NOT_REQUIRED"]
+    },
+    "validationStatus": {
+      "type": "string",
+      "description": "Overall validation status after external validator review.",
+      "enum": ["VALIDATION_PASS", "VALIDATION_WARN", "VALIDATION_FAIL", "VALIDATION_DEFER", "NOT_YET_VALIDATED"]
+    },
+    "controllerDecisionStatus": {
+      "type": "string",
+      "description": "Final controller decision status after all review steps.",
+      "enum": ["ACCEPT", "MODIFY", "REJECT", "DEFER", "HUMAN_REVIEW_REQUIRED", "PATCH_REQUIRED", "NOT_YET_DECIDED"]
+    },
+    "analyzerDecisionStatus": {
+      "type": "string",
+      "description": "Independent analyzer decision status.",
+      "enum": ["ANALYZER_PASS", "ANALYZER_WARN", "ANALYZER_FAIL", "ANALYZER_DISAGREE", "NOT_YET_REVIEWED"]
+    },
+    "humanApprovalStatus": {
+      "type": "string",
+      "description": "Status of human approval for implementation handoff.",
+      "enum": ["GRANTED", "PENDING", "DENIED", "NOT_YET_REQUESTED"]
+    },
+    "implementationStatus": {
+      "type": "string",
+      "description": "Current implementation status of this output bundle.",
+      "enum": [
+        "NOT_YET_IMPLEMENTED",
+        "COMPLETED_MODE_1_CURRENT_WEBSITE",
+        "COMPLETED_MODE_2_ASTRO_CARRY",
+        "DEFERRED",
+        "REJECTED"
+      ]
+    },
+    "schemaOutputCreated": {
+      "type": "boolean",
+      "description": "Whether a schema output (JSON-LD draft) was produced in this run."
+    },
+    "heldFieldsEmitted": {
+      "type": "boolean",
+      "description": "Whether any held fields were emitted. Must be false for a compliant bundle.",
+      "required_value": false
+    },
+    "blockedModulesUsed": {
+      "type": "boolean",
+      "description": "Whether any blocked modules were used. Must be false for a compliant bundle.",
+      "required_value": false
+    },
+    "contentInvented": {
+      "type": "boolean",
+      "description": "Whether any content was invented (not anchored to Phase 0 or page evidence). Must be false.",
+      "required_value": false
+    },
+    "phase0Mutated": {
+      "type": "boolean",
+      "description": "Whether Phase 0 source was mutated. Must be false.",
+      "required_value": false
+    },
+    "sourceTruthMutated": {
+      "type": "boolean",
+      "description": "Whether source truth was mutated. Must be false.",
+      "required_value": false
+    },
+    "runDate": {
+      "type": "string",
+      "description": "ISO 8601 date of the governed run.",
+      "example": "2026-05-22"
+    }
+  },
+  "optionalFields": {
+    "humanApprover": {
+      "type": "string",
+      "description": "Name of the human who granted implementation approval."
+    },
+    "humanApprovalDate": {
+      "type": "string",
+      "description": "ISO 8601 date human approval was granted."
+    },
+    "modulesImplemented": {
+      "type": "array",
+      "description": "List of schema module types included in the final implementation.",
+      "items": {"type": "string"}
+    },
+    "auditResult": {
+      "type": "string",
+      "description": "Mode 1 lane completion audit result.",
+      "enum": ["AUDIT_PASS", "AUDIT_WARN", "AUDIT_FAIL"]
+    },
+    "notes": {
+      "type": "string",
+      "description": "Operator notes for this run."
+    }
+  }
+}

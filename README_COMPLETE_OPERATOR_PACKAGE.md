@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,14 +50,15 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #8 adds the final validation, analyzer, and completion prompt templates (Prompts 12, 13, 14, and 15) to `04_OPERATOR_PROMPTS/`. The full operator prompt set is now in place. These are templates only — they have not been executed and no schema has been generated.
+PR #9 adds output bundle contract schemas to `06_MACHINE_RULES/`. These are contract schema definitions only — they define the required shape of future run artifacts. No schema has been generated, no JSON-LD has been created, and no output bundles have been produced.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
 - The homepage schema profile, blocked module policy, held field policy, and decision matrix are in `07_REFERENCE_LISTS/`.
 - The standalone master flow, Mode 1 flow, Mode 2 flow, page run sequence, and master stop conditions are in `01_MASTER_FLOW/`.
 - The operator navigation decision tree, preflight checklist, and mode status guide are in `00_START_HERE/`.
-- The full operator prompt set (Prompts 00–04, 08, 12–15) is now in `04_OPERATOR_PROMPTS/`.
+- The full operator prompt set (Prompts 00–04, 08, 12–15) is in `04_OPERATOR_PROMPTS/`.
+- The output bundle contract schemas (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules) are now in `06_MACHINE_RULES/`.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -68,7 +69,7 @@ PR #8 adds the final validation, analyzer, and completion prompt templates (Prom
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add output bundle schemas, the draft contract, evidence maps, validators, and the final runnable handoff.
+Status is `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add the draft contract, evidence maps, validators, and the final runnable handoff.
 
 ---
 
@@ -129,7 +130,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #2) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #2 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #9) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #9 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -152,7 +153,8 @@ No content in this package (through PR #2) authorizes any schema to be deployed 
 - **PR #5:** ~~Add Rise standalone schema master flow~~ ✓ Merged
 - **PR #6:** ~~Add team quickstart and operator checklist upgrades~~ ✓ Merged
 - **PR #7:** ~~Add operator prompts 00 through 04 and 08~~ ✓ Merged
-- **PR #8:** Add final validation, analyzer, and completion prompts
+- **PR #8:** ~~Add final validation, analyzer, and completion prompts~~ ✓ Merged
   `docs: add Rise standalone final validation analyzer and completion prompts`
-- **PR #9:** Add output bundle contract schemas
+- **PR #9:** ~~Add output bundle contract schemas~~ ✓ Merged
+  `schema: add Rise standalone output bundle contract schemas`
 - **PR #10:** Add controlled homepage non-production JSON-LD draft contract

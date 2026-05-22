@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 adds the final validation, analyzer, and completion prompt templates (Prompts 12–15). No schema has been generated. No prompts have been executed. Evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 adds output bundle contract schemas to `06_MACHINE_RULES/`. No schema has been generated. No prompts have been executed. The draft contract, evidence maps, validators, and the final runnable handoff are still later PRs.
 
 ---
 
@@ -101,12 +101,25 @@
 
 ---
 
+## Active machine-rules files (PR #9)
+
+| File | Purpose |
+|------|---------|
+| `06_MACHINE_RULES/README_MACHINE_RULES_V1_0.md` | Machine rules folder index. Contract schema definitions only — not validators, not scripts. |
+| `06_MACHINE_RULES/OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0.json` | Contract schema — required shape of a run output bundle manifest. |
+| `06_MACHINE_RULES/RUN_METADATA_SCHEMA_V1_0.json` | Contract schema — required shape of a run metadata record. |
+| `06_MACHINE_RULES/CONTROLLER_DECISION_SCHEMA_V1_0.json` | Contract schema — allowed controller decisions and required fields for Prompt 03 and Prompt 14. |
+| `06_MACHINE_RULES/VALIDATOR_RESULTS_SCHEMA_V1_0.json` | Contract schema — required shape of external validator result sets from Prompt 04. |
+| `06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json` | Contract schema — required shape of a future evidence map run artifact. Schema added; no evidence map run artifact exists yet. |
+| `06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json` | Lint rules — allowed modules, blocked modules, held field categories, and 10 JSON-LD safety rules. |
+
+---
+
 ## Active placeholder directories
 
 | Directory | Status | Purpose |
 |-----------|--------|---------|
 | `05_REFERENCE_WORKFLOW/` | Pending PR #10 | Reference workflow documents |
-| `06_MACHINE_RULES/` | Pending PR #9 | Output bundle contract schemas |
 | `08_SMOKE_TESTS/` | Future PR | Smoke test files |
 | `tools/` | Placeholder only | Future tooling scripts |
 
@@ -152,7 +165,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #6:** ~~Team quickstart and operator checklist upgrades~~ ✓ Done
 - **PR #7:** ~~Operator prompts 00 through 04 and 08~~ ✓ Done
 - **PR #8:** ~~Final validation, analyzer, and completion prompts~~ ✓ Done
-- **PR #9:** Output bundle contract schemas
+- **PR #9:** ~~Output bundle contract schemas~~ ✓ Done
 - **PR #10:** Controlled homepage non-production JSON-LD draft contract
 
-Generated schema, output bundle schemas, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #9 and later.
+Generated schema, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #10 and later.

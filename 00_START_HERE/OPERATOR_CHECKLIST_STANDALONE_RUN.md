@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_FULL_PROMPT_SET_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_OUTPUT_BUNDLE_SCHEMAS_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #8. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #9. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -54,7 +54,15 @@
 - [ ] Confirm Prompt 14 has been read (`04_OPERATOR_PROMPTS/PROMPT_14_CONTROLLER_POST_ANALYZER_DECISION_V1_0.txt`)
 - [ ] Confirm Prompt 12 has been read (`04_OPERATOR_PROMPTS/PROMPT_12_FINAL_VALIDATION_AND_IMPLEMENTATION_SCHEMA_V1_0.txt`)
 - [ ] Confirm Prompt 15 has been read (`04_OPERATOR_PROMPTS/PROMPT_15_MODE_1_LANE_COMPLETION_AUDIT_V1_0.txt`)
-- [ ] Confirm the output bundle contract schemas (PR #9) have been merged
+- [ ] Confirm the output bundle contract schemas (PR #9) have been merged ✓ Done
+- [ ] Confirm the machine rules README has been read (`06_MACHINE_RULES/README_MACHINE_RULES_V1_0.md`)
+- [ ] Confirm the output bundle manifest schema has been read (`06_MACHINE_RULES/OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0.json`)
+- [ ] Confirm the run metadata schema has been read (`06_MACHINE_RULES/RUN_METADATA_SCHEMA_V1_0.json`)
+- [ ] Confirm the controller decision schema has been read (`06_MACHINE_RULES/CONTROLLER_DECISION_SCHEMA_V1_0.json`)
+- [ ] Confirm the validator results schema has been read (`06_MACHINE_RULES/VALIDATOR_RESULTS_SCHEMA_V1_0.json`)
+- [ ] Confirm the evidence map schema has been read (`06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json`)
+- [ ] Confirm the lint rules have been read (`06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json`)
+- [ ] Confirm the controlled homepage non-production JSON-LD draft contract (PR #10) has been merged
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -130,7 +138,7 @@ Operators must not:
 | PR #6 | Team quickstart and operator checklist upgrades | ✓ Done |
 | PR #7 | Operator prompts 00 through 04 and 08 | ✓ Done |
 | PR #8 | Final validation, analyzer, and completion prompts | ✓ Done |
-| PR #9 | Output bundle contract schemas | Pending |
+| PR #9 | Output bundle contract schemas | ✓ Done |
 | PR #10 | Controlled homepage non-production JSON-LD draft contract | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "FULL_OPERATOR_PROMPT_SET_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -29,7 +29,13 @@
   "mode2FlowDocumented": true,
   "pageRunSequenceDocumented": true,
   "masterStopConditionsDocumented": true,
-  "outputBundleSchemasAdded": false,
+  "outputBundleSchemasAdded": true,
+  "outputBundleManifestSchemaAdded": true,
+  "runMetadataSchemaAdded": true,
+  "controllerDecisionSchemaAdded": true,
+  "validatorResultsSchemaAdded": true,
+  "evidenceMapSchemaAdded": true,
+  "lintRulesAdded": true,
   "smokeTestsAdded": false,
   "evidenceMapAdded": false,
   "operatorPromptsAdded": true,
@@ -132,5 +138,14 @@
     "WebPage",
     "BreadcrumbList"
   ],
-  "nextRecommendedPr": "PR #9: Add Rise standalone output bundle contract schemas"
+  "activeMachineRulesFiles": [
+    "06_MACHINE_RULES/README_MACHINE_RULES_V1_0.md",
+    "06_MACHINE_RULES/OUTPUT_BUNDLE_MANIFEST_SCHEMA_V1_0.json",
+    "06_MACHINE_RULES/RUN_METADATA_SCHEMA_V1_0.json",
+    "06_MACHINE_RULES/CONTROLLER_DECISION_SCHEMA_V1_0.json",
+    "06_MACHINE_RULES/VALIDATOR_RESULTS_SCHEMA_V1_0.json",
+    "06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json",
+    "06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json"
+  ],
+  "nextRecommendedPr": "PR #10: Add controlled homepage non-production JSON-LD draft contract"
 }

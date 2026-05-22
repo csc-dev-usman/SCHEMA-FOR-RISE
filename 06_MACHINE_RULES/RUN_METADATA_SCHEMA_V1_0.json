@@ -1,0 +1,112 @@
+{
+  "_schemaType": "CONTRACT_SCHEMA",
+  "_schemaVersion": "V1_0",
+  "_description": "Contract schema for Rise FC schema operator run metadata records. Defines the required shape of a run metadata entry. This is a contract definition only — not a real run artifact.",
+  "_notAnOutputBundle": true,
+  "_notJsonLd": true,
+  "_noSchemaGenerated": true,
+  "requiredFields": {
+    "runId": {
+      "type": "string",
+      "description": "Unique identifier for this governed schema run.",
+      "example": "RUN_001_HOMEPAGE_MODE1"
+    },
+    "runDate": {
+      "type": "string",
+      "description": "ISO 8601 date the governed run was initiated.",
+      "example": "2026-05-22"
+    },
+    "targetUrl": {
+      "type": "string",
+      "description": "Full URL of the target page.",
+      "example": "https://risefcsoccer.com/"
+    },
+    "targetRoute": {
+      "type": "string",
+      "description": "Route path of the target page.",
+      "example": "/"
+    },
+    "pageFamily": {
+      "type": "string",
+      "description": "Page family identifier.",
+      "example": "homepage"
+    },
+    "mode": {
+      "type": "string",
+      "description": "Operating mode for this run.",
+      "enum": ["MODE_1_CURRENT_WEBSITE", "MODE_2_FUTURE_ASTRO_CARRY"]
+    },
+    "schemaProfile": {
+      "type": "string",
+      "description": "Active schema profile used in this run.",
+      "example": "HOMEPAGE_SCHEMA_PROFILE"
+    },
+    "truthFingerprint": {
+      "type": "string",
+      "description": "SHA-256 fingerprint of the truth-pack reference confirmed at intake.",
+      "example": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d"
+    },
+    "fingerprintMatchConfirmed": {
+      "type": "boolean",
+      "description": "Whether the truth fingerprint was confirmed as matching the expected value at intake.",
+      "required_value": true
+    },
+    "operatorInputs": {
+      "type": "object",
+      "description": "Key operator inputs recorded at Prompt 00 intake.",
+      "properties": {
+        "targetUrlConfirmed": {"type": "boolean"},
+        "phase0SourceReferenceConfirmed": {"type": "boolean"},
+        "truthViewConfirmed": {"type": "boolean"},
+        "schemaProfileConfirmed": {"type": "boolean"},
+        "blockedModulesConfirmed": {"type": "boolean"},
+        "heldFieldsConfirmed": {"type": "boolean"},
+        "evidenceMapStatusAtIntake": {"type": "string"}
+      }
+    },
+    "productionStatus": {
+      "type": "string",
+      "description": "Whether this run produced a production or non-production output.",
+      "enum": ["NON_PRODUCTION", "PRODUCTION_APPROVED", "DEFERRED", "REJECTED"]
+    },
+    "humanApprovalStatus": {
+      "type": "string",
+      "description": "Status of human approval at time of record.",
+      "enum": ["GRANTED", "PENDING", "DENIED", "NOT_YET_REQUESTED"]
+    },
+    "governanceCompliant": {
+      "type": "boolean",
+      "description": "Whether this run passed the Mode 1 lane completion audit without violations."
+    }
+  },
+  "optionalFields": {
+    "implementationDate": {
+      "type": "string",
+      "description": "ISO 8601 date of implementation on the current website or Astro carry."
+    },
+    "humanApprover": {
+      "type": "string",
+      "description": "Name of the human who granted implementation approval."
+    },
+    "humanApprovalDate": {
+      "type": "string",
+      "description": "ISO 8601 date approval was granted."
+    },
+    "prompt00Result": {"type": "string", "enum": ["CONFIRMED", "NOT_COMPLETED"]},
+    "prompt08Result": {"type": "string", "enum": ["PASS", "FAIL", "NOT_COMPLETED"]},
+    "prompt01Result": {"type": "string", "enum": ["COMPLETE", "NOT_COMPLETED"]},
+    "prompt02Result": {"type": "string", "enum": ["PASS", "WARN", "FAIL", "NOT_COMPLETED"]},
+    "prompt03Result": {"type": "string", "enum": ["ACCEPT", "MODIFY", "REJECT", "DEFER", "HUMAN_REVIEW_REQUIRED", "NOT_COMPLETED"]},
+    "prompt04Result": {"type": "string", "enum": ["VALIDATION_PASS", "VALIDATION_WARN", "VALIDATION_FAIL", "VALIDATION_DEFER", "NOT_COMPLETED"]},
+    "prompt13Result": {"type": "string", "enum": ["ANALYZER_PASS", "ANALYZER_WARN", "ANALYZER_FAIL", "ANALYZER_DISAGREE", "NOT_COMPLETED"]},
+    "prompt14Result": {"type": "string", "enum": ["ACCEPT", "MODIFY", "REJECT", "DEFER", "HUMAN_REVIEW_REQUIRED", "PATCH_REQUIRED", "NOT_COMPLETED"]},
+    "prompt12Result": {"type": "string", "enum": ["COMPLETE", "NOT_COMPLETED"]},
+    "prompt15Result": {"type": "string", "enum": ["AUDIT_PASS", "AUDIT_WARN", "AUDIT_FAIL", "NOT_COMPLETED"]},
+    "heldFieldsEmitted": {"type": "boolean", "required_value": false},
+    "blockedModulesUsed": {"type": "boolean", "required_value": false},
+    "contentInvented": {"type": "boolean", "required_value": false},
+    "phase0Mutated": {"type": "boolean", "required_value": false},
+    "sourceTruthMutated": {"type": "boolean", "required_value": false},
+    "notes": {"type": "string"}
+  }
+}
