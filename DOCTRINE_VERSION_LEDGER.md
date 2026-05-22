@@ -10,7 +10,7 @@
 
 ## Current status
 
-`HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+`OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -28,6 +28,7 @@
 | PR #8 | `docs: add Rise standalone final validation analyzer and completion prompts` | Final validation, analyzer, and completion prompt templates added. Prompts 12, 13, 14, and 15 added as templates only. No prompts executed. No schema output. |
 | PR #9 | `schema: add Rise standalone output bundle contract schemas` | Output bundle contract schemas added to `06_MACHINE_RULES/`. Contract schema definitions only — not validators, not scripts, not JSON-LD, not schema output. evidenceMapSchemaAdded=true; evidenceMapAdded=false. No schema output. |
 | PR #10 | `docs: add controlled homepage non-production JSON-LD draft contract` | Controlled homepage non-production JSON-LD draft contract added to `05_REFERENCE_WORKFLOW/`. Documentation contract only — no JSON-LD, no draft created, no @context, no @type nodes. No schema output. |
+| PR #11 | `tools: add Rise standalone output bundle validator` | Output bundle validator added to `tools/`. Validator rules and expected-files contract added to `06_MACHINE_RULES/`. Validator tooling only — no actual output bundles, no JSON-LD, no schema output. validatorsAdded=true; outputBundleValidatorAdded=true. |
 
 ---
 
@@ -78,6 +79,10 @@
 - Homepage draft review and approval sequence documented: **YES (PR #10)**
 - Homepage JSON-LD draft created: **NO**
 - Evidence map added: **NO**
+- Output bundle validator added: **YES (PR #11) — validator tooling only**
+- Validators added: **YES (PR #11)**
+- Output bundle validator rules added: **YES (PR #11)**
+- Output bundle validator expected files contract added: **YES (PR #11) — contract definition only**
 
 ---
 
@@ -121,6 +126,8 @@ The package is not runnable for schema production. Evidence maps, validators, an
 
 Controlled homepage non-production JSON-LD draft contract added in PR #10. The draft contract, homepage draft preconditions and hold matrix, planned output file list, and 10-step review and approval sequence are now in `05_REFERENCE_WORKFLOW/`. These are documentation contracts only. No JSON-LD has been created. No draft exists. No `@context` or `@type` nodes have been produced. The first governed homepage draft run will be created after all preconditions in the hold matrix are confirmed.
 
+Output bundle validator added in PR #11. The Python standard-library validator script (`tools/validate_output_bundle.py`), validator README (`tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md`), validator rules (`06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_RULES_V1_0.md`), and expected-files contract (`06_MACHINE_RULES/OUTPUT_BUNDLE_VALIDATOR_EXPECTED_FILES_V1_0.json`) are now in the package. These are validator tooling only — no actual output bundles have been created, no JSON-LD has been created, and no schema has been generated. `validatorsAdded=true`, `outputBundleValidatorAdded=true`. Mode 1 remains not runnable.
+
 Next doctrine dependency: evidence map for the homepage (future PR).
 
 ---
@@ -139,3 +146,4 @@ Next doctrine dependency: evidence map for the homepage (future PR).
 | 1.0.0 | 2026-05-22 | PR #8 | Final validation, analyzer, and completion prompt templates added (Prompts 12, 13, 14, 15). Templates only — not executed. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #9 | Output bundle contract schemas added (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules). Contract definitions only — not validators, not scripts, not JSON-LD, not schema output. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #10 | Controlled homepage non-production JSON-LD draft contract added (draft contract, preconditions matrix, output file list, review sequence). Documentation contract only — no JSON-LD, no draft, no @context, no @type. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #11 | Output bundle validator added (validate_output_bundle.py, README, validator rules, expected-files contract). Validator tooling only — not actual output bundles, not JSON-LD, not schema output. validatorsAdded=true; outputBundleValidatorAdded=true. No Phase 0 mutation. No Astro attachment. |
