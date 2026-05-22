@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -312,6 +312,23 @@ Understand:
 
 ---
 
+### Step 2q — Read smoke-test runner and health reporter (PR #18 addition)
+
+Files in this order:
+1. `tools/README_SMOKE_TEST_AND_HEALTH_TOOLS_V1_0.md`
+2. `08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md`
+
+Understand:
+- The smoke test runner (`tools/run_standalone_smoke_test.py`) runs 12 checks against the fake fixture — it does not test real Rise FC schema
+- Run with: `python tools/run_standalone_smoke_test.py .` — exit 0 = PASS
+- The package health reporter (`tools/report_package_health.py`) prints a full package health summary without modifying files
+- Run with: `python tools/report_package_health.py .` — exit 0 = CLEAN
+- Milestone 3 is tooling-complete — the audit confirms this and states Mode 1 remains not runnable
+- PASS and CLEAN results do not authorize schema production or production deployment
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -351,7 +368,8 @@ Operators must wait for:
 - PR #15: Run ledger append helper and reporter ✓ Done
 - PR #16: Package validator and active-file coherence checks ✓ Done
 - PR #17: Smoke-test fixture contract and canned fixture ✓ Done
-- PR #18: Smoke-test runner and package health reporter
+- PR #18: Smoke-test runner and package health reporter ✓ Done
+- PR #19: Homepage evidence map and first real page handoff template
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

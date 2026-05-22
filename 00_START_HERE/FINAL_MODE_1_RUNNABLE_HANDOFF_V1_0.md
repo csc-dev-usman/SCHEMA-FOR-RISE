@@ -1,6 +1,6 @@
 # Final Mode 1 Runnable Handoff V1.0
 
-**Status:** `NOT_RUNNABLE_YET_SMOKE_TEST_FIXTURE_CONTRACT_ADDED`
+**Status:** `NOT_RUNNABLE_YET_MILESTONE_3_COMPLETE`
 
 ---
 
@@ -30,7 +30,7 @@ The Mode 1 runnable handoff requires the following dependencies:
 | Run ledger append helper and reporter | PR #15 | ✓ Done |
 | Package validator and active-file checks | PR #16 | ✓ Done |
 | Smoke-test fixture contract and canned fixture | PR #17 | ✓ Done |
-| Smoke-test runner and package health reporter | PR #18 | Pending |
+| Smoke-test runner and package health reporter | PR #18 | ✓ Done |
 | Homepage evidence map | Future PR | Pending |
 | Final runnable handoff | Future PR | Pending |
 

@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `SMOKE_TEST_FIXTURE_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 added the output bundle validator to `tools/`. PR #12 added the Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference. PR #13 added the final schema validation protocol and associated runbooks. PR #14 added the governed run ledger schema, run ledger review guide, and upgraded `RUN_LEDGER.json`. PR #15 added the run ledger append helper and read-only ledger status reporter to `tools/`. PR #16 added the package validator, expected active files contract, and validation checklist. PR #17 adds the smoke-test fixture contract and canned fake fixture set in `08_SMOKE_TESTS/`. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PRs #2–#16 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, and package validator. PR #17 added the smoke-test fixture contract and canned fake fixture set in `08_SMOKE_TESTS/`. PR #18 adds the smoke test runner, package health reporter, smoke test runner expectations, and the Milestone 3 completion audit. Milestone 3 is tooling-complete. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -142,7 +142,19 @@
 
 ---
 
-## Active tools files (PR #11, PR #15, and PR #16)
+## Active smoke-test tool files (PR #18)
+
+| File | Purpose |
+|------|---------|
+| `tools/run_standalone_smoke_test.py` | Smoke test runner — 12 checks against `08_SMOKE_TESTS/fixtures/standalone_v1_0/`. Verifies fixture integrity and package validator pass. Added PR #18. |
+| `tools/report_package_health.py` | Package health reporter — 8 health check sections, read-only. Summarizes manifest, ledger, mode status, safety flags, tool presence. Added PR #18. |
+| `tools/README_SMOKE_TEST_AND_HEALTH_TOOLS_V1_0.md` | Operator README for the smoke test runner and health reporter. Usage, exit codes, check tables, non-authorization statement. Added PR #18. |
+| `08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md` | Expected PASS/FAIL behavior of the smoke test runner for all 12 checks. Added PR #18. |
+| `05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md` | Milestone 3 completion audit — records all Milestone 3 components, tool inventory, validation results, current package posture. Added PR #18. |
+
+---
+
+## Active tools files (PR #11, PR #15, PR #16, and PR #18)
 
 | File | Purpose |
 |------|---------|
@@ -220,6 +232,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #15:** ~~Run ledger append helper and reporter~~ ✓ Done
 - **PR #16:** ~~Package validator and active-file coherence checks~~ ✓ Done
 - **PR #17:** ~~Smoke-test fixture contract and canned fixture~~ ✓ Done
-- **PR #18:** Smoke-test runner and package health reporter
+- **PR #18:** ~~Smoke-test runner and package health reporter~~ ✓ Done
+- **PR #19:** Homepage evidence map and first real page handoff template
 
 Generated schema, evidence maps, and real run artifacts are still not allowed. They require a future governed run after all preconditions are confirmed.
