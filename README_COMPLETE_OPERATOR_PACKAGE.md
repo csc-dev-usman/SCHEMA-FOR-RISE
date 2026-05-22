@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #18 completes Milestone 3 by adding the smoke-test runner (`tools/run_standalone_smoke_test.py`), package health reporter (`tools/report_package_health.py`), smoke test runner expectations (`08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md`), and the Milestone 3 completion audit (`05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md`). Run `python tools/run_standalone_smoke_test.py .` to exercise the fake fixture (12 checks). Run `python tools/report_package_health.py .` for a full package health summary. Milestone 3 is tooling-complete only — Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #19 adds the first real page run handoff template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md`), intake fields document (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md`), homepage first real run supervision rules (`05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md`), and hold reason reference (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md`). These are governance reference documents only — no real run has been started, no schema has been generated. Milestone 3 is tooling-complete. Milestone 4 (first real page run support layer) is in progress. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -137,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #18) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #18 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #19) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #19 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -182,4 +182,8 @@ No content in this package (through PR #18) authorizes any schema to be deployed
   `test: add Rise standalone smoke-test fixture contract`
 - **PR #18:** ~~Add smoke-test runner and package health reporter~~ ✓ Merged
   `tools: add Rise smoke-test runner and package health reporter`
-- **PR #19:** Add homepage evidence map and first real page handoff template
+- **PR #19:** ~~Add first real page handoff template~~ ✓ Merged
+  `docs: add Rise first real page handoff template`
+- **PR #20:** Add independent analyzer and controller post-analyzer flow
+- **PR #21:** Add current website implementation handoff checklist
+- **PR #22:** Add governed sample-run artifact policy

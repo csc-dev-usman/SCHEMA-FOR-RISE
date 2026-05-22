@@ -1,12 +1,12 @@
 # Final Mode 1 Runnable Handoff V1.0
 
-**Status:** `NOT_RUNNABLE_YET_MILESTONE_3_COMPLETE`
+**Status:** `NOT_RUNNABLE_YET_FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED`
 
 ---
 
 ## Notice
 
-Mode 1 is not runnable yet after PR #16. This file is a placeholder for the later final runnable handoff.
+Mode 1 is not runnable yet after PR #19. This file is a placeholder for the later final runnable handoff.
 
 The Mode 1 runnable handoff requires the following dependencies:
 
@@ -31,6 +31,10 @@ The Mode 1 runnable handoff requires the following dependencies:
 | Package validator and active-file checks | PR #16 | ✓ Done |
 | Smoke-test fixture contract and canned fixture | PR #17 | ✓ Done |
 | Smoke-test runner and package health reporter | PR #18 | ✓ Done |
+| First real page handoff template | PR #19 | ✓ Done |
+| Independent analyzer and controller post-analyzer flow | PR #20 | Pending |
+| Current website implementation handoff checklist | PR #21 | Pending |
+| Governed sample-run artifact policy | PR #22 | Pending |
 | Homepage evidence map | Future PR | Pending |
 | Final runnable handoff | Future PR | Pending |
 

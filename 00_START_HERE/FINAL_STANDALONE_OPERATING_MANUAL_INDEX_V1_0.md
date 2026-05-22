@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -329,6 +329,24 @@ Understand:
 
 ---
 
+### Step 2r — Read first real page handoff template and supervision rules (PR #19 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md`
+
+Understand:
+- The handoff template is a blank future-use template — it is not a completed run artifact; no real run ID or URL is filled in
+- All fields default to placeholder, NOT_STARTED, HOLD, or NOT_AUTHORIZED
+- The intake fields document defines what must be confirmed before any governed run begins — all 9 required field groups must pass intake validation
+- The homepage supervision rules define: route `/`, `HOMEPAGE_SCHEMA_PROFILE`, fingerprint `80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d`, allowed modules, blocked modules, held fields, and 10 supervision rules
+- The hold reason reference defines 14 hold codes (HOLD_PHASE0_SOURCE_MISSING through HOLD_ASTRO_CARRY_NOT_READY) — each with condition and resolution requirement
+- Reading these files does not start a run, generate schema, or authorize any implementation
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -369,7 +387,10 @@ Operators must wait for:
 - PR #16: Package validator and active-file coherence checks ✓ Done
 - PR #17: Smoke-test fixture contract and canned fixture ✓ Done
 - PR #18: Smoke-test runner and package health reporter ✓ Done
-- PR #19: Homepage evidence map and first real page handoff template
+- PR #19: First real page handoff template ✓ Done
+- PR #20: Independent analyzer and controller post-analyzer flow
+- PR #21: Current website implementation handoff checklist
+- PR #22: Governed sample-run artifact policy
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

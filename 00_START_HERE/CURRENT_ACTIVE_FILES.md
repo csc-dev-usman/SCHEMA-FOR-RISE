@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `FIRST_REAL_PAGE_HANDOFF_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PRs #2–#16 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, and package validator. PR #17 added the smoke-test fixture contract and canned fake fixture set in `08_SMOKE_TESTS/`. PR #18 adds the smoke test runner, package health reporter, smoke test runner expectations, and the Milestone 3 completion audit. Milestone 3 is tooling-complete. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PRs #2–#18 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, and health reporter. PR #19 adds the first real page handoff template, intake fields, homepage first real run supervision rules, and hold reason reference. Milestone 3 is tooling-complete. Milestone 4 (support layer) is in progress. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -118,6 +118,10 @@
 | `05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md` | Screaming Frog structured data extraction checklist — optional/where available. Step 6 of validation protocol. Added PR #13. |
 | `05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md` | Required evidence metadata for the implementation handoff packet. No actual evidence. Added PR #13. |
 | `05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md` | How to read the run ledger, field explanations, when PRODUCTION_LOCKED may and may not be claimed. Added PR #14. |
+| `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md` | Blank future-use handoff template for governed first real page runs. All fields default to placeholder, NOT_STARTED, HOLD, or NOT_AUTHORIZED. Added PR #19. |
+| `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md` | Required intake fields and validation expectations for a governed first real page run. Added PR #19. |
+| `05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md` | Supervision rules for the homepage first real run — route `/`, `HOMEPAGE_SCHEMA_PROFILE`, fingerprint, allowed modules, blocked modules, held fields, stop conditions. Added PR #19. |
+| `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md` | All hold codes for first real page runs — definitions, conditions, resolution requirements. Added PR #19. |
 
 ---
 
@@ -233,6 +237,9 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #16:** ~~Package validator and active-file coherence checks~~ ✓ Done
 - **PR #17:** ~~Smoke-test fixture contract and canned fixture~~ ✓ Done
 - **PR #18:** ~~Smoke-test runner and package health reporter~~ ✓ Done
-- **PR #19:** Homepage evidence map and first real page handoff template
+- **PR #19:** ~~First real page handoff template~~ ✓ Done
+- **PR #20:** Independent analyzer and controller post-analyzer flow
+- **PR #21:** Current website implementation handoff checklist
+- **PR #22:** Governed sample-run artifact policy
 
 Generated schema, evidence maps, and real run artifacts are still not allowed. They require a future governed run after all preconditions are confirmed.
