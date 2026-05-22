@@ -1,0 +1,161 @@
+PROMPT 04 — VALIDATOR RESULTS REVIEW
+Rise FC Standalone Schema Operator Package
+Version: V1_0
+Status: TEMPLATE_ONLY — NOT EXECUTED
+
+---
+
+PURPOSE
+
+Review the results of external validator tools against the non-production JSON-LD draft after the controller has issued ACCEPT in Prompt 03. This prompt interprets validator output and determines whether the draft passes validation, requires modification, or must be rejected. It does not self-approve the draft for production.
+
+Validator tools include:
+- Google Rich Results Test (rich-results.google.com/test)
+- Schema.org validator (validator.schema.org)
+- Screaming Frog (if available)
+
+This prompt runs after Prompt 03 issues ACCEPT.
+
+---
+
+OPERATOR INSTRUCTION
+
+Paste this prompt after the controller issues ACCEPT in Prompt 03. The operator must run the draft through external validator tools first and collect the raw validator output. Paste the validator output in the inputs section below. Do not skip external validation. Claude's review of validator output is not a substitute for running the validators.
+
+---
+
+BEGIN PROMPT
+
+You are operating inside the Rise FC standalone schema operator package.
+
+This is Prompt 04 — Validator Results Review.
+
+You are reviewing external validator results — not generating schema, not validating schema independently, and not self-approving the draft for production. Your role is to interpret the validator output, identify any errors or warnings, and return a review decision.
+
+---
+
+INPUTS REQUIRED FROM OPERATOR
+
+Target URL:
+[OPERATOR INPUT REQUIRED]
+
+Target route:
+[OPERATOR INPUT REQUIRED]
+
+Active schema profile:
+[HOMEPAGE_SCHEMA_PROFILE]
+
+Non-production JSON-LD draft (controller-accepted version from Prompt 03):
+[OPERATOR INPUT REQUIRED — paste the accepted draft]
+
+Google Rich Results Test output:
+[OPERATOR INPUT REQUIRED — paste the full validator output, including detected item types, errors, and warnings]
+
+Schema.org validator output:
+[OPERATOR INPUT REQUIRED — paste the full validator output, including any errors or warnings]
+
+Screaming Frog validation output (if available):
+[OPERATOR INPUT OPTIONAL — paste if available; mark NOT_AVAILABLE if not run]
+
+Validator run date:
+[OPERATOR INPUT REQUIRED — date the validators were run]
+
+---
+
+VALIDATOR REVIEW CHECKLIST
+
+Review each validator output against the draft. Return PASS, WARN, or FAIL for each check.
+
+GOOGLE RICH RESULTS TEST:
+
+[ ] No errors reported — PASS / WARN / FAIL
+[ ] Detected item types match expected modules (Organization, WebSite, WebPage, BreadcrumbList as applicable) — PASS / WARN / FAIL
+[ ] No unexpected or blocked item types detected — PASS / FAIL
+[ ] Warnings (if any) are reviewed and documented — PASS / WARN
+
+SCHEMA.ORG VALIDATOR:
+
+[ ] No critical errors reported — PASS / WARN / FAIL
+[ ] No unknown property warnings for emitted properties — PASS / WARN / FAIL
+[ ] No type mismatch errors — PASS / FAIL
+
+SCREAMING FROG (if run):
+
+[ ] No schema errors reported — PASS / WARN / FAIL / NOT_AVAILABLE
+[ ] Schema fields detected match expected output — PASS / WARN / NOT_AVAILABLE
+
+HELD FIELD CROSS-CHECK:
+
+[ ] Validator output does not reveal held field data in any detected property — PASS / FAIL
+
+BLOCKED MODULE CROSS-CHECK:
+
+[ ] Validator does not detect any blocked module type — PASS / FAIL
+
+---
+
+VALIDATOR REVIEW DECISIONS
+
+The reviewer must issue one of the following decisions:
+
+VALIDATION_PASS
+  Condition: All validators pass with no errors. Warnings reviewed and found non-blocking.
+  Next step: Proceed to Prompt 13 (independent analyzer review).
+
+VALIDATION_WARN
+  Condition: One or more validators return warnings that are non-blocking (e.g., optional recommended fields missing). No errors.
+  Next step: Document warnings in the validation report. Proceed to Prompt 13. Include warnings in the Prompt 13 context.
+
+VALIDATION_FAIL
+  Condition: One or more validators return errors. Any blocked module detected. Any held field detected in output.
+  Next step: Do not proceed. Return to controller (Prompt 03) with the validation failure report. Controller will issue MODIFY or REJECT.
+
+VALIDATION_DEFER
+  Condition: External validator tools are unavailable or could not be run for a technical reason.
+  Next step: Suspend the run. Document the reason. Resume only when validators can be run.
+
+---
+
+VALIDATOR REVIEW REPORT FORMAT
+
+Return the validator review report in this format:
+
+VALIDATOR REVIEW REPORT — PROMPT 04
+Target: [URL]
+Profile: [schema profile]
+Draft status: NON_PRODUCTION
+Controller decision received: ACCEPT
+Validator run date: [date]
+
+Google Rich Results Test: [PASS / WARN / FAIL]
+  Detected types: [list]
+  Errors: [none / list]
+  Warnings: [none / list]
+
+Schema.org Validator: [PASS / WARN / FAIL]
+  Errors: [none / list]
+  Warnings: [none / list]
+
+Screaming Frog: [PASS / WARN / FAIL / NOT_AVAILABLE]
+  Errors: [none / list]
+  Warnings: [none / list]
+
+Held field cross-check: [PASS / FAIL]
+Blocked module cross-check: [PASS / FAIL]
+
+Issues found:
+[List each WARN or FAIL with the specific field, node, or property and the reason]
+
+Overall validator decision: [VALIDATION_PASS / VALIDATION_WARN / VALIDATION_FAIL / VALIDATION_DEFER]
+
+Next step: [state the next action]
+
+---
+
+NON-AUTHORIZATION STATEMENT
+
+This validator review does not approve the draft for production. A VALIDATION_PASS result means the draft passes external validator checks. It does not mean the draft is approved for implementation. Independent analyzer review (Prompt 13), controller post-analyzer review (Prompt 14), and explicit human approval are all still required before any implementation handoff.
+
+Claude does not self-approve schema for production under any circumstances. Human approval is required at every gate.
+
+END PROMPT

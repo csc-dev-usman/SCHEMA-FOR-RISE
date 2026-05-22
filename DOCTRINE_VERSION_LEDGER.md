@@ -10,7 +10,7 @@
 
 ## Current status
 
-`OPERATOR_QUICKSTART_CHECKLIST_UPGRADED_NO_SCHEMA_OUTPUT`
+`CORE_OPERATOR_PROMPTS_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -24,6 +24,7 @@
 | PR #4 | `docs: add Rise homepage schema profile and blocked module policy` | Homepage schema profile added. Blocked module policy added. Held field categories defined. Allowed modules defined. Decision matrix added. No schema output. |
 | PR #5 | `docs: add Rise standalone schema master flow` | Standalone master flow added. Mode 1 flow documented. Mode 2 flow documented. Page run sequence documented. Master stop conditions documented. No schema output. |
 | PR #6 | `docs: upgrade Rise standalone team quickstart and operator checklist` | Team quickstart upgraded. Operator checklist upgraded. Navigation decision tree added. Preflight checklist added. Mode status guide added. No schema output. |
+| PR #7 | `docs: add Rise standalone operator prompts 00 through 04 and 08` | Core operator prompt templates added. Prompts 00, 01, 02, 03, 04, and 08 added as templates only. No prompts executed. No schema output. |
 
 ---
 
@@ -49,6 +50,13 @@
 - Navigation decision tree added: **YES (PR #6)**
 - Preflight checklist added: **YES (PR #6)**
 - Mode status guide added: **YES (PR #6)**
+- Operator prompts added: **YES (PR #7) — templates only, not executed**
+- Prompt 00 added: **YES (PR #7)**
+- Prompt 01 added: **YES (PR #7)**
+- Prompt 02 added: **YES (PR #7)**
+- Prompt 03 added: **YES (PR #7)**
+- Prompt 04 added: **YES (PR #7)**
+- Prompt 08 added: **YES (PR #7)**
 - Evidence map added: **NO**
 
 ---
@@ -83,9 +91,11 @@ Standalone master flow added in PR #5. The root master flow, Mode 1 current-webs
 
 Operator quickstart and checklist upgraded in PR #6. The navigation decision tree, preflight checklist, and mode status guide are now in `00_START_HERE/`. Team quickstart and operator checklist have been upgraded with full reference coverage through PR #6. No schema output has been created.
 
-The package is not runnable for schema production. Operator prompts, evidence maps, output bundle schemas, the draft contract, validators, and the final runnable handoff are pending in later PRs.
+Core operator prompt templates added in PR #7. Prompts 00 (standalone URL review start), 01 (build non-production JSON-LD draft), 02 (Claude external QA one-zip), 03 (controller decision and regeneration), 04 (validator results review), and 08 (page content readiness gate) are now in `04_OPERATOR_PROMPTS/` as templates only. No prompts have been executed. No schema has been generated. No JSON-LD has been created.
 
-Next doctrine dependency: operator prompts 00 through 04 and 08 — PR #7.
+The package is not runnable for schema production. Final validation and analyzer prompts (PR #8), output bundle schemas (PR #9), the draft contract (PR #10), evidence maps, validators, and the final runnable handoff are still pending in later PRs.
+
+Next doctrine dependency: final validation, analyzer, and completion prompts — PR #8.
 
 ---
 
@@ -99,3 +109,4 @@ Next doctrine dependency: operator prompts 00 through 04 and 08 — PR #7.
 | 1.0.0 | 2026-05-21 | PR #4 | Homepage schema profile added. Blocked module policy added. Held field categories defined. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-21 | PR #5 | Standalone master flow added. Mode 1 documented. Mode 2 documented. Page run sequence documented. Master stop conditions documented. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-21 | PR #6 | Team quickstart upgraded. Operator checklist upgraded. Navigation decision tree added. Preflight checklist added. Mode status guide added. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #7 | Core operator prompt templates added (Prompts 00, 01, 02, 03, 04, 08). Templates only — not executed. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
