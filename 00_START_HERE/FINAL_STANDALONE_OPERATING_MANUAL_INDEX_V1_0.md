@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUN_LEDGER_TOOLS_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -259,6 +259,24 @@ Understand:
 
 ---
 
+### Step 2n — Read run ledger tools (PR #15 addition)
+
+Files in this order:
+1. `tools/README_RUN_LEDGER_TOOLS_V1_0.md`
+2. `tools/append_run_ledger_entry.py` (review the safety checks and usage)
+3. `tools/report_run_ledger_status.py` (review the read-only reporter)
+
+Understand:
+- The append helper runs 20 safety checks on a candidate entry JSON before writing to `RUN_LEDGER.json`
+- Supports `--dry-run` — no files are modified in dry-run mode
+- Safety checks enforce no duplicate runIds, no PRODUCTION_LOCKED without humanApprovalRef, no PRODUCTION_LOCKED on failed readiness or missing evidence or failed validation
+- The reporter is read-only — it prints ledger metadata, entry counts, status breakdowns, and integrity warnings without modifying any files
+- Neither tool generates schema, creates JSON-LD, or authorizes production deployment
+- Do not use the append helper to add fake or test entries — real entries only after the final runnable handoff is in place
+- Run `python tools/report_run_ledger_status.py RUN_LEDGER.json` at any time to check ledger state — no side effects
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -295,7 +313,8 @@ Operators must wait for:
 - PR #12: Claude QA finding schema and controller review contracts ✓ Done
 - PR #13: Final schema validation protocol and validator runbook ✓ Done
 - PR #14: Governed run ledger schema and RUN_LEDGER upgrade ✓ Done
-- PR #15: Run ledger append helper and reporter
+- PR #15: Run ledger append helper and reporter ✓ Done
+- PR #16: Package validator and active-file coherence checks
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

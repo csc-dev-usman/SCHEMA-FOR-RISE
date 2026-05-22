@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "RUN_LEDGER_SCHEMA_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "RUN_LEDGER_TOOLS_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -51,6 +51,9 @@
   "runLedgerSchemaAdded": true,
   "runLedgerGuideAdded": true,
   "runLedgerUpgraded": true,
+  "runLedgerAppendHelperAdded": true,
+  "runLedgerReporterAdded": true,
+  "runLedgerToolsAdded": true,
   "operatorPromptsAdded": true,
   "prompt00Added": true,
   "prompt01Added": true,
@@ -173,7 +176,10 @@
   ],
   "activeToolFiles": [
     "tools/validate_output_bundle.py",
-    "tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md"
+    "tools/README_OUTPUT_BUNDLE_VALIDATOR_V1_0.md",
+    "tools/append_run_ledger_entry.py",
+    "tools/report_run_ledger_status.py",
+    "tools/README_RUN_LEDGER_TOOLS_V1_0.md"
   ],
   "activeReferenceWorkflowFiles": [
     "05_REFERENCE_WORKFLOW/README_REFERENCE_WORKFLOW_V1_0.md",
@@ -190,5 +196,5 @@
     "05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md",
     "05_REFERENCE_WORKFLOW/RUN_LEDGER_STANDALONE_SCHEMA_REVIEW_GUIDE_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #15: Add run ledger append helper and read-only ledger reporter"
+  "nextRecommendedPr": "PR #16: Add package validator and active-file coherence checks"
 }
