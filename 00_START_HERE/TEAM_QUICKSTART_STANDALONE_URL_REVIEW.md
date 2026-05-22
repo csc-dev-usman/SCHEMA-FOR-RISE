@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -23,7 +23,7 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ---
 
-## What you can do right now (after PR #12)
+## What you can do right now (after PR #13)
 
 - Use `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md` to find the right document for your task.
 - Use `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` to check all gates before any schema work.
@@ -41,6 +41,8 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Run `python tools/validate_output_bundle.py --help` to see the validator usage.
 - Read `05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md` to understand the governed Claude QA and controller review process.
 - Read `05_REFERENCE_WORKFLOW/CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md` to understand all valid controller decision values.
+- Read `05_REFERENCE_WORKFLOW/FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md` to understand the required 9-step validation sequence for all future schema output bundles.
+- Read the associated validation runbooks in `05_REFERENCE_WORKFLOW/` — Schema.org Validator, Google Rich Results Test, Screaming Frog checklist, and validation evidence handoff requirements.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -49,9 +51,9 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ## What you cannot do right now
 
-> **The source-truth boundary, doctrine, homepage scoped truth-pack reference, homepage schema profile, master flow, operator navigation documents, full operator prompt set, output bundle contract schemas, homepage draft contract, output bundle validator, and Claude QA/controller review contracts now exist. The package is still not runnable for schema production. Operators must wait for evidence maps and the final runnable handoff before generating or implementing any schema.**
+> **The source-truth boundary, doctrine, homepage scoped truth-pack reference, homepage schema profile, master flow, operator navigation documents, full operator prompt set, output bundle contract schemas, homepage draft contract, output bundle validator, Claude QA/controller review contracts, and final schema validation protocol now exist. The package is still not runnable for schema production. Operators must wait for evidence maps and the final runnable handoff before generating or implementing any schema.**
 
-Specifically, after PR #12 you must not:
+Specifically, after PR #13 you must not:
 
 - Generate any JSON-LD
 - Execute any operator prompt (prompts are templates only)
@@ -82,7 +84,8 @@ The sequence:
 - PR #10 adds controlled homepage non-production JSON-LD draft contract ✓ Done
 - PR #11 adds output bundle validator ✓ Done
 - PR #12 adds Claude QA finding schema and controller review contracts ✓ Done
-- PR #13 adds final schema validation protocol and validator runbook
+- PR #13 adds final schema validation protocol and validator runbook ✓ Done
+- PR #14 adds governed run ledger schema and RUN_LEDGER upgrade
 
 Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
 

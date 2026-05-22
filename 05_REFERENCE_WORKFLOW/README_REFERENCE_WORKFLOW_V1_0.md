@@ -1,8 +1,8 @@
 # Reference Workflow — Rise FC Standalone Schema Package
 
-**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
 
-> This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, and QA/controller review process for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist.
+> This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, and the full validation protocol for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run.
 
 ---
 
@@ -25,6 +25,11 @@ These documents serve as a governance checkpoint: the full workflow must be unde
 | `HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md` | The full 10-step review and approval sequence from readiness gate through implementation handoff. |
 | `CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md` | Claude QA and controller review workflow — what QA is, session rules, what the controller can and cannot do, finding severity rules. Added PR #12. |
 | `CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md` | Authoritative reference for all valid controller decision values — per-finding dispositions, final recommendations, and constraint table. Added PR #12. |
+| `FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md` | Ordered 9-step validation protocol — output bundle validation, JSON parse, lint rules, Schema.org Validator, Google Rich Results Test, Screaming Frog, controller review, human approval, implementation handoff. Added PR #13. |
+| `SCHEMA_VALIDATOR_RUNBOOK_V1_0.md` | How to use the Schema.org Validator for future schema bundles. Step 4 of the validation protocol. Added PR #13. |
+| `GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md` | How to use the Google Rich Results Test. Rich results eligibility not guaranteed. Step 5 is informational only. Added PR #13. |
+| `SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md` | Screaming Frog structured data extraction checklist — optional/where available. Step 6 of validation protocol. Added PR #13. |
+| `VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md` | Required evidence metadata shape for the implementation handoff packet. No actual evidence. Added PR #13. |
 
 ---
 
@@ -52,3 +57,8 @@ All files in this folder are documentation-only governance contracts. The actual
 5. `HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md` — understand the full review sequence
 6. `CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md` — understand the Claude QA and controller review process
 7. `CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md` — understand all valid controller decision values
+8. `FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md` — understand the required 9-step validation sequence
+9. `SCHEMA_VALIDATOR_RUNBOOK_V1_0.md` — Schema.org Validator usage (Step 4)
+10. `GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md` — Google Rich Results Test usage (Step 5)
+11. `SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md` — Screaming Frog extraction (Step 6, optional)
+12. `VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md` — required evidence metadata for implementation handoff

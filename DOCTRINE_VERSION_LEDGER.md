@@ -10,7 +10,7 @@
 
 ## Current status
 
-`CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
+`FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -30,6 +30,7 @@
 | PR #10 | `docs: add controlled homepage non-production JSON-LD draft contract` | Controlled homepage non-production JSON-LD draft contract added to `05_REFERENCE_WORKFLOW/`. Documentation contract only — no JSON-LD, no draft created, no @context, no @type nodes. No schema output. |
 | PR #11 | `tools: add Rise standalone output bundle validator` | Output bundle validator added to `tools/`. Validator rules and expected-files contract added to `06_MACHINE_RULES/`. Validator tooling only — no actual output bundles, no JSON-LD, no schema output. validatorsAdded=true; outputBundleValidatorAdded=true. |
 | PR #12 | `schema: add Rise Claude QA finding and controller review contracts` | Claude QA finding schema and controller review packet schema added to `06_MACHINE_RULES/`. QA/controller workflow and controller decision enum reference added to `05_REFERENCE_WORKFLOW/`. Contract definitions only — no QA run, no findings, no JSON-LD, no schema output. claudeQaFindingSchemaAdded=true; controllerReviewPacketSchemaAdded=true; claudeQaControllerWorkflowAdded=true. |
+| PR #13 | `docs: add Rise final schema validation protocol` | Final schema validation protocol and five runbook/requirements documents added to `05_REFERENCE_WORKFLOW/`. Documentation contracts only — no validators run, no schema generated, no evidence collected. finalValidationProtocolAdded=true; schemaValidatorRunbookAdded=true; googleRichResultsRunbookAdded=true; screamingFrogChecklistAdded=true; validationEvidenceHandoffRequirementsAdded=true. |
 
 ---
 
@@ -88,6 +89,11 @@
 - Controller review packet schema added: **YES (PR #12) — contract definition only**
 - Claude QA and controller review workflow added: **YES (PR #12) — documentation contract only**
 - Controller decision enum reference added: **YES (PR #12) — documentation contract only**
+- Final schema validation protocol added: **YES (PR #13) — documentation contract only**
+- Schema.org Validator runbook added: **YES (PR #13) — documentation contract only**
+- Google Rich Results Test runbook added: **YES (PR #13) — documentation contract only**
+- Screaming Frog structured data export checklist added: **YES (PR #13) — documentation contract only, optional step**
+- Validation evidence handoff requirements added: **YES (PR #13) — documentation contract only**
 
 ---
 
@@ -135,6 +141,8 @@ Output bundle validator added in PR #11. The Python standard-library validator s
 
 Claude QA finding schema and controller review packet schema added in PR #12. The Claude QA finding schema (`06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json`) and controller review packet schema (`06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json`) are now in the package as contract definitions only. The QA and controller review workflow (`05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md`) and controller decision enum reference (`05_REFERENCE_WORKFLOW/CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md`) are also added. These are contracts and documentation only — no QA has been run, no findings exist, no packets exist, no JSON-LD has been created, and no schema has been generated. `claudeQaFindingSchemaAdded=true`, `controllerReviewPacketSchemaAdded=true`, `claudeQaControllerWorkflowAdded=true`. Mode 1 remains not runnable.
 
+Final schema validation protocol added in PR #13. The 9-step final schema validation protocol (`05_REFERENCE_WORKFLOW/FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md`), Schema.org Validator runbook (`05_REFERENCE_WORKFLOW/SCHEMA_VALIDATOR_RUNBOOK_V1_0.md`), Google Rich Results Test runbook (`05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md`), Screaming Frog structured data export checklist (`05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md`), and validation evidence handoff requirements (`05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md`) are now in the package. These are documentation contracts only — no validators have been run, no schema has been generated, and no evidence exists. `finalValidationProtocolAdded=true`, `schemaValidatorRunbookAdded=true`, `googleRichResultsRunbookAdded=true`, `screamingFrogChecklistAdded=true`, `validationEvidenceHandoffRequirementsAdded=true`. Mode 1 remains not runnable.
+
 Next doctrine dependency: evidence map for the homepage (future PR).
 
 ---
@@ -155,3 +163,4 @@ Next doctrine dependency: evidence map for the homepage (future PR).
 | 1.0.0 | 2026-05-22 | PR #10 | Controlled homepage non-production JSON-LD draft contract added (draft contract, preconditions matrix, output file list, review sequence). Documentation contract only — no JSON-LD, no draft, no @context, no @type. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #11 | Output bundle validator added (validate_output_bundle.py, README, validator rules, expected-files contract). Validator tooling only — not actual output bundles, not JSON-LD, not schema output. validatorsAdded=true; outputBundleValidatorAdded=true. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #12 | Claude QA finding schema and controller review packet schema added. QA/controller workflow and controller decision enum reference added. Contract definitions only — no QA run, no findings, no JSON-LD, not schema output. claudeQaFindingSchemaAdded=true; controllerReviewPacketSchemaAdded=true; claudeQaControllerWorkflowAdded=true. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #13 | Final schema validation protocol and five runbook/requirements documents added. Documentation contracts only — no validators run, no schema generated, no evidence collected. finalValidationProtocolAdded=true; schemaValidatorRunbookAdded=true; googleRichResultsRunbookAdded=true; screamingFrogChecklistAdded=true; validationEvidenceHandoffRequirementsAdded=true. No Phase 0 mutation. No Astro attachment. |

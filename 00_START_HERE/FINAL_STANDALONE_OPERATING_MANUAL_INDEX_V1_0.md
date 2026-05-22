@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -216,6 +216,31 @@ Understand:
 
 ---
 
+### Step 2l — Read final schema validation protocol (PR #13 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/SCHEMA_VALIDATOR_RUNBOOK_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md`
+5. `05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md`
+
+Understand:
+- The validation protocol defines 9 ordered steps that every future schema output bundle must pass
+- Step 1 is the Python output bundle validator (`tools/validate_output_bundle.py`) — must return PASS
+- Step 2 is JSON parse validation of all bundle files
+- Step 3 is schema lint rules (all 10 JLSR rules must pass)
+- Step 4 is Schema.org Validator — no critical errors allowed
+- Step 5 is Google Rich Results Test — informational only; rich results eligibility is not guaranteed; "not eligible" does not block
+- Step 6 is Screaming Frog structured data extraction — optional/where available; `N/A` does not block
+- Step 7 is controller review — `finalRecommendation` must be `PROCEED_TO_HUMAN_APPROVAL` with `unresolvedBlockers: 0`
+- Step 8 is human approval — required before any implementation handoff
+- Step 9 is implementation handoff — produced by Prompt 12 after human approval
+- Passing the full validation protocol does NOT authorize production deployment — human approval at Step 8 is always required
+- No validators have been run. No schema has been generated. These are documentation contracts only.
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -250,7 +275,8 @@ Operators must wait for:
 - PR #10: Controlled homepage non-production JSON-LD draft contract ✓ Done
 - PR #11: Output bundle validator ✓ Done
 - PR #12: Claude QA finding schema and controller review contracts ✓ Done
-- PR #13: Final schema validation protocol and validator runbook
+- PR #13: Final schema validation protocol and validator runbook ✓ Done
+- PR #14: Governed run ledger schema and RUN_LEDGER upgrade
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 
