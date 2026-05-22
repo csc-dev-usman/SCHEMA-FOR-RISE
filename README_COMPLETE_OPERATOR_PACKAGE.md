@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #12 adds the Claude QA finding schema, controller review packet schema, QA and controller review workflow, and controller decision enum reference. These are contract documents only — they define the structure and rules for future Claude QA review sessions and controller review packets. No QA has been run, no findings exist, and no schema has been generated.
+PR #13 adds the final schema validation protocol and five associated runbook/requirements documents. These are documentation contracts only — they define the ordered validation sequence, Schema.org Validator usage, Google Rich Results Test review, Screaming Frog structured data extraction, and implementation handoff evidence requirements for future governed schema runs. No validators have been run, no schema has been generated, and no evidence exists.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -61,7 +61,8 @@ PR #12 adds the Claude QA finding schema, controller review packet schema, QA an
 - The output bundle contract schemas (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules) are in `06_MACHINE_RULES/`.
 - The controlled homepage non-production JSON-LD draft contract, preconditions matrix, output file list, and review sequence are in `05_REFERENCE_WORKFLOW/`.
 - The output bundle validator (`tools/validate_output_bundle.py`), validator README, validator rules, and expected-files contract are in `tools/` and `06_MACHINE_RULES/`.
-- The Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference are now in `06_MACHINE_RULES/` and `05_REFERENCE_WORKFLOW/`.
+- The Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference are in `06_MACHINE_RULES/` and `05_REFERENCE_WORKFLOW/`.
+- The final schema validation protocol, Schema.org Validator runbook, Google Rich Results Test runbook, Screaming Frog checklist, and validation evidence handoff requirements are now in `05_REFERENCE_WORKFLOW/`.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -72,7 +73,7 @@ PR #12 adds the Claude QA finding schema, controller review packet schema, QA an
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `OUTPUT_BUNDLE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
+Status is `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
 
 ---
 
@@ -133,7 +134,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #10) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #10 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #13) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #13 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -166,4 +167,6 @@ No content in this package (through PR #10) authorizes any schema to be deployed
   `tools: add Rise standalone output bundle validator`
 - **PR #12:** ~~Add Claude QA finding schema and controller QA review contract~~ ✓ Merged
   `schema: add Rise Claude QA finding and controller review contracts`
-- **PR #13:** Add final schema validation protocol and validator runbook
+- **PR #13:** ~~Add final schema validation protocol and validator runbook~~ ✓ Merged
+  `docs: add Rise final schema validation protocol`
+- **PR #14:** Add governed run ledger schema

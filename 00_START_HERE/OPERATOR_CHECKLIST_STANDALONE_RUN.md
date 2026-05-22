@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_FINAL_VALIDATION_PROTOCOL_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #12. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #13. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -79,6 +79,12 @@
 - [ ] Confirm the controller decision enum reference has been read (`05_REFERENCE_WORKFLOW/CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md`)
 - [ ] Confirm the Claude QA finding schema has been read (`06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json`)
 - [ ] Confirm the controller review packet schema has been read (`06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json`)
+- [ ] Confirm the final schema validation protocol (PR #13) has been merged ✓ Done
+- [ ] Confirm the final schema validation protocol has been read (`05_REFERENCE_WORKFLOW/FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md`)
+- [ ] Confirm the Schema.org Validator runbook has been read (`05_REFERENCE_WORKFLOW/SCHEMA_VALIDATOR_RUNBOOK_V1_0.md`)
+- [ ] Confirm the Google Rich Results Test runbook has been read (`05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md`)
+- [ ] Confirm the Screaming Frog checklist has been read (`05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md`)
+- [ ] Confirm the validation evidence handoff requirements have been read (`05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md`)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -158,6 +164,7 @@ Operators must not:
 | PR #10 | Controlled homepage non-production JSON-LD draft contract | ✓ Done |
 | PR #11 | Output bundle validator | ✓ Done |
 | PR #12 | Claude QA finding schema and controller review contracts | ✓ Done |
-| PR #13 | Final schema validation protocol and validator runbook | Pending |
+| PR #13 | Final schema validation protocol and validator runbook | ✓ Done |
+| PR #14 | Governed run ledger schema and RUN_LEDGER upgrade | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

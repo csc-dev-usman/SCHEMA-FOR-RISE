@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `CLAUDE_QA_CONTROLLER_CONTRACTS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `FINAL_VALIDATION_PROTOCOL_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 added the output bundle validator to `tools/`. PR #12 adds the Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 added the output bundle validator to `tools/`. PR #12 added the Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference. PR #13 adds the final schema validation protocol, Schema.org Validator runbook, Google Rich Results Test runbook, Screaming Frog checklist, and validation evidence handoff requirements. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -101,7 +101,7 @@
 
 ---
 
-## Active reference-workflow files (PR #10 and PR #12)
+## Active reference-workflow files (PR #10, PR #12, and PR #13)
 
 | File | Purpose |
 |------|---------|
@@ -112,6 +112,11 @@
 | `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md` | Full 10-step review and approval sequence from readiness gate through implementation handoff. |
 | `05_REFERENCE_WORKFLOW/CLAUDE_QA_AND_CONTROLLER_REVIEW_WORKFLOW_V1_0.md` | Claude QA and controller review workflow — what QA is, what it is not, session rules, controller rules. Added PR #12. |
 | `05_REFERENCE_WORKFLOW/CONTROLLER_DECISION_ENUM_REFERENCE_V1_0.md` | Authoritative reference for all valid controller decision values — per-finding dispositions and final recommendations. Added PR #12. |
+| `05_REFERENCE_WORKFLOW/FINAL_SCHEMA_VALIDATION_PROTOCOL_V1_0.md` | Ordered 9-step validation protocol from output bundle validation through implementation handoff. Added PR #13. |
+| `05_REFERENCE_WORKFLOW/SCHEMA_VALIDATOR_RUNBOOK_V1_0.md` | How to use the Schema.org Validator for future schema bundles (Step 4 of validation protocol). Added PR #13. |
+| `05_REFERENCE_WORKFLOW/GOOGLE_RICH_RESULTS_REVIEW_RUNBOOK_V1_0.md` | How to use the Google Rich Results Test. Rich results eligibility not guaranteed. Step 5 is informational only. Added PR #13. |
+| `05_REFERENCE_WORKFLOW/SCREAMING_FROG_STRUCTURED_DATA_EXPORT_CHECKLIST_V1_0.md` | Screaming Frog structured data extraction checklist — optional/where available. Step 6 of validation protocol. Added PR #13. |
+| `05_REFERENCE_WORKFLOW/VALIDATION_EVIDENCE_HANDOFF_REQUIREMENTS_V1_0.md` | Required evidence metadata for the implementation handoff packet. No actual evidence. Added PR #13. |
 
 ---
 
@@ -194,6 +199,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #10:** ~~Controlled homepage non-production JSON-LD draft contract~~ ✓ Done
 - **PR #11:** ~~Output bundle validator~~ ✓ Done
 - **PR #12:** ~~Claude QA finding schema and controller review contracts~~ ✓ Done
-- **PR #13:** Final schema validation protocol and validator runbook
+- **PR #13:** ~~Final schema validation protocol and validator runbook~~ ✓ Done
+- **PR #14:** Governed run ledger schema and RUN_LEDGER upgrade
 
 Generated schema, evidence maps, real run artifacts, and smoke tests are still not allowed. They require a future governed run after all preconditions are confirmed.
