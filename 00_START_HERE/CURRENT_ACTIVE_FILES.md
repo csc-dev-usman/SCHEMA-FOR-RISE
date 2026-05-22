@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 adds output bundle contract schemas to `06_MACHINE_RULES/`. No schema has been generated. No prompts have been executed. The draft contract, evidence maps, validators, and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 adds the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. No schema has been generated. No prompts have been executed. Evidence maps, validators, and the final runnable handoff are still later PRs.
 
 ---
 
@@ -101,6 +101,18 @@
 
 ---
 
+## Active reference-workflow files (PR #10)
+
+| File | Purpose |
+|------|---------|
+| `05_REFERENCE_WORKFLOW/README_REFERENCE_WORKFLOW_V1_0.md` | Reference workflow folder index. Documentation contracts only — no JSON-LD, no draft. |
+| `05_REFERENCE_WORKFLOW/CONTROLLED_HOMEPAGE_NON_PRODUCTION_JSONLD_DRAFT_CONTRACT_V1_0.md` | Draft contract — rules, allowed modules, blocked modules, held fields, governance rules. |
+| `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` | All preconditions required before drafting begins. Full hold matrix for all 14 held field categories. |
+| `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md` | Planned output file names and shapes — no files created yet. |
+| `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md` | Full 10-step review and approval sequence from readiness gate through implementation handoff. |
+
+---
+
 ## Active machine-rules files (PR #9)
 
 | File | Purpose |
@@ -119,7 +131,6 @@
 
 | Directory | Status | Purpose |
 |-----------|--------|---------|
-| `05_REFERENCE_WORKFLOW/` | Pending PR #10 | Reference workflow documents |
 | `08_SMOKE_TESTS/` | Future PR | Smoke test files |
 | `tools/` | Placeholder only | Future tooling scripts |
 
@@ -166,6 +177,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #7:** ~~Operator prompts 00 through 04 and 08~~ ✓ Done
 - **PR #8:** ~~Final validation, analyzer, and completion prompts~~ ✓ Done
 - **PR #9:** ~~Output bundle contract schemas~~ ✓ Done
-- **PR #10:** Controlled homepage non-production JSON-LD draft contract
+- **PR #10:** ~~Controlled homepage non-production JSON-LD draft contract~~ ✓ Done
+- **PR #11:** Output bundle validator or Claude QA/controller schema layer
 
-Generated schema, evidence maps, real run artifacts, and smoke tests are still not allowed. They require PR #10 and later.
+Generated schema, evidence maps, real run artifacts, and smoke tests are still not allowed. They require a future governed run after all preconditions are confirmed.

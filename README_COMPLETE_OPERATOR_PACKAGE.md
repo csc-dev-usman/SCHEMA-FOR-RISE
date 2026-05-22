@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #9 adds output bundle contract schemas to `06_MACHINE_RULES/`. These are contract schema definitions only — they define the required shape of future run artifacts. No schema has been generated, no JSON-LD has been created, and no output bundles have been produced.
+PR #10 adds the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. This is a documentation contract only — it defines the rules, preconditions, output file plans, and review sequence for a future homepage draft run. No schema has been generated, no JSON-LD has been created, and no draft exists.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -58,7 +58,8 @@ PR #9 adds output bundle contract schemas to `06_MACHINE_RULES/`. These are cont
 - The standalone master flow, Mode 1 flow, Mode 2 flow, page run sequence, and master stop conditions are in `01_MASTER_FLOW/`.
 - The operator navigation decision tree, preflight checklist, and mode status guide are in `00_START_HERE/`.
 - The full operator prompt set (Prompts 00–04, 08, 12–15) is in `04_OPERATOR_PROMPTS/`.
-- The output bundle contract schemas (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules) are now in `06_MACHINE_RULES/`.
+- The output bundle contract schemas (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules) are in `06_MACHINE_RULES/`.
+- The controlled homepage non-production JSON-LD draft contract, preconditions matrix, output file list, and review sequence are now in `05_REFERENCE_WORKFLOW/`.
 - The active homepage schema profile is `HOMEPAGE_SCHEMA_PROFILE` for route `/`.
 - No JSON-LD has been created.
 - No schema output has been created.
@@ -69,7 +70,7 @@ PR #9 adds output bundle contract schemas to `06_MACHINE_RULES/`. These are cont
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add the draft contract, evidence maps, validators, and the final runnable handoff.
+Status is `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps, validators, and the final runnable handoff.
 
 ---
 
@@ -130,7 +131,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #9) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #9 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #10) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #10 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -157,4 +158,6 @@ No content in this package (through PR #9) authorizes any schema to be deployed 
   `docs: add Rise standalone final validation analyzer and completion prompts`
 - **PR #9:** ~~Add output bundle contract schemas~~ ✓ Merged
   `schema: add Rise standalone output bundle contract schemas`
-- **PR #10:** Add controlled homepage non-production JSON-LD draft contract
+- **PR #10:** ~~Add controlled homepage non-production JSON-LD draft contract~~ ✓ Merged
+  `docs: add controlled homepage non-production JSON-LD draft contract`
+- **PR #11:** Add output bundle validator or Claude QA/controller schema layer

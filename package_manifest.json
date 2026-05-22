@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -50,6 +50,13 @@
   "prompt13Added": true,
   "prompt14Added": true,
   "prompt15Added": true,
+  "homepageNonProductionDraftContractAdded": true,
+  "homepageDraftPreconditionsDocumented": true,
+  "homepageDraftOutputFileListDocumented": true,
+  "homepageDraftReviewApprovalSequenceDocumented": true,
+  "homepageJsonLdDraftCreated": false,
+  "currentWebsiteImplementationAuthorized": false,
+  "astroAttachmentAuthorized": false,
   "validatorsAdded": false,
   "mode1Runnable": false,
   "mode2AstroReady": false,
@@ -147,5 +154,12 @@
     "06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json",
     "06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json"
   ],
-  "nextRecommendedPr": "PR #10: Add controlled homepage non-production JSON-LD draft contract"
+  "activeReferenceWorkflowFiles": [
+    "05_REFERENCE_WORKFLOW/README_REFERENCE_WORKFLOW_V1_0.md",
+    "05_REFERENCE_WORKFLOW/CONTROLLED_HOMEPAGE_NON_PRODUCTION_JSONLD_DRAFT_CONTRACT_V1_0.md",
+    "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md",
+    "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md",
+    "05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md"
+  ],
+  "nextRecommendedPr": "PR #11: Add output bundle validator or Claude QA/controller schema layer"
 }

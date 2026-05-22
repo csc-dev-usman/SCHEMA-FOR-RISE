@@ -1,8 +1,8 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
 
-> This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add the draft contract, evidence maps, validators, and the final runnable handoff.
+> This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps, validators, and the final runnable handoff.
 
 ---
 
@@ -157,6 +157,25 @@ Understand:
 
 ---
 
+### Step 2i — Read reference workflow (PR #10 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/README_REFERENCE_WORKFLOW_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/CONTROLLED_HOMEPAGE_NON_PRODUCTION_JSONLD_DRAFT_CONTRACT_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md`
+5. `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md`
+
+Understand:
+- These are documentation contracts only — no JSON-LD, no draft exists
+- The draft contract defines allowed modules (Organization, WebSite, WebPage, BreadcrumbList), blocked modules, held fields, and all 10 governance rules
+- The preconditions matrix lists every gate that must pass before any draft run begins — including truth fingerprint match, evidence map, schema profile, and readiness gate
+- The output file list defines planned file names and shapes — no files have been created
+- The 10-step review and approval sequence is the complete governed path from readiness gate through implementation handoff
+- Human approval is required at Step 9 before any implementation handoff can occur
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -177,7 +196,7 @@ Understand:
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #9**.
+The schema workflow is **not runnable after PR #10**.
 
 Operators must wait for:
 - PR #2: Governing doctrine ✓ Done
@@ -188,7 +207,8 @@ Operators must wait for:
 - PR #7: Operator prompts 00 through 04 and 08 ✓ Done
 - PR #8: Final validation, analyzer, and completion prompts ✓ Done
 - PR #9: Output bundle contract schemas ✓ Done
-- PR #10: Controlled homepage non-production JSON-LD draft contract
+- PR #10: Controlled homepage non-production JSON-LD draft contract ✓ Done
+- PR #11: Output bundle validator or Claude QA/controller schema layer
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 
@@ -203,7 +223,7 @@ Produce validated schema for pages on the current risefcsoccer.com website.
 - Schema is derived from approved Phase 0 content and confirmed page evidence
 - Output must be validated before any implementation handoff
 
-**Not runnable yet. Waiting for PR #10 draft contract and final runnable handoff.**
+**Not runnable yet. Waiting for evidence maps, validators, and the final runnable handoff.**
 
 ---
 
