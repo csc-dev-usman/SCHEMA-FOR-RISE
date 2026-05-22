@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_OUTPUT_BUNDLE_SCHEMAS_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_HOMEPAGE_DRAFT_CONTRACT_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #9. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #10. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -62,7 +62,13 @@
 - [ ] Confirm the validator results schema has been read (`06_MACHINE_RULES/VALIDATOR_RESULTS_SCHEMA_V1_0.json`)
 - [ ] Confirm the evidence map schema has been read (`06_MACHINE_RULES/EVIDENCE_MAP_SCHEMA_V1_0.json`)
 - [ ] Confirm the lint rules have been read (`06_MACHINE_RULES/RISE_SCHEMA_LINT_RULES_V1_0.json`)
-- [ ] Confirm the controlled homepage non-production JSON-LD draft contract (PR #10) has been merged
+- [ ] Confirm the controlled homepage non-production JSON-LD draft contract (PR #10) has been merged ✓ Done
+- [ ] Confirm the reference workflow README has been read (`05_REFERENCE_WORKFLOW/README_REFERENCE_WORKFLOW_V1_0.md`)
+- [ ] Confirm the draft contract has been read (`05_REFERENCE_WORKFLOW/CONTROLLED_HOMEPAGE_NON_PRODUCTION_JSONLD_DRAFT_CONTRACT_V1_0.md`)
+- [ ] Confirm the preconditions and hold matrix has been read (`05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md`)
+- [ ] Confirm all preconditions in the hold matrix are met before beginning any draft run
+- [ ] Confirm the output file list has been read (`05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_OUTPUT_FILE_LIST_V1_0.md`)
+- [ ] Confirm the review and approval sequence has been read (`05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_REVIEW_AND_APPROVAL_SEQUENCE_V1_0.md`)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -139,6 +145,7 @@ Operators must not:
 | PR #7 | Operator prompts 00 through 04 and 08 | ✓ Done |
 | PR #8 | Final validation, analyzer, and completion prompts | ✓ Done |
 | PR #9 | Output bundle contract schemas | ✓ Done |
-| PR #10 | Controlled homepage non-production JSON-LD draft contract | Pending |
+| PR #10 | Controlled homepage non-production JSON-LD draft contract | ✓ Done |
+| PR #11 | Output bundle validator or Claude QA/controller schema layer | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

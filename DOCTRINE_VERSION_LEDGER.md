@@ -10,7 +10,7 @@
 
 ## Current status
 
-`OUTPUT_BUNDLE_CONTRACT_SCHEMAS_ADDED_NO_SCHEMA_OUTPUT`
+`HOMEPAGE_NON_PRODUCTION_DRAFT_CONTRACT_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -27,6 +27,7 @@
 | PR #7 | `docs: add Rise standalone operator prompts 00 through 04 and 08` | Core operator prompt templates added. Prompts 00, 01, 02, 03, 04, and 08 added as templates only. No prompts executed. No schema output. |
 | PR #8 | `docs: add Rise standalone final validation analyzer and completion prompts` | Final validation, analyzer, and completion prompt templates added. Prompts 12, 13, 14, and 15 added as templates only. No prompts executed. No schema output. |
 | PR #9 | `schema: add Rise standalone output bundle contract schemas` | Output bundle contract schemas added to `06_MACHINE_RULES/`. Contract schema definitions only — not validators, not scripts, not JSON-LD, not schema output. evidenceMapSchemaAdded=true; evidenceMapAdded=false. No schema output. |
+| PR #10 | `docs: add controlled homepage non-production JSON-LD draft contract` | Controlled homepage non-production JSON-LD draft contract added to `05_REFERENCE_WORKFLOW/`. Documentation contract only — no JSON-LD, no draft created, no @context, no @type nodes. No schema output. |
 
 ---
 
@@ -71,6 +72,11 @@
 - Validator results schema added: **YES (PR #9)**
 - Evidence map schema added: **YES (PR #9) — contract definition only**
 - Lint rules added: **YES (PR #9)**
+- Homepage non-production draft contract added: **YES (PR #10) — documentation contract only**
+- Homepage draft preconditions documented: **YES (PR #10)**
+- Homepage draft output file list documented: **YES (PR #10) — planned file names only, no files created**
+- Homepage draft review and approval sequence documented: **YES (PR #10)**
+- Homepage JSON-LD draft created: **NO**
 - Evidence map added: **NO**
 
 ---
@@ -111,9 +117,11 @@ Final validation, analyzer, and completion prompt templates added in PR #8. Prom
 
 Output bundle contract schemas added in PR #9. The output bundle manifest schema, run metadata schema, controller decision schema, validator results schema, evidence map schema, and lint rules are now in `06_MACHINE_RULES/` as contract schema definitions only. These are not validators, not scripts, not JSON-LD, not schema output, and not real run artifacts. The evidence map schema contract exists (`evidenceMapSchemaAdded=true`) but no evidence map run artifact has been created (`evidenceMapAdded=false`). No schema has been generated. No JSON-LD has been created.
 
-The package is not runnable for schema production. The draft contract (PR #10), evidence maps, validators, and the final runnable handoff are still pending in later PRs.
+The package is not runnable for schema production. Evidence maps, validators, and the final runnable handoff are still pending in later PRs.
 
-Next doctrine dependency: controlled homepage non-production JSON-LD draft contract — PR #10.
+Controlled homepage non-production JSON-LD draft contract added in PR #10. The draft contract, homepage draft preconditions and hold matrix, planned output file list, and 10-step review and approval sequence are now in `05_REFERENCE_WORKFLOW/`. These are documentation contracts only. No JSON-LD has been created. No draft exists. No `@context` or `@type` nodes have been produced. The first governed homepage draft run will be created after all preconditions in the hold matrix are confirmed.
+
+Next doctrine dependency: evidence map for the homepage (future PR).
 
 ---
 
@@ -130,3 +138,4 @@ Next doctrine dependency: controlled homepage non-production JSON-LD draft contr
 | 1.0.0 | 2026-05-22 | PR #7 | Core operator prompt templates added (Prompts 00, 01, 02, 03, 04, 08). Templates only — not executed. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #8 | Final validation, analyzer, and completion prompt templates added (Prompts 12, 13, 14, 15). Templates only — not executed. No schema output. No JSON-LD. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #9 | Output bundle contract schemas added (output bundle manifest, run metadata, controller decision, validator results, evidence map schema, lint rules). Contract definitions only — not validators, not scripts, not JSON-LD, not schema output. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #10 | Controlled homepage non-production JSON-LD draft contract added (draft contract, preconditions matrix, output file list, review sequence). Documentation contract only — no JSON-LD, no draft, no @context, no @type. No Phase 0 mutation. No Astro attachment. |
