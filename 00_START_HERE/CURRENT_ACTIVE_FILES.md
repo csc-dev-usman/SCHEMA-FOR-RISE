@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `RUN_LEDGER_TOOLS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 added the output bundle validator to `tools/`. PR #12 added the Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference. PR #13 added the final schema validation protocol and associated runbooks. PR #14 added the governed run ledger schema, run ledger review guide, and upgraded `RUN_LEDGER.json`. PR #15 adds the run ledger append helper and read-only ledger status reporter to `tools/`. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PR #2 added the governing doctrine and source-truth boundary. PR #3 added the read-only homepage scoped truth-pack reference. PR #4 added the homepage schema profile, blocked module policy, and reference lists. PR #5 added the standalone schema master flow. PR #6 added the operator navigation decision tree, preflight checklist, and mode status guide. PR #7 added core operator prompt templates (Prompts 00–04, 08). PR #8 added the final validation, analyzer, and completion prompt templates (Prompts 12–15). PR #9 added output bundle contract schemas to `06_MACHINE_RULES/`. PR #10 added the controlled homepage non-production JSON-LD draft contract to `05_REFERENCE_WORKFLOW/`. PR #11 added the output bundle validator to `tools/`. PR #12 added the Claude QA finding schema, controller review packet schema, QA/controller workflow, and controller decision enum reference. PR #13 added the final schema validation protocol and associated runbooks. PR #14 added the governed run ledger schema, run ledger review guide, and upgraded `RUN_LEDGER.json`. PR #15 added the run ledger append helper and read-only ledger status reporter to `tools/`. PR #16 adds the package validator, expected active files contract, and validation checklist. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -121,7 +121,7 @@
 
 ---
 
-## Active machine-rules files (PR #9, PR #11, PR #12, and PR #14)
+## Active machine-rules files (PR #9, PR #11, PR #12, PR #14, and PR #16)
 
 | File | Purpose |
 |------|---------|
@@ -137,10 +137,12 @@
 | `06_MACHINE_RULES/CLAUDE_QA_FINDING_SCHEMA_V1_0.json` | Contract schema — required shape of a Claude QA finding record. Severity, category, claim, evidence, recommendation, controller disposition. Added PR #12. |
 | `06_MACHINE_RULES/CONTROLLER_REVIEW_PACKET_SCHEMA_V1_0.json` | Contract schema — required shape of a controller review packet. Per-finding dispositions, final recommendation, patch/human-review flags. Added PR #12. |
 | `06_MACHINE_RULES/RUN_LEDGER_SCHEMA_V1_0.json` | Contract schema — required shape of run ledger entries. All fields, allowed status values, safety constraints. Added PR #14. |
+| `06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md` | Manual checklist explaining all 12 package validator checks, rationale, and failure meanings. Added PR #16. |
+| `06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json` | Machine-readable expected file list contract — 80 required files through PR #16, optional files, blocked files. Added PR #16. |
 
 ---
 
-## Active tools files (PR #11 and PR #15)
+## Active tools files (PR #11, PR #15, and PR #16)
 
 | File | Purpose |
 |------|---------|
@@ -149,6 +151,8 @@
 | `tools/append_run_ledger_entry.py` | Run ledger append helper. Runs 20 safety checks on a candidate entry JSON file before appending to `RUN_LEDGER.json`. Supports `--dry-run`. Does not generate schema or JSON-LD. Added PR #15. |
 | `tools/report_run_ledger_status.py` | Read-only ledger status reporter. Prints ledger metadata, entry counts, status breakdowns, and integrity checks. Does not modify any files. Added PR #15. |
 | `tools/README_RUN_LEDGER_TOOLS_V1_0.md` | Operator README for the run ledger tools. Usage, safety checks, exit codes, non-authorization statement. Added PR #15. |
+| `tools/validate_package.py` | Package validator. 12 checks — required files, JSON validity, no JSON-LD, no sample_runs, no production readiness claimed, mode1Runnable false, no schema output claimed, ledger lock status, no fake reports, truth view JSON valid. Added PR #16. |
+| `tools/README_PACKAGE_VALIDATOR_V1_0.md` | Operator README for the package validator. Usage, checks, exit codes, non-authorization statement. Added PR #16. |
 
 ---
 
@@ -207,6 +211,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #13:** ~~Final schema validation protocol and validator runbook~~ ✓ Done
 - **PR #14:** ~~Governed run ledger schema and RUN_LEDGER upgrade~~ ✓ Done
 - **PR #15:** ~~Run ledger append helper and reporter~~ ✓ Done
-- **PR #16:** Package validator and active-file coherence checks
+- **PR #16:** ~~Package validator and active-file coherence checks~~ ✓ Done
+- **PR #17:** Smoke-test fixture contract and canned fixture
 
 Generated schema, evidence maps, real run artifacts, and smoke tests are still not allowed. They require a future governed run after all preconditions are confirmed.

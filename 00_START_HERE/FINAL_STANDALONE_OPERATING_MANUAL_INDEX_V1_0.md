@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `RUN_LEDGER_TOOLS_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -277,6 +277,24 @@ Understand:
 
 ---
 
+### Step 2o — Read package validator (PR #16 addition)
+
+Files in this order:
+1. `tools/README_PACKAGE_VALIDATOR_V1_0.md`
+2. `06_MACHINE_RULES/PACKAGE_VALIDATION_CHECKLIST_V1_0.md`
+3. `06_MACHINE_RULES/PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`
+
+Understand:
+- The package validator runs 12 checks against the package directory root
+- Checks include: required files present, key JSON schemas valid, no JSON-LD files, no sample_runs directory, no production readiness claimed, mode1Runnable false, no schema output flags claimed, ledger lock status correct, no fake reports, truth view JSON valid
+- Exit codes: 0=PASS (all checks), 1=FAIL (one or more checks failed), 2=input error
+- Run with: `python tools/validate_package.py .` from the package root
+- The expected active files contract (`PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`) lists all 80 required files through PR #16 plus optional and blocked files
+- A PASS result confirms structural integrity only — it does not authorize schema production or deployment
+- The validator does not modify any files
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -314,7 +332,8 @@ Operators must wait for:
 - PR #13: Final schema validation protocol and validator runbook ✓ Done
 - PR #14: Governed run ledger schema and RUN_LEDGER upgrade ✓ Done
 - PR #15: Run ledger append helper and reporter ✓ Done
-- PR #16: Package validator and active-file coherence checks
+- PR #16: Package validator and active-file coherence checks ✓ Done
+- PR #17: Smoke-test fixture contract and canned fixture
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 
