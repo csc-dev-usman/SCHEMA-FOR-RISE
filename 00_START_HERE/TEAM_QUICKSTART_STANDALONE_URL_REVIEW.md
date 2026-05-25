@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -81,6 +81,10 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md` to understand all 13 allowed status enum values for carry fields.
 - Read `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` to understand the 7 non-authorization rules governing Runtime Appendix carry — all in force.
 - Read `06_MACHINE_RULES/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json` to understand the JSON contract schema defining the required shape of a future Runtime Appendix carry field record.
+- Read `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md` to understand the Astro attachment packet template — 19 packet fields, all defaults, 10 hard rules, non-authorization statement. No real packet has been created.
+- Read `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md` to understand the required field contract for all 19 attachment packet fields — type, format, gate dependency, failure hold code.
+- Read `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md` to understand the 9-step sequential review sequence — no step may be skipped; final decision requires all prior steps to complete.
+- Read `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md` to understand the 15 hold codes for the attachment packet — all active by default, none self-resolvable.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -134,6 +138,7 @@ The sequence:
 - PR #22 adds governed sample-run artifact policy ✓ Done — Milestone 4 complete
 - PR #23 adds Astro schema carry gate reference ✓ Done — Milestone 5 in progress (1/4)
 - PR #24 adds Runtime Appendix schema carry field reference ✓ Done — Milestone 5 in progress (2/4)
+- PR #25 adds Astro attachment packet template ✓ Done — Milestone 5 in progress (3/4)
 
 Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
 

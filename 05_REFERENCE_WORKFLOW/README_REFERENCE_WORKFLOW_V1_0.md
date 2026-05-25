@@ -1,6 +1,6 @@
 # Reference Workflow — Rise FC Standalone Schema Package
 
-**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, the full validation protocol, the run ledger review guide, first real page run handoff templates, analyzer/controller flow definitions, and the current website implementation handoff checklist for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run. No run entries exist. No implementation has occurred.
 
@@ -54,6 +54,10 @@ These documents serve as a governance checkpoint: the full workflow must be unde
 | `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md` | Runtime Appendix carry field reference — 18 required fields, field definitions, summary table, population sequence, non-authorization statement. All fields NOT_STARTED. Added PR #24. |
 | `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md` | 13 status enum values for Runtime Appendix carry fields — definitions, applicability, gate implications, field-to-enum matrix. Added PR #24. |
 | `RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` | 7 non-authorization rules (RANA-001–RANA-007) — no runtime code, no Astro code, no schema attached, no schema generated, no production deployment. All in force. Added PR #24. |
+| `ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md` | Astro attachment packet template — 19 packet fields with defaults (NOT_STARTED / NOT_APPROVED), 10 hard rules for real packet creation, non-authorization statement. No real packet created. Added PR #25. |
+| `ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md` | Required fields reference for all 19 attachment packet fields — type, format, allowed values, gate dependency, failure hold code. Field-to-gate dependency summary table. Added PR #25. |
+| `ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md` | 9-step attachment packet review sequence — sequential gate structure, no step may be skipped. No packet review has occurred. Non-authorization statement. Added PR #25. |
+| `ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md` | 15 hold codes for the Astro attachment packet — all active by default, none self-resolvable. Per-hold blocking step, triggered condition, packet field blocked, resolution required. Summary table. Added PR #25. |
 
 ---
 
@@ -111,3 +115,7 @@ All files in this folder are documentation-only governance contracts. The actual
 34. `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md` — 18 Runtime Appendix carry fields (Added PR #24)
 35. `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md` — 13 carry field status enums (Added PR #24)
 36. `RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` — 7 non-authorization rules for Runtime Appendix carry (Added PR #24)
+37. `ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md` — Astro attachment packet template, 19 fields, all defaults (Added PR #25)
+38. `ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md` — required fields reference for all 19 packet fields (Added PR #25)
+39. `ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md` — 9-step sequential review sequence (Added PR #25)
+40. `ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md` — 15 hold codes, all active by default (Added PR #25)

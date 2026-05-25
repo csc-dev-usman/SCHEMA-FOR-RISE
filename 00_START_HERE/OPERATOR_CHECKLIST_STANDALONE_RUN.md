@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #24. The checklist items below are provided for reference only and will be enabled when PR #26 merges the final Mode 1 runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #25. The checklist items below are provided for reference only and will be enabled when PR #26 merges the final Mode 1 runnable handoff.
 
 ---
 
@@ -144,6 +144,11 @@
 - [ ] Confirm the Runtime Appendix carry field status enums have been read (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md`)
 - [ ] Confirm the Runtime Appendix non-authorization rules have been read (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`)
 - [ ] Confirm the Runtime Appendix carry fields JSON schema has been read (`06_MACHINE_RULES/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json`)
+- [ ] Confirm the Astro attachment packet template (PR #25) has been merged ✓ Done
+- [ ] Confirm the attachment packet template has been read (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md`)
+- [ ] Confirm the attachment packet required fields reference has been read (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md`)
+- [ ] Confirm the attachment packet review sequence has been read (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md`)
+- [ ] Confirm the attachment packet hold matrix has been read (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md`)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -235,5 +240,6 @@ Operators must not:
 | PR #22 | Governed sample-run artifact policy | ✓ Done |
 | PR #23 | Astro schema carry gate reference | ✓ Done |
 | PR #24 | Runtime Appendix schema carry field reference | ✓ Done |
+| PR #25 | Astro attachment packet template | ✓ Done |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

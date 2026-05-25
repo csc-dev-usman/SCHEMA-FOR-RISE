@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT",
+  "status": "ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -67,6 +67,10 @@
   "runtimeAppendixSchemaCarryFieldStatusEnumsAdded": true,
   "runtimeAppendixSchemaCarryNonAuthorizationRulesAdded": true,
   "runtimeAppendixSchemaCarryFieldsSchemaAdded": true,
+  "astroAttachmentPacketTemplateAdded": true,
+  "astroAttachmentPacketRequiredFieldsAdded": true,
+  "astroAttachmentPacketReviewSequenceAdded": true,
+  "astroAttachmentPacketHoldMatrixAdded": true,
   "realRunArtifactsCommitted": false,
   "evidenceMapAdded": false,
   "outputBundleValidatorAdded": true,
@@ -260,7 +264,11 @@
     "05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md",
     "05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md",
     "05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md",
-    "05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md"
+    "05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #25: Add Astro attachment packet template"
+  "nextRecommendedPr": "PR #26: Add final Mode 1 runnable handoff"
 }

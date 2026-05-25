@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -442,6 +442,24 @@ Understand:
 
 ---
 
+### Step 2x — Read Astro attachment packet template (PR #25 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md`
+
+Understand:
+- The attachment packet is the governing instrument that authorizes schema transfer from the SEO operator lane to an Astro route — it must be filled and approved before any schema may be attached to Astro
+- 19 packet fields all default to NOT_STARTED or NOT_APPROVED — no real packet has been created or filled
+- The required fields reference defines type, format, allowed values, gate dependency, and failure hold code for each field
+- The 9-step review sequence is strictly sequential — no step may be skipped; final attachment decision requires all prior steps to complete
+- All 15 hold codes are active by default; none are self-resolvable; each requires real governed evidence or explicit human approval
+- Reading these files does not create an attachment packet, attach schema, change any Astro code, or authorize Mode 2
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -488,6 +506,7 @@ Operators must wait for:
 - PR #22: Governed sample-run artifact policy ✓ Done
 - PR #23: Astro schema carry gate reference ✓ Done
 - PR #24: Runtime Appendix schema carry field reference ✓ Done
+- PR #25: Astro attachment packet template ✓ Done
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 
@@ -512,7 +531,7 @@ Carry validated schema into the Astro implementation after all carry gates pass.
 
 - Blocked until all Astro carry gates pass — carry gate sequence defined in PR #23 (`ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`); no gates have been passed
 - No Astro files are modified by this package
-- Carry gate sequence defined in PR #23. Runtime Appendix carry field reference added in PR #24. Attachment packet template pending in PR #25.
+- Carry gate sequence defined in PR #23. Runtime Appendix carry field reference added in PR #24. Attachment packet template added in PR #25.
 
 **Not yet scoped. Waiting for Astro route, runtime evidence, and all carry gates to pass.**
 
