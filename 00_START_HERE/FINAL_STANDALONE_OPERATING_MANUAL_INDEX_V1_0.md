@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -403,6 +403,26 @@ Understand:
 
 ---
 
+### Step 2w — Read Runtime Appendix schema carry field reference (PR #24 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`
+4. `06_MACHINE_RULES/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json`
+
+Understand:
+- The Runtime Appendix is the metadata bridge between the SEO/schema operator lane and the HTML/runtime/Astro carry implementation — it does not author schema
+- 18 carry fields must all be populated and confirmed before Gate 4 (Runtime Appendix complete) in the Astro carry gate sequence
+- Required constants: `schema_owner: SEO_SCHEMA_OPERATOR`, `schema_source_lane: SEO_SCHEMA_EXPORT`
+- 13 status enum values govern what values each status field may accept
+- Seven non-authorization rules (RANA-001–RANA-007) confirm no runtime code, no Astro code, no schema generated, no attachment, no production deployment
+- The JSON contract schema defines the required shape of a future Runtime Appendix carry field record — contract definition only, no record created
+- All 18 carry fields are at NOT_STARTED; no governed run has completed
+- Reading these files does not create a Runtime Appendix record, generate schema, or authorize carry
+
+---
+
 ### Step 2v — Read Astro schema carry gate reference (PR #23 addition)
 
 Files in this order:
@@ -467,6 +487,7 @@ Operators must wait for:
 - PR #21: Current website implementation handoff checklist ✓ Done
 - PR #22: Governed sample-run artifact policy ✓ Done
 - PR #23: Astro schema carry gate reference ✓ Done
+- PR #24: Runtime Appendix schema carry field reference ✓ Done
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

@@ -1,0 +1,192 @@
+{
+  "schemaId": "RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0",
+  "schemaVersion": "1.0.0",
+  "description": "Contract schema defining the required shape of a future Runtime Appendix schema carry field record. This schema defines field names, types, allowed values, and required constraints. It is a reference contract only — no Runtime Appendix record has been created, no schema output exists, and no carry has occurred.",
+  "nonAuthorizationStatement": "This schema does not authorize schema output, JSON-LD generation, Astro attachment, runtime code creation, or production deployment. Mode 2 is not ready.",
+  "requiredFields": [
+    "schema_bundle_id",
+    "schema_export_id",
+    "schema_owner",
+    "schema_source_lane",
+    "target_route",
+    "page_family",
+    "schema_profile_expected",
+    "schema_profile_actual",
+    "schema_validation_gate_status",
+    "schema_evidence_map_status",
+    "schema_truth_fingerprint_status",
+    "schema_attach_eligible",
+    "schema_attach_status",
+    "schema_hold_reasons",
+    "controller_decision_status",
+    "human_approval_status",
+    "astro_route_manifest_status",
+    "runtime_appendix_status"
+  ],
+  "fieldDefinitions": {
+    "schema_bundle_id": {
+      "type": "string",
+      "required": true,
+      "format": "RISE_RUN_<PAGE_FAMILY>_<DATE_YYYYMMDD>_<SEQ>",
+      "description": "Unique run ID of the approved schema output bundle. Must match the runId in the output bundle manifest and RUN_LEDGER.json.",
+      "defaultValue": "NOT_STARTED",
+      "allowedStatuses": ["NOT_STARTED", "PENDING", "PASS", "FAIL"]
+    },
+    "schema_export_id": {
+      "type": "string",
+      "required": true,
+      "format": "RISE_EXPORT_<PAGE_FAMILY>_<DATE_YYYYMMDD>_<SEQ>",
+      "description": "Unique export ID for this carry operation. Generated at bundle approval time. Must be unique across all carry operations.",
+      "defaultValue": "NOT_STARTED",
+      "allowedStatuses": ["NOT_STARTED", "PENDING", "PASS", "FAIL"]
+    },
+    "schema_owner": {
+      "type": "string",
+      "required": true,
+      "requiredValue": "SEO_SCHEMA_OPERATOR",
+      "description": "The lane that owns and authored the schema. Must always be SEO_SCHEMA_OPERATOR. May not be set by runtime, CMS, or Astro lanes.",
+      "allowedValues": ["SEO_SCHEMA_OPERATOR"]
+    },
+    "schema_source_lane": {
+      "type": "string",
+      "required": true,
+      "requiredValue": "SEO_SCHEMA_EXPORT",
+      "description": "The lane from which the schema output was exported. Must always be SEO_SCHEMA_EXPORT.",
+      "allowedValues": ["SEO_SCHEMA_EXPORT"]
+    },
+    "target_route": {
+      "type": "string",
+      "required": true,
+      "format": "Route path starting with /",
+      "description": "The URL route for which the schema output was produced. Must match the Astro route exactly.",
+      "example": "/",
+      "allowedStatuses": ["NOT_STARTED", "PENDING", "PASS", "FAIL"]
+    },
+    "page_family": {
+      "type": "string",
+      "required": true,
+      "description": "Page family category for the target route. Must match the page_family in the output bundle manifest.",
+      "example": "HOMEPAGE",
+      "allowedStatuses": ["NOT_STARTED", "PENDING", "PASS", "FAIL"]
+    },
+    "schema_profile_expected": {
+      "type": "string",
+      "required": true,
+      "description": "Schema profile expected at run intake. Must match the approved profile before drafting began.",
+      "example": "HOMEPAGE_SCHEMA_PROFILE",
+      "allowedStatuses": ["NOT_STARTED", "PENDING", "PASS", "FAIL"]
+    },
+    "schema_profile_actual": {
+      "type": "string",
+      "required": true,
+      "description": "Schema profile actually used in the output bundle. Must exactly match schema_profile_expected. Mismatch triggers HOLD_SCHEMA_PROFILE_MISMATCH.",
+      "example": "HOMEPAGE_SCHEMA_PROFILE",
+      "allowedStatuses": ["NOT_STARTED", "PENDING", "PASS", "FAIL"]
+    },
+    "schema_validation_gate_status": {
+      "type": "string",
+      "required": true,
+      "description": "Result of the 9-step final schema validation protocol. Must be PASS before Gate 8.",
+      "defaultValue": "NOT_STARTED",
+      "allowedValues": ["NOT_STARTED", "PENDING", "PASS", "WARN", "FAIL"]
+    },
+    "schema_evidence_map_status": {
+      "type": "string",
+      "required": true,
+      "description": "Status of the evidence map for the target route. Must be PASS — all schema fields must trace to Phase 0 or confirmed page evidence.",
+      "defaultValue": "NOT_STARTED",
+      "allowedValues": ["NOT_STARTED", "PENDING", "PASS", "WARN", "FAIL", "HOLD"]
+    },
+    "schema_truth_fingerprint_status": {
+      "type": "string",
+      "required": true,
+      "description": "Whether the output bundle truth fingerprint matches the locked Phase 0 homepage fingerprint (80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d). Must be PASS.",
+      "lockedFingerprint": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d",
+      "defaultValue": "NOT_STARTED",
+      "allowedValues": ["NOT_STARTED", "PENDING", "PASS", "FAIL"]
+    },
+    "schema_attach_eligible": {
+      "type": "string",
+      "required": true,
+      "description": "Whether the schema output bundle is eligible for Astro attachment. All 8 carry gates must pass and no hold codes may be active.",
+      "defaultValue": "NOT_ATTACH_ELIGIBLE",
+      "allowedValues": ["NOT_STARTED", "NOT_ATTACH_ELIGIBLE", "ATTACH_ELIGIBLE"]
+    },
+    "schema_attach_status": {
+      "type": "string",
+      "required": true,
+      "description": "Whether schema has been attached to the Astro route. Starts as NOT_ATTACHED. Set to ATTACHED only after Gate 8 completes with human approval.",
+      "defaultValue": "NOT_ATTACHED",
+      "allowedValues": ["NOT_STARTED", "NOT_ATTACHED", "ATTACHED"]
+    },
+    "schema_hold_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "required": true,
+      "description": "List of active hold codes blocking schema carry. Must be empty ([]) before Gate 8. All 15 hold codes from ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md are active by default.",
+      "defaultValue": [
+        "HOLD_ASTRO_ROUTE_MISSING",
+        "HOLD_ASTRO_RUNTIME_APPENDIX_MISSING",
+        "HOLD_SCHEMA_BUNDLE_MISSING",
+        "HOLD_SCHEMA_EXPORT_ID_MISSING",
+        "HOLD_ROUTE_IDENTITY_MISMATCH",
+        "HOLD_PAGE_FAMILY_MISMATCH",
+        "HOLD_SCHEMA_PROFILE_MISMATCH",
+        "HOLD_TRUTH_FINGERPRINT_MISMATCH",
+        "HOLD_EVIDENCE_MAP_NOT_PASSED",
+        "HOLD_VALIDATION_GATE_NOT_PASSED",
+        "HOLD_CONTROLLER_APPROVAL_MISSING",
+        "HOLD_HUMAN_APPROVAL_MISSING",
+        "HOLD_HELD_FIELD_UNAPPROVED",
+        "HOLD_BLOCKED_MODULE_PRESENT",
+        "HOLD_ASTRO_ATTACHMENT_NOT_AUTHORIZED"
+      ],
+      "requiredValueBeforeGate8": []
+    },
+    "controller_decision_status": {
+      "type": "string",
+      "required": true,
+      "description": "Final recommendation from controller review. Must be APPROVED with unresolvedBlockers: 0 before Gates 2 and Gate 6 Check 9.",
+      "defaultValue": "NOT_STARTED",
+      "allowedValues": ["NOT_STARTED", "PENDING", "APPROVED", "NOT_APPROVED"],
+      "additionalConstraint": "APPROVED requires unresolvedBlockers equal to 0 in the controller review packet"
+    },
+    "human_approval_status": {
+      "type": "string",
+      "required": true,
+      "description": "Whether explicit human approval for schema carry has been granted. Must be APPROVED with a valid humanApprovalRef. Cannot be self-granted by Claude or automated tooling.",
+      "defaultValue": "NOT_STARTED",
+      "allowedValues": ["NOT_STARTED", "PENDING", "APPROVED", "NOT_APPROVED"],
+      "additionalConstraint": "APPROVED requires a non-empty humanApprovalRef string"
+    },
+    "astro_route_manifest_status": {
+      "type": "string",
+      "required": true,
+      "description": "Whether a confirmed Astro route manifest is available for the target route. Cannot be self-resolved — requires real Astro route evidence.",
+      "defaultValue": "NOT_STARTED",
+      "allowedValues": ["NOT_STARTED", "PENDING", "PASS", "FAIL", "NOT_APPLICABLE"]
+    },
+    "runtime_appendix_status": {
+      "type": "string",
+      "required": true,
+      "description": "Overall status of the Runtime Appendix for this carry operation. PASS when all 18 fields meet requirements and no hold codes are active.",
+      "defaultValue": "NOT_STARTED",
+      "allowedValues": ["NOT_STARTED", "PENDING", "PASS", "WARN", "FAIL", "HOLD"]
+    }
+  },
+  "constraints": {
+    "schemaOwnerMustBeSeoSchemaOperator": true,
+    "schemaSourceLaneMustBeSeoSchemaExport": true,
+    "profileExpectedMustMatchProfileActual": true,
+    "truthFingerprintMustMatch": "80edd829806cae271242c6a8e853edabdb8b2f16ca5a8fa1a3fc69ff5b78d53d",
+    "holdReasonsMustBeEmptyBeforeGate8": true,
+    "humanApprovalMustNotBeSelfGranted": true,
+    "controllerApprovalMustHaveZeroUnresolvedBlockers": true,
+    "runtimeAndAstroMayNotAuthorSchema": true,
+    "mode2AstroReady": false,
+    "schemaOutputCreated": false,
+    "jsonLdCreated": false
+  }
+}

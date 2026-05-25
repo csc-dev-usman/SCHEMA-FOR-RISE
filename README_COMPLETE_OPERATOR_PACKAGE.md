@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #23 adds the Astro schema carry gate reference (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`), Astro carry non-authorization rules (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`), Astro identity match requirements (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md`), and Astro carry hold reason reference (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md`). These are reference documents only — no Astro code changes, no schema attachment, no schema output. Mode 2 is not ready. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #24 adds the Runtime Appendix schema carry field reference (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md`), carry field status enums (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md`), Runtime Appendix non-authorization rules (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`), and the carry fields JSON contract schema (`06_MACHINE_RULES/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json`). These are reference documents and contract definitions only — no runtime code changes, no Astro code changes, no schema attachment, no schema output. Mode 2 is not ready. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -76,7 +76,7 @@ PR #23 adds the Astro schema carry gate reference (`05_REFERENCE_WORKFLOW/ASTRO_
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #26 adds the final Mode 1 runnable handoff.
+Status is `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #26 adds the final Mode 1 runnable handoff.
 
 ---
 
@@ -137,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #23) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #23 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #24) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #24 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -192,3 +192,5 @@ No content in this package (through PR #23) authorizes any schema to be deployed
   `docs: add Rise governed sample-run artifact policy`
 - **PR #23:** ~~Add Astro schema carry gate reference~~ ✓ Merged
   `docs: add Rise Astro schema carry gate reference`
+- **PR #24:** ~~Add Runtime Appendix schema carry field reference~~ ✓ Merged
+  `docs: add Rise Runtime Appendix schema carry field reference`
