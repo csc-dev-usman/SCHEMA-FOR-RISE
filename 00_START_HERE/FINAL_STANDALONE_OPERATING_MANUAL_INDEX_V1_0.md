@@ -487,13 +487,13 @@ Produce validated schema for pages on the current risefcsoccer.com website.
 
 ## Mode 2 — Future Astro goal
 
-Carry validated schema into the Astro implementation after carry gates are defined.
+Carry validated schema into the Astro implementation after all carry gates pass.
 
-- Blocked until Astro carry gates exist
-- No Astro files are modified by this package at bootstrap
-- A future PR will define the carry gates and attachment protocol
+- Blocked until all Astro carry gates pass — carry gate sequence defined in PR #23 (`ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`); no gates have been passed
+- No Astro files are modified by this package
+- Carry gate sequence defined in PR #23. Attachment protocol and Runtime Appendix to be added in future PRs (#24–#26).
 
-**Not yet scoped. Waiting for Astro route and runtime evidence.**
+**Not yet scoped. Waiting for Astro route, runtime evidence, and all carry gates to pass.**
 
 ---
 

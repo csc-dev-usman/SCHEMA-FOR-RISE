@@ -228,5 +228,6 @@ Operators must not:
 | PR #20 | Independent analyzer and controller post-analyzer flow | ✓ Done |
 | PR #21 | Current website implementation handoff checklist | ✓ Done |
 | PR #22 | Governed sample-run artifact policy | ✓ Done |
+| PR #23 | Astro schema carry gate reference | ✓ Done |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

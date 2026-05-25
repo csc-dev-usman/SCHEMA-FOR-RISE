@@ -225,7 +225,7 @@ The following file types and artifacts are **not permitted** in this repository 
 | Screaming Frog exports | Not authorized yet |
 | Claude QA zips | Not authorized yet |
 | Generated schema files | Not authorized — no schema has been generated |
-| Astro implementation files | Not authorized until Astro carry gates are defined |
+| Astro implementation files | Not authorized until all Astro carry gates pass — gate sequence defined PR #23, no gates passed, Mode 2 not ready |
 | Website source files | Not part of this package |
 | Runtime source files | Not part of this package |
 | Medical or CSC-specific doctrine | Not applicable to Rise FC |

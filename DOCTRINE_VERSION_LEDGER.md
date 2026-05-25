@@ -147,7 +147,7 @@
 
 ## Astro attachment status
 
-- Astro carry gates defined: **NO**
+- Astro carry gates defined: **YES (PR #23) — 8-gate sequence documented in `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`; no gates passed**
 - Astro attachment authorized: **NO**
 - Astro files modified: **NO**
 
