@@ -76,7 +76,7 @@ PR #22 adds the governed sample-run artifact policy (`05_REFERENCE_WORKFLOW/GOVE
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
+Status is `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
 
 ---
 

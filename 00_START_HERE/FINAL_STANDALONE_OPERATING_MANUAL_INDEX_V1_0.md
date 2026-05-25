@@ -366,6 +366,24 @@ Understand:
 
 ---
 
+### Step 2t — Read current website implementation handoff checklist (PR #21 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`
+
+Understand:
+- The implementation handoff checklist defines 8 sections (schema output bundle, validation pass, controller approval, human approval, implementation details, rollback plan, post-implementation verification, run ledger update) — all items are NOT_STARTED
+- The non-authorization rules define 10 explicit rules: no implementation without a validated output bundle, no implementation without controller approval, no implementation without human approval, no held fields without owner approval, no blocked modules, no Phase 0 mutation, no self-merge, no production lock without human approval reference, mode1Runnable must be true before any run, evidence map required before drafting
+- The pre-implementation approval gate defines 7 gates that must ALL be confirmed before any implementation: package readiness, truth pack currency, evidence map, schema profile and modules, validated output bundle, controller review, human approval — all currently NOT REACHED
+- The post-implementation verification checklist defines 8 sections for verifying a live implementation — all items are NOT_STARTED
+- None of these documents authorize implementation — they are future-use governance contracts only
+- Mode 1 remains not runnable after PR #21
+
+---
+
 ### Step 2u — Read governed sample-run artifact policy (PR #22 addition)
 
 Files in this order:
@@ -382,24 +400,6 @@ Understand:
 - Milestone 4 is now complete: all four support-layer PRs (#19–#22) are merged; the package has first real page handoff templates, analyzer/controller flow, implementation handoff checklist, and artifact policy
 - Mode 1 remains not runnable — evidence maps and a final runnable handoff PR are still required
 - Reading these files does not create any artifacts or authorize any commits
-
----
-
-### Step 2t — Read current website implementation handoff checklist (PR #21 addition)
-
-Files in this order:
-1. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`
-2. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`
-3. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`
-4. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`
-
-Understand:
-- The implementation handoff checklist defines 8 sections (schema output bundle, validation pass, controller approval, human approval, implementation details, rollback plan, post-implementation verification, run ledger update) — all items are NOT_STARTED
-- The non-authorization rules define 10 explicit rules: no implementation without a validated output bundle, no implementation without controller approval, no implementation without human approval, no held fields without owner approval, no blocked modules, no Phase 0 mutation, no self-merge, no production lock without human approval reference, mode1Runnable must be true before any run, evidence map required before drafting
-- The pre-implementation approval gate defines 7 gates that must ALL be confirmed before any implementation: package readiness, truth pack currency, evidence map, schema profile and modules, validated output bundle, controller review, human approval — all currently NOT REACHED
-- The post-implementation verification checklist defines 8 sections for verifying a live implementation — all items are NOT_STARTED
-- None of these documents authorize implementation — they are future-use governance contracts only
-- Mode 1 remains not runnable after PR #21
 
 ---
 
