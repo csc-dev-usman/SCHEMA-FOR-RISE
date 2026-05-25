@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -398,8 +398,27 @@ Understand:
 - Synthetic artifacts using `example.invalid` are permitted only in designated fake-data directories (e.g., `08_SMOKE_TESTS/fixtures/`)
 - Redacted sample artifacts are not yet authorized — the redaction requirements document defines the future standard for when a redacted lane is established
 - Milestone 4 is now complete: all four support-layer PRs (#19–#22) are merged; the package has first real page handoff templates, analyzer/controller flow, implementation handoff checklist, and artifact policy
-- Mode 1 remains not runnable — evidence maps and a final runnable handoff PR are still required
+- Mode 1 remains not runnable — the final Mode 1 runnable handoff PR (#26) is still required
 - Reading these files does not create any artifacts or authorize any commits
+
+---
+
+### Step 2v — Read Astro schema carry gate reference (PR #23 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md`
+
+Understand:
+- The Astro carry gate sequence defines 8 gates that must all pass before any schema output may be carried into Astro — no gates are currently passed
+- Astro does not author, repair, normalize, or override schema — it carries approved output only
+- Seven non-authorization rules (ACNA-001–007) govern what may not be done: no Astro code changes, no schema attachment, no production deployment, no Mode 2 readiness
+- Twelve identity match checks must pass at Gate 6 — bundle ID, export ID, route, page family, profile, truth fingerprint, evidence map, validation, controller approval, human approval, held fields, blocked modules
+- Fifteen hold codes define all conditions that block Astro carry — all active by default
+- Mode 2 remains not ready — `mode2AstroReady: false`
+- Reading these files does not attach schema, change any Astro code, or authorize carry
 
 ---
 
@@ -447,6 +466,7 @@ Operators must wait for:
 - PR #20: Independent analyzer and controller post-analyzer flow ✓ Done
 - PR #21: Current website implementation handoff checklist ✓ Done
 - PR #22: Governed sample-run artifact policy ✓ Done
+- PR #23: Astro schema carry gate reference ✓ Done
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

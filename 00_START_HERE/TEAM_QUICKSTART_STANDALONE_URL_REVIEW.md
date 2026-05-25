@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -73,6 +73,10 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read `05_REFERENCE_WORKFLOW/REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md` to understand the 7 prohibition rules — real artifacts are prohibited by default until an authorized artifact lane is established.
 - Read `05_REFERENCE_WORKFLOW/REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md` to understand the 8 redaction categories that will apply when a redacted artifact lane is established.
 - Read `05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md` to understand the Milestone 4 completion status and current package posture.
+- Read `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md` to understand the future 8-gate Astro carry sequence — no gates are currently passed.
+- Read `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` to understand the 7 non-authorization rules governing Astro carry and attachment — all in force.
+- Read `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md` to understand the 12 identity match checks required before any schema carry may proceed.
+- Read `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md` to understand the 15 hold codes for Astro carry — definitions, conditions, and resolution requirements.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -124,6 +128,7 @@ The sequence:
 - PR #20 adds independent analyzer and controller post-analyzer flow ✓ Done
 - PR #21 adds current website implementation handoff checklist ✓ Done
 - PR #22 adds governed sample-run artifact policy ✓ Done — Milestone 4 complete
+- PR #23 adds Astro schema carry gate reference ✓ Done — Milestone 5 in progress (1/4)
 
 Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
 

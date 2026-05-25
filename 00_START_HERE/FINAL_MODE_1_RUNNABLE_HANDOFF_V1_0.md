@@ -1,12 +1,12 @@
 # Final Mode 1 Runnable Handoff V1.0
 
-**Status:** `NOT_RUNNABLE_YET_MILESTONE_4_SUPPORT_LAYER_COMPLETE`
+**Status:** `NOT_RUNNABLE_YET_ASTRO_CARRY_GATE_REFERENCE_ADDED`
 
 ---
 
 ## Notice
 
-Mode 1 is not runnable yet after PR #22. Milestone 4 (first real page run support layer) is now complete, but Mode 1 still requires evidence maps and a final runnable handoff PR. This file is a placeholder for that later handoff.
+Mode 1 is not runnable yet after PR #23. Milestone 4 is complete and the Astro carry gate reference has been added, but Mode 1 still requires evidence maps and the final Mode 1 runnable handoff PR. This file is a placeholder for that later handoff.
 
 The Mode 1 runnable handoff requires the following dependencies:
 
@@ -35,8 +35,10 @@ The Mode 1 runnable handoff requires the following dependencies:
 | Independent analyzer and controller post-analyzer flow | PR #20 | ✓ Done |
 | Current website implementation handoff checklist | PR #21 | ✓ Done |
 | Governed sample-run artifact policy | PR #22 | ✓ Done |
-| Homepage evidence map | Future PR | Pending |
-| Final runnable handoff | Future PR | Pending |
+| Astro schema carry gate reference | PR #23 | ✓ Done |
+| Runtime Appendix carry field reference | Future PR | Pending |
+| Astro attachment packet template | Future PR | Pending |
+| Final Mode 1 runnable handoff | PR #26 | Pending |
 
 ---
 

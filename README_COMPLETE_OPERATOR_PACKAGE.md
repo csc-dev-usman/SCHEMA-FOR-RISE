@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #22 adds the governed sample-run artifact policy (`05_REFERENCE_WORKFLOW/GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md`), real run artifact commit rules (`05_REFERENCE_WORKFLOW/REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md`), redacted sample artifact requirements (`05_REFERENCE_WORKFLOW/REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md`), and Milestone 4 completion audit (`05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md`). These are artifact policy and governance documents only — no schema has been generated, no implementation has occurred. Milestone 4 (first real page run support layer) is now complete. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #23 adds the Astro schema carry gate reference (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`), Astro carry non-authorization rules (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`), Astro identity match requirements (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md`), and Astro carry hold reason reference (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md`). These are reference documents only — no Astro code changes, no schema attachment, no schema output. Mode 2 is not ready. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -76,7 +76,7 @@ PR #22 adds the governed sample-run artifact policy (`05_REFERENCE_WORKFLOW/GOVE
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
+Status is `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #26 adds the final Mode 1 runnable handoff.
 
 ---
 
@@ -137,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #22) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #22 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #23) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #23 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -190,3 +190,5 @@ No content in this package (through PR #22) authorizes any schema to be deployed
   `docs: add Rise current website implementation handoff checklist`
 - **PR #22:** ~~Add governed sample-run artifact policy~~ ✓ Merged
   `docs: add Rise governed sample-run artifact policy`
+- **PR #23:** ~~Add Astro schema carry gate reference~~ ✓ Merged
+  `docs: add Rise Astro schema carry gate reference`
