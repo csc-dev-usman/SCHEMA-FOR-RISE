@@ -1,6 +1,6 @@
 # Reference Workflow — Rise FC Standalone Schema Package
 
-**Status:** `CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
 
 > This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, the full validation protocol, the run ledger review guide, first real page run handoff templates, analyzer/controller flow definitions, and the current website implementation handoff checklist for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run. No run entries exist. No implementation has occurred.
 
@@ -43,6 +43,10 @@ These documents serve as a governance checkpoint: the full workflow must be unde
 | `CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md` | 10 non-authorization rules governing current website implementation — no implementation without validated bundle, controller approval, human approval, evidence map, and mode1Runnable=true. Added PR #21. |
 | `CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md` | 7-gate pre-implementation approval gate — all currently NOT REACHED. Must all pass before any implementation may begin. Added PR #21. |
 | `CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md` | Future-use post-implementation verification checklist — 8 sections covering page source inspection, structured data extraction, Schema.org validation, Google Rich Results review, blocked module check, held field check, run ledger update, and human sign-off. Added PR #21. |
+| `GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md` | Governing policy for sample run artifacts — default prohibition, synthetic artifact rules, redacted artifact lane requirements, authorized artifact lane definition. Added PR #22. |
+| `REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md` | 7 prohibition rules (RAC-001–007) for real run artifact commits — all real artifacts prohibited by default; enforcement mechanisms described. Added PR #22. |
+| `REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md` | 8 redaction categories and verification checklist for future redacted sample artifacts — contact/identity, social URLs, logo, location, reviews, prices, events, testimonials. Added PR #22. |
+| `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md` | Milestone 4 completion audit — all 16 support-layer components verified present, package posture confirmed, Milestone 5 noted. Added PR #22. |
 
 ---
 
@@ -89,3 +93,7 @@ All files in this folder are documentation-only governance contracts. The actual
 23. `CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md` — 10 non-authorization rules (Added PR #21)
 24. `CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md` — 7-gate pre-implementation approval gate (Added PR #21)
 25. `CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md` — post-implementation verification checklist (Added PR #21)
+26. `GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md` — governing artifact policy, default prohibition (Added PR #22)
+27. `REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md` — 7 artifact commit prohibition rules (Added PR #22)
+28. `REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md` — 8 redaction categories for future redacted artifacts (Added PR #22)
+29. `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md` — Milestone 4 completion audit (Added PR #22)

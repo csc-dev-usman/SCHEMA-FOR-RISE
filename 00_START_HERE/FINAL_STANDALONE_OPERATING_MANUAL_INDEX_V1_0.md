@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -366,6 +366,25 @@ Understand:
 
 ---
 
+### Step 2u — Read governed sample-run artifact policy (PR #22 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md`
+
+Understand:
+- Real run artifacts (JSON-LD, output bundles, validator screenshots, QA zips, implementation evidence) are prohibited by default until an authorized artifact lane is established
+- Seven explicit prohibition rules (RAC-001–RAC-007) govern what may not be committed
+- Synthetic artifacts using `example.invalid` are permitted only in designated fake-data directories (e.g., `08_SMOKE_TESTS/fixtures/`)
+- Redacted sample artifacts are not yet authorized — the redaction requirements document defines the future standard for when a redacted lane is established
+- Milestone 4 is now complete: all four support-layer PRs (#19–#22) are merged; the package has first real page handoff templates, analyzer/controller flow, implementation handoff checklist, and artifact policy
+- Mode 1 remains not runnable — evidence maps and a final runnable handoff PR are still required
+- Reading these files does not create any artifacts or authorize any commits
+
+---
+
 ### Step 2t — Read current website implementation handoff checklist (PR #21 addition)
 
 Files in this order:
@@ -427,7 +446,7 @@ Operators must wait for:
 - PR #19: First real page handoff template ✓ Done
 - PR #20: Independent analyzer and controller post-analyzer flow ✓ Done
 - PR #21: Current website implementation handoff checklist ✓ Done
-- PR #22: Governed sample-run artifact policy
+- PR #22: Governed sample-run artifact policy ✓ Done
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 

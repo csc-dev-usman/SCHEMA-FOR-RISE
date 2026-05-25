@@ -1,12 +1,12 @@
 # Final Mode 1 Runnable Handoff V1.0
 
-**Status:** `NOT_RUNNABLE_YET_CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED`
+**Status:** `NOT_RUNNABLE_YET_MILESTONE_4_SUPPORT_LAYER_COMPLETE`
 
 ---
 
 ## Notice
 
-Mode 1 is not runnable yet after PR #21. This file is a placeholder for the later final runnable handoff.
+Mode 1 is not runnable yet after PR #22. Milestone 4 (first real page run support layer) is now complete, but Mode 1 still requires evidence maps and a final runnable handoff PR. This file is a placeholder for that later handoff.
 
 The Mode 1 runnable handoff requires the following dependencies:
 
@@ -34,7 +34,7 @@ The Mode 1 runnable handoff requires the following dependencies:
 | First real page handoff template | PR #19 | ✓ Done |
 | Independent analyzer and controller post-analyzer flow | PR #20 | ✓ Done |
 | Current website implementation handoff checklist | PR #21 | ✓ Done |
-| Governed sample-run artifact policy | PR #22 | Pending |
+| Governed sample-run artifact policy | PR #22 | ✓ Done |
 | Homepage evidence map | Future PR | Pending |
 | Final runnable handoff | Future PR | Pending |
 

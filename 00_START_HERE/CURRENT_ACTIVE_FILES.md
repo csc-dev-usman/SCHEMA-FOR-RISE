@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PRs #2–#20 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, and independent analyzer/controller flow. PR #21 adds the current website implementation handoff checklist, non-authorization rules, pre-implementation approval gate, and post-implementation verification checklist. Milestone 3 is tooling-complete. Milestone 4 (support layer) is in progress. No schema has been generated. No implementation has occurred. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PRs #2–#21 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, independent analyzer/controller flow, and current website implementation handoff checklist. PR #22 adds the governed sample-run artifact policy, real run artifact commit rules, redacted sample artifact requirements, and Milestone 4 completion audit. Milestone 3 is tooling-complete. Milestone 4 (first real page run support layer) is now complete. No schema has been generated. No implementation has occurred. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -130,6 +130,10 @@
 | `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md` | 10 non-authorization rules governing current website implementation lane. Added PR #21. |
 | `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md` | 7-gate pre-implementation approval gate — all gates NOT REACHED. Added PR #21. |
 | `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md` | Future-use post-implementation verification checklist — 8 sections, all NOT_STARTED. Added PR #21. |
+| `05_REFERENCE_WORKFLOW/GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md` | Governing policy for sample run artifacts — default prohibition, synthetic artifact rules, redacted artifact lane requirements, authorized artifact lane definition. Added PR #22. |
+| `05_REFERENCE_WORKFLOW/REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md` | 7 prohibition rules for real run artifact commits — all real artifacts prohibited by default until authorized artifact lane established. Added PR #22. |
+| `05_REFERENCE_WORKFLOW/REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md` | 8 redaction categories and redaction verification checklist for future redacted sample artifacts. Added PR #22. |
+| `05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md` | Milestone 4 completion audit — all 16 components verified, package posture confirmed, next milestone noted. Added PR #22. |
 
 ---
 
@@ -248,6 +252,6 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #19:** ~~First real page handoff template~~ ✓ Done
 - **PR #20:** ~~Independent analyzer and controller post-analyzer flow~~ ✓ Done
 - **PR #21:** ~~Current website implementation handoff checklist~~ ✓ Done
-- **PR #22:** Governed sample-run artifact policy
+- **PR #22:** ~~Governed sample-run artifact policy~~ ✓ Done
 
 Generated schema, evidence maps, and real run artifacts are still not allowed. They require a future governed run after all preconditions are confirmed.
