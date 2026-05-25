@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PRs #2–#19 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, and first real page handoff templates. PR #20 adds the independent analyzer and controller post-analyzer flow, analyzer review template, controller decision template, and disposition matrix. Milestone 3 is tooling-complete. Milestone 4 (support layer) is in progress. No schema has been generated. No prompts have been executed. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PRs #2–#20 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, and independent analyzer/controller flow. PR #21 adds the current website implementation handoff checklist, non-authorization rules, pre-implementation approval gate, and post-implementation verification checklist. Milestone 3 is tooling-complete. Milestone 4 (support layer) is in progress. No schema has been generated. No implementation has occurred. Evidence maps and the final runnable handoff are still later PRs.
 
 ---
 
@@ -126,6 +126,10 @@
 | `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md` | Blank future-use independent analyzer review template. Added PR #20. |
 | `05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md` | Blank future-use controller post-analyzer decision template. Added PR #20. |
 | `05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md` | Disposition matrix — severity guidance, category constraints, final recommendation rules. Added PR #20. |
+| `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md` | Future-use implementation handoff checklist — 8 sections, all NOT_STARTED, hard stops, implementation sequence. Added PR #21. |
+| `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md` | 10 non-authorization rules governing current website implementation lane. Added PR #21. |
+| `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md` | 7-gate pre-implementation approval gate — all gates NOT REACHED. Added PR #21. |
+| `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md` | Future-use post-implementation verification checklist — 8 sections, all NOT_STARTED. Added PR #21. |
 
 ---
 
@@ -243,7 +247,7 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #18:** ~~Smoke-test runner and package health reporter~~ ✓ Done
 - **PR #19:** ~~First real page handoff template~~ ✓ Done
 - **PR #20:** ~~Independent analyzer and controller post-analyzer flow~~ ✓ Done
-- **PR #21:** Current website implementation handoff checklist
+- **PR #21:** ~~Current website implementation handoff checklist~~ ✓ Done
 - **PR #22:** Governed sample-run artifact policy
 
 Generated schema, evidence maps, and real run artifacts are still not allowed. They require a future governed run after all preconditions are confirmed.

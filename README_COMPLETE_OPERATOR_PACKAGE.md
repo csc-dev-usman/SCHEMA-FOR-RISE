@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #20 adds the independent analyzer and controller post-analyzer flow (`05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`), independent analyzer review template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`), controller post-analyzer decision template (`05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`), and analyzer/controller disposition matrix (`05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`). These are workflow definitions and blank templates only — no analyzer has been run, no findings exist, no controller decisions have been made, no schema has been generated. Milestone 4 (first real page run support layer) is in progress. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #21 adds the current website implementation handoff checklist (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`), implementation non-authorization rules (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`), pre-implementation approval gate (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`), and post-implementation verification checklist (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`). These are future-use governance documents only — no schema has been generated, no implementation has occurred, Mode 1 is still not runnable. Milestone 4 (first real page run support layer) is in progress. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -137,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #20) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #20 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #21) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #21 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -186,5 +186,6 @@ No content in this package (through PR #20) authorizes any schema to be deployed
   `docs: add Rise first real page handoff template`
 - **PR #20:** ~~Add independent analyzer and controller post-analyzer flow~~ ✓ Merged
   `docs: add Rise independent analyzer and controller post-analyzer flow`
-- **PR #21:** Add current website implementation handoff checklist
+- **PR #21:** ~~Add current website implementation handoff checklist~~ ✓ Merged
+  `docs: add Rise current website implementation handoff checklist`
 - **PR #22:** Add governed sample-run artifact policy

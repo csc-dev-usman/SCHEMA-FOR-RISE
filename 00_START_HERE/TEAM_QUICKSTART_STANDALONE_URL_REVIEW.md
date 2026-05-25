@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -65,6 +65,10 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read `05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md` to understand the blank analyzer review template.
 - Read `05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md` to understand the blank controller decision template.
 - Read `05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md` to understand the full disposition matrix — severity guidance, category constraints, and final recommendation rules.
+- Read `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md` to understand the future-use implementation handoff checklist — 8 sections defining what must be confirmed before and during a governed implementation.
+- Read `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md` to understand the 10 non-authorization rules governing current website implementation.
+- Read `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md` to understand the 7 pre-implementation gates — all currently NOT REACHED.
+- Read `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md` to understand the future-use post-implementation verification steps.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -114,7 +118,7 @@ The sequence:
 - PR #18 adds smoke-test runner and package health reporter ✓ Done — Milestone 3 complete
 - PR #19 adds first real page handoff template ✓ Done
 - PR #20 adds independent analyzer and controller post-analyzer flow ✓ Done
-- PR #21 adds current website implementation handoff checklist
+- PR #21 adds current website implementation handoff checklist ✓ Done
 - PR #22 adds governed sample-run artifact policy
 
 Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
