@@ -1,6 +1,6 @@
 # Mode 2 — Future Astro Schema Carry Flow V1.0
 
-**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -25,6 +25,7 @@ Mode 2 is fully blocked until all of the following exist:
 | Blocking condition | Current status |
 |-------------------|----------------|
 | Astro carry gates defined in a governing doctrine PR | DEFINED — `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md` (PR #23) |
+| Runtime Appendix carry fields defined | DEFINED — `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md` (PR #24); all fields NOT_STARTED |
 | Astro route manifest confirmed from Phase 0 or runtime evidence | NOT_CONFIRMED |
 | Astro route-to-schema-profile mapping established | NOT_ESTABLISHED |
 | Mode 1 validated output available for target routes | NOT_YET_PRODUCED |
@@ -86,15 +87,17 @@ HUMAN APPROVAL
 
 ## Mode 2 not-ready statement
 
-**Mode 2 is not ready after PR #23.**
+**Mode 2 is not ready after PR #24.**
 
 Mode 2 is blocked until:
 - ~~A governing doctrine PR defines Astro carry gates~~ ✓ Done (PR #23 — carry gate reference added)
+- ~~Runtime Appendix carry fields defined~~ ✓ Done (PR #24 — field reference added; all fields NOT_STARTED)
 - Astro route and runtime evidence exists
 - Mode 1 validated output exists for target routes
+- Astro attachment packet template approved and filled
 - Human approval for Astro attachment is granted
 
-No Astro files may be created or modified by this package until Mode 2 carry gates exist.
+No Astro files may be created or modified by this package until all Mode 2 carry gates pass.
 
 ---
 

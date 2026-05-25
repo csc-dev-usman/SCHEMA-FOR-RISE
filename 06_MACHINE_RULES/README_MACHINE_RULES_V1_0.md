@@ -1,6 +1,6 @@
 # Machine Rules — Rise FC Standalone Schema Package
 
-**Status:** `PACKAGE_VALIDATOR_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This folder contains contract schema definitions and validator tooling. The contract schemas define the expected shape of future governed run outputs. The validator rules and expected-files contract support the Python output bundle validator in `tools/`. The Claude QA finding schema and controller review packet schema define the required shape of future QA and controller review artifacts. The run ledger schema defines the required shape of future run ledger entries. No schema has been generated. No JSON-LD has been created. No evidence maps exist as run artifacts. No QA findings exist. No run entries exist.
 
@@ -43,6 +43,7 @@ No real run artifacts exist. No governed runs have occurred. No output bundles h
 | `RUN_LEDGER_SCHEMA_V1_0.json` | Contract schema for run ledger entries — runId, targetUrl, mode, schemaProfile, truthFingerprint, all status fields, productionLockStatus. Added PR #14. |
 | `PACKAGE_VALIDATION_CHECKLIST_V1_0.md` | Manual checklist for all 12 package validator checks — rationale, failure meanings, non-authorization statement. Added PR #16. |
 | `PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json` | Machine-readable expected file list contract — 80 required files through PR #16, optional files, blocked files and patterns, safety constraints. Added PR #16. |
+| `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json` | Contract schema for Runtime Appendix schema carry field records — 18 required fields, allowed statuses, constraints, locked fingerprint. Added PR #24. |
 
 ---
 
@@ -76,4 +77,6 @@ The run ledger schema (`RUN_LEDGER_SCHEMA_V1_0.json`) added in PR #14 defines th
 
 The run ledger append helper (`tools/append_run_ledger_entry.py`) and reporter (`tools/report_run_ledger_status.py`) were added in PR #15. The package validator (`tools/validate_package.py`) was added in PR #16, along with this folder's `PACKAGE_VALIDATION_CHECKLIST_V1_0.md` and `PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`.
 
-Future PRs will add the smoke-test fixture, the homepage evidence map, and the final runnable handoff.
+The Runtime Appendix schema carry fields schema (`RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json`) added in PR #24 defines the required shape of a future Runtime Appendix carry field record — the metadata bridge between the SEO/schema operator lane and the HTML/runtime/Astro carry implementation. This is a contract definition only. No Runtime Appendix record has been created. No carry has occurred. Mode 2 is not ready.
+
+Future PRs will add the Astro attachment packet template (PR #25) and the final Mode 1 runnable handoff (PR #26).

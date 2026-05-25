@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_ASTRO_CARRY_GATE_REFERENCE_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #23. The checklist items below are provided for reference only and will be enabled when PR #26 merges the final Mode 1 runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #24. The checklist items below are provided for reference only and will be enabled when PR #26 merges the final Mode 1 runnable handoff.
 
 ---
 
@@ -139,6 +139,11 @@
 - [ ] Confirm the Astro identity match requirements have been read (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md`)
 - [ ] Confirm the Astro carry hold reason reference has been read (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md`)
 - [ ] Confirm Mode 2 is not ready (`mode2AstroReady: false` in manifest)
+- [ ] Confirm the Runtime Appendix schema carry field reference (PR #24) has been merged ✓ Done
+- [ ] Confirm the Runtime Appendix carry field reference has been read (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md`)
+- [ ] Confirm the Runtime Appendix carry field status enums have been read (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md`)
+- [ ] Confirm the Runtime Appendix non-authorization rules have been read (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`)
+- [ ] Confirm the Runtime Appendix carry fields JSON schema has been read (`06_MACHINE_RULES/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json`)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -229,5 +234,6 @@ Operators must not:
 | PR #21 | Current website implementation handoff checklist | ✓ Done |
 | PR #22 | Governed sample-run artifact policy | ✓ Done |
 | PR #23 | Astro schema carry gate reference | ✓ Done |
+| PR #24 | Runtime Appendix schema carry field reference | ✓ Done |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

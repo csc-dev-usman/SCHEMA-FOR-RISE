@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -77,6 +77,10 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` to understand the 7 non-authorization rules governing Astro carry and attachment — all in force.
 - Read `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md` to understand the 12 identity match checks required before any schema carry may proceed.
 - Read `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md` to understand the 15 hold codes for Astro carry — definitions, conditions, and resolution requirements.
+- Read `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md` to understand the 18 Runtime Appendix carry fields — the metadata bridge between the operator lane and runtime/Astro carry.
+- Read `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md` to understand all 13 allowed status enum values for carry fields.
+- Read `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` to understand the 7 non-authorization rules governing Runtime Appendix carry — all in force.
+- Read `06_MACHINE_RULES/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json` to understand the JSON contract schema defining the required shape of a future Runtime Appendix carry field record.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -129,6 +133,7 @@ The sequence:
 - PR #21 adds current website implementation handoff checklist ✓ Done
 - PR #22 adds governed sample-run artifact policy ✓ Done — Milestone 4 complete
 - PR #23 adds Astro schema carry gate reference ✓ Done — Milestone 5 in progress (1/4)
+- PR #24 adds Runtime Appendix schema carry field reference ✓ Done — Milestone 5 in progress (2/4)
 
 Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
 
