@@ -1,7 +1,7 @@
 {
   "packageName": "Rise FC Complete Schema Operator Package",
   "packageVersion": "1.0.0",
-  "status": "MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT",
+  "status": "ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT",
   "createdByPr": null,
   "schemaOutputCreated": false,
   "jsonLdCreated": false,
@@ -59,6 +59,10 @@
   "realRunArtifactCommitRulesAdded": true,
   "redactedSampleArtifactRequirementsAdded": true,
   "milestone4FirstRealPageRunSupportComplete": true,
+  "astroSchemaCarryGateReferenceAdded": true,
+  "astroSchemaCarryNonAuthorizationRulesAdded": true,
+  "astroSchemaIdentityMatchRequirementsAdded": true,
+  "astroSchemaCarryHoldReasonReferenceAdded": true,
   "realRunArtifactsCommitted": false,
   "evidenceMapAdded": false,
   "outputBundleValidatorAdded": true,
@@ -244,7 +248,11 @@
     "05_REFERENCE_WORKFLOW/GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md",
     "05_REFERENCE_WORKFLOW/REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md",
     "05_REFERENCE_WORKFLOW/REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md",
-    "05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md"
+    "05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md",
+    "05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md"
   ],
-  "nextRecommendedPr": "PR #23: Add Astro schema carry gate reference"
+  "nextRecommendedPr": "PR #24: Add Runtime Appendix schema carry field reference"
 }

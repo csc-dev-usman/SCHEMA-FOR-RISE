@@ -1,6 +1,6 @@
 # Mode 2 — Future Astro Schema Carry Flow V1.0
 
-**Status:** `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -8,7 +8,7 @@
 
 This document defines the Mode 2 future Astro schema carry flow for the Rise FC standalone schema operator package. Mode 2 carries validated schema into the Astro implementation after Astro route and runtime evidence is ready.
 
-**Mode 2 is documented but not ready.** Astro carry gates do not exist. No Astro files have been created or modified. Mode 2 cannot proceed until a future governing doctrine PR defines the carry gates and attachment protocol.
+**Mode 2 is documented but not ready.** Astro carry gates are now defined in `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md` (PR #23), but no Astro files have been created or modified, and no carry gates have been passed. Mode 2 cannot proceed until a real validated schema output bundle exists, all carry gates pass, and human approval for Astro attachment is granted.
 
 ---
 
@@ -24,7 +24,7 @@ Mode 2 is fully blocked until all of the following exist:
 
 | Blocking condition | Current status |
 |-------------------|----------------|
-| Astro carry gates defined in a governing doctrine PR | NOT_DEFINED |
+| Astro carry gates defined in a governing doctrine PR | DEFINED — `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md` (PR #23) |
 | Astro route manifest confirmed from Phase 0 or runtime evidence | NOT_CONFIRMED |
 | Astro route-to-schema-profile mapping established | NOT_ESTABLISHED |
 | Mode 1 validated output available for target routes | NOT_YET_PRODUCED |
@@ -86,10 +86,10 @@ HUMAN APPROVAL
 
 ## Mode 2 not-ready statement
 
-**Mode 2 is not ready after PR #5.**
+**Mode 2 is not ready after PR #23.**
 
 Mode 2 is blocked until:
-- A governing doctrine PR defines Astro carry gates
+- ~~A governing doctrine PR defines Astro carry gates~~ ✓ Done (PR #23 — carry gate reference added)
 - Astro route and runtime evidence exists
 - Mode 1 validated output exists for target routes
 - Human approval for Astro attachment is granted

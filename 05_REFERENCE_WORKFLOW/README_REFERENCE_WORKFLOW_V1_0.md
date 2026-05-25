@@ -1,6 +1,6 @@
 # Reference Workflow — Rise FC Standalone Schema Package
 
-**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 > This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, the full validation protocol, the run ledger review guide, first real page run handoff templates, analyzer/controller flow definitions, and the current website implementation handoff checklist for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run. No run entries exist. No implementation has occurred.
 
@@ -47,6 +47,10 @@ These documents serve as a governance checkpoint: the full workflow must be unde
 | `REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md` | 7 prohibition rules (RAC-001–007) for real run artifact commits — all real artifacts prohibited by default; enforcement mechanisms described. Added PR #22. |
 | `REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md` | 8 redaction categories and verification checklist for future redacted sample artifacts — contact/identity, social URLs, logo, location, reviews, prices, events, testimonials. Added PR #22. |
 | `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md` | Milestone 4 completion audit — all 16 support-layer components verified present, package posture confirmed, Milestone 5 noted. Added PR #22. |
+| `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md` | Future Astro carry gate sequence — 8 gates from schema output bundle approval through Astro attachment. Reference only, no gates passed. Added PR #23. |
+| `ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` | 7 non-authorization rules (ACNA-001–007) governing Astro carry and attachment — no Astro code changes, no schema attachment, no Mode 2 readiness. All in force. Added PR #23. |
+| `ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md` | 12 identity match checks required before any schema carry — bundle ID, export ID, route, page family, profile, fingerprint, evidence map, validation, controller, human approval, held fields, blocked modules. All NOT REACHED. Added PR #23. |
+| `ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md` | 15 hold codes for Astro carry — definitions, conditions, blocking gates, resolution requirements. All active by default. Added PR #23. |
 
 ---
 
@@ -97,3 +101,7 @@ All files in this folder are documentation-only governance contracts. The actual
 27. `REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md` — 7 artifact commit prohibition rules (Added PR #22)
 28. `REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md` — 8 redaction categories for future redacted artifacts (Added PR #22)
 29. `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md` — Milestone 4 completion audit (Added PR #22)
+30. `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md` — future Astro carry gate sequence (Added PR #23)
+31. `ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` — 7 Astro carry non-authorization rules (Added PR #23)
+32. `ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md` — 12 identity match checks (Added PR #23)
+33. `ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md` — 15 Astro carry hold codes (Added PR #23)

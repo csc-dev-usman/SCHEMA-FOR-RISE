@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PRs #2–#21 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, independent analyzer/controller flow, and current website implementation handoff checklist. PR #22 adds the governed sample-run artifact policy, real run artifact commit rules, redacted sample artifact requirements, and Milestone 4 completion audit. Milestone 3 is tooling-complete. Milestone 4 (first real page run support layer) is now complete. No schema has been generated. No implementation has occurred. Evidence maps and the final runnable handoff are still later PRs.
+> PR #1 created the package shell. PRs #2–#22 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, independent analyzer/controller flow, current website implementation handoff checklist, and governed sample-run artifact policy. PR #23 adds the Astro schema carry gate reference (4 new files defining future Mode 2 carry gates, non-authorization rules, identity match requirements, and hold reason reference). Milestone 4 is complete. Milestone 5 is in progress. No schema has been generated. No implementation has occurred. Mode 1 is not yet runnable.
 
 ---
 
@@ -134,6 +134,10 @@
 | `05_REFERENCE_WORKFLOW/REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md` | 7 prohibition rules for real run artifact commits — all real artifacts prohibited by default until authorized artifact lane established. Added PR #22. |
 | `05_REFERENCE_WORKFLOW/REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md` | 8 redaction categories and redaction verification checklist for future redacted sample artifacts. Added PR #22. |
 | `05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md` | Milestone 4 completion audit — all 16 components verified, package posture confirmed, next milestone noted. Added PR #22. |
+| `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md` | Future Astro carry gate sequence — 8 gates from schema output bundle approval through Astro attachment. Reference only, no gates passed. Added PR #23. |
+| `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` | 7 non-authorization rules (ACNA-001–007) — no Astro code changes, no schema attachment, no Mode 2 readiness. All in force. Added PR #23. |
+| `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md` | 12 identity match checks required before any schema carry — bundle ID, export ID, route, page family, profile, fingerprint, evidence map, validation, controller approval, human approval, held fields, blocked modules. All NOT REACHED. Added PR #23. |
+| `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md` | 15 hold codes for Astro carry — definitions, conditions, blocking gates, resolution requirements. All active by default. Added PR #23. |
 
 ---
 
@@ -221,7 +225,7 @@ The following file types and artifacts are **not permitted** in this repository 
 | Screaming Frog exports | Not authorized yet |
 | Claude QA zips | Not authorized yet |
 | Generated schema files | Not authorized — no schema has been generated |
-| Astro implementation files | Not authorized until Astro carry gates are defined |
+| Astro implementation files | Not authorized until all Astro carry gates pass — gate sequence defined PR #23, no gates passed, Mode 2 not ready |
 | Website source files | Not part of this package |
 | Runtime source files | Not part of this package |
 | Medical or CSC-specific doctrine | Not applicable to Rise FC |
@@ -253,5 +257,6 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #20:** ~~Independent analyzer and controller post-analyzer flow~~ ✓ Done
 - **PR #21:** ~~Current website implementation handoff checklist~~ ✓ Done
 - **PR #22:** ~~Governed sample-run artifact policy~~ ✓ Done
+- **PR #23:** ~~Astro schema carry gate reference~~ ✓ Done
 
 Generated schema, evidence maps, and real run artifacts are still not allowed. They require a future governed run after all preconditions are confirmed.

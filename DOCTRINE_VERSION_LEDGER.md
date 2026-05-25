@@ -10,7 +10,7 @@
 
 ## Current status
 
-`MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
+`ASTRO_SCHEMA_CARRY_GATE_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -40,6 +40,7 @@
 | PR #20 | `docs: add Rise independent analyzer and controller post-analyzer flow` | Independent analyzer and controller flow (`05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`), blank analyzer review template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`), blank controller decision template (`05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`), and disposition matrix (`05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Workflow definitions and blank templates only — no analyzer run, no findings, no controller decisions, no schema generated. independentAnalyzerFlowAdded=true; controllerPostAnalyzerFlowAdded=true; analyzerReviewTemplateAdded=true; controllerPostAnalyzerDecisionTemplateAdded=true; analyzerControllerDispositionMatrixAdded=true. |
 | PR #21 | `docs: add Rise current website implementation handoff checklist` | Current website implementation handoff checklist (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`), non-authorization rules (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`), pre-implementation approval gate (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`), and post-implementation verification checklist (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Future-use governance documents only — no schema generated, no implementation occurred. currentWebsiteImplementationHandoffChecklistAdded=true; currentWebsiteImplementationNonAuthorizationRulesAdded=true; currentWebsitePreImplementationApprovalGateAdded=true; currentWebsitePostImplementationVerificationChecklistAdded=true. |
 | PR #22 | `docs: add Rise governed sample-run artifact policy` | Governed sample-run artifact policy (`05_REFERENCE_WORKFLOW/GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md`), real run artifact commit rules (`05_REFERENCE_WORKFLOW/REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md`), redacted sample artifact requirements (`05_REFERENCE_WORKFLOW/REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md`), and Milestone 4 completion audit (`05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Artifact policy and governance documents only — no schema generated, no implementation occurred. realRunArtifactsCommitted=false; governedSampleRunArtifactPolicyAdded=true; realRunArtifactCommitRulesAdded=true; redactedSampleArtifactRequirementsAdded=true; milestone4FirstRealPageRunSupportComplete=true. |
+| PR #23 | `docs: add Rise Astro schema carry gate reference` | Astro schema carry gate reference (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`), Astro carry non-authorization rules (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`), Astro identity match requirements (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md`), and Astro carry hold reason reference (`05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Reference documents only — no Astro code changes, no schema attachment, no JSON-LD, no schema output, no Phase 0 mutation. astroSchemaCarryGateReferenceAdded=true; astroSchemaCarryNonAuthorizationRulesAdded=true; astroSchemaIdentityMatchRequirementsAdded=true; astroSchemaCarryHoldReasonReferenceAdded=true. Mode 2 not ready. |
 
 ---
 
@@ -136,13 +137,17 @@
 - Redacted sample artifact requirements added: **YES (PR #22) — 8 redaction categories, future-use only**
 - Milestone 4 first real page run support complete: **YES (PR #22) — support layer only, not schema-production-ready**
 - Real run artifacts committed: **NO — `realRunArtifactsCommitted: false`**
+- Astro schema carry gate reference added: **YES (PR #23) — 8-gate carry sequence, reference only, Mode 2 not ready**
+- Astro carry non-authorization rules added: **YES (PR #23) — 7 rules (ACNA-001–007), all in force**
+- Astro identity match requirements added: **YES (PR #23) — 12 checks, all NOT REACHED**
+- Astro carry hold reason reference added: **YES (PR #23) — 15 hold codes, all active by default**
 - Production lock status: **NO_PRODUCTION_LOCKS**
 
 ---
 
 ## Astro attachment status
 
-- Astro carry gates defined: **NO**
+- Astro carry gates defined: **YES (PR #23) — 8-gate sequence documented in `ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`; no gates passed**
 - Astro attachment authorized: **NO**
 - Astro files modified: **NO**
 
@@ -200,7 +205,9 @@ Current website implementation handoff checklist added in PR #21. The implementa
 
 Governed sample-run artifact policy added in PR #22. The artifact policy (`GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md`), real run artifact commit rules (`REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md`), redacted sample artifact requirements (`REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md`), and Milestone 4 completion audit (`MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md`) are now in `05_REFERENCE_WORKFLOW/`. Real run artifacts remain prohibited by default — no authorized artifact lane exists. Milestone 4 (first real page run support layer) is now complete. Mode 1 remains not runnable.
 
-Next doctrine dependency: Astro schema carry gate reference (PR #23).
+Astro schema carry gate reference added in PR #23. The carry gate reference (`ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`), Astro carry non-authorization rules (`ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`), Astro identity match requirements (`ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md`), and Astro carry hold reason reference (`ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md`) are now in `05_REFERENCE_WORKFLOW/`. These are reference documents only. No Astro code has been changed. No schema has been attached. No carry gates have been passed. Mode 2 remains not ready. Mode 1 remains not runnable.
+
+Next doctrine dependency: Runtime Appendix schema carry field reference (PR #24).
 
 ---
 
@@ -230,3 +237,4 @@ Next doctrine dependency: Astro schema carry gate reference (PR #23).
 | 1.0.0 | 2026-05-22 | PR #20 | Independent analyzer and controller post-analyzer flow, blank analyzer review template, blank controller decision template, and disposition matrix added to 05_REFERENCE_WORKFLOW/. Workflow definitions and blank templates only — no analyzer run, no findings, no controller decisions, no schema generated. independentAnalyzerFlowAdded=true; controllerPostAnalyzerFlowAdded=true; analyzerReviewTemplateAdded=true; controllerPostAnalyzerDecisionTemplateAdded=true; analyzerControllerDispositionMatrixAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-25 | PR #21 | Current website implementation handoff checklist, non-authorization rules, pre-implementation approval gate, and post-implementation verification checklist added to 05_REFERENCE_WORKFLOW/. Future-use governance documents only — no schema generated, no implementation occurred. currentWebsiteImplementationHandoffChecklistAdded=true; currentWebsiteImplementationNonAuthorizationRulesAdded=true; currentWebsitePreImplementationApprovalGateAdded=true; currentWebsitePostImplementationVerificationChecklistAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-25 | PR #22 | Governed sample-run artifact policy, real run artifact commit rules, redacted sample artifact requirements, and Milestone 4 completion audit added to 05_REFERENCE_WORKFLOW/. Artifact policy and governance documents only — no schema generated, no implementation occurred. governedSampleRunArtifactPolicyAdded=true; realRunArtifactCommitRulesAdded=true; redactedSampleArtifactRequirementsAdded=true; milestone4FirstRealPageRunSupportComplete=true; realRunArtifactsCommitted=false. productionLockStatus=NO_PRODUCTION_LOCKS. Milestone 4 complete. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-25 | PR #23 | Astro schema carry gate reference, carry non-authorization rules, identity match requirements, and carry hold reason reference added to 05_REFERENCE_WORKFLOW/. Reference documents only — no Astro code changes, no schema attachment, no JSON-LD, no schema output. astroSchemaCarryGateReferenceAdded=true; astroSchemaCarryNonAuthorizationRulesAdded=true; astroSchemaIdentityMatchRequirementsAdded=true; astroSchemaCarryHoldReasonReferenceAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. Mode 2 not ready. Milestone 5 in progress (1/4). No Phase 0 mutation. No Astro attachment. |
