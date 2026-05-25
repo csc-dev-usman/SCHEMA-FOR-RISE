@@ -1,6 +1,6 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
 
 > This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
 
@@ -366,6 +366,24 @@ Understand:
 
 ---
 
+### Step 2t — Read current website implementation handoff checklist (PR #21 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`
+
+Understand:
+- The implementation handoff checklist defines 8 sections (schema output bundle, validation pass, controller approval, human approval, implementation details, rollback plan, post-implementation verification, run ledger update) — all items are NOT_STARTED
+- The non-authorization rules define 10 explicit rules: no implementation without a validated output bundle, no implementation without controller approval, no implementation without human approval, no held fields without owner approval, no blocked modules, no Phase 0 mutation, no self-merge, no production lock without human approval reference, mode1Runnable must be true before any run, evidence map required before drafting
+- The pre-implementation approval gate defines 7 gates that must ALL be confirmed before any implementation: package readiness, truth pack currency, evidence map, schema profile and modules, validated output bundle, controller review, human approval — all currently NOT REACHED
+- The post-implementation verification checklist defines 8 sections for verifying a live implementation — all items are NOT_STARTED
+- None of these documents authorize implementation — they are future-use governance contracts only
+- Mode 1 remains not runnable after PR #21
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -408,7 +426,7 @@ Operators must wait for:
 - PR #18: Smoke-test runner and package health reporter ✓ Done
 - PR #19: First real page handoff template ✓ Done
 - PR #20: Independent analyzer and controller post-analyzer flow ✓ Done
-- PR #21: Current website implementation handoff checklist
+- PR #21: Current website implementation handoff checklist ✓ Done
 - PR #22: Governed sample-run artifact policy
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.

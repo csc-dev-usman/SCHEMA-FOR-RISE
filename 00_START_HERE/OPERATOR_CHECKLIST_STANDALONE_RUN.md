@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED`
+**Status:** `DISABLED — NOT_RUNNABLE_YET_CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #20. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
+> This checklist is not yet active. Do not attempt to run the schema workflow after PR #21. The checklist items below are provided for reference only and will be enabled when a later PR merges the final runnable handoff.
 
 ---
 
@@ -122,6 +122,11 @@
 - [ ] Confirm the analyzer review template has been read (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`)
 - [ ] Confirm the controller decision template has been read (`05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`)
 - [ ] Confirm the disposition matrix has been read (`05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`)
+- [ ] Confirm the current website implementation handoff checklist (PR #21) has been merged ✓ Done
+- [ ] Confirm the implementation handoff checklist has been read (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`)
+- [ ] Confirm the implementation non-authorization rules have been read (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`)
+- [ ] Confirm the pre-implementation approval gate has been read (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`)
+- [ ] Confirm the post-implementation verification checklist has been read (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`)
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -209,7 +214,7 @@ Operators must not:
 | PR #18 | Smoke-test runner and package health reporter | ✓ Done |
 | PR #19 | First real page handoff template | ✓ Done |
 | PR #20 | Independent analyzer and controller post-analyzer flow | ✓ Done |
-| PR #21 | Current website implementation handoff checklist | Pending |
+| PR #21 | Current website implementation handoff checklist | ✓ Done |
 | PR #22 | Governed sample-run artifact policy | Pending |
 
 This checklist will be updated and activated when a later PR merges the final runnable handoff.

@@ -10,7 +10,7 @@
 
 ## Current status
 
-`INDEPENDENT_ANALYZER_CONTROLLER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+`CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -38,6 +38,7 @@
 | PR #18 | `tools: add Rise smoke-test runner and package health reporter` | Smoke test runner (`tools/run_standalone_smoke_test.py`) and package health reporter (`tools/report_package_health.py`) added to `tools/`. Smoke test runner expectations (`08_SMOKE_TESTS/SMOKE_TEST_RUNNER_EXPECTATIONS_V1_0.md`) and Milestone 3 completion audit (`05_REFERENCE_WORKFLOW/MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETION_AUDIT_V1_0.md`) added. Milestone 3 tooling complete. Smoke test runner: 12 checks, PASS. Health reporter: CLEAN. Tooling only — no schema generated. smokeTestRunnerAdded=true; packageHealthReporterAdded=true; milestone3LedgerAndHealthToolsComplete=true. |
 | PR #19 | `docs: add Rise first real page handoff template` | First real page run handoff template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HANDOFF_TEMPLATE_V1_0.md`), intake fields (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_INTAKE_FIELDS_V1_0.md`), homepage first real run supervision rules (`05_REFERENCE_WORKFLOW/HOMEPAGE_FIRST_REAL_RUN_SUPERVISION_RULES_V1_0.md`), and hold reason reference (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_RUN_HOLD_REASON_REFERENCE_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Governance reference documents only — no real run started, no schema generated. firstRealPageHandoffTemplateAdded=true; firstRealPageIntakeFieldsAdded=true; homepageFirstRealRunSupervisionRulesAdded=true; firstRealPageHoldReasonReferenceAdded=true. |
 | PR #20 | `docs: add Rise independent analyzer and controller post-analyzer flow` | Independent analyzer and controller flow (`05_REFERENCE_WORKFLOW/INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`), blank analyzer review template (`05_REFERENCE_WORKFLOW/FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`), blank controller decision template (`05_REFERENCE_WORKFLOW/CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`), and disposition matrix (`05_REFERENCE_WORKFLOW/ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Workflow definitions and blank templates only — no analyzer run, no findings, no controller decisions, no schema generated. independentAnalyzerFlowAdded=true; controllerPostAnalyzerFlowAdded=true; analyzerReviewTemplateAdded=true; controllerPostAnalyzerDecisionTemplateAdded=true; analyzerControllerDispositionMatrixAdded=true. |
+| PR #21 | `docs: add Rise current website implementation handoff checklist` | Current website implementation handoff checklist (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`), non-authorization rules (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`), pre-implementation approval gate (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`), and post-implementation verification checklist (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`) added to `05_REFERENCE_WORKFLOW/`. Future-use governance documents only — no schema generated, no implementation occurred. currentWebsiteImplementationHandoffChecklistAdded=true; currentWebsiteImplementationNonAuthorizationRulesAdded=true; currentWebsitePreImplementationApprovalGateAdded=true; currentWebsitePostImplementationVerificationChecklistAdded=true. |
 
 ---
 
@@ -125,6 +126,10 @@
 - Analyzer review template added: **YES (PR #20) — blank future-use template**
 - Controller post-analyzer decision template added: **YES (PR #20) — blank future-use template**
 - Analyzer/controller disposition matrix added: **YES (PR #20) — governance reference only**
+- Current website implementation handoff checklist added: **YES (PR #21) — future-use governance document only**
+- Current website implementation non-authorization rules added: **YES (PR #21) — governance reference only**
+- Current website pre-implementation approval gate added: **YES (PR #21) — 7 gates, future-use only**
+- Current website post-implementation verification checklist added: **YES (PR #21) — future-use governance document only**
 - Production lock status: **NO_PRODUCTION_LOCKS**
 
 ---
@@ -185,7 +190,9 @@ First real page handoff template added in PR #19. The handoff template (`FIRST_R
 
 Independent analyzer and controller post-analyzer flow added in PR #20. The flow definition (`INDEPENDENT_ANALYZER_AND_CONTROLLER_FLOW_V1_0.md`), blank analyzer review template (`FIRST_REAL_PAGE_INDEPENDENT_ANALYZER_REVIEW_TEMPLATE_V1_0.md`), blank controller decision template (`CONTROLLER_POST_ANALYZER_DECISION_TEMPLATE_V1_0.md`), and disposition matrix (`ANALYZER_CONTROLLER_DISPOSITION_MATRIX_V1_0.md`) are now in `05_REFERENCE_WORKFLOW/`. These are workflow definitions and blank templates only — no analyzer has been run, no findings exist, no controller decisions have been made. Milestone 4 (first real page run support layer) is in progress.
 
-Next doctrine dependency: current website implementation handoff checklist (PR #21).
+Current website implementation handoff checklist added in PR #21. The implementation handoff checklist (`CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`), non-authorization rules (`CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`), pre-implementation approval gate (`CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`), and post-implementation verification checklist (`CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`) are now in `05_REFERENCE_WORKFLOW/`. These are future-use governance documents only — no schema has been generated, no implementation has occurred. Mode 1 remains not runnable. Milestone 4 is in progress.
+
+Next doctrine dependency: governed sample-run artifact policy (PR #22).
 
 ---
 
@@ -213,3 +220,4 @@ Next doctrine dependency: current website implementation handoff checklist (PR #
 | 1.0.0 | 2026-05-22 | PR #18 | Smoke test runner and package health reporter added to tools/. Smoke test runner expectations and Milestone 3 completion audit added. Smoke test: 12/12 PASS. Health reporter: CLEAN. Milestone 3 tooling complete. smokeTestRunnerAdded=true; packageHealthReporterAdded=true; milestone3LedgerAndHealthToolsComplete=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #19 | First real page run handoff template, intake fields, homepage first real run supervision rules, and hold reason reference added to 05_REFERENCE_WORKFLOW/. Governance reference documents only — no real run started, no schema generated. firstRealPageHandoffTemplateAdded=true; firstRealPageIntakeFieldsAdded=true; homepageFirstRealRunSupervisionRulesAdded=true; firstRealPageHoldReasonReferenceAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
 | 1.0.0 | 2026-05-22 | PR #20 | Independent analyzer and controller post-analyzer flow, blank analyzer review template, blank controller decision template, and disposition matrix added to 05_REFERENCE_WORKFLOW/. Workflow definitions and blank templates only — no analyzer run, no findings, no controller decisions, no schema generated. independentAnalyzerFlowAdded=true; controllerPostAnalyzerFlowAdded=true; analyzerReviewTemplateAdded=true; controllerPostAnalyzerDecisionTemplateAdded=true; analyzerControllerDispositionMatrixAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
+| 1.0.0 | 2026-05-22 | PR #21 | Current website implementation handoff checklist, non-authorization rules, pre-implementation approval gate, and post-implementation verification checklist added to 05_REFERENCE_WORKFLOW/. Future-use governance documents only — no schema generated, no implementation occurred. currentWebsiteImplementationHandoffChecklistAdded=true; currentWebsiteImplementationNonAuthorizationRulesAdded=true; currentWebsitePreImplementationApprovalGateAdded=true; currentWebsitePostImplementationVerificationChecklistAdded=true. productionLockStatus=NO_PRODUCTION_LOCKS. No Phase 0 mutation. No Astro attachment. |
