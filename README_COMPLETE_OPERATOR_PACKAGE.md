@@ -76,7 +76,7 @@ PR #25 adds the Astro attachment packet template (`05_REFERENCE_WORKFLOW/ASTRO_A
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #26 adds the final Mode 1 runnable handoff.
+Status is `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #26 adds the final Mode 1 runnable handoff.
 
 ---
 
