@@ -95,9 +95,9 @@ Status is `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 **Goal:** After Astro route and runtime evidence is ready, carry validated schema into the Astro implementation.
 
-- This mode is **blocked** until Astro carry gates exist.
+- This mode is **blocked** until all Astro carry gates pass — carry gate sequence defined in PR #23; no gates have passed.
 - No Astro files are created or modified in this package at bootstrap.
-- A future PR will define the carry gates and attachment protocol.
+- Carry gate sequence defined in PR #23. Runtime Appendix carry field reference defined in PR #24. Attachment packet template pending in PR #25.
 
 ---
 

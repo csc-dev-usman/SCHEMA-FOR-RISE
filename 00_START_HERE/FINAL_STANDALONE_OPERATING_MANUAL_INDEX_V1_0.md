@@ -403,6 +403,25 @@ Understand:
 
 ---
 
+### Step 2v — Read Astro schema carry gate reference (PR #23 addition)
+
+Files in this order:
+1. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md`
+
+Understand:
+- The Astro carry gate sequence defines 8 gates that must all pass before any schema output may be carried into Astro — no gates are currently passed
+- Astro does not author, repair, normalize, or override schema — it carries approved output only
+- Seven non-authorization rules (ACNA-001–007) govern what may not be done: no Astro code changes, no schema attachment, no production deployment, no Mode 2 readiness
+- Twelve identity match checks must pass at Gate 6 — bundle ID, export ID, route, page family, profile, truth fingerprint, evidence map, validation, controller approval, human approval, held fields, blocked modules
+- Fifteen hold codes define all conditions that block Astro carry — all active by default
+- Mode 2 remains not ready — `mode2AstroReady: false`
+- Reading these files does not attach schema, change any Astro code, or authorize carry
+
+---
+
 ### Step 2w — Read Runtime Appendix schema carry field reference (PR #24 addition)
 
 Files in this order:
@@ -420,25 +439,6 @@ Understand:
 - The JSON contract schema defines the required shape of a future Runtime Appendix carry field record — contract definition only, no record created
 - All 18 carry fields are at NOT_STARTED; no governed run has completed
 - Reading these files does not create a Runtime Appendix record, generate schema, or authorize carry
-
----
-
-### Step 2v — Read Astro schema carry gate reference (PR #23 addition)
-
-Files in this order:
-1. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`
-2. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`
-3. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_IDENTITY_MATCH_REQUIREMENTS_V1_0.md`
-4. `05_REFERENCE_WORKFLOW/ASTRO_SCHEMA_CARRY_HOLD_REASON_REFERENCE_V1_0.md`
-
-Understand:
-- The Astro carry gate sequence defines 8 gates that must all pass before any schema output may be carried into Astro — no gates are currently passed
-- Astro does not author, repair, normalize, or override schema — it carries approved output only
-- Seven non-authorization rules (ACNA-001–007) govern what may not be done: no Astro code changes, no schema attachment, no production deployment, no Mode 2 readiness
-- Twelve identity match checks must pass at Gate 6 — bundle ID, export ID, route, page family, profile, truth fingerprint, evidence map, validation, controller approval, human approval, held fields, blocked modules
-- Fifteen hold codes define all conditions that block Astro carry — all active by default
-- Mode 2 remains not ready — `mode2AstroReady: false`
-- Reading these files does not attach schema, change any Astro code, or authorize carry
 
 ---
 
@@ -512,7 +512,7 @@ Carry validated schema into the Astro implementation after all carry gates pass.
 
 - Blocked until all Astro carry gates pass — carry gate sequence defined in PR #23 (`ASTRO_SCHEMA_CARRY_GATE_REFERENCE_V1_0.md`); no gates have been passed
 - No Astro files are modified by this package
-- Carry gate sequence defined in PR #23. Attachment protocol and Runtime Appendix to be added in future PRs (#24–#26).
+- Carry gate sequence defined in PR #23. Runtime Appendix carry field reference added in PR #24. Attachment packet template pending in PR #25.
 
 **Not yet scoped. Waiting for Astro route, runtime evidence, and all carry gates to pass.**
 
