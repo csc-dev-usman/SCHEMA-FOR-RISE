@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #21 adds the current website implementation handoff checklist (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_HANDOFF_CHECKLIST_V1_0.md`), implementation non-authorization rules (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_IMPLEMENTATION_NON_AUTHORIZATION_RULES_V1_0.md`), pre-implementation approval gate (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_PRE_IMPLEMENTATION_APPROVAL_GATE_V1_0.md`), and post-implementation verification checklist (`05_REFERENCE_WORKFLOW/CURRENT_WEBSITE_POST_IMPLEMENTATION_VERIFICATION_CHECKLIST_V1_0.md`). These are future-use governance documents only — no schema has been generated, no implementation has occurred, Mode 1 is still not runnable. Milestone 4 (first real page run support layer) is in progress. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #22 adds the governed sample-run artifact policy (`05_REFERENCE_WORKFLOW/GOVERNED_SAMPLE_RUN_ARTIFACT_POLICY_V1_0.md`), real run artifact commit rules (`05_REFERENCE_WORKFLOW/REAL_RUN_ARTIFACT_COMMIT_RULES_V1_0.md`), redacted sample artifact requirements (`05_REFERENCE_WORKFLOW/REDACTED_SAMPLE_ARTIFACT_REQUIREMENTS_V1_0.md`), and Milestone 4 completion audit (`05_REFERENCE_WORKFLOW/MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETION_AUDIT_V1_0.md`). These are artifact policy and governance documents only — no schema has been generated, no implementation has occurred. Milestone 4 (first real page run support layer) is now complete. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -76,7 +76,7 @@ PR #21 adds the current website implementation handoff checklist (`05_REFERENCE_
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `MILESTONE_3_LEDGER_AND_HEALTH_TOOLS_COMPLETE_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
+Status is `MILESTONE_4_FIRST_REAL_PAGE_RUN_SUPPORT_COMPLETE_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until later PRs add evidence maps and the final runnable handoff.
 
 ---
 
@@ -137,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #21) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #21 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #22) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #22 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -188,4 +188,5 @@ No content in this package (through PR #21) authorizes any schema to be deployed
   `docs: add Rise independent analyzer and controller post-analyzer flow`
 - **PR #21:** ~~Add current website implementation handoff checklist~~ ✓ Merged
   `docs: add Rise current website implementation handoff checklist`
-- **PR #22:** Add governed sample-run artifact policy
+- **PR #22:** ~~Add governed sample-run artifact policy~~ ✓ Merged
+  `docs: add Rise governed sample-run artifact policy`
