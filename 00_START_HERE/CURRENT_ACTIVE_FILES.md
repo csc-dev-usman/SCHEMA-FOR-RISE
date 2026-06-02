@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETE_MODE_1_SUPERVISED_RUNNABLE_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PRs #2–#24 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, independent analyzer/controller flow, current website implementation handoff checklist, governed sample-run artifact policy, Astro carry gate reference, and Runtime Appendix carry field reference. PR #25 adds the Astro attachment packet template (4 new reference documents in `05_REFERENCE_WORKFLOW/`). Milestone 4 is complete. Milestone 5 is in progress (3/4). No schema has been generated. No implementation has occurred. Mode 1 is not yet runnable.
+> PR #1 created the package shell. PRs #2–#25 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, independent analyzer/controller flow, current website implementation handoff checklist, governed sample-run artifact policy, Astro carry gate reference, Runtime Appendix carry field reference, and Astro attachment packet template. PR #26 adds the final Mode 1 runnable handoff and Milestone 5 completion documents (4 new reference documents in `05_REFERENCE_WORKFLOW/`; `FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md` upgraded from placeholder to actual content). Milestone 4 is complete. Milestone 5 is complete. Mode 1 is supervised-runnable. No schema has been generated. No implementation has occurred.
 
 ---
 
@@ -25,7 +25,7 @@
 | `00_START_HERE/FINAL_STANDALONE_OPERATING_MANUAL_INDEX_V1_0.md` | Operator reading order and manual index. |
 | `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md` | Plain-language quickstart for team members. |
 | `00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md` | Pre-run checklist. Currently disabled — not runnable yet. |
-| `00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md` | Mode 1 handoff placeholder. Not runnable yet. |
+| `00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md` | Mode 1 supervised runnable handoff. Mode 1 is supervised-runnable as of PR #26. Intake may begin. |
 | `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md` | Navigation aid — which document to read for each task |
 | `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` | Preflight checklist — all gates required before schema production |
 | `00_START_HERE/RISE_MODE_STATUS_AND_NEXT_STEP_GUIDE_V1_0.md` | Current Mode 1 and Mode 2 status and next steps |
@@ -145,6 +145,10 @@
 | `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md` | Required fields reference for all 19 attachment packet fields — type, format, gate dependency, failure hold code. Field-to-gate summary table. Added PR #25. |
 | `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md` | 9-step attachment packet review sequence — sequential gate structure, no step may be skipped. No packet review has occurred. Added PR #25. |
 | `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md` | 15 hold codes for the attachment packet — all active by default, none self-resolvable. Summary table. Added PR #25. |
+| `05_REFERENCE_WORKFLOW/FINAL_MODE_1_SUPERVISED_RUNNABLE_HANDOFF_V1_0.md` | Formal reference declaration of Mode 1 supervised-runnable status — what it means, what it does not mean, critical rules preserved. Added PR #26. |
+| `05_REFERENCE_WORKFLOW/MODE_1_RUNNABLE_SCOPE_AND_LIMITS_V1_0.md` | Full CAN/CANNOT table for Mode 1 supervised-runnable — per-action blocking conditions and scope boundary. Added PR #26. |
+| `05_REFERENCE_WORKFLOW/MODE_1_OPERATOR_START_CONDITIONS_V1_0.md` | 14 start conditions (SC-001–SC-014) with resolution guide and intake checklist. Added PR #26. |
+| `05_REFERENCE_WORKFLOW/MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETION_AUDIT_V1_0.md` | Milestone 5 completion audit — all 16 Milestone 5 components verified, current package posture, mode status, safety confirmations. Added PR #26. |
 
 ---
 
@@ -268,5 +272,6 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #23:** ~~Astro schema carry gate reference~~ ✓ Done
 - **PR #24:** ~~Runtime Appendix schema carry field reference~~ ✓ Done
 - **PR #25:** ~~Astro attachment packet template~~ ✓ Done
+- **PR #26:** ~~Final Mode 1 runnable handoff~~ ✓ Done
 
 Generated schema, evidence maps, and real run artifacts are still not allowed. They require a future governed run after all preconditions are confirmed.

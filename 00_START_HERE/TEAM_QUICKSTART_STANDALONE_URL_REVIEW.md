@@ -1,6 +1,6 @@
 # Team Quickstart — Rise FC Standalone Schema Operator Package
 
-**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETE_MODE_1_SUPERVISED_RUNNABLE_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -85,6 +85,11 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 - Read `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md` to understand the required field contract for all 19 attachment packet fields — type, format, gate dependency, failure hold code.
 - Read `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md` to understand the 9-step sequential review sequence — no step may be skipped; final decision requires all prior steps to complete.
 - Read `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md` to understand the 15 hold codes for the attachment packet — all active by default, none self-resolvable.
+- Read `00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md` to understand the Mode 1 supervised-runnable handoff — Mode 1 is now runnable for intake. Follow the step-by-step operator instructions.
+- Read `05_REFERENCE_WORKFLOW/FINAL_MODE_1_SUPERVISED_RUNNABLE_HANDOFF_V1_0.md` to understand the formal reference declaration of supervised-runnable status — what it means and what it does not mean.
+- Read `05_REFERENCE_WORKFLOW/MODE_1_RUNNABLE_SCOPE_AND_LIMITS_V1_0.md` to understand the full CAN/CANNOT table for Mode 1 — what operators may do now and what remains blocked until later run approval.
+- Read `05_REFERENCE_WORKFLOW/MODE_1_OPERATOR_START_CONDITIONS_V1_0.md` to understand all 14 start conditions (SC-001–SC-014) that must pass before Prompt 00 intake begins.
+- Read `05_REFERENCE_WORKFLOW/MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETION_AUDIT_V1_0.md` to understand the Milestone 5 completion audit — all components verified, current package posture, mode status.
 - Understand which modules are allowed, which are blocked, and which fields are held.
 - Review the owner approval worksheet to understand which fields need human owner decisions.
 - Review `05_REFERENCE_WORKFLOW/HOMEPAGE_DRAFT_PRECONDITIONS_AND_HOLD_MATRIX_V1_0.md` to understand every gate that must pass before a draft run begins.
@@ -93,9 +98,9 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ## What you cannot do right now
 
-> **The source-truth boundary, doctrine, homepage scoped truth-pack reference, homepage schema profile, master flow, operator navigation documents, full operator prompt set, output bundle contract schemas, homepage draft contract, output bundle validator, Claude QA/controller review contracts, final schema validation protocol, governed run ledger schema, run ledger tools, and package validator now exist. The package is still not runnable for schema production. Operators must wait for evidence maps and the final runnable handoff before generating or implementing any schema.**
+> **Mode 1 is supervised-runnable as of PR #26. The operator intake sequence may begin for a confirmed page candidate. However, schema output (JSON-LD, output bundles, production deployment) is not yet authorized. Operators must wait for PR #27 (controlled non-production homepage JSON-LD draft) before generating any schema.**
 
-Specifically, after PR #16 you must not:
+After PR #26, you must not:
 
 - Generate any JSON-LD
 - Execute any operator prompt (prompts are templates only)
@@ -139,8 +144,9 @@ The sequence:
 - PR #23 adds Astro schema carry gate reference ✓ Done — Milestone 5 in progress (1/4)
 - PR #24 adds Runtime Appendix schema carry field reference ✓ Done — Milestone 5 in progress (2/4)
 - PR #25 adds Astro attachment packet template ✓ Done — Milestone 5 in progress (3/4)
+- PR #26 adds final Mode 1 runnable handoff ✓ Done — Milestone 5 complete (4/4)
 
-Until all required PRs are merged and the final runnable handoff exists, do not execute any operator prompt or generate schema.
+Mode 1 is now supervised-runnable. Intake may begin. Do not execute schema output prompts (Prompt 01 and beyond) or generate schema without PR #27 authorization.
 
 ---
 

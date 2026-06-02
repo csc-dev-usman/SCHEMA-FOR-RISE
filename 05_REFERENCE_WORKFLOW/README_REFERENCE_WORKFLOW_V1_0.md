@@ -1,8 +1,8 @@
 # Reference Workflow — Rise FC Standalone Schema Package
 
-**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETE_MODE_1_SUPERVISED_RUNNABLE_NO_SCHEMA_OUTPUT`
 
-> This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, the full validation protocol, the run ledger review guide, first real page run handoff templates, analyzer/controller flow definitions, and the current website implementation handoff checklist for future governed schema runs. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run. No run entries exist. No implementation has occurred.
+> This folder contains reference workflow documents. These are documentation contracts only — they define the rules, preconditions, output file plans, review sequences, QA/controller review process, the full validation protocol, the run ledger review guide, first real page run handoff templates, analyzer/controller flow definitions, the current website implementation handoff checklist, Astro carry reference documents, the attachment packet template, and (as of PR #26) the Mode 1 supervised runnable handoff reference, scope and limits, operator start conditions, and Milestone 5 completion audit. No actual schema has been generated. No JSON-LD has been created. No draft exists yet. No QA findings exist. No validators have been run. No run entries exist. No implementation has occurred.
 
 ---
 
@@ -58,6 +58,10 @@ These documents serve as a governance checkpoint: the full workflow must be unde
 | `ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md` | Required fields reference for all 19 attachment packet fields — type, format, allowed values, gate dependency, failure hold code. Field-to-gate dependency summary table. Added PR #25. |
 | `ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md` | 9-step attachment packet review sequence — sequential gate structure, no step may be skipped. No packet review has occurred. Non-authorization statement. Added PR #25. |
 | `ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md` | 15 hold codes for the Astro attachment packet — all active by default, none self-resolvable. Per-hold blocking step, triggered condition, packet field blocked, resolution required. Summary table. Added PR #25. |
+| `FINAL_MODE_1_SUPERVISED_RUNNABLE_HANDOFF_V1_0.md` | Formal reference declaration of Mode 1 supervised-runnable status — what supervised-runnable means, what it does not mean, critical rules preserved, Mode 2 status, next milestone. Added PR #26. |
+| `MODE_1_RUNNABLE_SCOPE_AND_LIMITS_V1_0.md` | Full CAN/CANNOT table for Mode 1 supervised-runnable — per-action blocking conditions, scope boundary, output/implementation phase requirements. Added PR #26. |
+| `MODE_1_OPERATOR_START_CONDITIONS_V1_0.md` | 14 start conditions (SC-001–SC-014) with pass state, block condition, resolution guide, and intake checklist. Added PR #26. |
+| `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETION_AUDIT_V1_0.md` | Milestone 5 completion audit — all 16 Milestone 5 components verified present, 4 Milestone 5 PRs confirmed merged, current package posture table, mode status, safety confirmations, next milestone. Added PR #26. |
 
 ---
 
@@ -119,3 +123,7 @@ All files in this folder are documentation-only governance contracts. The actual
 38. `ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md` — required fields reference for all 19 packet fields (Added PR #25)
 39. `ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md` — 9-step sequential review sequence (Added PR #25)
 40. `ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md` — 15 hold codes, all active by default (Added PR #25)
+41. `FINAL_MODE_1_SUPERVISED_RUNNABLE_HANDOFF_V1_0.md` — formal supervised-runnable declaration (Added PR #26)
+42. `MODE_1_RUNNABLE_SCOPE_AND_LIMITS_V1_0.md` — full CAN/CANNOT table with blocking conditions (Added PR #26)
+43. `MODE_1_OPERATOR_START_CONDITIONS_V1_0.md` — 14 start conditions with resolution guide (Added PR #26)
+44. `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETION_AUDIT_V1_0.md` — Milestone 5 completion audit (Added PR #26)

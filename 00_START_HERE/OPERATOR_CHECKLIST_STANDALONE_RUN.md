@@ -1,8 +1,8 @@
 # Operator Checklist — Rise FC Standalone Schema Run
 
-**Status:** `DISABLED — NOT_RUNNABLE_YET_ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED`
+**Status:** `INTAKE_ENABLED — NO_SCHEMA_OUTPUT_AUTHORIZED`
 
-> This checklist is not yet active. Do not attempt to run the schema workflow after PR #25. The checklist items below are provided for reference only and will be enabled when PR #26 merges the final Mode 1 runnable handoff.
+> Mode 1 is supervised-runnable as of PR #26. The intake phase of this checklist is now active. Operators may confirm all checklist items below and then start Prompt 00 intake. The schema output phase (Prompt 01 and beyond) is not yet authorized — it requires PR #27 (controlled non-production homepage JSON-LD draft).
 
 ---
 
@@ -11,7 +11,7 @@
 - [ ] Confirm you have read `README_COMPLETE_OPERATOR_PACKAGE.md`
 - [ ] Confirm you have read `00_START_HERE/FINAL_STANDALONE_OPERATING_MANUAL_INDEX_V1_0.md`
 - [ ] Confirm you have read `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
-- [ ] Confirm PR #6 (runnable handoff) has been merged
+- [ ] Confirm PR #26 (final Mode 1 runnable handoff) has been merged ✓ Done
 - [ ] Confirm the governing doctrine (PR #2) has been merged ✓ Done
 - [ ] Confirm the source-truth boundary has been read (`02_GOVERNING_DOCTRINE/RISE_SCHEMA_SOURCE_TRUTH_BOUNDARY_V1_0.md`)
 - [ ] Confirm the governing doctrine has been read (`02_GOVERNING_DOCTRINE/RISE_SCHEMA_GOVERNING_DOCTRINE_V1_0.md`)
@@ -149,6 +149,13 @@
 - [ ] Confirm the attachment packet required fields reference has been read (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md`)
 - [ ] Confirm the attachment packet review sequence has been read (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md`)
 - [ ] Confirm the attachment packet hold matrix has been read (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md`)
+- [ ] Confirm the final Mode 1 runnable handoff (PR #26) has been merged ✓ Done
+- [ ] Confirm the operator runnable handoff has been read (`00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md`)
+- [ ] Confirm the supervised runnable reference document has been read (`05_REFERENCE_WORKFLOW/FINAL_MODE_1_SUPERVISED_RUNNABLE_HANDOFF_V1_0.md`)
+- [ ] Confirm the runnable scope and limits document has been read (`05_REFERENCE_WORKFLOW/MODE_1_RUNNABLE_SCOPE_AND_LIMITS_V1_0.md`)
+- [ ] Confirm all 14 operator start conditions have been read (`05_REFERENCE_WORKFLOW/MODE_1_OPERATOR_START_CONDITIONS_V1_0.md`)
+- [ ] Confirm the Milestone 5 completion audit has been read (`05_REFERENCE_WORKFLOW/MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETION_AUDIT_V1_0.md`)
+- [ ] Confirm all 14 start conditions (SC-001–SC-014) in `MODE_1_OPERATOR_START_CONDITIONS_V1_0.md` pass before starting Prompt 00
 
 **If any of the above are not true: STOP. Do not proceed.**
 
@@ -202,14 +209,20 @@ None of the following are included in the current schema profile:
 
 ## Do not run yet
 
-**This checklist is disabled after PR #1.**
+**Schema output is not yet authorized after PR #26.**
 
-Operators must not:
+Operators must not (until PR #27 is merged):
 - Generate any JSON-LD
 - Create any schema output
 - Create any production schema bundles
-- Run the schema operator workflow
+- Run schema output prompts (Prompt 01 and beyond)
 - Commit real run artifacts
+
+Operators may (after all checklist items pass):
+- Run Prompt 00 intake
+- Prepare a first real page run packet
+- Apply hold codes and confirm evidence mapping
+- Run the package validator, health reporter, and smoke test
 
 ---
 
@@ -241,5 +254,6 @@ Operators must not:
 | PR #23 | Astro schema carry gate reference | ✓ Done |
 | PR #24 | Runtime Appendix schema carry field reference | ✓ Done |
 | PR #25 | Astro attachment packet template | ✓ Done |
+| PR #26 | Final Mode 1 runnable handoff | ✓ Done |
 
-This checklist will be updated and activated when a later PR merges the final runnable handoff.
+Schema output prompts (Prompt 01 and beyond) will be enabled when PR #27 merges the controlled non-production homepage JSON-LD draft authorization.

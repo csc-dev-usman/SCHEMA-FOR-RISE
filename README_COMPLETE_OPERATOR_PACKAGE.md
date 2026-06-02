@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETE_MODE_1_SUPERVISED_RUNNABLE_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #25 adds the Astro attachment packet template (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md`), required fields reference (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md`), 9-step review sequence (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md`), and hold matrix (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md`). These are template and reference documents only — no real attachment packet created, no Astro code changes, no schema attachment, no schema output. Mode 2 is not ready. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #26 adds the final Mode 1 runnable handoff (`00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md`), supervised runnable reference document (`05_REFERENCE_WORKFLOW/FINAL_MODE_1_SUPERVISED_RUNNABLE_HANDOFF_V1_0.md`), scope and limits document (`05_REFERENCE_WORKFLOW/MODE_1_RUNNABLE_SCOPE_AND_LIMITS_V1_0.md`), operator start conditions (`05_REFERENCE_WORKFLOW/MODE_1_OPERATOR_START_CONDITIONS_V1_0.md`), and Milestone 5 completion audit (`05_REFERENCE_WORKFLOW/MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETION_AUDIT_V1_0.md`). Milestone 5 (Astro Carry Bridge) is complete. Mode 1 is supervised-runnable as of PR #26 — intake may begin for a confirmed page candidate. Mode 2 is not ready. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -73,10 +73,10 @@ PR #25 adds the Astro attachment packet template (`05_REFERENCE_WORKFLOW/ASTRO_A
 - No schema has been attached to any page.
 - No Astro files have been modified.
 - No Phase 0 or source truth files have been mutated.
-- Mode 1 is documented but not runnable yet.
+- Mode 1 is supervised-runnable as of PR #26. Intake may begin. No schema output yet.
 - Mode 2 is documented but not ready.
 
-Status is `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #26 adds the final Mode 1 runnable handoff.
+Status is `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETE_MODE_1_SUPERVISED_RUNNABLE_NO_SCHEMA_OUTPUT`. Milestone 5 is complete. Mode 1 is supervised-runnable. Mode 2 is not ready. No schema output has been created.
 
 ---
 
@@ -196,3 +196,5 @@ No content in this package (through PR #25) authorizes any schema to be deployed
   `docs: add Rise Runtime Appendix schema carry field reference`
 - **PR #25:** ~~Add Astro attachment packet template~~ ✓ Merged
   `docs: add Rise Astro attachment packet template`
+- **PR #26:** ~~Add final Mode 1 runnable handoff~~ ✓ Merged
+  `docs: add Rise final Mode 1 runnable handoff`
