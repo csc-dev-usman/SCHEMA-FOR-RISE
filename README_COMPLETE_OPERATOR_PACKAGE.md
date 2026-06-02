@@ -1,6 +1,6 @@
 # Rise FC Complete Schema Operator Package V1.0.0
 
-**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -50,7 +50,7 @@ Rise Phase 0 remains the source of factual truth. This package is downstream of 
 
 ## Current operating posture
 
-PR #24 adds the Runtime Appendix schema carry field reference (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md`), carry field status enums (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md`), Runtime Appendix non-authorization rules (`05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md`), and the carry fields JSON contract schema (`06_MACHINE_RULES/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELDS_SCHEMA_V1_0.json`). These are reference documents and contract definitions only — no runtime code changes, no Astro code changes, no schema attachment, no schema output. Mode 2 is not ready. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
+PR #25 adds the Astro attachment packet template (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md`), required fields reference (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md`), 9-step review sequence (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md`), and hold matrix (`05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md`). These are template and reference documents only — no real attachment packet created, no Astro code changes, no schema attachment, no schema output. Mode 2 is not ready. Mode 1 is still not runnable. `productionLockStatus` remains `NO_PRODUCTION_LOCKS`.
 
 - The governing doctrine is in `02_GOVERNING_DOCTRINE/`.
 - The homepage scoped truth-pack is in `03_TRUTH_PACK/`.
@@ -76,7 +76,7 @@ PR #24 adds the Runtime Appendix schema carry field reference (`05_REFERENCE_WOR
 - Mode 1 is documented but not runnable yet.
 - Mode 2 is documented but not ready.
 
-Status is `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #26 adds the final Mode 1 runnable handoff.
+Status is `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`. The package will remain non-runnable until PR #26 adds the final Mode 1 runnable handoff.
 
 ---
 
@@ -97,7 +97,7 @@ Status is `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
 
 - This mode is **blocked** until all Astro carry gates pass — carry gate sequence defined in PR #23; no gates have passed.
 - No Astro files are created or modified in this package at bootstrap.
-- Carry gate sequence defined in PR #23. Runtime Appendix carry field reference defined in PR #24. Attachment packet template pending in PR #25.
+- Carry gate sequence defined in PR #23. Runtime Appendix carry field reference defined in PR #24. Attachment packet template added in PR #25.
 
 ---
 
@@ -137,7 +137,7 @@ Blocked means: no prompt may reference them, no schema profile may include them,
 
 No JSON-LD has been created. No schema output has been created.
 
-No content in this package (through PR #24) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #24 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
+No content in this package (through PR #25) authorizes any schema to be deployed to the current website or to any Astro implementation. No content through PR #25 approves `PRODUCTION_LOCKED` status. Human merge is required. No self-merge.
 
 ---
 
@@ -194,3 +194,5 @@ No content in this package (through PR #24) authorizes any schema to be deployed
   `docs: add Rise Astro schema carry gate reference`
 - **PR #24:** ~~Add Runtime Appendix schema carry field reference~~ ✓ Merged
   `docs: add Rise Runtime Appendix schema carry field reference`
+- **PR #25:** ~~Add Astro attachment packet template~~ ✓ Merged
+  `docs: add Rise Astro attachment packet template`

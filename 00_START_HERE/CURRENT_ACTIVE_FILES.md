@@ -1,8 +1,8 @@
 # Current Active Files — Rise FC Standalone Schema Operator Package
 
-**Status:** `RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
 
-> PR #1 created the package shell. PRs #2–#23 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, independent analyzer/controller flow, current website implementation handoff checklist, governed sample-run artifact policy, and Astro carry gate reference. PR #24 adds the Runtime Appendix schema carry field reference (3 new reference documents in `05_REFERENCE_WORKFLOW/` and 1 new JSON contract schema in `06_MACHINE_RULES/`). Milestone 4 is complete. Milestone 5 is in progress (2/4). No schema has been generated. No implementation has occurred. Mode 1 is not yet runnable.
+> PR #1 created the package shell. PRs #2–#24 added governing doctrine, truth pack, schema profiles, master flow, operator prompts, contract schemas, validators, run ledger infrastructure, package validator, smoke-test fixture and runner, health reporter, first real page handoff templates, independent analyzer/controller flow, current website implementation handoff checklist, governed sample-run artifact policy, Astro carry gate reference, and Runtime Appendix carry field reference. PR #25 adds the Astro attachment packet template (4 new reference documents in `05_REFERENCE_WORKFLOW/`). Milestone 4 is complete. Milestone 5 is in progress (3/4). No schema has been generated. No implementation has occurred. Mode 1 is not yet runnable.
 
 ---
 
@@ -141,6 +141,10 @@
 | `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_REFERENCE_V1_0.md` | Runtime Appendix carry field reference — 18 required fields, field definitions, summary table, population sequence, non-authorization statement. All fields NOT_STARTED. Added PR #24. |
 | `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_FIELD_STATUS_ENUMS_V1_0.md` | 13 status enum values for Runtime Appendix carry fields — definitions, applicability, gate implications, field-to-enum matrix. Added PR #24. |
 | `05_REFERENCE_WORKFLOW/RUNTIME_APPENDIX_SCHEMA_CARRY_NON_AUTHORIZATION_RULES_V1_0.md` | 7 non-authorization rules (RANA-001–RANA-007) governing Runtime Appendix carry — no runtime code, no Astro code, no schema attached, no schema generated, no production deployment. All in force. Added PR #24. |
+| `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_TEMPLATE_V1_0.md` | Astro attachment packet template — 19 packet fields with defaults (NOT_STARTED / NOT_APPROVED), 10 hard rules, non-authorization statement. No real packet created. Added PR #25. |
+| `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REQUIRED_FIELDS_V1_0.md` | Required fields reference for all 19 attachment packet fields — type, format, gate dependency, failure hold code. Field-to-gate summary table. Added PR #25. |
+| `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_REVIEW_SEQUENCE_V1_0.md` | 9-step attachment packet review sequence — sequential gate structure, no step may be skipped. No packet review has occurred. Added PR #25. |
+| `05_REFERENCE_WORKFLOW/ASTRO_ATTACHMENT_PACKET_HOLD_MATRIX_V1_0.md` | 15 hold codes for the attachment packet — all active by default, none self-resolvable. Summary table. Added PR #25. |
 
 ---
 
@@ -229,7 +233,7 @@ The following file types and artifacts are **not permitted** in this repository 
 | Screaming Frog exports | Not authorized yet |
 | Claude QA zips | Not authorized yet |
 | Generated schema files | Not authorized — no schema has been generated |
-| Astro implementation files | Not authorized until all Astro carry gates pass and Runtime Appendix is complete — gate sequence defined PR #23, Runtime Appendix defined PR #24, no gates passed, Mode 2 not ready |
+| Astro implementation files | Not authorized until all Astro carry gates pass and attachment packet is filled and approved — gate sequence defined PR #23, Runtime Appendix defined PR #24, attachment packet template added PR #25, no gates passed, Mode 2 not ready |
 | Website source files | Not part of this package |
 | Runtime source files | Not part of this package |
 | Medical or CSC-specific doctrine | Not applicable to Rise FC |
@@ -263,5 +267,6 @@ The following file types and artifacts are **not permitted** in this repository 
 - **PR #22:** ~~Governed sample-run artifact policy~~ ✓ Done
 - **PR #23:** ~~Astro schema carry gate reference~~ ✓ Done
 - **PR #24:** ~~Runtime Appendix schema carry field reference~~ ✓ Done
+- **PR #25:** ~~Astro attachment packet template~~ ✓ Done
 
 Generated schema, evidence maps, and real run artifacts are still not allowed. They require a future governed run after all preconditions are confirmed.
