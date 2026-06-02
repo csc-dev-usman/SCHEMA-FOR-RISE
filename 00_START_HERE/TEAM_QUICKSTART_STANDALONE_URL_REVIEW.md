@@ -23,7 +23,7 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 
 ---
 
-## What you can do right now (after PR #16)
+## What you can do right now (after PR #26)
 
 - Use `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md` to find the right document for your task.
 - Use `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` to check all gates before any schema work.
@@ -103,7 +103,7 @@ The Rise FC website (risefcsoccer.com) needs validated, accurate schema markup f
 After PR #26, you must not:
 
 - Generate any JSON-LD
-- Execute any operator prompt (prompts are templates only)
+- Execute schema output operator prompts (Prompt 01 and beyond) without PR #27 authorization
 - Create any schema output
 - Create any production schema bundles
 - Attach schema to the current website

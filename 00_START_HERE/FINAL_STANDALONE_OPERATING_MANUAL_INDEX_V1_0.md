@@ -92,7 +92,7 @@ Files in this order:
 
 Understand:
 - The full operating sequence from intake through implementation or Astro handoff
-- Mode 1 and Mode 2 flows — both documented but not yet runnable
+- Mode 1 flow is supervised-runnable as of PR #26 — intake may begin; Mode 2 is not ready
 - What upstream artifacts exist and what future artifacts are still required
 - The complete master stop conditions and resolution rules for each condition
 
@@ -286,7 +286,7 @@ Files in this order:
 
 Understand:
 - The package validator runs 12 checks against the package directory root
-- Checks include: required files present, key JSON schemas valid, no JSON-LD files, no sample_runs directory, no production readiness claimed, mode1Runnable false, no schema output flags claimed, ledger lock status correct, no fake reports, truth view JSON valid
+- Checks include: required files present, key JSON schemas valid, no JSON-LD files, no sample_runs directory, no production readiness claimed, mode1Runnable status valid (false, or true with co-authorization flags mode1SupervisedRunnable and finalMode1RunnableHandoffAdded), no schema output flags claimed, ledger lock status correct, no fake reports, truth view JSON valid
 - Exit codes: 0=PASS (all checks), 1=FAIL (one or more checks failed), 2=input error
 - Run with: `python tools/validate_package.py .` from the package root
 - The expected active files contract (`PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`) lists all 80 required files through PR #16 plus optional and blocked files
@@ -398,7 +398,7 @@ Understand:
 - Synthetic artifacts using `example.invalid` are permitted only in designated fake-data directories (e.g., `08_SMOKE_TESTS/fixtures/`)
 - Redacted sample artifacts are not yet authorized — the redaction requirements document defines the future standard for when a redacted lane is established
 - Milestone 4 is now complete: all four support-layer PRs (#19–#22) are merged; the package has first real page handoff templates, analyzer/controller flow, implementation handoff checklist, and artifact policy
-- Mode 1 remains not runnable — the final Mode 1 runnable handoff PR (#26) is still required
+- Mode 1 is supervised-runnable as of PR #26 — intake may begin; schema output requires PR #27
 - Reading these files does not create any artifacts or authorize any commits
 
 ---
@@ -495,12 +495,12 @@ File: `00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md`
 
 Understand:
 - Pre-run checks
-- Current disabled status
+- Current intake-enabled status — intake phase active as of PR #26; schema output not yet authorized
 - What must be in place before running
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #10**.
+Mode 1 is **supervised-runnable as of PR #26**. Intake may begin for a confirmed page candidate. Schema output (Prompt 01 and beyond) requires PR #27.
 
 Operators must wait for:
 - PR #2: Governing doctrine ✓ Done

@@ -24,7 +24,7 @@
 | `00_START_HERE/CURRENT_ACTIVE_FILES.md` | This file. Active file index. |
 | `00_START_HERE/FINAL_STANDALONE_OPERATING_MANUAL_INDEX_V1_0.md` | Operator reading order and manual index. |
 | `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md` | Plain-language quickstart for team members. |
-| `00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md` | Pre-run checklist. Currently disabled — not runnable yet. |
+| `00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md` | Pre-run checklist. Intake phase enabled as of PR #26. Schema output not yet authorized. |
 | `00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md` | Mode 1 supervised runnable handoff. Mode 1 is supervised-runnable as of PR #26. Intake may begin. |
 | `00_START_HERE/RISE_OPERATOR_NAVIGATION_DECISION_TREE_V1_0.md` | Navigation aid — which document to read for each task |
 | `00_START_HERE/RISE_SCHEMA_OPERATOR_PREFLIGHT_CHECKLIST_V1_0.md` | Preflight checklist — all gates required before schema production |
