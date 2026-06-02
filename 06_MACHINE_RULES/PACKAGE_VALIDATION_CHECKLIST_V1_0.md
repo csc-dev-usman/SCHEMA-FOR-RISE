@@ -91,13 +91,17 @@ This checklist explains each check, its rationale, and what a failure means.
 
 ---
 
-### CHECK_PKG_008 — Mode 1 not claimed as runnable
+### CHECK_PKG_008 — Mode 1 runnable status is valid
 
-**What it checks:** `package_manifest.json` field `mode1Runnable` is `false` (or absent).
+**What it checks:** `package_manifest.json` field `mode1Runnable` is either:
+- `false` (pre-authorization state — PASS), OR
+- `true` AND `mode1SupervisedRunnable: true` AND `finalMode1RunnableHandoffAdded: true` (PR #26 supervised runnable authorization confirmed — PASS)
 
-**Why it matters:** Mode 1 is only runnable after the final runnable handoff PR is merged. Prematurely setting `mode1Runnable: true` could mislead operators into executing the schema workflow before all preconditions are met.
+Any other combination is a failure.
 
-**Failure means:** `mode1Runnable: true` was found. This flag may only be set to `true` when the final runnable handoff PR explicitly authorizes it.
+**Why it matters:** Mode 1 is only runnable after the final runnable handoff PR is merged and the co-authorization flags are set. As of PR #26, `mode1Runnable: true` is authorized when accompanied by `mode1SupervisedRunnable: true` and `finalMode1RunnableHandoffAdded: true`.
+
+**Failure means:** `mode1Runnable: true` was found without the required co-authorization flags. Both `mode1SupervisedRunnable` and `finalMode1RunnableHandoffAdded` must be `true` when `mode1Runnable` is `true`.
 
 ---
 

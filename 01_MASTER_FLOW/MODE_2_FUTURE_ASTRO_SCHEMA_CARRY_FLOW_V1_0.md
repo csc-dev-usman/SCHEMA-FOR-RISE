@@ -1,6 +1,6 @@
 # Mode 2 — Future Astro Schema Carry Flow V1.0
 
-**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETE_MODE_1_SUPERVISED_RUNNABLE_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -88,14 +88,14 @@ HUMAN APPROVAL
 
 ## Mode 2 not-ready statement
 
-**Mode 2 is not ready after PR #25.**
+**Mode 2 is not ready after PR #26.**
 
 Mode 2 is blocked until:
 - ~~A governing doctrine PR defines Astro carry gates~~ ✓ Done (PR #23 — carry gate reference added)
 - ~~Runtime Appendix carry fields defined~~ ✓ Done (PR #24 — field reference added; all fields NOT_STARTED)
 - ~~Astro attachment packet template added~~ ✓ Done (PR #25 — template added; no real packet created or filled)
 - Astro route and runtime evidence exists
-- Mode 1 validated output exists for target routes
+- Mode 1 validated output exists for target routes (Mode 1 is supervised-runnable as of PR #26, but no schema output yet)
 - Astro attachment packet filled and approved for a target route
 - Human approval for Astro attachment is granted
 

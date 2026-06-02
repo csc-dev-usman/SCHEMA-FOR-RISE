@@ -1,8 +1,8 @@
 # Final Standalone Operating Manual Index V1.0
 
-**Status:** `ASTRO_ATTACHMENT_PACKET_TEMPLATE_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETE_MODE_1_SUPERVISED_RUNNABLE_NO_SCHEMA_OUTPUT`
 
-> This manual index defines the operator reading order. The full workflow is not yet runnable. Operators must not generate or implement schema until later PRs add evidence maps and the final runnable handoff.
+> This manual index defines the operator reading order. Mode 1 is supervised-runnable as of PR #26 — intake may begin for a confirmed page candidate. Schema output is not yet authorized. Operators must not generate or implement schema until PR #27 authorizes the first governed draft run.
 
 ---
 
@@ -92,7 +92,7 @@ Files in this order:
 
 Understand:
 - The full operating sequence from intake through implementation or Astro handoff
-- Mode 1 and Mode 2 flows — both documented but not yet runnable
+- Mode 1 flow is supervised-runnable as of PR #26 — intake may begin; Mode 2 is not ready
 - What upstream artifacts exist and what future artifacts are still required
 - The complete master stop conditions and resolution rules for each condition
 
@@ -286,7 +286,7 @@ Files in this order:
 
 Understand:
 - The package validator runs 12 checks against the package directory root
-- Checks include: required files present, key JSON schemas valid, no JSON-LD files, no sample_runs directory, no production readiness claimed, mode1Runnable false, no schema output flags claimed, ledger lock status correct, no fake reports, truth view JSON valid
+- Checks include: required files present, key JSON schemas valid, no JSON-LD files, no sample_runs directory, no production readiness claimed, mode1Runnable status valid (false, or true with co-authorization flags mode1SupervisedRunnable and finalMode1RunnableHandoffAdded), no schema output flags claimed, ledger lock status correct, no fake reports, truth view JSON valid
 - Exit codes: 0=PASS (all checks), 1=FAIL (one or more checks failed), 2=input error
 - Run with: `python tools/validate_package.py .` from the package root
 - The expected active files contract (`PACKAGE_EXPECTED_ACTIVE_FILES_V1_0.json`) lists all 80 required files through PR #16 plus optional and blocked files
@@ -398,7 +398,7 @@ Understand:
 - Synthetic artifacts using `example.invalid` are permitted only in designated fake-data directories (e.g., `08_SMOKE_TESTS/fixtures/`)
 - Redacted sample artifacts are not yet authorized — the redaction requirements document defines the future standard for when a redacted lane is established
 - Milestone 4 is now complete: all four support-layer PRs (#19–#22) are merged; the package has first real page handoff templates, analyzer/controller flow, implementation handoff checklist, and artifact policy
-- Mode 1 remains not runnable — the final Mode 1 runnable handoff PR (#26) is still required
+- Mode 1 is supervised-runnable as of PR #26 — intake may begin; schema output requires PR #27
 - Reading these files does not create any artifacts or authorize any commits
 
 ---
@@ -460,6 +460,26 @@ Understand:
 
 ---
 
+### Step 2y — Read final Mode 1 runnable handoff documents (PR #26 addition)
+
+Files in this order:
+1. `00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md`
+2. `05_REFERENCE_WORKFLOW/FINAL_MODE_1_SUPERVISED_RUNNABLE_HANDOFF_V1_0.md`
+3. `05_REFERENCE_WORKFLOW/MODE_1_RUNNABLE_SCOPE_AND_LIMITS_V1_0.md`
+4. `05_REFERENCE_WORKFLOW/MODE_1_OPERATOR_START_CONDITIONS_V1_0.md`
+5. `05_REFERENCE_WORKFLOW/MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETION_AUDIT_V1_0.md`
+
+Understand:
+- Mode 1 is supervised-runnable as of PR #26 — `mode1Runnable: true` and `mode1SupervisedRunnable: true` are now set
+- Supervised-runnable means intake may begin (Prompt 00); it does not mean schema output is authorized
+- The CAN/CANNOT table in the scope and limits document defines exactly what operators may and may not do
+- All 14 start conditions (SC-001–SC-014) must pass before Prompt 00 intake begins
+- Milestone 5 (Astro Carry Bridge) is complete — all 4 Milestone 5 PRs are merged
+- Mode 2 remains not ready — `mode2AstroReady: false`
+- No schema output has been created; no JSON-LD exists; no implementation has occurred
+
+---
+
 ### Step 3 — Read TEAM_QUICKSTART
 
 File: `00_START_HERE/TEAM_QUICKSTART_STANDALONE_URL_REVIEW.md`
@@ -475,12 +495,12 @@ File: `00_START_HERE/OPERATOR_CHECKLIST_STANDALONE_RUN.md`
 
 Understand:
 - Pre-run checks
-- Current disabled status
+- Current intake-enabled status — intake phase active as of PR #26; schema output not yet authorized
 - What must be in place before running
 
 ### Step 5 — Wait for later PRs before running actual schema workflow
 
-The schema workflow is **not runnable after PR #10**.
+Mode 1 is **supervised-runnable as of PR #26**. Intake may begin for a confirmed page candidate. Schema output (Prompt 01 and beyond) requires PR #27.
 
 Operators must wait for:
 - PR #2: Governing doctrine ✓ Done
@@ -507,6 +527,7 @@ Operators must wait for:
 - PR #23: Astro schema carry gate reference ✓ Done
 - PR #24: Runtime Appendix schema carry field reference ✓ Done
 - PR #25: Astro attachment packet template ✓ Done
+- PR #26: Final Mode 1 runnable handoff ✓ Done — Milestone 5 complete
 
 Do not generate schema. Do not create JSON-LD. Do not implement on the website.
 
@@ -521,7 +542,7 @@ Produce validated schema for pages on the current risefcsoccer.com website.
 - Schema is derived from approved Phase 0 content and confirmed page evidence
 - Output must be validated before any implementation handoff
 
-**Not runnable yet. Waiting for evidence maps, validators, and the final runnable handoff.**
+**Mode 1 is supervised-runnable as of PR #26. Intake may begin. Schema output requires PR #27.**
 
 ---
 
@@ -533,7 +554,7 @@ Carry validated schema into the Astro implementation after all carry gates pass.
 - No Astro files are modified by this package
 - Carry gate sequence defined in PR #23. Runtime Appendix carry field reference added in PR #24. Attachment packet template added in PR #25.
 
-**Not yet scoped. Waiting for Astro route, runtime evidence, and all carry gates to pass.**
+**Not ready. Mode 2 is blocked until all Astro carry gates pass and human approval is granted. `mode2AstroReady: false`.**
 
 ---
 

@@ -179,15 +179,15 @@ def main():
     # ------------------------------------------------------------------
     _section("4. Production safety flags")
     if manifest:
-        safety_flags = {
+        # These flags must always remain false — they indicate unauthorized production actions
+        schema_safety_flags = {
             "schemaOutputCreated": False,
             "jsonLdCreated": False,
             "currentWebsiteImplementationAuthorized": False,
             "astroAttachmentAuthorized": False,
-            "mode1Runnable": False,
         }
         all_safe = True
-        for flag, expected_false in safety_flags.items():
+        for flag, expected_false in schema_safety_flags.items():
             actual = manifest.get(flag, False)
             if actual is expected_false:
                 _ok(flag, str(actual))
@@ -195,6 +195,19 @@ def main():
                 _warn(flag, f"UNEXPECTED VALUE: {actual}")
                 warnings += 1
                 all_safe = False
+        # mode1Runnable: true is authorized by PR #26 when co-authorization flags are present
+        mode1_runnable = manifest.get("mode1Runnable", False)
+        mode1_supervised = manifest.get("mode1SupervisedRunnable", False)
+        mode1_handoff = manifest.get("finalMode1RunnableHandoffAdded", False)
+        if mode1_runnable:
+            if mode1_supervised and mode1_handoff:
+                _ok("mode1Runnable", "True (PR #26 supervised runnable authorization confirmed)")
+            else:
+                _warn("mode1Runnable", "True but co-authorization flags missing — review")
+                warnings += 1
+                all_safe = False
+        else:
+            _ok("mode1Runnable", "False (pre-authorization state)")
         if all_safe:
             _ok("All production safety flags", "correct")
     else:

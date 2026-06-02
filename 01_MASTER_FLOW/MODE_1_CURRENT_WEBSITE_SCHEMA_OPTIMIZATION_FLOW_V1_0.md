@@ -1,6 +1,6 @@
 # Mode 1 — Current Website Schema Optimization Flow V1.0
 
-**Status:** `MASTER_FLOW_ADDED_NO_SCHEMA_OUTPUT`
+**Status:** `MILESTONE_5_ASTRO_CARRY_BRIDGE_COMPLETE_MODE_1_SUPERVISED_RUNNABLE_NO_SCHEMA_OUTPUT`
 
 ---
 
@@ -8,7 +8,7 @@
 
 This document defines the Mode 1 current-website schema optimization flow for the Rise FC standalone schema operator package. Mode 1 produces validated schema for pages on the current risefcsoccer.com website.
 
-**Mode 1 is documented but not runnable yet.** Operator prompts, evidence maps, validators, and the final runnable handoff are pending in later PRs.
+**Mode 1 is supervised-runnable as of PR #26.** Intake may begin for a confirmed page candidate. Schema output (JSON-LD, output bundles) is not yet authorized — it requires PR #27 (controlled non-production homepage JSON-LD draft).
 
 ---
 
@@ -142,19 +142,13 @@ IMPLEMENTATION HANDOFF
 
 ---
 
-## Mode 1 not-runnable statement
+## Mode 1 supervised-runnable statement
 
-**Mode 1 is not runnable after PR #5.**
+**Mode 1 is supervised-runnable as of PR #26.**
 
-The following artifacts are still required:
-- Operator prompts (PR #7 and PR #8)
-- Homepage evidence map (future PR)
-- Output bundle contract schemas (PR #9)
-- Homepage non-production draft contract (PR #10)
-- Validator (future PR)
-- Final runnable handoff (future PR)
+`mode1Runnable: true` and `mode1SupervisedRunnable: true` are set in `package_manifest.json`. The intake phase may begin. See `00_START_HERE/FINAL_MODE_1_RUNNABLE_HANDOFF_V1_0.md` for the operator start sequence and `05_REFERENCE_WORKFLOW/MODE_1_OPERATOR_START_CONDITIONS_V1_0.md` for all 14 required start conditions.
 
-No schema output may be produced until all of the above exist and are approved.
+Schema output requires PR #27 (controlled non-production homepage JSON-LD draft). No JSON-LD may be created until PR #27 is merged and the evidence map for the target route is confirmed.
 
 ---
 

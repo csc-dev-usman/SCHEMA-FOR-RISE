@@ -226,16 +226,33 @@ def check_no_production_readiness(manifest):
 
 
 def check_mode1_not_runnable(manifest):
-    """CHECK_PKG_008 — Mode 1 not claimed as runnable."""
+    """CHECK_PKG_008 — Mode 1 runnable status is valid.
+
+    PASS cases:
+      - mode1Runnable is False (not yet authorized)
+      - mode1Runnable is True AND mode1SupervisedRunnable is True AND
+        finalMode1RunnableHandoffAdded is True (PR #26 authorization confirmed)
+
+    FAIL cases:
+      - mode1Runnable is True without the co-authorization flags present
+    """
     if manifest is None:
         return False, "CHECK_PKG_008 FAIL — Cannot check: manifest not loaded"
     if manifest.get("mode1Runnable") is True:
+        supervised = manifest.get("mode1SupervisedRunnable") is True
+        handoff_added = manifest.get("finalMode1RunnableHandoffAdded") is True
+        if supervised and handoff_added:
+            return True, (
+                "CHECK_PKG_008 PASS — mode1Runnable is true; "
+                "mode1SupervisedRunnable and finalMode1RunnableHandoffAdded confirmed "
+                "(PR #26 supervised runnable authorization present)"
+            )
         return False, (
-            "CHECK_PKG_008 FAIL — package_manifest.json claims mode1Runnable: true. "
-            "Mode 1 may only be runnable when the final runnable handoff explicitly "
-            "authorizes it. This flag must remain false until that PR is merged."
+            "CHECK_PKG_008 FAIL — package_manifest.json claims mode1Runnable: true "
+            "but mode1SupervisedRunnable or finalMode1RunnableHandoffAdded is missing. "
+            "Both flags must be true when mode1Runnable is true."
         )
-    return True, "CHECK_PKG_008 PASS — mode1Runnable is false (correct)"
+    return True, "CHECK_PKG_008 PASS — mode1Runnable is false (pre-authorization state)"
 
 
 def check_no_schema_output_claimed(manifest):
